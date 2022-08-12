@@ -1,26 +1,27 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<!-- cambiar color de fondo -->
+  <div class="bg-white-400 h-screen">
+    <MenuResponsive>
+
+    </MenuResponsive>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+//Importar los estilos del tailwind 
+
+import MenuResponsive from "./components/views/MenuResponsive.vue"
+
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
-}
+    // agregar a la compilacion 
+    MenuResponsive,
+    
+},
+};
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
