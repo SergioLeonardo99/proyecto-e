@@ -21,22 +21,35 @@
                 <a :href="link.links" class="text-xl hover:text-black">{{link.nombre}}</a>
             </li>
 
-            <BtnLogin>Iniciar Sesion</BtnLogin>
+            <BtnLogin @click="$router.push('/ventana')">Empezar</BtnLogin>
+           
+           
         </ul>
 
     </div>
 </template>
 
-<script>
+<script  >
 import BtnLogin from './BtnLogin.vue'
+
  import { ref } from 'vue'; 
+ 
+
 export default {
+/*
+     methods: {
+         redirect() {
+            this.$router.push('/login');
+         },
+      },
+     */
     components:{
         BtnLogin
+        
     },
-
+   
     setup(){
-
+        
         let open = ref(false)
         let links = [
             {nombre: "Inicio", link: "#" },
@@ -49,8 +62,14 @@ export default {
             open.value = !open.value
         }
         return {links, open, AbrirMenu}
+      
+        
     }
+    
+   
     
 }
 
 </script>
+
+
