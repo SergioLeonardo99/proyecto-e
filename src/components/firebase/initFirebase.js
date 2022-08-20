@@ -1,5 +1,6 @@
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBxNcw2FaXVy1LwIHeJavCI33NtvNZX23Q",
@@ -7,12 +8,10 @@ const firebaseConfig = {
   projectId: "m-subate",
   storageBucket: "m-subate.appspot.com",
   messagingSenderId: "385200448205",
-  appId: "1:385200448205:web:20cbf9e774e80f0c217f84",
+  appId: "1:385200448205:web:9cf4364d75d51ee7217f84",
+  measurementId: "G-6ZZYN2Q187",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-
-
-// Initialize Cloud Firestore and get a reference to the service
-
+firebase.initializeApp(firebaseConfig);
+const db=firebase.firestore();
+export default  db;
