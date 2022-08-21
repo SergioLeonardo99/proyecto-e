@@ -4,8 +4,12 @@ import App from './App.vue'
 //import VueRouter from 'vue-router'
 import MenuResponsive from "./views/MenuResponsive.vue"
 import ventanaLogin from "./views/ventanaLogin.vue"
+import ventanaRegistro from "./views/ventanaRegistro.vue"
+
 import './assets/tailwind.css'
 import { createRouter, createWebHistory } from 'vue-router';
+
+
 //import Vue from 'vue'
     
 //Vue.use(VueRouter)
@@ -57,7 +61,11 @@ const router = createRouter( {
   history: createWebHistory(),
   routes: [
     {path: '/', name: 'MenuResponsive', component: MenuResponsive},
-    {path: '/ventana', name: 'ventanaLogin', component: ventanaLogin}
+    {path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin},
+    {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
+
+
+
 
 
   ]

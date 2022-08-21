@@ -21,7 +21,7 @@
                 <a :href="link.links" class="text-xl hover:text-black">{{link.nombre}}</a>
             </li>
 
-            <BtnLogin @click="$router.push('/ventana')">Empezar</BtnLogin>
+            <BtnLogin @click="$router.push('/ventanaL')">Empezar</BtnLogin>
            
            
         </ul>
