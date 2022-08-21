@@ -1,14 +1,21 @@
 <template>
     <div>
-        <h1>Ventana de login</h1>
+        <h1>Ventana de registro</h1>
+
        
-        <form >
+        <form>
+            <label for="nit">Nombre de la empresa: </label>
+            <input type="text" v-model="nombre">
             <label for="nit">Nit: </label>
             <input type="text" v-model="nit">
+            <label for="nit">Dirección de la empresa: </label>
+            <input type="text" v-model="direccion">
+            <label for="nit">Telefono: </label>
+            <input type="text" v-model="telefono">
             <label for="contraseña">Contraseña: </label>
             <input type="password" v-model="contraseña">
-            <button type="button"  @click="autenticate()"> 
-                Ingresar
+            <button type="button"  @click="register()"> 
+                Registrarse
             </button> 
             
 
@@ -23,11 +30,15 @@
 
 import db from "../components/firebase/initFirebase";
 import VueCookies from 'vue-cookies'
+import { registerFirestore } from "@firebase/firestore-compat";
 
 export default {
   data() {
     return {
+      nombre: '',
       nit: '',
+      direccion: '',
+      telefono: '',
       contraseña: '',
       mensaje: '',
     }
@@ -59,6 +70,23 @@ export default {
                this.mensaje="Nit incorrecto..."
             });
 
+    },
+    register(){
+      db.collection("usuario").doc(this.nit).set({
+      nombre: this.nombre,
+      nit: this.nit,
+      direccion: this.direccion,
+      telefono: this.telefono,
+      contraseña: this.contraseña,
+      tipo: "usuario"
+  })
+  .then(() => {
+      this.mensaje="Empresa registrada con exito"
+  })
+  .catch((error) => {
+      console.error("Error writing document: ", error);
+      this.mensaje="No se pudo completar el registro, intente nuevamente"
+});
     }
     
   },
