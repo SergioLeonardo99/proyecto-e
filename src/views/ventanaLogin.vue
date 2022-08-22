@@ -33,7 +33,7 @@
 
       <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
         <router-view></router-view>
-        <img src="@/assets/bg.jpg" alt="" class="w-full h-full object-cover">
+        <img src="@/assets/bg.webp" alt="" class="w-full h-full object-cover">
       </div>
 
       <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
@@ -47,7 +47,7 @@
           <form class="mt-6">
             <div>
               <label class="block text-gray-700">Nit</label>
-              <input type="numero" name="nit" v-model="nit" placeholder="Nit"
+              <input type="number" name="nit" v-model="nit" placeholder="Nit"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                 autofocus autocomplete required>
             </div>
@@ -72,7 +72,7 @@
 
           <hr class="my-6 border-gray-300 w-full">
 
-          <button type="button"
+          <!-- <button type="button"
             class="w-full block bg-white hover:bg-gray-100 focus:bg-gray-100 text-gray-900 font-semibold rounded-lg px-4 py-3 border border-gray-300">
             <div class="flex items-center justify-center">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="w-6 h-6"
@@ -95,7 +95,7 @@
                 Google
               </span>
             </div>
-          </button>
+          </button> -->
 
           <p class="mt-8">
             Necesitas una cuenta?
@@ -129,7 +129,9 @@ export default {
   },
   methods: {
     autenticate() {
-      var docRef = db.collection("usuario").doc(this.nit);
+      
+      var docRef = db.collection("usuario").doc(this.nit.toString());
+      
       var getOptions = {
         //source: 'cache'
       };

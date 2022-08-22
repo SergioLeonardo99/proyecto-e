@@ -15,7 +15,7 @@
 
     <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
       <router-view></router-view>
-      <img src="@/assets/bg3.jpg" alt="" class="w-full h-full object-cover">
+      <img src="@/assets/bg3.webp" alt="" class="w-full h-full object-cover">
     </div>
   
     <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
@@ -36,7 +36,7 @@
             
             <div>
             <label class="block text-gray-700">Nit: </label>
-            <input type="numero" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
            <div>
@@ -46,7 +46,7 @@
 
              <div>
             <label class="block text-gray-700">Telefono: </label>
-            <input type="numero" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="number" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
           <div class="mt-4">
@@ -62,8 +62,9 @@
           </div>
          
   
-          <button type="button" @click="register()" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+          <button type="button" @click="advancedRegister()" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Registrarse</button>
+          <p>{{ mensaje }}</p>
         </form>
   
         <hr class="my-4 border-gray-300 w-full">
@@ -100,12 +101,50 @@ export default {
     }
   },
   methods: {
+    advancedRegister() {
+      
+      var docRef = db.collection("usuario").doc(this.nit.toString());
+      
+      var getOptions = {
+        //source: 'cache'
+      };
+      docRef.get(getOptions).then((doc) => {
+        // Document was found in the cache. If no cached document exists,
+        // an error will be returned to the 'catch' block below.
+
+        if (doc.data().nit == this.nit.toString()) {
+          this.mensaje = "Nit ya registrado..."
+        }
+      }).catch((error) => {
+        var forge = require('node-forge');
+        var input_str = this.contraseña;
+        var md = forge.md.sha256.create();
+        md.update(input_str);
+        db.collection("usuario").doc(this.nit.toString()).set({
+          nombre: this.nombre,
+          nit: this.nit,
+          direccion: this.direccion,
+          telefono: this.telefono,
+          contraseña: md.digest().toHex(),
+          tipo: "usuario"
+        })
+          .then(() => {
+            this.mensaje = "Empresa registrada con exito"
+          })
+          .catch((error) => {
+            console.error("Error writing document: ", error);
+            this.mensaje = "No se pudo completar el registro, intente nuevamente"
+          });
+        
+      });
+
+    },
     register(){
       var forge = require('node-forge');
       var input_str = this.contraseña;
       var md = forge.md.sha256.create();
       md.update(input_str);
-      db.collection("usuario").doc(this.nit).set({
+      db.collection("usuario").doc(this.nit.toString()).set({
       nombre: this.nombre,
       nit: this.nit,
       direccion: this.direccion,
