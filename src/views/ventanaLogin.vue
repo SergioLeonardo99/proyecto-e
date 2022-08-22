@@ -44,17 +44,17 @@
           <h1 class="text-2xl font-bold">Bienvenido</h1>
           <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Ingresa al sistema</h1>
 
-          <form>
+          <form class="mt-6">
             <div>
               <label class="block text-gray-700">Nit</label>
-              <input type="number" name="nit" id="" v-model="nit" placeholder="Nit"
+              <input type="numero" name="nit" v-model="nit" placeholder="Nit"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                 autofocus autocomplete required>
             </div>
 
             <div class="mt-4">
               <label class="block text-gray-700">Contraseña</label>
-              <input type="password" name="contraseña" v-model="contraseña" id="" placeholder="Password" minlength="4"
+              <input type="password" name="contraseña" v-model="contraseña" placeholder="Password" minlength="4"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                   focus:bg-white focus:outline-none" required>
             </div>
@@ -122,7 +122,7 @@ import VueCookies from 'vue-cookies'
 export default {
   data() {
     return {
-      nit: '',
+      nit: 0,
       contraseña: '',
       mensaje: '',
     }
