@@ -40,26 +40,28 @@
       <div class="w-full h-100">
   
         <h1 class="text-2xl font-bold">Bienvenido</h1>
-        <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Crea tu cuenta</h1>
+        <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Ingresa al sistema</h1>
   
-        <form class="mt-6" action="#" method="POST">
+        <form>
           <div>
             <label class="block text-gray-700">Nit</label>
-            <input type="number" name="nit" id="" placeholder="Nit" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="number" name="nit" id="" v-model="nit" placeholder="Nit" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
   
           <div class="mt-4">
             <label class="block text-gray-700">Contraseña</label>
-            <input type="password" name="contraseña" id="" placeholder="Password" minlength="6" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+            <input type="password" name="contraseña" v-model="contraseña" id="" placeholder="Password" minlength="4" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                   focus:bg-white focus:outline-none" required>
           </div>
   
           <div class="text-right mt-2">
             <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Olvidaste tu contraseña?</a>
+            <p>{{mensaje}}</p>
           </div>
   
-          <button type="submit" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
-                px-4 py-3 mt-6">Ingresar</button>
+          <button @click="autenticate()" type="button" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                px-4 py-3 mt-6" >Ingresar</button>
+                
         </form>
   
         <hr class="my-6 border-gray-300 w-full">
@@ -94,6 +96,52 @@
 </template>
 
 <script>
+import db from "../components/firebase/initFirebase";
+import VueCookies from 'vue-cookies'
+
+export default {
+  data() {
+    return {
+      nit: '',
+      contraseña: '',
+      mensaje: '',
+    }
+  },
+  methods: {
+    autenticate(){
+        var docRef = db.collection("usuario").doc(this.nit);
+            var getOptions = {
+            //source: 'cache'
+            };
+            docRef.get(getOptions).then((doc) => {
+    // Document was found in the cache. If no cached document exists,
+    // an error will be returned to the 'catch' block below.
+                
+                var forge = require('node-forge');
+                var input_str = this.contraseña;
+                var md = forge.md.sha256.create();
+                md.update(input_str);
+
+                if(doc.data().contraseña==md.digest().toHex()){
+                    this.mensaje="Datos validos"
+                    VueCookies.set('nit' , this.nit, "1h")
+                    console.log($cookies.get("nit"))
+                }else{
+                    this.mensaje="Contraseña invalida..."
+                }
+            }).catch((error) => {
+               console.log("Nit Incorrecto...", error);
+               this.mensaje="Nit incorrecto..."
+            });
+
+    }
+    
+  },
+  mounted() {
+    // methods can be called in lifecycle hooks, or other methods!
+  }
+}
+
 
 
 </script>
