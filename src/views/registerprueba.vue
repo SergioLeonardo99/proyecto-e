@@ -30,7 +30,7 @@
 
 import db from "../components/firebase/initFirebase";
 import VueCookies from 'vue-cookies'
-import { registerFirestore } from "@firebase/firestore-compat";
+import { registerFirestore } from "@firebase/firestore";
 
 export default {
   data() {
@@ -72,6 +72,12 @@ export default {
 
     },
     register(){
+      var forge = require('node-forge');
+      var input_str = this.contraseña;
+      var md = forge.md.sha256.create();
+      md.update(input_str);
+      this.contraseña = md.digest().toHex()
+      
       db.collection("usuario").doc(this.nit).set({
       nombre: this.nombre,
       nit: this.nit,

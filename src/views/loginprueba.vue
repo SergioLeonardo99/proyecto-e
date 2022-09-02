@@ -46,11 +46,14 @@ export default {
                 var input_str = this.contraseña;
                 var md = forge.md.sha256.create();
                 md.update(input_str);
+                console.log(doc.data().contraseña)
+                console.log(md.digest().toHex())
 
                 if(doc.data().contraseña==md.digest().toHex()){
                     this.mensaje="Datos validos"
                     VueCookies.set('nit' , this.nit, "1h")
                     console.log($cookies.get("nit"))
+                    this.$router.push('/empresa')
                 }else{
                     this.mensaje="Contraseña invalida..."
                 }
