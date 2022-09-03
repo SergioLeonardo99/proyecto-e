@@ -148,6 +148,7 @@ export default {
           this.mensaje = "Datos validos"
           VueCookies.set('nit', this.nit, "1h")
           console.log($cookies.get("nit"))
+          
         } else {
           this.mensaje = "Contraseña invalida..."
         }
