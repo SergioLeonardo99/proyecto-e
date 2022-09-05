@@ -5,7 +5,11 @@ import App from './App.vue'
 import MenuResponsive from "./views/MenuResponsive.vue"
 import ventanaLogin from "./views/ventanaLogin.vue"
 import ventanaRegistro from "./views/ventanaRegistro.vue"
+
 import encuesta from "./views/encuesta.vue"
+
+import formularioFinal from "./views/formularioFinal.vue"
+
 import './assets/tailwind.css'
 import { createRouter, createWebHistory } from 'vue-router';
 
@@ -63,8 +67,11 @@ const router = createRouter( {
     {path: '/', name: 'MenuResponsive', component: MenuResponsive},
     {path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin},
     {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
+
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
 
+    {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
+    
 
 
 
