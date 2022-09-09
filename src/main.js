@@ -9,6 +9,7 @@ import ventanaRegistro from "./views/ventanaRegistro.vue"
 import encuesta from "./views/encuesta.vue"
 
 import formularioFinal from "./views/formularioFinal.vue"
+import viewadmin from "./views/viewadmin.vue"
 
 import './assets/tailwind.css'
 import { createRouter, createWebHistory } from 'vue-router';
@@ -69,6 +70,8 @@ const router = createRouter( {
     {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
 
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
+    {path: '/admin', name: 'viewadmin', component: viewadmin},
+
 
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
     

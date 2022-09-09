@@ -8,19 +8,17 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "survey-vue-ui": "^1.9.24",
+    "@popperjs/core": "^2.11.6",
     "autoprefixer": "^10",
     "bootstrap": "^3.3.7",
     "bootstrap-icons-vue": "^1.8.1",
+    "chart.js": "^2.9.4",
     "core-js": "^3.8.3",
     "firebase": "^8.10.1",
     "jenesius-vue-modal": "^1.7.2",
     "jquery": "^3.6.0",
     "node-forge": "^1.3.1",
     "postcss": "^8",
-    "survey-creator": "^1.9.46",
-    "survey-vue": "^1.9.46",
-    "surveyjs-widgets": "^1.9.46",
     "tailwindcss": "^3.1.8",
     "vue": "^3.2.37",
     "vue-cookies": "^1.8.1",
@@ -46,7 +44,6 @@
       "plugin:vue/vue3-essential",
       "eslint:recommended"
     ],
-
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
