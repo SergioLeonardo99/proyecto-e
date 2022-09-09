@@ -1,0 +1,76 @@
+<template>
+
+    <div class="mx-auto ">
+        <!--Estilo superior-->
+        <nav class="bg-white-50 flex justify-between lg:justify-start items-center" style="box-shadow: 5px 5px 10px #f5f5f4;">
+            <div class="logo p-3 w-5/6 ">
+
+                <!--Integracion de logo-->
+
+                <img src="@/assets/logo1.png" height="150" width="150" alt="">
+
+            </div>
+            <!--opciones superiores para acceso a los diferentes modúlos-->
+            <!--menu resposive para adaptar app movil y web-->
+
+            <div class="links lg:block hidden w-1/6 md:w-4/6">
+                <ul class="menu flex items-center justify-center gap-5">
+                    <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
+                    <li><a @click="$router.push('/graphics')" class="botones-link">Graficos</a></li>
+                    <li><a @click="$router.push('/surveys')" class="botones-link">Encuestas</a></li>
+                    <li><a @click="$router.push('/modulesE')" class="botones-link">Modúlo educativo</a></li>
+                    <li><a @click="$router.push('/leave')" class="botones-link">Salir</a></li>
+                    <!-- <li><a href="#"
+                            class="border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
+                    </li> -->
+
+                </ul>
+            </div>
+            <!--menu resposive para adaptar app movil y web-->
+            <div class="block lg:hidden w-1/6 lg:w-4/6">
+                <button class="link" id="mobile-menu" @click="menubar">Menu</button>
+                <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
+                    :class="{ hidden: isActive }">
+                    <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
+                    <li><a @click="$router.push('/graphics')" class="botones-link">Graficos</a></li>
+                    <li><a @click="$router.push('/surveys')" class="botones-link">Encuestas</a></li>
+                    <li><a @click="$router.push('/modulesE')" class="botones-link">Modúlo educativo</a></li>
+                    <li><a @click="$router.push('/leave')" class="botones-link">Salir</a></li>
+                    <!-- <li><a href="#"
+                            class="my-4 inline-block border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
+                    </li> -->
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</template>
+
+<script>
+
+export default {
+    name: 'navBar2',
+    components: {
+
+    },
+    data() {
+        return {
+            isActive: true,
+
+        }
+    },
+    methods: {
+        menubar() {
+            this.isActive = !this.isActive
+        }
+    }
+}
+</script>
+    
+    
+    
+    <style lang="">
+        
+    </style>
+    
+        

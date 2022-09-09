@@ -1,5 +1,21 @@
+
 @tailwind base;
+
+
+
+
 
 @tailwind components;
 
+
+
+
+
+
 @tailwind utilities;
+
+@layer components{
+.botones-link {
+    @apply text-black block p-4 font-semibold hover:text-teal-700;
+}
+}

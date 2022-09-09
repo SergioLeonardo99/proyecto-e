@@ -1,18 +1,28 @@
-
+//forma para trabajar en tailwind 
 
 module.exports = {
   mode: 'jit',
 
-  purge: ['./index.html','./src/**/*.{vue,js,ts,jsx,tsx}',],
-  darkMode: false,
+  purge: ['./index.html','./src/**/*.{vue,js,ts,jsx,tsx}',],  //procesamiento para buscar aarchivos, transforma y optimiza
+  darkMode: false, //habilitar propiedades
 
   theme: {
-    extend: {},
+    extend: {
+      brackgroundImage: theme => ({
+        'imgg-pattern': 'url(../src/assets/imgBlanca.png)'
+      })
+
+
+
+
+    },
   },
+  content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
+  
   variants: {
     extend: {},
   },
-
-
-  plugins: [],
 }
