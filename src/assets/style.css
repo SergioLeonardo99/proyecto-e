@@ -1,0 +1,95 @@
+
+ul {
+    column-count: 2;
+    column-gap: 2rem;
+    list-style: none;
+  }
+  .formulario {
+    /* --------------------------------------- */
+    /* ----- Radio Button */
+    /* --------------------------------------- */
+    /* --------------------------------------- */
+    /* ----- Checkbox */
+    /* --------------------------------------- */ }
+    .formulario h2 {
+      font-size: 16px;
+      color: #001F3F;
+      margin-bottom: 20px;
+      margin-left: 20px; }
+    .formulario > div {
+      padding: 20px 0;
+      border-bottom: 1px solid rgb(204, 204, 204); }
+    .formulario .radio label,
+    .formulario .checkbox label {
+      display: inline-block;
+      cursor: pointer;
+      color: #242b29;
+      position: relative;
+      padding: 5px 15px 5px 51px;
+      font-size: 1em;
+      border-radius: 5px;
+      -webkit-transition: all 0.3s ease;
+      -o-transition: all 0.3s ease;
+      transition: all 0.3s ease; }
+      .formulario .radio label:hover,
+      .formulario .checkbox label:hover {
+        background: rgba(255, 65, 54, 0.1); }
+      .formulario .radio label:before,
+      .formulario .checkbox label:before {
+        content: "";
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        position: absolute;
+        left: 15px;
+        border-radius: 50%;
+        background: none;
+        border: 3px solid #0f766e; }
+    .formulario input[type="radio"] {
+      display: none; }
+      .formulario input[type="radio"]:checked + label:before {
+        display: none; }
+      .formulario input[type="radio"]:checked + label {
+        padding: 5px 15px;
+        background: #0f766e;
+        border-radius: 2px;
+        color: #fff; }
+    .formulario .checkbox label:before {
+      border-radius: 3px; }
+    .formulario .checkbox input[type="checkbox"] {
+      display: none; }
+      .formulario .checkbox input[type="checkbox"]:checked + label:before {
+        display: none; }
+      .formulario .checkbox input[type="checkbox"]:checked + label {
+        background: #0f766e;
+        color: #fff;
+        padding: 5px 15px; }
+
+
+        
+        
+table {
+  border-collapse: collapse;   
+  margin: auto;
+}
+      td, th {
+          border: 1px solid #ccc;
+          padding: 10px;
+      }
+      th:empty {
+          border: 0;
+      }
+tabla-b{
+  width: 20%;
+}
+input[type=text]{
+  border-radius: 7px;
+  border: 2px solid #73AD21;
+  width: 100%;
+  padding: 5px 10px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgb(90, 87, 87);
+}
+    
