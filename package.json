@@ -5,40 +5,28 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "build:css": "postcss src/assets/tailwind.css -o src/assets/main.css",
-    "build1": "NODE_ENV=production postcss src/assets/tailwind.css -o src/assets/main.css",
-    "watch:css": "postcss src/assets/tailwind.css -o src/assets/main.css"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@popperjs/core": "^2.11.6",
-<<<<<<< HEAD
-    "@tailwindcss/jit": "^0.1.18",
-    "autoprefixer": "^10.4.8",
-=======
     "autoprefixer": "^10",
     "bootstrap": "^3.3.7",
->>>>>>> c52b4c536956508751fd93558ecdf28636e5d14a
     "bootstrap-icons-vue": "^1.8.1",
-    "chart.js": "^2.9.4",
     "core-js": "^3.8.3",
     "firebase": "^8.10.1",
     "jenesius-vue-modal": "^1.7.2",
     "jquery": "^3.6.0",
     "node-forge": "^1.3.1",
     "postcss": "^8",
-    "postcss-cli": "^10.0.0",
+    "survey-creator": "^1.9.46",
+    "survey-vue": "^1.9.46",
+    "survey-vue-ui": "^1.9.24",
+    "surveyjs-widgets": "^1.9.46",
     "tailwindcss": "^3.1.8",
-<<<<<<< HEAD
     "tw-elements": "^1.0.0-alpha12",
-    "vue": "^3.2.37",
-    "vue-router": "^4.1.5"
-=======
     "vue": "^3.2.37",
     "vue-cookies": "^1.8.1",
     "vue-router": "^4.1.3",
     "vuex": "^4.0.2"
->>>>>>> c52b4c536956508751fd93558ecdf28636e5d14a
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",

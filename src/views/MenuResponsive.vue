@@ -4,7 +4,7 @@
 
         <div class="flex items-center">
             <span class="text-black text-xl mr-1">
-                <img src="@/assets/logom.png" height="50" width="50" alt="">
+                <!-- <img src="@/assets/logom.png" height="50" width="50" alt=""> -->
             
             </span>
             <h1 class="text-xl"> M&S</h1>

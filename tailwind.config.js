@@ -8,17 +8,7 @@ module.exports = {
 
   theme: {
     extend: {
-<<<<<<< HEAD
-      brackgroundImage: theme => ({
-        'imgg-pattern': 'url(../src/assets/imgBlanca.png)'
-      })
-
-
-
-
-=======
       
->>>>>>> c52b4c536956508751fd93558ecdf28636e5d14a
     },
   },
   content: ['./src/**/*.{html,js}', './node_modules/tw-elements/dist/js/**/*.js'],
