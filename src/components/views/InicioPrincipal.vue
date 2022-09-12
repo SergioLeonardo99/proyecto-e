@@ -489,15 +489,15 @@
                             <br>
                         <h2 class="text-xl text-white font-bold">Régimen legal</h2>
 
-                        <a href="#" v-on:click="leyes_uno()" data-bs-toggle="modal" data-bs-target="#exampleModal1" class="underline decoration-solid">Ley estatutaria 1581 de 2012</a>
+                        <a href="#" v-on:click="leyes_uno()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley estatutaria 1581 de 2012</a>
                         <br>
-                        <a href="#" v-on:click="leyes_dos()" data-bs-toggle="modal" data-bs-target="#exampleModal2" class="underline decoration-solid">Decreto 045 de 15 de enero de 2021</a>
+                        <a href="#" v-on:click="leyes_dos()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Decreto 045 de 15 de enero de 2021</a>
                         <br>
-                        <a href="#" v-on:click="leyes_tres()" data-bs-toggle="modal" data-bs-target="#exampleModal3" class="underline decoration-solid">Ley Directiva Presidencia 03 de 15 de marzo de 2021</a>
+                        <a href="#" v-on:click="leyes_tres()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley Directiva Presidencia 03 de 15 de marzo de 2021</a>
                         <br>
-                        <a href="#" v-on:click="leyes_cuatro()" data-bs-toggle="modal" data-bs-target="#exampleModal4" class="underline decoration-solid">Ley 590 del 2000 Artículo 2</a>
+                        <a href="#" v-on:click="leyes_cuatro()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley 590 del 2000 Artículo 2</a>
                         <br>
-                        <a href="#" v-on:click="terminos_condiciones()" data-bs-toggle="modal" data-bs-target="#exampleModal5" class="underline decoration-solid">Términos y condiciones</a>
+                        <a href="#" v-on:click="terminos_condiciones()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Términos y condiciones</a>
                         <br>
                         <!--Derechos de autor-->
                             <p>COPYRIGHT © 2022</p>

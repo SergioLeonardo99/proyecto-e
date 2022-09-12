@@ -27,11 +27,8 @@ const router = createRouter( {
     {path: '/profile', name: 'PerfilEmpresa', component: perfilEmpresa},
     {path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin},
     {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
-
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
     {path: '/admin', name: 'viewadmin', component: viewadmin},
-
-
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
   ]
 
