@@ -16,10 +16,11 @@
             <div class="links lg:block hidden w-1/6 md:w-4/6">
                 <ul class="menu flex items-center justify-center gap-5">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
-                    <li><a @click="$router.push('/graphics')" class="botones-link">Graficos</a></li>
-                    <li><a @click="$router.push('/surveys')" class="botones-link">Encuestas</a></li>
-                    <li><a @click="$router.push('/modulesE')" class="botones-link">Modúlo educativo</a></li>
-                    <li><a @click="$router.push('/leave')" class="botones-link">Salir</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Graficos</a></li>
+                    <li><a @click="$router.push('/formulario')" class="botones-link">Encuesta</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Modúlo educativo</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
                             class="border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
                     </li> -->
@@ -32,10 +33,11 @@
                 <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
-                    <li><a @click="$router.push('/graphics')" class="botones-link">Graficos</a></li>
-                    <li><a @click="$router.push('/surveys')" class="botones-link">Encuestas</a></li>
-                    <li><a @click="$router.push('/modulesE')" class="botones-link">Modúlo educativo</a></li>
-                    <li><a @click="$router.push('/leave')" class="botones-link">Salir</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Graficos</a></li>
+                    <li><a @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>}
+                    <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Modúlo educativo</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
                             class="my-4 inline-block border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
                     </li> -->

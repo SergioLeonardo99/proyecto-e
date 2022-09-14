@@ -116,7 +116,9 @@
 </template>
 
 <script>
-import db from "../components/firebase/initFirebase";
+import firebase from "../components/firebase/initFirebase";
+import "firebase/firestore";
+const db = firebase.firestore();
 import VueCookies from 'vue-cookies'
 
 export default {
@@ -147,7 +149,7 @@ export default {
         if (doc.data().contraseña == md.digest().toHex()) {
           this.mensaje = "Datos validos"
           VueCookies.set('nit', this.nit, "1h")
-          console.log($cookies.get("nit"))
+          this.$router.push('/profile');
           
         } else {
           this.mensaje = "Contraseña invalida..."
@@ -162,7 +164,7 @@ export default {
   },
   mounted() {
     // methods can be called in lifecycle hooks, or other methods!
-    console.log(db)
+    
   }
 }
 

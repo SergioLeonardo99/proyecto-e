@@ -11,6 +11,7 @@ import viewadmin from "./views/viewadmin.vue"
 import acercaD from "./components/views/AcercaD.vue"
 import inicioPrincipal from "./components/views/InicioPrincipal.vue"
 import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
+import graficos from "./views/graficos.vue"
 
 import './assets/tailwind.css'
 import 'tw-elements';
@@ -33,6 +34,7 @@ const router = createRouter( {
 
 
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
+    {path: '/graficos', name: 'graficos', component: graficos},
   ]
 
 })

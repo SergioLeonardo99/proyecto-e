@@ -1,6 +1,6 @@
 <template>
     
-   
+    <navBar2></navBar2>
     <body class="antialiased text-gray-700 bg-gray-100">
        <div class="flex w-full  justify-center items-center">
       <div class="w-full max-w-3xl" >
@@ -1793,11 +1793,14 @@
 import db from "../components/firebase/initFirebase";
 import VueCookies from 'vue-cookies'
 import { registerFirestore } from "@firebase/firestore";
-
+import navBar2 from '../components/views/elementos/navbar2.vue'
 
 
 export default {
   name: "formulario",
+  components: {
+        navBar2
+    },
   data() {
     return {
       p1: '',
