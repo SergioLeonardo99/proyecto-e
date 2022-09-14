@@ -8,18 +8,19 @@
                 <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0 p-10">
                 </div>
                 <div class="relative">
-                    <button @click="" type="button" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
-                px-4 py-3 mt-6">Ingresar</button>
-                    <div
+                    
+                    <div v-if="imagenDescargada != null"
                         class="animate__animated animate__fadeInDown w-48 h-48 bg-indigo-100 mx-auto rounded-full shadow-2xl absolute inset-x-0 top-0 -mt-24 flex items-center justify-center text-indigo-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-24 w-24" viewBox="0 0 20 20"
-                            fill="currentColor">
-                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"
-                                clip-rule="evenodd" />
-                        </svg>
+                        
+                        <img :src="imagenDescargada" alt="">
+                        
                     </div>
+
+                    
                     
                 </div>
+                <button @click="$router.push('/editprofile')" type="button" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+                px-4 py-3 mt-6">Editar perfil</button>
 
                 <!-- <div class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
                     <button
@@ -50,10 +51,7 @@
             <div class="animate__animated animate__fadeInDown mt-12 flex flex-col justify-center">
                 <p class="mt-2 text-black text-center">Acerca de la empresa</p>
                 <br>
-                <p class="text-black text-center font-light lg:px-16">An artist of considerable range, Ryan — the
-                    name taken by Melbourne-raised, Brooklyn-based Nick Murphy — writes, performs and records all of his
-                    own music, giving it a warm, intimate feel with a solid groove structure. An artist of considerable
-                    range.</p>
+                <p class="text-black text-center font-light lg:px-16">{{about}}</p>
             </div>
 
         </div>
@@ -87,6 +85,9 @@ export default {
       email: '',
       mensaje: '',
       direccion: '',
+      imagenDescargada: null,
+      about: '',
+
     }
   },
     components: {
@@ -117,7 +118,8 @@ export default {
         this.cargoEncargado = doc.data().cargo;
         this.email = doc.data().email;
         this.direccion = doc.data().direccion;
-
+        this.about = doc.data().about;
+        this.cargarImagen()
 
       }).catch((error) => {
         this.$router.push('/');
@@ -126,30 +128,52 @@ export default {
       
 
     },
-    subirFoto(){
-        var imagesRef = storageRef.child('images');
-        storageRef.put(file).then((snapshot) => {
-  console.log('Uploaded a blob or file!');
-});
+
+    cargarImagen(){
+        // Create a reference to the file we want to download
+    var starsRef = storageRef.child('imagenes/'+this.nitEmpresa+'.jpg');
+
+    // Get the download URL
+    starsRef.getDownloadURL()
+    .then((url) => {
+        this.imagenDescargada=url;
+    // Insert url into an <img> tag to "download"
+
+
+    })
+    .catch((error) => {
+    // A full list of error codes is available at
+    // https://firebase.google.com/docs/storage/web/handle-errors
+    switch (error.code) {
+        case 'storage/object-not-found':
+        // File doesn't exist
+        break;
+        case 'storage/unauthorized':
+        // User doesn't have permission to access the object
+        break;
+        case 'storage/canceled':
+        // User canceled the upload
+        break;
+
+        // ...
+
+        case 'storage/unknown':
+        // Unknown error occurred, inspect the server response
+        break;
+    }
+    });
+
 
 
     },
-    mostrar(){
-  var archivo = document.getElementById("file").files[0];
-  var reader = new FileReader();
-  if (file) {
-    reader.readAsDataURL(archivo );
-    reader.onloadend = function () {
-      document.getElementById("img").src = reader.result;
-    }
-  }
-},
+    
     
 
 
     },
     mounted() {
         this.cargarEmpresa()
+        
     
   }
 }
