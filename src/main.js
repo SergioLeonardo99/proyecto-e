@@ -12,6 +12,9 @@ import acercaD from "./components/views/AcercaD.vue"
 import inicioPrincipal from "./components/views/InicioPrincipal.vue"
 import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
 
+//layouts
+import Admin from "@/layouts/Admin.vue";
+
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -29,7 +32,7 @@ const router = createRouter( {
     {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
 
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
-    {path: '/admin', name: 'viewadmin', component: viewadmin},
+    {path: '/admin', name: 'viewadmin', component: viewadmin, component: Admin},
 
 
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
