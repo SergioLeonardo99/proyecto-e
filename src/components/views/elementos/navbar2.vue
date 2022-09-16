@@ -16,9 +16,10 @@
             <div class="links lg:block hidden w-1/6 md:w-4/6">
                 <ul class="menu flex items-center justify-center gap-5">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Graficos</a></li>
+                    <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
                     <li><a @click="$router.push('/formulario')" class="botones-link">Encuesta</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Modúlo educativo</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
@@ -33,9 +34,10 @@
                 <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Graficos</a></li>
+                    <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
                     <li><a @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>}
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
+                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Modúlo educativo</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"

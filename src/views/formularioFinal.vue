@@ -2395,6 +2395,7 @@ export default {
         puntajeProveedores: this.proveedores,
         puntajeTotal: this.total,
         fechaCreacion: date,
+        nit: this.nitEmpresa,
       }
       )
   .then(() => {
@@ -2418,6 +2419,6 @@ export default {
 <style>
 
    @import '../assets/style.css'; 
-    @import '/public/base/styles.css'; 
+   @import '/public/base/styles.css'; 
  
 </style>
