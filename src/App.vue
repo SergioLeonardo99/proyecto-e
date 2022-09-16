@@ -11,9 +11,7 @@
   
   <router-view></router-view>
    
-        <div id="surveyElement">
-            <SurveyComponent />
-        </div>
+       
 </template>
 
 

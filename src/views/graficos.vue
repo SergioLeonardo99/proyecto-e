@@ -9,7 +9,9 @@
   </template>
   <script>
   
-  import db from "../components/firebase/initFirebase";
+  import firebase from "../components/firebase/initFirebase";
+  import "firebase/firestore";
+  const db = firebase.firestore();
     
     
     export default {

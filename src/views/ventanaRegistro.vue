@@ -126,6 +126,7 @@ export default {
       if(this.nombre!=''&& this.nit != 0 && this.direccion != ''&&this.telefono !=0 &&this.contraseña !=''&&this.contraseñaConfirmar != ''&&this.email !=''&& this.encargado != ''&& this.cargo != ''){
         if(this.contraseña==this.contraseñaConfirmar){
 
+
         
         
           var docRef = db.collection("usuario").doc(this.nit.toString());
@@ -141,6 +142,7 @@ export default {
               this.mensaje = "Nit ya registrado..."
             }
           }).catch((error) => {
+            let date = new Date().toLocaleDateString();
             var forge = require('node-forge');
             var input_str = this.contraseña;
             var md = forge.md.sha256.create();
@@ -154,7 +156,8 @@ export default {
               encargado: this.encargado,
               cargo: this.cargo,
               contraseña: md.digest().toHex(),
-              tipo: "empresa"
+              tipo: "empresa",
+              fechaCreacion: date,
             })
               .then(() => {
                 this.mensaje = "Empresa registrada con exito"

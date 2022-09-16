@@ -17,7 +17,8 @@ import graficos from "./views/graficos.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
-
+import VueChartkick from 'vue-chartkick'
+import 'chartkick/chart.js'
 
 
 const router = createRouter( {
@@ -43,4 +44,5 @@ const router = createRouter( {
 
 const app = createApp(App)
 app.use(router);
+app.use(VueChartkick);
 app.mount('#app');

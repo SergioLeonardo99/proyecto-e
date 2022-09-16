@@ -2218,6 +2218,7 @@ export default {
         }
     },
     registerForm(){
+      let date = new Date().toLocaleDateString();
       this.puntuacion()
       db.collection("datos").doc(this.nitEmpresa).set({
         pregunta1:{
@@ -2393,6 +2394,7 @@ export default {
         puntajeClientes: this.clientes,
         puntajeProveedores: this.proveedores,
         puntajeTotal: this.total,
+        fechaCreacion: date,
       }
       )
   .then(() => {
