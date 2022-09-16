@@ -11,6 +11,7 @@ import viewadmin from "./views/viewadmin.vue"
 import acercaD from "./components/views/AcercaD.vue"
 import inicioPrincipal from "./components/views/InicioPrincipal.vue"
 import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
+import solicitudes from "./components/views/solicitudes.vue"
 
 import './assets/tailwind.css'
 import 'tw-elements';
@@ -30,6 +31,7 @@ const router = createRouter( {
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
     {path: '/admin', name: 'viewadmin', component: viewadmin},
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
+    {path: '/solicitudes', name:'solicitudes', component:solicitudes}
   ]
 
 })

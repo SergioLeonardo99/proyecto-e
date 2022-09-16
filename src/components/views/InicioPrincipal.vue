@@ -78,7 +78,8 @@
                     <div class="text-center p-8">
 
                         <p>La minería consiste en la extracción y explotación de minerales. Los recursos están
-                            presentes de forma directa o indirecta en la vida cotidiana de la comunidad. El sector minero es muy influyente
+                            presentes de forma directa o indirecta en la vida cotidiana de la comunidad. El sector
+                            minero es muy influyente
                             en la economía del municipio.</p>
                         <br>
                         <p>La provincia de Ubaté tiene gran producción de carbón, se reconoce por ser pequeña y
@@ -92,11 +93,13 @@
                     <div class="text-center p-8">
 
                         <p>El sector lácteo es una actividad económica que produce grandes oportunidades de negocio
-                            tanto en mercado interno, como en los nuevos mercados. Todo esto es posible a raíz del libre comercio.</p>
+                            tanto en mercado interno, como en los nuevos mercados. Todo esto es posible a raíz del libre
+                            comercio.</p>
                         <br>
                         <p>El municipio de Ubaté es reconocido por la producción láctea, la elaboración y
-                            comercialización de productos lácteos. El sector en general promueve el desarrollo económico del 
-                             municipio y es generador de empleo. </p> 
+                            comercialización de productos lácteos. El sector en general promueve el desarrollo económico
+                            del
+                            municipio y es generador de empleo. </p>
                     </div>
                 </div>
             </div>
@@ -160,7 +163,8 @@
 
                             </div>
                             <div class="p-3 bg-slate-700 rounded-b-lg break-words text-white">
-                                La integración de datos y procesos se desarrolla a partir de investigación y es finalmente experimentada con
+                                La integración de datos y procesos se desarrolla a partir de investigación y es
+                                finalmente experimentada con
                                 los representantes de las empresas.
                             </div>
                         </div>
@@ -222,11 +226,9 @@
 
 
                 </div>
-                <!--  beneficios del sitio web
-                          <video src=""></video>-->
+                <!--  beneficios del sitio web-->
                 <div class="w-1/2 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md shadow-lg ">
-                    <!--  beneficios del sitio web
-                          <video src=""></video>-->
+
                     <br>
                     <br>
 
@@ -234,11 +236,12 @@
                         beneficia?
                     </h1>
                     <br>
-                    <!-- <iframe width="600" height="401" src="https://www.youtube.com/embed/Jf4pBNAbJXA"
-                        title="Popper Positioning Engine (Picker, Dropdown, Bubble, Tooltip and Popover) with Vue 3"
-                        frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe> -->
+                    <div class="aspect-w-16 aspect-h-9">
+                        <iframe src="https://www.youtube.com/embed/tvrFx4PlQNk" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -343,11 +346,11 @@
                         <p class="text-gray-500">Tutorial básico</p>
                     </div>
                 </div>
-
+                <br>
                 <!---iconos de los cursos de cpacitacion educativa-->
                 <div class="grid-rows-2">
                     <br>
-                    <div class="grid grid-cols-2 gap-8 ">
+                    <div class="grid grid-cols-2 gap-8 letra">
 
                         <div class="text-center p-10">
 
@@ -358,7 +361,8 @@
                             </p>
                             <p class="text-justify">
                                 Las capacitaciones se brindan a partir de la interacción con las herramientas
-                                presentadas. Los cursos son básicos y se mostrarán de forma corta y concisa, para que de esta manera se logren entender las
+                                presentadas. Los cursos son básicos y se mostrarán de forma corta y concisa, para que de
+                                esta manera se logren entender las
                                 principales funciones que contienen estos entornos tecnológicos.
                             </p>
 
@@ -369,10 +373,12 @@
                                     src="@/assets/imgAprender.png">
                             </div>
                         </div>
-                        <div class="flex justify-center max-h-100 min-h-100">
+                        <div class="object-cover p-8">
+                        <div class="flex justify-center max-h-100 min-h-100 p-10">
                             <img src="@/assets/iMacPlantilla.png"
                                 alt="https://www.tenvinilo.co/vinilos-decorativos/vinilo-decorativo-pantalla-imac-4810">
                         </div>
+                    </div>
                     </div>
                 </div>
 
@@ -383,15 +389,15 @@
         <!--formulario para el usuario, llenado para comentarios-->
         <!-- footer-->
         <footer>
-            
+
             <div class="bg-teal-700 justify-center p-3">
                 <div class=" grid grid-cols-3">
                     <div class="block p-6 rounded-lg shadow-lg max-w-md">
                         <form>
                             <h3 class="font-semibold letra text-white text-2xl">
-                            ¡Envíanos un comentario!
-                        </h3>
-                        <br>
+                                ¡Envíanos un comentario!
+                            </h3>
+                            <br>
                             <div class="form-group mb-6">
                                 <input type="text"
                                     class="form-control block
@@ -442,7 +448,8 @@
                                     ease-in-out
                                     m-0
                                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-                                    id="exampleInput8" placeholder="Correo destino" value="correspondencia.ubate@ucundinamarca.edu.co" disabled>
+                                    id="exampleInput8" placeholder="Correo destino"
+                                    value="correspondencia.ubate@ucundinamarca.edu.co" disabled>
                             </div>
                             <div class="form-group mb-6">
                                 <textarea class="
@@ -461,7 +468,8 @@
                                     ease-in-out
                                     m-0
                                     focus:text-gray-700 focus:bg-white focus:border-slate-400 focus:outline-none
-                                " id="exampleFormControlTextarea13" rows="3" placeholder="Escribe aquí tu comentario"></textarea>
+                                " id="exampleFormControlTextarea13" rows="3"
+                                    placeholder="Escribe aquí tu comentario"></textarea>
                             </div>
                             <button type="submit" class="
                                 w-full
@@ -484,23 +492,33 @@
                         </form>
                     </div>
                     <!--Creacion del modal para visualizacion de informacion de regimen legal-->
-                    <div class="text-center text-white font-medium justify-items-center">
+                    <div class="text-center text-white justify-items-center letra">
 
-                            <br>
+                        <br>
                         <h2 class="text-xl text-white font-bold">Régimen legal</h2>
 
-                        <a href="#" v-on:click="leyes_uno()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley estatutaria 1581 de 2012</a>
+
+
+                        <a href="#" v-on:click="leyes_uno()" data-bs-toggle="modal" data-bs-target="#exampleModalLong"
+                            class="underline decoration-solid">Ley estatutaria 1581 de 2012</a>
                         <br>
-                        <a href="#" v-on:click="leyes_dos()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Decreto 045 de 15 de enero de 2021</a>
+                        <a href="#" v-on:click="leyes_dos()" data-bs-toggle="modal" data-bs-target="#exampleModalLong"
+                            class="underline decoration-solid">Decreto 045 de 15 de enero de 2021</a>
                         <br>
-                        <a href="#" v-on:click="leyes_tres()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley Directiva Presidencia 03 de 15 de marzo de 2021</a>
+                        <a href="#" v-on:click="leyes_tres()" data-bs-toggle="modal" data-bs-target="#exampleModalLong"
+                            class="underline decoration-solid">Ley Directiva Presidencia 03 de 15 de marzo de 2021</a>
                         <br>
-                        <a href="#" v-on:click="leyes_cuatro()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley 590 del 2000 Artículo 2</a>
+                        <a href="#" v-on:click="leyes_cuatro()" data-bs-toggle="modal"
+                            data-bs-target="#exampleModalLong" class="underline decoration-solid">Ley 590 del 2000
+                            Artículo 2</a>
                         <br>
-                        <a href="#" v-on:click="terminos_condiciones()" data-bs-toggle="modal" data-bs-target="#exampleModalLong" class="underline decoration-solid">Términos y condiciones</a>
+                        <a href="#" v-on:click="terminos_condiciones()" data-bs-toggle="modal"
+                            data-bs-target="#exampleModalLong" class="underline decoration-solid">Términos y
+                            condiciones</a>
                         <br>
                         <!--Derechos de autor-->
-                            <p>COPYRIGHT © 2022</p>
+                        <p class="text-white letra">COPYRIGHT © 2022</p>
+
                         <!-- Desarrollo del Modal con caracteristicas y estilo -->
                         <div class="modal fade fixed top-0 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto"
                             id="exampleModalLong" tabindex="-1" aria-labelledby="exampleModalLongLabel"
@@ -513,18 +531,18 @@
                                         <h5 class="text-xl font-medium leading-normal text-black"
                                             id="exampleModalLongLabel">
                                             {{titulo_leyes}}
-                                          
+
                                         </h5>
                                         <button type="button"
                                             class="btn-close box-content w-4 h-4 p-1 text-white border-none rounded-none opacity-50 focus:shadow-none focus:outline-none focus:opacity-100 hover:text-black hover:opacity-75 hover:no-underline"
                                             data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
                                     <!--texto interno del modal-->
-                                    <div class="modal-body relative p-4 text-black" style="min-height: 100px"> 
+                                    <div class="modal-body relative p-4 text-black" style="min-height: 100px">
                                         {{ley1}}
                                         <p>{{parrafos}}</p>
-                                        <a  v-bind:href="link" class="underline decoration-solid">{{citas}}</a>
-                                        
+                                        <a v-bind:href="link" class="underline decoration-solid">{{citas}}</a>
+
                                     </div>
                                     <div
                                         class="modal-footer flex flex-shrink-0 flex-wrap items-center justify-end p-4 border-t border-gray-200 rounded-b-md">
@@ -541,16 +559,19 @@
                     <!--Informacion de contacto directo-->
                     <div class="text-center d-block">
                         <br>
-                        <h2 class="text-xl text-white  font-bold">Contacto</h2>
+                        <h2 class="text-xl text-white font-bold">Contacto</h2>
                         <p class="text-white font-medium">
+                        <div class="letra text-white">
                             Dirección (Correo físico o postal): Calle 6 Nº 9 - 80
                             <br>
                             PBX: (+57 1) 855 3055 | 56
                             <br>
                             Facultad de ingeniería de Sistemas
                             <br>
-                            <a href="mailto:correspondencia.ubate@ucundinamarca.edu.co" class="underline decoration-solid">Correo Institucional</a>
+                            <a href="mailto:correspondencia.ubate@ucundinamarca.edu.co"
+                                class="underline decoration-solid">Correo Institucional</a>
                             <br>
+                        </div>
                         </p>
                     </div>
                 </div>
@@ -571,52 +592,52 @@ export default {
 
 
     },
-    data(){
-        return{
+    data() {
+        return {
             ley1: '',
             titulo_leyes: '',
             parrafos: '',
-            link:'',
-            citas:''
+            link: '',
+            citas: ''
 
-           
+
 
         }
     },
     methods: {
-        leyes_uno(){
-            this.titulo_leyes='Normatividad'
+        leyes_uno() {
+            this.titulo_leyes = 'Normatividad'
             this.ley1 = 'Ley estatutaria 1581 de 2012'
-            this.parrafos='La presente ley tiene como objetivo fundamental desarrollar el derecho constitucional que tienen todas las personas a conocer, actualizar, y rectificar la información que se haya recolectado sobre las mismas en bases de datos o archivos. De esta manera, se refiere al articulo 15 de la constitución política; así como el derecho a la información que esta sujeta en el artículo 20 de la misma. Los principios de esta ley sobre protección de datos serán aplicables a todas las bases de datos con los límites que disponga la ley y que estén amparados por la reserva legal.'
-            this.link="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981#:~:text=La%20presente%20ley%20tiene%20por,el%20art%C3%ADculo%2015%20de%20la"
-            this.citas='(Función Pública, 2012)'
+            this.parrafos = 'La presente ley tiene como objetivo fundamental desarrollar el derecho constitucional que tienen todas las personas a conocer, actualizar, y rectificar la información que se haya recolectado sobre las mismas en bases de datos o archivos. De esta manera, se refiere al articulo 15 de la constitución política; así como el derecho a la información que esta sujeta en el artículo 20 de la misma. Los principios de esta ley sobre protección de datos serán aplicables a todas las bases de datos con los límites que disponga la ley y que estén amparados por la reserva legal.'
+            this.link = "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=49981#:~:text=La%20presente%20ley%20tiene%20por,el%20art%C3%ADculo%2015%20de%20la"
+            this.citas = '(Función Pública, 2012)'
         },
-        leyes_dos(){
-            this.titulo_leyes="Normatividad"
-            this.ley1='Decreto 045 de 15 de enero de 2021'
-            this.parrafos='El gobierno Nacional creó la Comisión Intersectorial para el Desarrollo de la Economía Digital y dispuso que su objetivo principal sería coordinar, orientar y articular funciones y actividades socioeconómicas por medio de las (TIC) para que de esta manera se promueva el desarrollo y la consolidación de la economía digital en Colombia. Además, el articulo 25 del Decreto 1784 del 2019 soporta que el ámbito funcional de la consejería presidencial para asuntos económicos y Transformación Digital debe cumplir con las siguientes funciones: Implementación de la apropiación tecnológica, del comercio electrónico, de la transformación digital, así como adelantar el seguimiento a las actividades concertadas; y asesorar al Gobierno Nacional en materia de desarrollo del ecosistema digital y en la formulación e implementación de la política de transformación digital'
-            this.link="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=155307"
-            this.citas='(Función Pública, 2021)'
+        leyes_dos() {
+            this.titulo_leyes = "Normatividad"
+            this.ley1 = 'Decreto 045 de 15 de enero de 2021'
+            this.parrafos = 'El gobierno Nacional creó la Comisión Intersectorial para el Desarrollo de la Economía Digital y dispuso que su objetivo principal sería coordinar, orientar y articular funciones y actividades socioeconómicas por medio de las (TIC) para que de esta manera se promueva el desarrollo y la consolidación de la economía digital en Colombia. Además, el articulo 25 del Decreto 1784 del 2019 soporta que el ámbito funcional de la consejería presidencial para asuntos económicos y Transformación Digital debe cumplir con las siguientes funciones: Implementación de la apropiación tecnológica, del comercio electrónico, de la transformación digital, así como adelantar el seguimiento a las actividades concertadas; y asesorar al Gobierno Nacional en materia de desarrollo del ecosistema digital y en la formulación e implementación de la política de transformación digital'
+            this.link = "https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=155307"
+            this.citas = '(Función Pública, 2021)'
         },
-        leyes_tres(){
-            this.titulo_leyes="Normatividad"
-            this.ley1='Ley Directiva Presidencia 03 de 15 de marzo de 2021'
-            this.parrafos='La ley se presenta con el fin de dar cumplimiento al articulo 147 de la ley 1955 de 2019, por el cual se expide el plan nacional de desarrollo “Pacto por Colombia, Pacto por la equidad”, con el fin de disminuir los costos de funcionamiento, acelerar la innovación, brindar entornos confiables digitales para las entidades públicas y mejorar sus procedimientos y servicios. Esta ley presenta diferentes directrices las cuales dos de estas impulsan al desarrollo del proyecto. Las cuales son: Seguridad digital y Gestión de datos, seleccionadas con el fin de fortalecer las capacidades tecnológicas de las micro y pequeñas empresas de la Villa de San Diego de Ubaté.'
-            this.link="https://dapre.presidencia.gov.co/normativa/normativa/DIRECTIVA%20PRESIDENCIAL%2003%20DEL%2015%20DE%20MARZO%20DE%202021.pdf"
-            this.citas='(Duque Márquez, 2021)'
+        leyes_tres() {
+            this.titulo_leyes = "Normatividad"
+            this.ley1 = 'Ley Directiva Presidencia 03 de 15 de marzo de 2021'
+            this.parrafos = 'La ley se presenta con el fin de dar cumplimiento al articulo 147 de la ley 1955 de 2019, por el cual se expide el plan nacional de desarrollo “Pacto por Colombia, Pacto por la equidad”, con el fin de disminuir los costos de funcionamiento, acelerar la innovación, brindar entornos confiables digitales para las entidades públicas y mejorar sus procedimientos y servicios. Esta ley presenta diferentes directrices las cuales dos de estas impulsan al desarrollo del proyecto. Las cuales son: Seguridad digital y Gestión de datos, seleccionadas con el fin de fortalecer las capacidades tecnológicas de las micro y pequeñas empresas de la Villa de San Diego de Ubaté.'
+            this.link = "https://dapre.presidencia.gov.co/normativa/normativa/DIRECTIVA%20PRESIDENCIAL%2003%20DEL%2015%20DE%20MARZO%20DE%202021.pdf"
+            this.citas = '(Duque Márquez, 2021)'
         },
-        leyes_cuatro(){
-            this.titulo_leyes="Normatividad"
-            this.ley1='Ley 590 del 2000 Artículo 2'
-            this.parrafos='La ley 590 busca promover el desarrollo integral de las micro, pequeñas y medianas empresas en consideración a sus aptitudes para la generación de empleo, el desarrollo regional, la integración entre sectores económicos, el aprovechamiento productivo de pequeños capitales, realización de sus productos y servicios a nivel nacional e internacional, la formación de capital humano, la asistencia para el desarrollo tecnológico y el acceso a los mercados financieros institucionales y teniendo en cuenta la capacidad empresarial de los colombianos.'
-            this.link="https://mujeresantioquia.gov.co/sites/default/files/ley_590_del_2000.pdf"
-            this.citas='(Congreso de Colombia, 2022)'
+        leyes_cuatro() {
+            this.titulo_leyes = "Normatividad"
+            this.ley1 = 'Ley 590 del 2000 Artículo 2'
+            this.parrafos = 'La ley 590 busca promover el desarrollo integral de las micro, pequeñas y medianas empresas en consideración a sus aptitudes para la generación de empleo, el desarrollo regional, la integración entre sectores económicos, el aprovechamiento productivo de pequeños capitales, realización de sus productos y servicios a nivel nacional e internacional, la formación de capital humano, la asistencia para el desarrollo tecnológico y el acceso a los mercados financieros institucionales y teniendo en cuenta la capacidad empresarial de los colombianos.'
+            this.link = "https://mujeresantioquia.gov.co/sites/default/files/ley_590_del_2000.pdf"
+            this.citas = '(Congreso de Colombia, 2022)'
         },
-        terminos_condiciones(){
-            this.titulo_leyes="Términos y condiciones"
-            this.ley1='Políticas para el uso de la plataforma M&S'
-            this.parrafos='La siguiente información le brindara una serie de ítems acerca de nuestro método de trabajo, y servirán como una guía que se deben tener en cuenta para el uso de la plataforma.'+' 1)	Material prohibido: - Cualquier medio de comunicación que sea ilegal o fuera de lo    establecido en el contacto. - Cualquier medio de comunicación que viole la privacidad o derechos de autor. - Cualquier medio que contenga un virus o programa hostil. 2)  Derechos de Autor: -Micro and Small Companys es un proyecto realizado en un entorno educativo universitario el cual, todos los contenidos incluyendo, texto, gráficos, imágenes, logos, botones, íconos, archivos de sonido o video, código HTML, CSS, VUE, TAILWINDCSS, etc. están protegidos y son propiedad exclusiva de Micro and Small Companys y de la entidad universitaria. 3) Modificaciones a este convenio -Los actuales términos y condiciones están sujetos a cambios sin previo aviso por parte de Micro and Small Companys. -La información contenida en la plataforma es modificable solamente por el administrador y los desarrolladores. Al ser parte de Micro and Small Companys está aceptando los términos y condiciones, lo cual se debe cumplir o estará en riesgo de demandas o disposiciones dictadas por la ley.'
-            this.citas=''
+        terminos_condiciones() {
+            this.titulo_leyes = "Términos y condiciones"
+            this.ley1 = 'Políticas para el uso de la plataforma M&S'
+            this.parrafos = 'La siguiente información le brindara una serie de ítems acerca de nuestro método de trabajo, y servirán como una guía que se deben tener en cuenta para el uso de la plataforma.' + ' 1)	Material prohibido: - Cualquier medio de comunicación que sea ilegal o fuera de lo    establecido en el contacto. - Cualquier medio de comunicación que viole la privacidad o derechos de autor. - Cualquier medio que contenga un virus o programa hostil. 2)  Derechos de Autor: -Micro and Small Companys es un proyecto realizado en un entorno educativo universitario el cual, todos los contenidos incluyendo, texto, gráficos, imágenes, logos, botones, íconos, archivos de sonido o video, código HTML, CSS, VUE, TAILWINDCSS, etc. están protegidos y son propiedad exclusiva de Micro and Small Companys y de la entidad universitaria. 3) Modificaciones a este convenio -Los actuales términos y condiciones están sujetos a cambios sin previo aviso por parte de Micro and Small Companys. -La información contenida en la plataforma es modificable solamente por el administrador y los desarrolladores. Al ser parte de Micro and Small Companys está aceptando los términos y condiciones, lo cual se debe cumplir o estará en riesgo de demandas o disposiciones dictadas por la ley.'
+            this.citas = ''
         }
     }
 }
@@ -624,7 +645,8 @@ export default {
 </script>
 
 <style lang="css">
-     @import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css");
+
 .imagen-carousel {
     height: 470px;
 }
