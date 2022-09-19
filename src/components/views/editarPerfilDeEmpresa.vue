@@ -2,106 +2,103 @@
     <!--llamado del navBar2 a la clase-->
     <navBar2></navBar2>
     <!--Intregacion de la imagen principal de la empresa-->
-    <div class="p-16">
-        <div class="p-8 bg-white shadow mt-24">
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                <div class="grid grid-cols-3 text-center order-last md:order-first mt-20 md:mt-0 p-10">
-                </div>
-                <div class="relative">
-                    <h1>Cambiar imagen</h1>
+  
+  <div class="flex items-center justify-center min-h-screen  ">
+    
+  <div class="px-8 py-6 mt-4 text-left bg-transparent shadow-lg max-w-6xl md:w-1/3 lg:max-w-full">
+      <div class="flex justify-center">
+        <div class="relative">
+        <h3 class="text-2xl font-bold text-center">Foto del perfil</h3> 
+        <img class="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-cyan-600"  :src="imagenDescargada" alt=""  />
+       
                         <form @submit.prevent="subirFoto" encrypter="multipart/form-data">
                         <input @change="clickImage($event)" type="file" accept="image/*">
-                        <input type="submit" value="Subir Imagen" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
-               px-4 py-3 mt-6">
+                       
                         </form >
                         
-                        <div v-if="imagenDescargada != null">
-                            <img :src="imagenDescargada" alt="">
-
-                        </div>
                     
                 </div>
 
-                <!-- <div class="space-x-8 flex justify-between mt-32 md:mt-0 md:justify-center">
-                    <button
-                        class="text-white py-2 px-4 uppercase rounded bg-blue-400 hover:bg-blue-500 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
-                        Connect
-                    </button>
-                    <button
-                        class="text-white py-2 px-4 uppercase rounded bg-gray-700 hover:bg-gray-800 shadow hover:shadow-lg font-medium transition transform hover:-translate-y-0.5">
-                        Message
-                    </button>
-                </div> -->
-            </div>
-                    <!--Nombre de la empresa-->
-            <div class="animate__animated animate__fadeInDown mt-20 text-center border-b pb-12">
-                <form class="mt-6">
-         
-
-         <div>
-           <label  class="block  text-gray-700">Nombre de la empresa: </label>
-           <input type="text" v-model="nombre" placeholder="nombre"
-           class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete  required>
-         </div>
-           
-           <div>
-           <label class="block text-gray-700">Nit de la empresa: </label>
-           <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
-
-          <div>
-           <label class="block text-gray-700">Dirección: </label>
-           <input type="text" v-model="direccion" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
-
-         <div>
-           <label class="block text-gray-700">Nombre del encargado: </label>
-           <input type="text" v-model="encargado" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
-
-         <div>
-           <label class="block text-gray-700">Cargo del encargado en la empresa: </label>
-           <input type="text" v-model="cargo" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
-
-         <div>
-           <label class="block text-gray-700">Correo electrónico: </label>
-           <input type="text" v-model="email" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
-
-
-            <div>
-           <label class="block text-gray-700">Número de celular o teléfono: </label>
-           <input type="number" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
-
-         <div class="mt-4">
-           <label class="block text-gray-700">Contraseña: </label>
-           <input type="password" v-model="contraseña" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                 focus:bg-white focus:outline-none" required>
-         </div>
-           
-         <div class="mt-4">
-           <label class="block text-gray-700">Confirmar Contraseña: </label>
-           <input type="password" v-model="contraseñaConfirmar" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
-                 focus:bg-white focus:outline-none" required>
-         </div>
-
-         <div>
-           <label class="block text-gray-700">Acerca de la empresa: </label>
-           <input type="text" v-model="about" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
-         </div>
+      </div>
+      <h3 class="text-2xl font-bold text-center">Información general</h3>
+      <form action="">
+          <div class="mt-4">
+              <div>
+                  <label class="block" >Nombre de la empresa </label>
+                          <input type="text" v-model="nombre"  placeholder="nombre"
+                              class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
+                              autofocus autocomplete  required>
+                          
+              </div>
+              <div>
+                <label class="block" >Nit de la empresa </label>
+                        <input type="number"  v-model="nit" placeholder="nit"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            autofocus autocomplete  required>
+                        
+              </div>
+              <div>
+                <label class="block" >Dirección</label>
+                        <input type="text" v-model="direccion" placeholder="dirección"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            autofocus autocomplete  required>
+                        
+              </div>
+              <div>
+                <label class="block" >Nombre del encargado</label>
+                        <input type="text" v-model="encargado" placeholder="nombre del encargado"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            autofocus autocomplete  required>
+                        
+              </div>
+              <div>
+                <label class="block" >Cargo del encargado en la empresa</label>
+                        <input type="text" v-model="cargo" placeholder="cargo"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            autofocus autocomplete  required>
+                        
+              </div>
+              <div>
+                <label class="block" >Correo electrónico</label>
+                        <input type="email" v-model="email" placeholder="correo"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            autofocus autocomplete  required>
+                        
+              </div>
+              <div>
+                <label class="block" >Número de celular o teléfono</label>
+                        <input type="number" v-model="telefono" placeholder="teléfono"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            autofocus autocomplete  required>
+                        
+              </div>
         
- 
-         <button type="button" @click="advancedRegister()" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
-               px-4 py-3 mt-6">Actualizar datos</button>
-         <p>{{ mensaje }}</p>
-       </form>
-
-
-        </div>
-    </div>
-    </div>
+              <div class="mt-4">
+                  <label class="block">Contraseña</label>
+                          <input type="password"  v-model="contraseña"  placeholder="Password"
+                              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                              required>
+              </div>
+              <div class="mt-4">
+                <label class="block">Contraseña</label>
+                        <input type="password" v-model="contraseñaConfirmar" placeholder="Password"
+                            class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+                            required>
+              </div>
+              
+              <div class="flex items-baseline justify-center">
+                
+                  <button type="button" @click="advancedRegister()" class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">Actualizar</button>
+               
+              </div>
+              <div class="bg-white rounded-lg py-5 px-6 mb-4 text-base text-red-700 mb-3" role="alert">
+                  {{ mensaje }}
+                  </div>
+          </div>
+      </form>
+  </div>
+  
+</div>
 </template>
 <script>
     //LLamado del navbar2 a la clase
@@ -166,7 +163,7 @@ export default {
         this.email = doc.data().email;
         this.direccion = doc.data().direccion;
         this.about = doc.data().about;
-
+        this.cargarImagen()
 
       }).catch((error) => {
         this.$router.push('/');

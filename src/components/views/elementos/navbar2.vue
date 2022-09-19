@@ -30,12 +30,16 @@
             </div>
             <!--menu resposive para adaptar app movil y web-->
             <div class="block lg:hidden w-1/6 lg:w-4/6">
-                <button class="link" id="mobile-menu" @click="menubar">Menu</button>
+                <button class="link" id="mobile-menu" @click="menubar">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                    </svg>
+                </button>
                 <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
                     <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
-                    <li><a @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>}
+                    <li><a @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Modúlo educativo</a></li>
