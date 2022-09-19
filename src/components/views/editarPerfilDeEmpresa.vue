@@ -12,8 +12,9 @@
         <img class="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-cyan-600"  :src="imagenDescargada" alt=""  />
        
                         <form @submit.prevent="subirFoto" encrypter="multipart/form-data">
-                        <input @change="clickImage($event)" type="file" accept="image/*">
-                       
+                        <input @change="clickImage($event)" type="file" accept="image/*" class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
+                        <input type="submit" value="Cambiar imagen" class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
+        
                         </form >
                         
                     
@@ -177,6 +178,7 @@ export default {
         var metadata= {contentType: 'img/jpeg'}
         
         imagesRef.put(this.imagen,metadata).then((snapshot) => {
+          location. reload()
         console.log('Uploaded a blob or file!');
 
 });
