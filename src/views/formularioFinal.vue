@@ -1242,7 +1242,7 @@
                 <li>
 
                   <input type="radio" id="28.4" value="5" v-model="p28">
-                    <label class="radio" for="28.4">Intercambio Electrónico de Documentos (EDI – Electronic Data Interchange)</label>
+                    <label class="radio" for="28.4">Intercambio Electrónico de Documentos (EDI - Electronic Data Interchange)</label>
                 </li>
                 <li>
 

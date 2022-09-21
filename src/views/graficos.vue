@@ -14,21 +14,46 @@
       <column-chart   class="w-16 md:w-32 lg:w-48" :data="[['Su Empresa',puntajeProveedores], ['Empresa 1', puntajeProveedores1],['Empresa 2',puntajeProveedores2],['Empresa 3',puntajeProveedores3],['Empresa 4',puntajeProveedores4]]" :colors="['#b00', '#666','#666','#666','#666']"></column-chart>
       <h2>Puntaje Total comparado con otras empresas</h2>
       <column-chart   class="w-16 md:w-32 lg:w-48" :data="[['Su Empresa',puntajeTotal], ['Empresa 1', puntajeTotal1],['Empresa 2',puntajeTotal2],['Empresa 3',puntajeTotal3],['Empresa 4',puntajeTotal4]]" :colors="['#b00', '#666','#666','#666','#666']"></column-chart>
-      <scatter-chart  class="w-16 md:w-32 lg:w-48" :data="empresaPuntos" xtitle="Size" ytitle="Population"></scatter-chart>
+      <area-chart  class="w-16 md:w-32 lg:w-48"  :data="{
+        '1': empresaPuntos[1], '2': empresaPuntos[2], '3': empresaPuntos[3], '4': empresaPuntos[4],'5': empresaPuntos[5], '6': empresaPuntos[6], '7': empresaPuntos[7], '8': empresaPuntos[8],'9': empresaPuntos[9],'10': empresaPuntos[10],
+        '11': empresaPuntos[11], '12': empresaPuntos[12], '13': empresaPuntos[13], '14': empresaPuntos[14],'15': empresaPuntos[15], '16': empresaPuntos[16], '17': empresaPuntos[17], '18': empresaPuntos[18],'19': empresaPuntos[19],'20': empresaPuntos[20],
+        '21': empresaPuntos[21], '22': empresaPuntos[22], '23': empresaPuntos[23], '24': empresaPuntos[24],'25': empresaPuntos[25], '26': empresaPuntos[26], '27': empresaPuntos[27], '28': empresaPuntos[28],'29': empresaPuntos[29],'30': empresaPuntos[30],
+        '31': empresaPuntos[31], '32': empresaPuntos[32], '33': empresaPuntos[33], '34': empresaPuntos[34],'35': empresaPuntos[35], '36': empresaPuntos[36], '37': empresaPuntos[37], '38': empresaPuntos[38],'39': empresaPuntos[39],'40': empresaPuntos[40],
+        '41': empresaPuntos[41], 
+        
+        
+        }" xtitle="Preguntas" ytitle="Puntaje"></area-chart>
+        <pie-chart :data="pruebita" :key="cambio2"></pie-chart>
+        
+      
+      
     </div>
+    <div v-if="textoEnviar != 'a'">
+      <graficoPalabras  :textuki="textoEnviar" :key="textoEnviar"></graficoPalabras>
+    </div>
+    
+    
   
   </template>
   <script>
-  
+  import { shallowRef } from "vue";
   import firebase from "../components/firebase/initFirebase";
   import "firebase/firestore";
   import navBar2 from '../components/views/elementos/navbar2.vue'
+  import graficoPalabras from '../views/graficoPalabras.vue'
+
   const db = firebase.firestore();
-    
-    
+  
+ 
+ 
+
     export default {
       components: {
-        navBar2
+        navBar2,
+        graficoPalabras
+        //'graficoPalabras': () => import('../views/graficoPalabras.vue'),
+        
+
     },
       data() {
         return {
@@ -66,9 +91,12 @@
           puntajeMadurez4: null,
           puntajeProveedores4: null,
           puntajeTotal4: null,
-          empresaPuntos: [[174.0, 80.0], [176.5, 82.3], [175.0, 81]],
-
-        
+          
+          empresaPuntos: [],
+          totalPuntos: [[1,1],[2,1],[3,1],[4,4]],
+          textoEnviar: 'a',
+          pruebita: [],
+          cambio2: ''
         
         }
       },
@@ -84,7 +112,7 @@
                 var getOptions = {
                 //source: 'cache'
                 };
-                docRef.get(getOptions).then((doc) => {
+                docRef.get(getOptions).then(async (doc) => {
         // Document was found in the cache. If no cached document exists,
         // an error will be returned to the 'catch' block below.
                     this.Empleados=doc.data().empleados
@@ -97,6 +125,56 @@
                     this.puntajeMadurez=doc.data().puntajeMadurez
                     this.puntajeProveedores=doc.data().puntajeProveedores
                     this.puntajeTotal=doc.data().puntajeTotal
+                    this.pruebita.push(['Clientes',doc.data().puntajeClientes])
+                    this.pruebita.push(['Conocimiento',doc.data().puntajeConocimiento])
+                    this.cambio2='heloudar'
+                    var i=0
+                    this.empresaPuntos.push(1)
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta1['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta2['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta3['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta4['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta5['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta6['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta7['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta8['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta9['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta10['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta11['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta12['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta13['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta14['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta15['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta16['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta17['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta18['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta19['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta20['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta21['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta22['respuesta'].length))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta23['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta24['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta25['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta26['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta27['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta28['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta29['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta30['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta31['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta32['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta33['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta34['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta35['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta36['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta37['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta38['respuesta']))
+                    this.empresaPuntos.push(6)
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta40['respuesta']))
+                    this.empresaPuntos.push(parseInt(doc.data().pregunta41['respuesta']))
+                    this.textoEnviar = doc.data().comentarios+' '+doc.data().pregunta1['complemento']
+                    console.log(this.textoEnviar)
+                    console.log(doc.data().comentarios)
+
                 }).catch((error) => {
                    console.log("Sesion terminada regresando al login", error);
                    
@@ -155,14 +233,22 @@
                     console.log("Error getting documents: ", error);
                 });
         },
+        
+        
 
 
     
         
       },
+      
+      
       mounted() {
+        
         this.compruebaSesion()
         this.recovery()
+        this.empresaPuntos=this.empresaPuntos
+        console.log(this.totalPuntos)
+        
       }
     }
     
