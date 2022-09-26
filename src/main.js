@@ -13,7 +13,9 @@ import inicioPrincipal from "./components/views/InicioPrincipal.vue"
 import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
 import editarPerfilEmpresa from "./components/views/editarPerfilDeEmpresa.vue"
 import generarCSV from "./components/views/generarCSV.vue"
+import listaUsuarios from "./components/views/listaUsuarios.vue"
 import graficos from "./views/graficos.vue"
+
 
 import './assets/tailwind.css'
 import 'tw-elements';
@@ -40,6 +42,7 @@ const router = createRouter( {
     {path: '/graficos', name: 'graficos', component: graficos},
     {path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa},
     {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
+    {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
   ]
 
 })

@@ -76,11 +76,26 @@
             <input type="password" v-model="contraseñaConfirmar" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
                   focus:bg-white focus:outline-none" required>
           </div>
+
+          <div class="mt-4">
+            <select v-model="selected">
+              <option disabled value="">Por favor seleccione una:</option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+
          
   
           <button type="button" @click="advancedRegister()" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Registrarse</button>
           <p>{{ mensaje }}</p>
+
         </form>
   
         <hr class="my-4 border-gray-300 w-full">
@@ -158,6 +173,7 @@ export default {
               contraseña: md.digest().toHex(),
               tipo: "empresa",
               fechaCreacion: date,
+              estado: 'Activo',
             })
               .then(() => {
                 this.mensaje = "Empresa registrada con exito"
