@@ -16,7 +16,6 @@ export default class Seguridad {
         cipher.finish();
         var encrypted = cipher.output;
         // outputs encrypted hex
-        console.log(encrypted);
         return encrypted.toHex()
         
 
@@ -29,8 +28,8 @@ export default class Seguridad {
         decipher.update(this.forge.util.createBuffer(ciphertext));
         var result = decipher.finish(); // check 'result' for true/false
         // outputs decrypted hex
-        console.log(decipher.output.toHex());
-        return decipher.output
+        var decrypted = decipher.output
+        return decrypted;
         
     }
   }

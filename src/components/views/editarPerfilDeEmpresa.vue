@@ -106,6 +106,8 @@
 import "firebase/storage";
 import "firebase/firestore";
 import firebase from "../../components/firebase/initFirebase";
+import Seguridad from "../../components/js/encrypt.js";
+const safe = new Seguridad();
 const db = firebase.firestore();
 const storage = firebase.storage();
 var storageRef = storage.ref();
@@ -113,12 +115,12 @@ var storageRef = storage.ref();
 
 
 import navBar2 from './elementos/navbar2.vue'
-import VueCookies from 'vue-cookies'
+
 
 
 export default {
 
-    name: 'PerfilDeEmpresa',
+    name: 'editarPerfilDeEmpresa',
     data() {
     return {
       nombre: '',
@@ -141,13 +143,9 @@ export default {
     
     methods: {
         cargarEmpresa() {
+           var nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
 
-        var nitEmpresa =$cookies.get("nit")
-        
-        if (nitEmpresa === null){
-            this.$router.push('/');
-        }else{
-            var docRef = db.collection("usuario").doc(nitEmpresa.toString());
+      var docRef = db.collection("usuario").doc(nitEmpresa);
       
       var getOptions = {
         //source: 'cache'
@@ -169,7 +167,7 @@ export default {
       }).catch((error) => {
         this.$router.push('/');
       });
-        }
+        
       
 
     },

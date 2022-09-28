@@ -55,7 +55,8 @@
 </template>
 
 <script>
-
+import Seguridad from "../../js/encrypt.js";
+const safe = new Seguridad();
 export default {
     name: 'navBar2',
     components: {
@@ -70,8 +71,20 @@ export default {
     methods: {
         menubar() {
             this.isActive = !this.isActive
+        },
+        compruebaSession(){
+            var nitEmpresa =$cookies.get(safe.cipher('nit'))
+
+            if (nitEmpresa === null){
+                this.$router.push('/');
+            }
         }
-    }
+    },
+    mounted() {
+        this.compruebaSession()
+        
+    
+  }
 }
 </script>
     

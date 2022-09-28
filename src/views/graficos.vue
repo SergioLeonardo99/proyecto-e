@@ -41,8 +41,10 @@
   import "firebase/firestore";
   import navBar2 from '../components/views/elementos/navbar2.vue'
   import graficoPalabras from '../views/graficoPalabras.vue'
-
+  import Seguridad from "../components/js/encrypt.js";
+  const safe = new Seguridad();
   const db = firebase.firestore();
+
   
  
  
@@ -101,13 +103,9 @@
         }
       },
       methods: {
-        compruebaSesion(){
-          this.nitEmpresa =$cookies.get("nit")
-            if (this.nitEmpresa === null){
-                this.$router.push('/');
-            }
-        },
+        
         recovery(){
+          this.nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
             var docRef = db.collection("datos").doc(this.nitEmpresa);
                 var getOptions = {
                 //source: 'cache'
@@ -244,11 +242,7 @@
       
       
       mounted() {
-        
-        this.compruebaSesion()
         this.recovery()
-        this.empresaPuntos=this.empresaPuntos
-        console.log(this.totalPuntos)
         
       }
     }

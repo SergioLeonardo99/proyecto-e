@@ -71,7 +71,7 @@ import "firebase/firestore";
 
 const db = firebase.firestore();
 const safe = new Seguridad();
-const safe2 = new Seguridad();
+
 
 
 

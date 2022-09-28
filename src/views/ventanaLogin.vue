@@ -118,8 +118,10 @@
 <script>
 import firebase from "../components/firebase/initFirebase";
 import "firebase/firestore";
-const db = firebase.firestore();
+import Seguridad from "../components/js/encrypt.js";
 import VueCookies from 'vue-cookies'
+const db = firebase.firestore();
+const safe = new Seguridad();
 
 export default {
   data() {
@@ -148,7 +150,8 @@ export default {
 
         if (doc.data().contraseña == md.digest().toHex()) {
           this.mensaje = "Datos validos"
-          VueCookies.set('nit', this.nit, "1h")
+          
+          VueCookies.set(safe.cipher('nit'), safe.cipher(this.nit.toString()), "1h")
           this.$router.push('/profile');
           
         } else {
