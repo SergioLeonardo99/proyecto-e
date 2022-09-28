@@ -1,105 +1,138 @@
 <template>
-    <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>NIT</th>
-                        <th>Empresa</th>
-                        <th>Fecha de Creación</th>
-                        <th>Tipo</th>
-                        <th>Estado</th>
-                        <th>Encuesta</th>
-                        <th>Opciones</th>
-                    </tr>
-                </thead>
-                <tbody>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>NIT</th>
+        <th>Usuario</th>
+        <th>Fecha de Creación</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Encuesta</th>
+        <th>Opciones</th>
+      </tr>
+    </thead>
+    <tbody>
 
-                <tr v-for="user in dataUsers">
-                    <td>{{user.nit}}</td>
-                    <td>{{user.nombre}}</td>
-                    <td>{{user.fechaCreacion}}</td>
-                    <td>{{user.tipo}}</td>
-                    <td>{{user.estado}}</td>
-                    <td>{{user.encuesta}}</td>
-                    <td>
-                        <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center" @click="prueba(user.nit)">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.343 3.94c.09-.542.56-.94 1.11-.94h1.093c.55 0 1.02.398 1.11.94l.149.894c.07.424.384.764.78.93.398.164.855.142 1.205-.108l.737-.527a1.125 1.125 0 011.45.12l.773.774c.39.389.44 1.002.12 1.45l-.527.737c-.25.35-.272.806-.107 1.204.165.397.505.71.93.78l.893.15c.543.09.94.56.94 1.109v1.094c0 .55-.397 1.02-.94 1.11l-.893.149c-.425.07-.765.383-.93.78-.165.398-.143.854.107 1.204l.527.738c.32.447.269 1.06-.12 1.45l-.774.773a1.125 1.125 0 01-1.449.12l-.738-.527c-.35-.25-.806-.272-1.203-.107-.397.165-.71.505-.781.929l-.149.894c-.09.542-.56.94-1.11.94h-1.094c-.55 0-1.019-.398-1.11-.94l-.148-.894c-.071-.424-.384-.764-.781-.93-.398-.164-.854-.142-1.204.108l-.738.527c-.447.32-1.06.269-1.45-.12l-.773-.774a1.125 1.125 0 01-.12-1.45l.527-.737c.25-.35.273-.806.108-1.204-.165-.397-.505-.71-.93-.78l-.894-.15c-.542-.09-.94-.56-.94-1.109v-1.094c0-.55.398-1.02.94-1.11l.894-.149c.424-.07.765-.383.93-.78.165-.398.143-.854-.107-1.204l-.527-.738a1.125 1.125 0 01.12-1.45l.773-.773a1.125 1.125 0 011.45-.12l.737.527c.35.25.807.272 1.204.107.397-.165.71-.505.78-.929l.15-.894z" />
-                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                            </svg>
+      <tr v-for="user in dataUsers">
+        <td>{{user.nit}}</td>
+        <td>{{user.nombre}}</td>
+        <td>{{user.fechaCreacion}}</td>
+        <td>{{user.tipo}}</td>
+        <td>{{user.estado}}</td>
+        <td>{{user.encuesta}}</td>
+        <td>
+          <button @click.stop="user.view = !user.view">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
 
-                            
-                        </button>
-                        
-                        
-                            
+          </button>
 
-                            
-                        
-                    </td>
-                    
-                </tr>
-            </tbody>
-                
-            </table>
-      
-      
-    
-    </template>
-    <script>
-   
-    import firebase from "../../components/firebase/initFirebase";
-    import "firebase/firestore";
-    
-  
-    const db = firebase.firestore();
-    
-   
-   
-  
-      export default {
-        components: {
-          
-          
-  
-      },
-        data() {
-          return {
-            dataUsers: [],
+          <!-- Dropdown menu -->
+          <div v-show="user.view">
+            <button v-if="user.tipo!='administrador'" @click="prueba(user.nit)">
+              <span>Acceder</span>
+            </button>
 
-            controlData: []
-          
-          }
-        },
-        methods: {
-          datosUsuarios(){
-            db.collection("usuario")
-                .get()
-                .then((querySnapshot) => {
-                    querySnapshot.forEach((doc) => {
-                        this.dataUsers.push({'nit':doc.data().nit,'nombre':doc.data().nombre,'fechaCreacion':doc.data().fechaCreacion,'tipo':doc.data().tipo, 'encuesta':doc.data().encuesta, 'estado':doc.data().estado})
+            <button v-if="user.tipo=='empresa'" @click="seguridadPrueba()">
+              <span>Realizar encuesta</span>
 
-                        
-                    });
-                })
-                .catch((error) => {
-                    console.log("Error getting documents: ", error);
-                });
-          },
-          prueba(nit){
-            console.log(nit)
-          },
-          
-        },
-        
-        
-        mounted() {
-            this.datosUsuarios()
-          
-        
-          
-        }
-      }
-      
-      
-      
-      </script>
+
+            </button>
+            <button @click="prueba(user.nit)">
+              <span>Habilitar/Deshabilitar</span>
+            </button>
+
+          </div>
+
+        </td>
+
+      </tr>
+    </tbody>
+
+  </table>
+
+
+
+
+  <!-- Dropdown toggle button -->
+
+
+
+
+</template>
+<script>
+
+import firebase from "../../components/firebase/initFirebase";
+import Seguridad from "../../components/js/encrypt.js";
+
+import "firebase/firestore";
+
+
+const db = firebase.firestore();
+const safe = new Seguridad();
+const safe2 = new Seguridad();
+
+
+
+
+
+export default {
+  components: {
+
+
+
+  },
+  data() {
+    return {
+      dataUsers: [],
+      show: false,
+      controlData: []
+
+    }
+  },
+  methods: {
+    seguridadPrueba(){
+    },
+    datosUsuarios() {
+      db.collection("usuario")
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach((doc) => {
+            this.dataUsers.push({ 'nit': doc.data().nit, 'nombre': doc.data().nombre, 'fechaCreacion': doc.data().fechaCreacion, 'tipo': doc.data().tipo, 'encuesta': doc.data().encuesta, 'estado': doc.data().estado , 'view':false})
+
+
+          });
+        })
+        .catch((error) => {
+          console.log("Error getting documents: ", error);
+        });
+    },
+    prueba(nit) {
+      console.log(nit)
+    },
+    accederUsuario(nit){
+
+    },
+    cambiarEstado(nit, estado){
+
+    },
+    realizarEncuesta(nit){
+
+    }
+
+
+  },
+
+
+  mounted() {
+    this.datosUsuarios()
+
+
+
+  }
+}
+
+
+
+</script>

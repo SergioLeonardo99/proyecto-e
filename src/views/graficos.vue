@@ -194,7 +194,7 @@
                           this.puntajeMadurez1=doc.data().puntajeMadurez
                           this.puntajeProveedores1=doc.data().puntajeProveedores
                           this.puntajeTotal1=doc.data().puntajeTotal
-                          contador=contador+1
+                          
 
                         }if(contador==2){
                           this.puntajeClientes2=doc.data().puntajeClientes
@@ -203,7 +203,7 @@
                           this.puntajeMadurez2=doc.data().puntajeMadurez
                           this.puntajeProveedores2=doc.data().puntajeProveedores
                           this.puntajeTotal2=doc.data().puntajeTotal
-                          contador=contador+1
+                          
 
                         }if(contador==3){
                           this.puntajeClientes3=doc.data().puntajeClientes
@@ -212,7 +212,7 @@
                           this.puntajeMadurez3=doc.data().puntajeMadurez
                           this.puntajeProveedores3=doc.data().puntajeProveedores
                           this.puntajeTotal3=doc.data().puntajeTotal
-                          contador=contador+1
+                          
 
                         }if(contador==4){
                           this.puntajeClientes4=doc.data().puntajeClientes
@@ -221,12 +221,13 @@
                           this.puntajeMadurez4=doc.data().puntajeMadurez
                           this.puntajeProveedores4=doc.data().puntajeProveedores
                           this.puntajeTotal4=doc.data().puntajeTotal
-                          contador=contador+1
+                          
 
                         }
                         // doc.data() is never undefined for query doc snapshots
 
                         //console.log(doc.id, " => ", doc.data());
+                        contador=contador+1
                     });
                 })
                 .catch((error) => {
