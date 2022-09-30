@@ -48,24 +48,24 @@
             <div>
               <label class="block text-gray-700">Nit</label>
               <input type="number" name="nit" v-model="nit" placeholder="Nit"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
+                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
                 autofocus autocomplete required>
             </div>
 
             <div class="mt-4">
               <label class="block text-gray-700">Contraseña</label>
               <input type="password" name="contraseña" v-model="contraseña" placeholder="Password" minlength="4"
-                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+                class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                   focus:bg-white focus:outline-none" required>
             </div>
 
             <div class="text-right mt-2">
-              <a href="#" class="text-sm font-semibold text-gray-700 hover:text-blue-700 focus:text-blue-700">Olvidaste
+              <a href="#" class="text-sm font-semibold text-gray-700 hover:text-gray-700 focus:text-gray-700">Olvidaste
                 tu contraseña?</a>
               <p>{{ mensaje }}</p>
             </div>
 
-            <button @click="autenticate()" type="button" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+            <button @click="autenticate()" type="button" class="w-full block bg-gray-400 hover:bg-gray-400 focus:bg-gray-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Ingresar</button>
 
           </form>
@@ -99,7 +99,7 @@
 
           <p class="mt-8">
             Necesitas una cuenta?
-            <router-link to="/ventanaR" class="text-blue-400 hover:text-blue-700 font-semibold">
+            <router-link to="/ventanaR" class="text-gray-400 hover:text-gray-900 font-semibold">
               Crear una cuenta
             </router-link>
           </p>

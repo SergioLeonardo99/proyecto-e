@@ -13,7 +13,7 @@
 <body>
   <section class="flex flex-col md:flex-row h-screen items-center">
 
-    <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
+    <div class="bg-gray-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
       <router-view></router-view>
       <img src="@/assets/bg3.webp" alt="" class="w-full h-full object-cover">
     </div>
@@ -31,45 +31,45 @@
           <div>
             <label  class="block  text-gray-700">Nombre de la empresa: </label>
             <input type="text" v-model="nombre" placeholder="nombre"
-            class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete  required>
+            class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete  required>
           </div>
             
             <div>
             <label class="block text-gray-700">Nit: </label>
-            <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-grays-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
            <div>
             <label class="block text-gray-700">Direccion: </label>
-            <input type="text" v-model="direccion" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="text" v-model="direccion" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
              <div>
             <label class="block text-gray-700">Telefono: </label>
-            <input type="number" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+            <input type="number" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
           <div class="mt-4">
             <label class="block text-gray-700">Contraseña: </label>
-            <input type="password" v-model="contraseña" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+            <input type="password" v-model="contraseña" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                   focus:bg-white focus:outline-none" required>
           </div>
             
           <div class="mt-4">
             <label class="block text-gray-700">Confirmar Contraseña: </label>
-            <input type="password" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500
+            <input type="password" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                   focus:bg-white focus:outline-none" required>
           </div>
          
   
-          <button type="button" @click="advancedRegister()" class="w-full block bg-blue-400 hover:bg-blue-400 focus:bg-blue-400 text-white font-semibold rounded-lg
+          <button type="button" @click="advancedRegister()" class="w-full block bg-gray-400 hover:bg-gray-400 focus:bg-gray-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Registrarse</button>
           <p>{{ mensaje }}</p>
         </form>
   
         <hr class="my-4 border-gray-300 w-full">
   
-   <p class="mt-4">ya tienes cuenta ? <Router-link to="/ventanaL" class="text-blue-400 hover:text-blue-700 font-semibold">Iniciar Sesion</Router-link></p>
+   <p class="mt-4">ya tienes cuenta ? <Router-link to="/ventanaL" class="text-gray-400 hover:text-gray-700 font-semibold">Iniciar Sesion</Router-link></p>
         <p class="text-sm text-gray-500 mt-4">&copy; 2022 M&S.</p>
       </div>
 
