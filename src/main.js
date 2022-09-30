@@ -12,13 +12,22 @@ import acercaD from "./components/views/AcercaD.vue"
 import inicioPrincipal from "./components/views/InicioPrincipal.vue"
 import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
 
-//layouts
-import Admin from "@/layouts/Admin.vue";
+
 
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
 
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+import { fas } from '@fortawesome/free-solid-svg-icons'
+library.add(fas);
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fab);
+import { far } from '@fortawesome/free-regular-svg-icons';
+library.add(far);
+import { dom } from "@fortawesome/fontawesome-svg-core";
+dom.watch();
 
 
 const router = createRouter( {
@@ -32,7 +41,7 @@ const router = createRouter( {
     {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
 
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
-    {path: '/admin', name: 'viewadmin', component: viewadmin, component: Admin},
+    {path: '/admin', name: 'viewadmin', component: viewadmin },
 
 
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
@@ -42,4 +51,5 @@ const router = createRouter( {
 
 const app = createApp(App)
 app.use(router);
+app.component("font-awesome-icon", FontAwesomeIcon);
 app.mount('#app');
