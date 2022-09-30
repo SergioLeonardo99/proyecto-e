@@ -374,11 +374,11 @@
                             </div>
                         </div>
                         <div class="object-cover p-8">
-                        <div class="flex justify-center max-h-100 min-h-100 p-10">
-                            <img src="@/assets/iMacPlantilla.png"
-                                alt="https://www.tenvinilo.co/vinilos-decorativos/vinilo-decorativo-pantalla-imac-4810">
+                            <div class="flex justify-center max-h-100 min-h-100 p-10">
+                                <img src="@/assets/iMacPlantilla.png"
+                                    alt="https://www.tenvinilo.co/vinilos-decorativos/vinilo-decorativo-pantalla-imac-4810">
+                            </div>
                         </div>
-                    </div>
                     </div>
                 </div>
 
@@ -570,9 +570,66 @@
                             <br>
                             <a href="mailto:correspondencia.ubate@ucundinamarca.edu.co"
                                 class="underline decoration-solid">Correo Institucional</a>
-                            <br>
+                        </div>
+                        <br>
+                        <!-- <div class="min-h-screen p-6 bg-gray-100 flex items-center justify-center">
+                            <div class="container max-w-screen-lg mx-auto"> -->
+                        <div class="grid grid-column-5 grid-flow-col gap-5">
+                            <div class="flex items-center justify-center">
+                                <a href="https://es-la.facebook.com/ucundinamarcaoficial/">
+                                    <svg class="w-6 h-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center">
+                                <a href="https://twitter.com/UCundinamarca">
+                                    <svg class="w-6 h-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <a href="https://www.linkedin.com/school/ucundinamarcaoficial/">
+                                    <svg class="w-6 h-6 text-white bg-withe fill-current"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                        <path
+                                            d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+                            <div class="flex flex-col justify-center items-center">
+                                <a href="https://www.instagram.com/ucundinamarcaoficial/">
+                                    <svg class="w-6 h-6 text-white fill-current" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 448 512">
+                                        <path
+                                            d="M224 141c-63.6 0-115 51.4-115 115s51.4 115 115 115 115-51.4 115-115-51.4-115-115-115zm0 160c-28.4 0-51-22.6-51-51s22.6-51 51-51 51 22.6 51 51-22.6 51-51 51zm144-160c0 13.3-10.7 24-24 24s-24-10.7-24-24 10.7-24 24-24 24 10.7 24 24zm88 0c0 66.2-53.8 120-120 120H120c-66.2 0-120-53.8-120-120V120C0 53.8 53.8 0 120 0h208c66.2 0 120 53.8 120 120v208z">
+                                        </path>
+                                    </svg>
+                                </a>
+                            </div>
+
+                            <div class="flex flex-col justify-center items-center">
+                                <a href="https://www.youtube.com/c/UDECANDOTV">
+                                    <svg class="w-5 h-5 text-white fill-current" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.007 2.007 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.007 2.007 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31.4 31.4 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.007 2.007 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A99.788 99.788 0 0 1 7.858 2h.193zM6.4 5.209v4.818l4.157-2.408L6.4 5.209z">
+                                        </path>
+                                    </svg>
+
+                                </a>
+                            </div>
                         </div>
                         </p>
+
                     </div>
                 </div>
             </div>
