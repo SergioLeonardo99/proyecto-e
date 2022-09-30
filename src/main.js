@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
+//estilos
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@/assets/styles/tailwind.css";
+
+
 import App from './App.vue'
 import ventanaLogin from "./views/ventanaLogin.vue"
 import ventanaRegistro from "./views/ventanaRegistro.vue"
@@ -12,6 +17,7 @@ import editarPerfilEmpresa from "./components/views/editarPerfilDeEmpresa.vue"
 import generarCSV from "./components/views/generarCSV.vue"
 import listaUsuarios from "./components/views/listaUsuarios.vue"
 import graficos from "./views/graficos.vue"
+import modEducativo from "./components/views/ModuloEd.vue"
 import solicitudes from "./components/views/solicitudes.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
@@ -47,9 +53,9 @@ const router = createRouter( {
     {path: '/graficos', name: 'graficos', component: graficos},
     {path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa},
     {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
+    {path: '/educativo', name: 'modEducativo', component: modEducativo},
     {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
     {path: '/solicitudes', name:'solicitudes', component:solicitudes}
-
   ]
 
 })
