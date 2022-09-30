@@ -2,10 +2,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import ventanaLogin from "./views/ventanaLogin.vue"
 import ventanaRegistro from "./views/ventanaRegistro.vue"
-
-
 import encuesta from "./views/encuesta.vue"
-
 import formularioFinal from "./views/formularioFinal.vue"
 import viewadmin from "./views/viewadmin.vue"
 import acercaD from "./components/views/AcercaD.vue"
@@ -15,8 +12,7 @@ import editarPerfilEmpresa from "./components/views/editarPerfilDeEmpresa.vue"
 import generarCSV from "./components/views/generarCSV.vue"
 import listaUsuarios from "./components/views/listaUsuarios.vue"
 import graficos from "./views/graficos.vue"
-
-
+import solicitudes from "./components/views/solicitudes.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -34,16 +30,15 @@ const router = createRouter( {
     {path: '/profile', name: 'PerfilEmpresa', component: perfilEmpresa},
     {path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin},
     {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
-
     {path: '/ventanaE', name: 'encuesta', component: encuesta},
     {path: '/admin', name: 'viewadmin', component: viewadmin},
-
-
     {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
     {path: '/graficos', name: 'graficos', component: graficos},
     {path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa},
     {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
     {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
+    {path: '/solicitudes', name:'solicitudes', component:solicitudes}
+
   ]
 
 })
