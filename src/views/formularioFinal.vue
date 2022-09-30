@@ -1,6 +1,6 @@
 <template>
     
-   
+    <navBar2></navBar2>
     <body class="antialiased text-gray-700 bg-gray-100">
        <div class="flex w-full  justify-center items-center">
       <div class="w-full max-w-3xl" >
@@ -373,7 +373,7 @@
                 
               <li>
                 <input type="radio" id="nacional-inter" value="4" v-model="p6">
-                <label class="radio" for="nacional-inter">Operamos a nivel nacional e internacionals.</label>
+                <label class="radio" for="nacional-inter">Operamos a nivel nacional e internacional.</label>
               </li>
                 
               </ul>
@@ -497,7 +497,34 @@
 
       <section>
         <p>9.	¿Si su empresa cuenta con algún software, especifique cual y si conoce el costo cuál es?</p>
-        <input type="text" v-model="p9">
+        <form action="" class="formulario">
+          <div class="radio">
+            
+              <ul>
+                
+              <li>
+                  <input  type="radio" id="9.1" value="1" v-model="p9">
+                  <label class="radio" for="9.1" >Si</label>
+              </li>
+                
+              <li>
+                  <input type="radio" id="9.2" value="2" v-model="p9">
+                  <label class="radio" for="9.2">No</label>
+                  
+              </li>
+                
+              <li>
+                <input type="radio" id="9.3" value="3" v-model="p9">
+                  <label class="radio" for="9.3">No tengo información</label>
+              </li>
+              
+              
+              </ul>
+            
+          </div>
+        </form>
+        
+
         <p>9.1 ¿Recuerda cual es y el valor aproximado de la compra? </p>
         <input type="text" v-model="c9">
         </section>
@@ -647,11 +674,15 @@
                 
               <li>
                 <input type="radio" id="14.3" value="3" v-model="p14">
-                  <label class="radio" for="14.3">Más de 20 computadores</label>
+                  <label class="radio" for="14.3">De cinco a 20 computadores</label>
               </li>
               <li>
                 <input type="radio" id="14.4" value="4" v-model="p14">
-                  <label class="radio" for="14.4">Mi empresa no tiene computadores</label>
+                  <label class="radio" for="14.4">Más de 20 computadores</label>
+              </li>
+              <li>
+                <input type="radio" id="14.5" value="5" v-model="p14">
+                  <label class="radio" for="14.5">Mi empresa no tiene computadores</label>
               </li>
 
               </ul>
@@ -795,9 +826,35 @@
         </section>
       <section>
         <p>18.	Su compañía cuenta con un dominio en internet</p>
-        <input type="text" v-model="p18">
+        
+        <form action="" class="formulario">
+          <div class="radio">
+            
+              <ul>
+                
+              <li>
+                  <input  type="radio" id="18.1" value="1" v-model="p18">
+                  <label class="radio" for="18.1" >Si</label>
+              </li>
+                
+              <li>
+                  <input type="radio" id="18.2" value="2" v-model="p18">
+                  <label class="radio" for="18.2">No</label>
+                  
+              </li>
+                
+              <li>
+                <input type="radio" id="18.3" value="3" v-model="p18">
+                  <label class="radio" for="18.3">No tengo información</label>
+              </li>
+              
+              
+              </ul>
+            
+          </div>
+        </form>
 
-        <p>¿Sabe cuánto cuesta un dominio al año para su empresa?</p>
+        <p>18.1 ¿Sabe cuánto cuesta un dominio al año para su empresa?</p>
         <input type="text" v-model="c18">
         </section>
       <section>
@@ -1067,7 +1124,7 @@
                 <ul>
                   
                 <li>
-                    <input  type="radio" id="26.1" value="1" v-model="p26">
+                    <input  type="radio" id="26.1" value="3" v-model="p26">
                     <label class="radio" for="26.1" >En mi empresa los procesos están estandarizados</label>
                 </li>
                   
@@ -1078,13 +1135,13 @@
                 </li>
                   
                 <li>
-                  <input type="radio" id="26.3" value="3" v-model="p26">
+                  <input type="radio" id="26.3" value="1" v-model="p26">
                     <label class="radio" for="26.3">Unos pocos procesos están estandarizados</label>
                 </li>
                 <li>
 
-                  <input type="radio" id="26.4" value="4" v-model="p26">
-                    <label class="radio" for="26.4">Unos pocos procesos están estandarizados</label>
+                  <input type="radio" id="26.4" value="0" v-model="p26">
+                    <label class="radio" for="26.4">Ningún proceso está estandarizado</label>
                 </li>
                 </ul>
               
@@ -1094,6 +1151,40 @@
         <p>Complemento</p>
         <input type="text" v-model="c26">
         </section>
+
+        <section>
+        <p>26.1	¿Cuenta con alguna certificación en calidad, medio ambiente o Seguridad y salud en el trabajo?</p>
+        <form action="" class="formulario">
+          <div class="radio">
+            
+              <ul>
+                
+              <li>
+                  <input  type="radio" id="26.1.1" value="1" v-model="p26_1">
+                  <label class="radio" for="26.1.1" >Si</label>
+              </li>
+                
+              <li>
+                  <input type="radio" id="26.1.2" value="2" v-model="p26_1">
+                  <label class="radio" for="26.1.2">No</label>
+                  
+              </li>
+                
+              <li>
+                <input type="radio" id="26.1.3" value="3" v-model="p26_1">
+                  <label class="radio" for="26.1.3">No tengo información</label>
+              </li>
+              
+              
+              </ul>
+            
+          </div>
+        </form>
+
+        <p>Complemento</p>
+        <input type="text" v-model="c26_1">
+        </section>
+
       <section>
         <p>27.	¿Con qué frecuencia utiliza los procedimientos y formatos definidos para los procesos administrativos y de operación de su empresa? </p>
           <form action="" class="formulario">
@@ -1102,7 +1193,7 @@
               <ul>
                 
               <li>
-                  <input  type="radio" id="27.1" value="1" v-model="p27">
+                  <input  type="radio" id="27.1" value="3" v-model="p27">
                   <label class="radio" for="27.1" >Siempre se utilizan</label>
               </li>
                 
@@ -1113,12 +1204,12 @@
               </li>
                 
               <li>
-                <input type="radio" id="27.3" value="3" v-model="p27">
+                <input type="radio" id="27.3" value="1" v-model="p27">
                   <label class="radio" for="27.3">Están definidos, pero nunca se utilizan</label>
               </li>
               <li>
 
-                <input type="radio" id="27.4" value="4" v-model="p27">
+                <input type="radio" id="27.4" value="0" v-model="p27">
                   <label class="radio" for="27.4">No tenemos procesos internos estandarizados</label>
               </li>
               </ul>
@@ -1134,33 +1225,33 @@
                 <ul>
                   
                 <li>
-                    <input  type="radio" id="28.1" value="1" v-model="p28">
+                    <input  type="radio" id="28.1" value="2" v-model="p28">
                     <label class="radio" for="28.1" >Utilizamos correo electrónico</label>
                 </li>
                   
                 <li>
-                    <input type="radio" id="28.2" value="2" v-model="p28">
+                    <input type="radio" id="28.2" value="3" v-model="p28">
                     <label class="radio" for="28.2">Utilizamos correo electrónico y/o la página Web (Página en Internet) de nuestra compañía o de nuestros proveedores</label>
                     
                 </li>
                   
                 <li>
-                  <input type="radio" id="28.3" value="3" v-model="p28">
+                  <input type="radio" id="28.3" value="4" v-model="p28">
                     <label class="radio" for="28.3">Utilizamos formatos pre -establecidos para intercambiar información</label>
                 </li>
                 <li>
 
-                  <input type="radio" id="28.4" value="4" v-model="p28">
-                    <label class="radio" for="28.4">Intercambio Electrónico de Documentos (EDI – Electronic Data Interchange)</label>
+                  <input type="radio" id="28.4" value="5" v-model="p28">
+                    <label class="radio" for="28.4">Intercambio Electrónico de Documentos (EDI - Electronic Data Interchange)</label>
                 </li>
                 <li>
 
-                  <input type="radio" id="28.5" value="5" v-model="p28">
+                  <input type="radio" id="28.5" value="0" v-model="p28">
                     <label class="radio" for="28.5">No usamos ningún medio electrónico</label>
                   </li>
                   <li>
 
-                  <input type="radio" id="28.6" value="6" v-model="p28">
+                  <input type="radio" id="28.6" value="1" v-model="p28">
                     <label class="radio" for="28.6">Usamos otros medios como Fax</label>
                   </li>
                 
@@ -1180,18 +1271,18 @@
                 <ul>
                   
                 <li>
-                    <input  type="radio" id="29.1" value="1" v-model="p29">
+                    <input  type="radio" id="29.1" value="2" v-model="p29">
                     <label class="radio" for="29.1" >Hemos tenido asesoría</label>
                 </li>
                   
                 <li>
-                    <input type="radio" id="29.2" value="2" v-model="p29">
+                    <input type="radio" id="29.2" value="1" v-model="p29">
                     <label class="radio" for="29.2">Tenemos actualmente asesoría</label>
                     
                 </li>
                   
                 <li>
-                  <input type="radio" id="29.3" value="3" v-model="p29">
+                  <input type="radio" id="29.3" value="0" v-model="p29">
                     <label class="radio" for="29.3">Nunca hemos tenido asesoría</label>
                 </li>
                 
@@ -1398,18 +1489,18 @@
               <ul>
                 
               <li>
-                  <input  type="radio" id="34.1" value="1" v-model="p34">
+                  <input  type="radio" id="34.1" value="2" v-model="p34">
                   <label class="radio" for="34.1" >Tienen un procedimiento estándar definido de común acuerdo con los clientes</label>
               </li>
                 
               <li>
-                  <input type="radio" id="34.2" value="2" v-model="p34">
+                  <input type="radio" id="34.2" value="3" v-model="p34">
                   <label class="radio" for="34.2">Tienen un procedimiento estándar definido por nuestra compañía</label>
                   
               </li>
                 
               <li>
-                <input type="radio" id="34.3" value="3" v-model="p34">
+                <input type="radio" id="34.3" value="1" v-model="p34">
                   <label class="radio" for="34.3">No tienen un procedimiento estándar, cada uno de los clientes usa sus propios formatos y mi compañía se adapta</label>
               </li>
               
@@ -1430,7 +1521,7 @@
             <ul>
               
             <li>
-                <input  type="radio" id="35.1" value="1" v-model="p35">
+                <input  type="radio" id="35.1" value="3" v-model="p35">
                 <label class="radio" for="35.1">Son estables y permanentes</label>
             </li>
               
@@ -1441,7 +1532,7 @@
             </li>
               
             <li>
-              <input type="radio" id="35.3" value="3" v-model="p35">
+              <input type="radio" id="35.3" value="1" v-model="p35">
                 <label class="radio" for="35.3">Son completamente esporádicas</label>
             </li>
             
@@ -1622,59 +1713,59 @@
         </tr>
         <tr>
             <td>Órdenes de Compra</td>
-            <td><input type="radio" name="row-1" data-col="1" value="1" v-model="p39a"></td>
+            <td><input type="radio" name="row-1" data-col="1" value="3" v-model="p39a"></td>
             <td><input type="radio" name="row-1" data-col="2" value="2" v-model="p39a"></td>
-            <td><input type="radio" name="row-1" data-col="3" value="3" v-model="p39a"></td>
+            <td><input type="radio" name="row-1" data-col="3" value="1" v-model="p39a"></td>
             <td><input type="number" v-model="c39a" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero" ></td>
         </tr>
         <tr>
             <td>Facturas</td>
-            <td><input type="radio" name="row-2" data-col="1" value="1" v-model="p39b"></td>
+            <td><input type="radio" name="row-2" data-col="1" value="3" v-model="p39b"></td>
             <td><input type="radio" name="row-2" data-col="2" value="2" v-model="p39b"></td>
-            <td><input type="radio" name="row-2" data-col="3" value="3" v-model="p39b"></td>
+            <td><input type="radio" name="row-2" data-col="3" value="1" v-model="p39b"></td>
             <td><input type="number" v-model="c39b" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero" ></td>
         </tr>
         <tr>
             <td>Remisiones</td>
-            <td><input type="radio" name="row-3" data-col="1" value="1" v-model="p39c"></td>
+            <td><input type="radio" name="row-3" data-col="1" value="3" v-model="p39c"></td>
             <td><input type="radio" name="row-3" data-col="2" value="2" v-model="p39c"></td>
-            <td><input type="radio" name="row-3" data-col="3" value="3" v-model="p39c"></td>
+            <td><input type="radio" name="row-3" data-col="3" value="1" v-model="p39c"></td>
             <td><input type="number" v-model="c39c" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero" ></td>
         </tr>
         <tr>
 
             <td>Confirmaciones de despacho</td>
-            <td><input type="radio" name="row-3" data-col="1" value="1" v-model="p39d"></td>
-            <td><input type="radio" name="row-3" data-col="2" value="2" v-model="p39d"></td>
-            <td><input type="radio" name="row-3" data-col="3" value="3" v-model="p39d"></td>
+            <td><input type="radio" name="row-4" data-col="1" value="3" v-model="p39d"></td>
+            <td><input type="radio" name="row-4" data-col="2" value="2" v-model="p39d"></td>
+            <td><input type="radio" name="row-4" data-col="3" value="1" v-model="p39d"></td>
             <td><input type="number"  v-model="c39d" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero" ></td>
 
         </tr>
         <tr>
 
         <td>Cotizaciones</td>
-        <td><input type="radio" name="row-3" data-col="1" value="1" v-model="p39e"></td>
-        <td><input type="radio" name="row-3" data-col="2" value="2" v-model="p39e"></td>
-        <td><input type="radio" name="row-3" data-col="3" value="3" v-model="pb39e"></td>
+        <td><input type="radio" name="row-5" data-col="1" value="3" v-model="p39e"></td>
+        <td><input type="radio" name="row-5" data-col="2" value="2" v-model="p39e"></td>
+        <td><input type="radio" name="row-5" data-col="3" value="1" v-model="p39e"></td>
         <td><input type="number" v-model="c39e" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero" ></td>
 
         </tr>
         <tr>
 
         <td>Catálogos de productos</td>
-        <td><input type="radio" name="row-3" data-col="1" value="1" v-model="p39f"></td>
-        <td><input type="radio" name="row-3" data-col="2" value="2" v-model="p39f" ></td>
-        <td><input type="radio" name="row-3" data-col="3" value="3" v-model="p39f"></td>
-        <td><input type="number" v-model="c39g" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero"></td>
+        <td><input type="radio" name="row-6" data-col="1" value="3" v-model="p39f"></td>
+        <td><input type="radio" name="row-6" data-col="2" value="2" v-model="p39f" ></td>
+        <td><input type="radio" name="row-6" data-col="3" value="1" v-model="p39f"></td>
+        <td><input type="number" v-model="c39f" class="bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero"></td>
 
         </tr>
         <tr>
 
         <td>Otros</td>
-        <td><input type="radio" name="row-3" data-col="1" value="1" v-model="p39g"></td>
-        <td><input type="radio" name="row-3" data-col="2" value="2" v-model="p39g"></td>
-        <td><input type="radio" name="row-3" data-col="3" value="3" v-model="p39g"> </td>
-        <td><input type="number" v-model="c39h" class="flex justify-center bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero"></td>
+        <td><input type="radio" name="row-7" data-col="1" value="3" v-model="p39g"></td>
+        <td><input type="radio" name="row-7" data-col="2" value="2" v-model="p39g"></td>
+        <td><input type="radio" name="row-7" data-col="3" value="1" v-model="p39g"> </td>
+        <td><input type="number" v-model="c39g" class="flex justify-center bg-gray-50 border border-gray-300 content-center text-gray-900 text-sm rounded-lg block w-20 p-1"  id="numero" name="numero"></td>
 
         </tr>
 
@@ -1692,23 +1783,23 @@
             <ul>
               
             <li>
-                <input  type="radio" id="40.1" value="1" v-model="p40">
+                <input  type="radio" id="40.1" value="3" v-model="p40">
                 <label class="radio" for="40.1">Tienen un procedimiento estándar definido de común acuerdo con los proveedores</label>
             </li>
               
             <li>
-                <input type="radio" id="40.2" value="2" v-model="p40">
+                <input type="radio" id="40.2" value="4" v-model="p40">
                 <label class="radio" for="40.2">Tienen un procedimiento estándar definido por nuestra compañía</label>
                 
             </li>
               
             <li>
-              <input type="radio" id="40.3" value="3" v-model="p40">
+              <input type="radio" id="40.3" value="2" v-model="p40">
                 <label class="radio" for="40.3">No tienen un procedimiento estándar, cada uno de los proveedores usa sus propios formatos y mi compañía se adapta</label>
             </li>
               
             <li>
-              <input type="radio" id="40.4" value="4" v-model="p40">
+              <input type="radio" id="40.4" value="1" v-model="p40">
               <label class="radio" for="40.4">Otra</label>
             </li>
               
@@ -1730,7 +1821,7 @@
               <ul>
                 
               <li>
-                  <input  type="radio" id="41.1" value="1" v-model="p41">
+                  <input  type="radio" id="41.1" value="3" v-model="p41">
                   <label class="radio" for="41.1">Son estables y permanentes</label>
               </li>
                 
@@ -1741,7 +1832,7 @@
               </li>
                 
               <li>
-                <input type="radio" id="41.3" value="3" v-model="p41">
+                <input type="radio" id="41.3" value="1" v-model="p41">
                   <label class="radio" for="41.3">Son completamente esporádicas</label>
               </li>
               
@@ -1790,14 +1881,20 @@
 <script>
 
 
-import db from "../components/firebase/initFirebase";
-import VueCookies from 'vue-cookies'
-import { registerFirestore } from "@firebase/firestore";
+import "firebase/storage";
+import firebase from "../components/firebase/initFirebase";
+const db = firebase.firestore();
+import Seguridad from "../components/js/encrypt.js";
+const safe = new Seguridad();
 
+import navBar2 from '../components/views/elementos/navbar2.vue'
 
 
 export default {
   name: "formulario",
+  components: {
+        navBar2
+    },
   data() {
     return {
       p1: '',
@@ -1826,6 +1923,7 @@ export default {
       p24: '',
       p25: '',
       p26: '',
+      p26_1: '',
       p27: '',
       p28: '',
       p29: '',
@@ -1873,6 +1971,7 @@ export default {
       c24: '',
       c25: '',
       c26: '',
+      c26_1: '',
       c27: '',
       c28: '',
       c29: '',
@@ -1897,7 +1996,14 @@ export default {
       c42: '',
       mensaje: '',
       probando: false,
-      nit: '123456'
+      nit: '123456',
+      conocimiento: 0,
+      infraestructura: 0,
+      madurez: 0,
+      clientes: 0,
+      proveedores: 0,
+      total: 0,
+      nitEmpresa: null,
     }
   },
  
@@ -1905,8 +2011,213 @@ export default {
     verificar(){
     
     },
+    puntuacion(){
+      if (this.p1 != ''){
+        this.conocimiento=this.conocimiento+1;
+      }if(this.p2 != ''){
+        this.conocimiento=this.conocimiento+1;
+      }if(this.p3 != ''){
+        this.conocimiento=this.conocimiento+1;
+      }if(this.p4 != ''){
+        this.conocimiento=this.conocimiento+parseInt(this.p4);
+      }if(this.p5 != ''){
+        this.conocimiento=this.conocimiento+1;
+      }if(this.p6 != ''){
+        this.conocimiento=this.conocimiento+parseInt(this.p6);
+      }if(this.p7 != ''){
+        if(this.p7=='7'){
+
+        }else{
+          this.conocimiento=this.conocimiento+parseInt(this.p7);
+        }
+        
+      }if(this.p8 != ''){
+        if(this.p8=='7'){
+
+        }else{
+          this.conocimiento=this.conocimiento+parseInt(this.p8);
+        }
+        
+      }if(this.p9 != ''){
+        if(this.p9 == '3' || this.p9 == '2'){
+        }else{
+          this.conocimiento=this.conocimiento+1;
+        }
+      }if(this.p10 != ''){
+        if(this.p10 == '3' || this.p10 == '2'){
+        }else{
+          this.conocimiento=this.conocimiento+1;
+        }
+      }if(this.p11 != ''){
+        if(this.p11 == '3' || this.p11 == '2'){
+        }else{
+          this.conocimiento=this.conocimiento+1;
+        }
+      }if(this.p12 != ''){
+        this.infraestructura=this.infraestructura+parseInt(this.p12);
+      }if(this.p13 != ''){
+        if(this.p13 == '3' || this.p13 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p14 != ''){
+        if(this.p14=='5'){
+
+        }else{
+          this.infraestructura=this.infraestructura+parseInt(this.p14);
+        }
+        
+      }if(this.p15 != ''){
+        if(this.p15 == '3' || this.p15 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p16 != ''){
+        if(this.p16=='4'){
+
+        }else{
+          this.infraestructura=this.infraestructura+parseInt(this.p14);
+        }
+        
+      }if(this.p17 != ''){
+        if(this.p17=='9'){
+
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+        
+      }if(this.p18 != ''){
+        if(this.p18 == '3' || this.p18 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p19 != ''){
+        if(this.p19=='4'){
+          this.infraestructura=this.infraestructura+1;
+        }else{
+          this.infraestructura=this.infraestructura+parseInt(this.p19);
+        }
+        
+      }if(this.p20 != ''){
+        if(this.p20 == '3' || this.p20 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }
+      if(this.p21 != ''){
+        if(this.p21 == '3' || this.p21 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p22 != ''){
+        this.infraestructura=this.infraestructura+this.p22.length;
+      }if(this.p23 != ''){
+        if(this.p23 == '3' || this.p23 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p24 != ''){
+        if(this.p24 == '3' || this.p24 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p25 != ''){
+        if(this.p25 == '3' || this.p25 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p26 != ''){
+        this.madurez=this.madurez+parseInt(this.p26);
+      }if(this.p26_1 != ''){
+        if(this.p26_1 == '3' || this.p26_1 == '2'){
+        }else{
+          this.infraestructura=this.infraestructura+1;
+        }
+      }if(this.p27 != ''){
+        this.madurez=this.madurez+parseInt(this.p27);
+      }if(this.p28 != ''){
+        this.madurez=this.madurez+parseInt(this.p28);
+      }if(this.p29 != ''){
+        this.madurez=this.madurez+parseInt(this.p29);
+      }if(this.p30 != ''){
+        if(this.p30 == '3' || this.p30 == '2'){
+        }else{
+          this.madurez=this.madurez+1;
+        }
+      }if(this.p31 != ''){
+        if(this.p31=='8'){
+        }else{
+          this.clientes=this.clientes+parseInt(this.p31);
+        }
+        
+      }if(this.p32 != ''){
+        if(this.p32=='8'){
+        }else{
+          this.clientes=this.clientes+parseInt(this.p32);
+        }
+        
+      }if(this.p33 != ''){
+        this.clientes=this.clientes+parseInt(this.p33);
+      }if(this.p34 != ''){
+        this.clientes=this.clientes+parseInt(this.p34);
+      }if(this.p35 != ''){
+        this.clientes=this.clientes+parseInt(this.p35);
+      }if(this.p36 != ''){
+        if(this.p36=='8'){
+        }else{
+          this.proveedores=this.proveedores+parseInt(this.p36);
+        }
+        
+      }if(this.p37 != ''){
+        if(this.p37=='8'){
+        }else{
+          this.proveedores=this.proveedores+parseInt(this.p37);
+        }
+        
+      }if(this.p38 != ''){
+        if(this.p38=='6'){
+        }else{
+          this.proveedores=this.proveedores+parseInt(this.p38);
+        }
+        
+      }if(this.p39a != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39a);
+        
+      }if(this.p39b != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39b);
+        
+      }if(this.p39c != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39c);
+        
+      }if(this.p39d != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39d);
+        
+      }if(this.p39e != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39e);
+        
+      }if(this.p39f != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39f);
+        
+      }if(this.p39g != ''){
+        this.proveedores=this.proveedores+parseInt(this.p39g);
+        
+      }if(this.p40 != ''){
+        this.proveedores=this.proveedores+parseInt(this.p40);
+        
+      }if(this.p41 != ''){
+        this.proveedores=this.proveedores+parseInt(this.p41);
+        
+      }
+
+      this.total=this.conocimiento+this.infraestructura+this.madurez+this.clientes+this.proveedores;
+
+    },
+    
     registerForm(){
-      db.collection("datos").doc(this.nit).set({
+      this.nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
+      let date = new Date().toLocaleDateString();
+      this.puntuacion()
+      db.collection("datos").doc(this.nitEmpresa).set({
         pregunta1:{
           respuesta: this.p1,
           complemento: this.c1
@@ -2005,6 +2316,9 @@ export default {
         pregunta26:{
           respuesta: this.p26,
           complemento: this.c26
+        },pregunta26_1:{
+          respuesta: this.p26_1,
+          complemento: this.c26_1
         },
         pregunta27:{
           respuesta: this.p27,
@@ -2070,7 +2384,15 @@ export default {
         pregunta41:{
           respuesta: this.p41,
         },
-        comentarios: this.c42
+        comentarios: this.c42,
+        puntajeConocimiento: this.conocimiento,
+        puntajeInfraestructura: this.infraestructura,
+        puntajeMadurez: this.madurez,
+        puntajeClientes: this.clientes,
+        puntajeProveedores: this.proveedores,
+        puntajeTotal: this.total,
+        fechaCreacion: date,
+        nit: this.nitEmpresa,
       }
       )
   .then(() => {
@@ -2082,11 +2404,9 @@ export default {
 });
 
     }
-    
-    
   },
   mounted() {
-    // methods can be called in lifecycle hooks, or other methods!
+    
   }
 }
 
@@ -2096,6 +2416,6 @@ export default {
 <style>
 
    @import '../assets/style.css'; 
-    @import '/public/base/styles.css'; 
+   @import '/public/base/styles.css'; 
  
 </style>

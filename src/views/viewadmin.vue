@@ -1,4 +1,5 @@
 <template>
+  <navAdmin></navAdmin>  
     <div>
       <div class="relative md:ml-64 bg-blueGray-100">
           <AdminL/>
@@ -31,17 +32,22 @@
   import cardBarras from "@/components/cards/cardBarras.vue";
   import cardInformation from "@/components/cards/cardInformation.vue";
   import cardSectores from "@/components/cards/cardSectores.vue";
+  import navAdmin from "@/components/views/elementos/navbar3.vue";
+
   
 
   export default {
     name: "dashboard-page",
     components: {
-    cardBarras,
-    cardGraficos,
-    cardInformation,
-    AdminL,
-    cardSectores,
-    
-},
+      cardBarras,
+      cardGraficos,
+      cardInformation,
+      cardSectores,
+      navAdmin,
+      AdminL,
+
+     
+    },
+
   };
   </script>

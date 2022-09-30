@@ -1,4 +1,7 @@
 <template>
+  <navAdmin></navAdmin>  
+  
+
     <div>
       <div class="flex flex-wrap">
         <div class="w-full xl:w-8/12 mb-12 xl:mb-0 px-4">
@@ -17,12 +20,15 @@
         </div>
       </div>
     </div>
+    
   </template>
   <script>
   import cardGraficos from "@/components/cards/cardGraficos.vue";
   import cardBarras from "@/components/cards/cardBarras.vue";
   import cardInformation from "@/components/cards/cardInformation.vue";
   import cardSectores from "@/components/cards/cardSectores.vue";
+  import navAdmin from "../components/views/elementos/navbar3.vue";
+
 /*
   
    */
@@ -33,6 +39,7 @@
       cardGraficos,
       cardInformation,
       cardSectores,
+      navAdmin
      
     },
   };

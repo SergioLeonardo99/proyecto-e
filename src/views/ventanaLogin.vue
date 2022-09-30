@@ -33,7 +33,7 @@
 
       <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
         <router-view></router-view>
-        <img src="@/assets/bg.webp" alt="" class="w-full h-full object-cover">
+        <img src="@/assets/wall.jpeg" alt="" class="w-full h-full object-cover">
       </div>
 
       <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
@@ -41,31 +41,31 @@
 
         <div class="w-full h-100">
 
-          <h1 class="text-2xl font-bold">Bienvenido</h1>
-          <h1 class="text-xl md:text-2xl font-bold leading-tight mt-12">Ingresa al sistema</h1>
+          <h1 class="text-3xl font-bold letra ">Bienvenido</h1>
+          <h1 class="text-xl md:text-xl letra leading-tight text-teal-700 mt-12">Ingresa al sistema</h1>
 
           <form class="mt-6">
             <div>
-              <label class="block text-gray-700">Nit</label>
+              <label class="block letra text-gray-700">NIT/C.C.</label>
               <input type="number" name="nit" v-model="nit" placeholder="Nit"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
                 autofocus autocomplete required>
             </div>
 
             <div class="mt-4">
-              <label class="block text-gray-700">Contraseña</label>
+              <label class="block letra text-gray-700">Contraseña</label>
               <input type="password" name="contraseña" v-model="contraseña" placeholder="Password" minlength="4"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                   focus:bg-white focus:outline-none" required>
             </div>
 
             <div class="text-right mt-2">
-              <a href="#" class="text-sm font-semibold text-gray-700 hover:text-gray-700 focus:text-gray-700">Olvidaste
+              <a href="#" class="text-sm letra text-gray-700 hover:text-gray-700 focus:text-gray-700">¿Olvidaste
                 tu contraseña?</a>
               <p>{{ mensaje }}</p>
             </div>
 
-            <button @click="autenticate()" type="button" class="w-full block bg-gray-400 hover:bg-gray-400 focus:bg-gray-400 text-white font-semibold rounded-lg
+            <button @click="autenticate()" type="button" class="w-full block letra bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Ingresar</button>
 
           </form>
@@ -97,14 +97,14 @@
             </div>
           </button> -->
 
-          <p class="mt-8">
-            Necesitas una cuenta?
-            <router-link to="/ventanaR" class="text-gray-400 hover:text-gray-900 font-semibold">
+          <p class="mt-8 letra">
+            ¿Necesitas una cuenta?
+            <router-link to="/ventanaR" class="text-teal-700 letra hover:text-teal-400 font-semibold">
               Crear una cuenta
             </router-link>
           </p>
 
-          <p class="text-sm text-gray-500 mt-12">&copy; 2022 M&S.</p>
+          <p class="text-sm letra text-teal-700 mt-12">&copy; 2022 M&S.</p>
         </div>
 
       </div>
@@ -116,8 +116,12 @@
 </template>
 
 <script>
-import db from "../components/firebase/initFirebase";
+import firebase from "../components/firebase/initFirebase";
+import "firebase/firestore";
+import Seguridad from "../components/js/encrypt.js";
 import VueCookies from 'vue-cookies'
+const db = firebase.firestore();
+const safe = new Seguridad();
 
 export default {
   data() {
@@ -145,9 +149,22 @@ export default {
         md.update(input_str);
 
         if (doc.data().contraseña == md.digest().toHex()) {
+          if(doc.data().tipo == 'empresa'){
+            VueCookies.set(safe.cipher('nit'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/profile');
+
+          }if(doc.data().tipo == 'estudiante'){
+            VueCookies.set(safe.cipher('estudiante'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/');
+
+          }if(doc.data().tipo == 'administrador'){
+            VueCookies.set(safe.cipher('admin'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/admin');
+
+          } 
           this.mensaje = "Datos validos"
-          VueCookies.set('nit', this.nit, "1h")
-          console.log($cookies.get("nit"))
+          
+          
           
         } else {
           this.mensaje = "Contraseña invalida..."
@@ -162,10 +179,16 @@ export default {
   },
   mounted() {
     // methods can be called in lifecycle hooks, or other methods!
-    console.log(db)
+    
   }
 }
 
 
 
+
 </script>
+<style>
+  .letra {
+    font-family: sans-serif;
+}
+</style>

@@ -4,7 +4,7 @@
     <div class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center">
         <!--Inicio card-->
 
-        <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
+        <div class="absolute bg-white opacity-60 inset-0 z-0"></div>
         <div class="max-w-md w-full space-y-8 p-10 bg-white rounded-xl z-10">
             <div class="text-center letra">
                 <h2 class="mt-6 text-3xl font-bold text-gray-900 letra">

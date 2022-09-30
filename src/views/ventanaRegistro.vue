@@ -35,17 +35,34 @@
           </div>
             
             <div>
-            <label class="block text-gray-700">Nit: </label>
-            <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-grays-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+
+            <label class="block text-gray-700">Nit de la empresa: </label>
+            <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
            <div>
-            <label class="block text-gray-700">Direccion: </label>
+            <label class="block text-gray-700">Dirección: </label>
             <input type="text" v-model="direccion" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
+          <div>
+            <label class="block text-gray-700">Nombre del encargado: </label>
+            <input type="text" v-model="encargado" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+          </div>
+
+          <div>
+            <label class="block text-gray-700">Cargo del encargado en la empresa: </label>
+            <input type="text" v-model="cargo" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+          </div>
+
+          <div>
+            <label class="block text-gray-700">Correo electrónico: </label>
+            <input type="text" v-model="email" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+          </div>
+
+
              <div>
-            <label class="block text-gray-700">Telefono: </label>
+            <label class="block text-gray-700">Número de celular o teléfono: </label>
             <input type="number" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
           </div>
 
@@ -57,14 +74,30 @@
             
           <div class="mt-4">
             <label class="block text-gray-700">Confirmar Contraseña: </label>
-            <input type="password" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+
+            <input type="password" v-model="contraseñaConfirmar" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                   focus:bg-white focus:outline-none" required>
           </div>
+
+          <div class="mt-4">
+            <select v-model="selected">
+              <option disabled value="">Por favor seleccione una:</option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+              <option></option>
+            </select>
+          </div>
+
          
   
           <button type="button" @click="advancedRegister()" class="w-full block bg-gray-400 hover:bg-gray-400 focus:bg-gray-400 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Registrarse</button>
           <p>{{ mensaje }}</p>
+
         </form>
   
         <hr class="my-4 border-gray-300 w-full">
@@ -84,10 +117,10 @@
 
 <script>
 
+import "firebase/storage";
+import firebase from "../components/firebase/initFirebase";
+const db = firebase.firestore();
 
-import db from "../components/firebase/initFirebase";
-import VueCookies from 'vue-cookies'
-import { registerFirestore } from "@firebase/firestore";
 
 export default {
   data() {
@@ -97,46 +130,68 @@ export default {
       direccion: '',
       telefono: 0,
       contraseña: '',
+      contraseñaConfirmar: '',
       mensaje: '',
+      email: '',
+      encargado: '',
+      cargo: '',
+
     }
   },
   methods: {
     advancedRegister() {
-      
-      var docRef = db.collection("usuario").doc(this.nit.toString());
-      
-      var getOptions = {
-        //source: 'cache'
-      };
-      docRef.get(getOptions).then((doc) => {
-        // Document was found in the cache. If no cached document exists,
-        // an error will be returned to the 'catch' block below.
+      if(this.nombre!=''&& this.nit != 0 && this.direccion != ''&&this.telefono !=0 &&this.contraseña !=''&&this.contraseñaConfirmar != ''&&this.email !=''&& this.encargado != ''&& this.cargo != ''){
+        if(this.contraseña==this.contraseñaConfirmar){
 
-        if (doc.data().nit == this.nit.toString()) {
-          this.mensaje = "Nit ya registrado..."
-        }
-      }).catch((error) => {
-        var forge = require('node-forge');
-        var input_str = this.contraseña;
-        var md = forge.md.sha256.create();
-        md.update(input_str);
-        db.collection("usuario").doc(this.nit.toString()).set({
-          nombre: this.nombre,
-          nit: this.nit,
-          direccion: this.direccion,
-          telefono: this.telefono,
-          contraseña: md.digest().toHex(),
-          tipo: "usuario"
-        })
-          .then(() => {
-            this.mensaje = "Empresa registrada con exito"
-          })
-          .catch((error) => {
-            console.error("Error writing document: ", error);
-            this.mensaje = "No se pudo completar el registro, intente nuevamente"
-          });
+
         
-      });
+        
+          var docRef = db.collection("usuario").doc(this.nit.toString());
+          
+          var getOptions = {
+            //source: 'cache'
+          };
+          docRef.get(getOptions).then((doc) => {
+            // Document was found in the cache. If no cached document exists,
+            // an error will be returned to the 'catch' block below.
+
+            if (doc.data().nit == this.nit.toString()) {
+              this.mensaje = "Nit ya registrado..."
+            }
+          }).catch((error) => {
+            let date = new Date().toLocaleDateString();
+            var forge = require('node-forge');
+            var input_str = this.contraseña;
+            var md = forge.md.sha256.create();
+            md.update(input_str);
+            db.collection("usuario").doc(this.nit.toString()).set({
+              nombre: this.nombre,
+              nit: this.nit,
+              direccion: this.direccion,
+              telefono: this.telefono,
+              email: this.email,
+              encargado: this.encargado,
+              cargo: this.cargo,
+              contraseña: md.digest().toHex(),
+              tipo: "empresa",
+              fechaCreacion: date,
+              estado: 'Activo',
+            })
+              .then(() => {
+                this.mensaje = "Empresa registrada con exito"
+              })
+              .catch((error) => {
+                console.error("Error writing document: ", error);
+                this.mensaje = "No se pudo completar el registro, intente nuevamente"
+              });
+            
+          });
+        }else{
+          this.mensaje = "Las contraseñas no coinciden..."
+        }
+      }else{
+        this.mensaje = "Tiene que rellenar todos los campos..."
+      }
 
     },
     register(){
