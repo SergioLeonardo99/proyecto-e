@@ -1,4 +1,9 @@
 import { createApp } from 'vue'
+//estilos
+import "@fortawesome/fontawesome-free/css/all.min.css";
+import "@/assets/styles/tailwind.css";
+
+
 import App from './App.vue'
 import ventanaLogin from "./views/ventanaLogin.vue"
 import ventanaRegistro from "./views/ventanaRegistro.vue"
@@ -14,7 +19,7 @@ import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
 import editarPerfilEmpresa from "./components/views/editarPerfilDeEmpresa.vue"
 import generarCSV from "./components/views/generarCSV.vue"
 import graficos from "./views/graficos.vue"
-
+import modEducativo from "./components/views/ModuloEd.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -40,6 +45,7 @@ const router = createRouter( {
     {path: '/graficos', name: 'graficos', component: graficos},
     {path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa},
     {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
+    {path: '/educativo', name: 'modEducativo', component: modEducativo}
   ]
 
 })

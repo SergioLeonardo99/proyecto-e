@@ -11,10 +11,13 @@
         <h3 class="text-2xl font-bold text-center">Foto del perfil</h3> 
         <img class="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-cyan-600"  :src="imagenDescargada" alt=""  />
        
-                        <form @submit.prevent="subirFoto" encrypter="multipart/form-data">
-                        <input @change="clickImage($event)" type="file" accept="image/*" class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
-                        <input type="submit" value="Cambiar imagen" class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
-        
+                        <form @submit.prevent="subirFoto" encrypter="multipart/form-data flex items-baseline justify-center">
+                        <input @change="clickImage($event)" type="file" accept="image/*" class="px-6 py-2 mt-4 text-white border-cyan-600 rounded-lg hover:bg-cyan-400">
+                        <div class="flex items-baseline justify-center">
+                
+                          <input type="submit" value="Actualizar foto de perfil" class="px-6 py-2 mt-4 text-white bg-blue-600 rounded-lg hover:bg-blue-900">
+                      
+                      </div>
                         </form >
                         
                     
