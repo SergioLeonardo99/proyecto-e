@@ -1,7 +1,9 @@
 <template>
     <!--Intregracion de un icono en forma de flecha para el redireccionamiento a la pagina principal-->
-    <div class="bg-teal-700">
-        <a href="/" class="m-10">
+    <!--seccion de titulo-->
+    <section class="bg-white">
+        <div class="bg-white justify-center gap-4  p-3 alinearT">
+            <a href="/" class="m-10">
             <svg width="24px" height="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
                 style="enable-background:new 0 0 512 51s2;" xml:space="preserve">
@@ -46,10 +48,6 @@
                 </g>
             </svg>
         </a>
-    </div>
-    <!--seccion de titulo-->
-    <section class="bg-white">
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
             <br>
             <h3 class="font-semibold letra text-teal-900 text-3xl">
 
@@ -193,6 +191,18 @@
                             (Desarrollador backend)
                             <br>
                             eyomayuza@ucundinamarca.edu.co
+                            <br>
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/edilson-yadir-yomayuza-guzman-7675b7241/">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
                     </div>
 
@@ -208,6 +218,18 @@
                             (Desarrollador backend)
                             <br>
                             bfmedina@ucundinamarca.edu.co
+                            <br>
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/brayan-felipe-medina-duarte-241826234/">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
                     </div>
                 </div>
@@ -228,6 +250,18 @@
                             (Analista de pruebas de software )
                             <br>
                             cfsaenz@ucundinamarca.edu.co
+                            <br>
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/cristian-felipe-saenz-guarnizo-879a92239/">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
 
                     </div>
@@ -244,6 +278,19 @@
                             (Desarrollador frontend)
                             <br>
                             kymaldonado@ucundinamarca.edu.co
+                            <br>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/karen-maldonado-8a2121214/">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
                     </div>
                 </div>
@@ -264,6 +311,19 @@
                             (Desarrollador frontend)
                             <br>
                             slvega@ucundinamarca.edu.co
+                            <br>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/sergio-leonardo-vega-corredor-99260b1b2/">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
                     </div>
 
@@ -279,6 +339,19 @@
                             (Especialista en gestión estratégica de proyectos)
                             <br>
                             sleonardocortes@ucundinamarca.edu.co.
+                            <br>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/segundo-leonardo-cortes-lopez-19123999">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
                     </div>
                 </div>
@@ -293,6 +366,19 @@
                             (Especialista en TIC aplicada a la enseñanza)
                             <br>
                             cecano@ucundinamarca.edu.co
+                            <br>
+
+                        <div class="flex flex-col justify-center items-center">
+                            <a href="https://www.linkedin.com/in/cristian-cano-778b70115/">
+                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+
+                                    <path
+                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                                    </path>
+                                </svg>
+                            </a>
+                        </div>
                         </p>
                     </div>
                 </div>

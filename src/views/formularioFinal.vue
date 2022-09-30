@@ -1242,7 +1242,7 @@
                 <li>
 
                   <input type="radio" id="28.4" value="5" v-model="p28">
-                    <label class="radio" for="28.4">Intercambio Electrónico de Documentos (EDI – Electronic Data Interchange)</label>
+                    <label class="radio" for="28.4">Intercambio Electrónico de Documentos (EDI - Electronic Data Interchange)</label>
                 </li>
                 <li>
 
@@ -1884,7 +1884,8 @@
 import "firebase/storage";
 import firebase from "../components/firebase/initFirebase";
 const db = firebase.firestore();
-import VueCookies from 'vue-cookies'
+import Seguridad from "../components/js/encrypt.js";
+const safe = new Seguridad();
 
 import navBar2 from '../components/views/elementos/navbar2.vue'
 
@@ -2211,13 +2212,9 @@ export default {
       this.total=this.conocimiento+this.infraestructura+this.madurez+this.clientes+this.proveedores;
 
     },
-    compruebaSesion(){
-      this.nitEmpresa =$cookies.get("nit")
-        if (this.nitEmpresa === null){
-            this.$router.push('/');
-        }
-    },
+    
     registerForm(){
+      this.nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
       let date = new Date().toLocaleDateString();
       this.puntuacion()
       db.collection("datos").doc(this.nitEmpresa).set({
@@ -2409,7 +2406,7 @@ export default {
     }
   },
   mounted() {
-    this.compruebaSesion()
+    
   }
 }
 
