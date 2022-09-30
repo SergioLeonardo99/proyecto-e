@@ -149,10 +149,22 @@ export default {
         md.update(input_str);
 
         if (doc.data().contraseña == md.digest().toHex()) {
+          if(doc.data().tipo == 'empresa'){
+            VueCookies.set(safe.cipher('nit'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/profile');
+
+          }if(doc.data().tipo == 'estudiante'){
+            VueCookies.set(safe.cipher('estudiante'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/');
+
+          }if(doc.data().tipo == 'administrador'){
+            VueCookies.set(safe.cipher('admin'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/admin');
+
+          } 
           this.mensaje = "Datos validos"
           
-          VueCookies.set(safe.cipher('nit'), safe.cipher(this.nit.toString()), "1h")
-          this.$router.push('/profile');
+          
           
         } else {
           this.mensaje = "Contraseña invalida..."

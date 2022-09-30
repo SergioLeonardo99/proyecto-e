@@ -1,5 +1,8 @@
+
 <template>
-  <table class="table table-striped">
+  
+  <navAdmin></navAdmin>
+  <DataTable :data="dataUsers" :columns="colum" :key="cambio" id="tablaUsuarios" class="table table-striped">
     <thead>
       <tr>
         <th>NIT</th>
@@ -8,12 +11,13 @@
         <th>Tipo</th>
         <th>Estado</th>
         <th>Encuesta</th>
-        <th>Opciones</th>
+        <th>Prueba</th>
+        
       </tr>
     </thead>
     <tbody>
 
-      <tr v-for="user in dataUsers">
+      <!-- <tr v-for="user in dataUsers">
         <td>{{user.nit}}</td>
         <td>{{user.nombre}}</td>
         <td>{{user.fechaCreacion}}</td>
@@ -28,7 +32,7 @@
 
           </button>
 
-          <!-- Dropdown menu -->
+           Dropdown menu 
           <div v-show="user.view">
             <button v-if="user.tipo!='administrador'" @click="prueba(user.nit)">
               <span>Acceder</span>
@@ -45,12 +49,12 @@
 
           </div>
 
-        </td>
+        </td> -->
 
-      </tr>
+      
     </tbody>
 
-  </table>
+  </DataTable>
 
 
 
@@ -62,9 +66,10 @@
 
 </template>
 <script>
-
+import navAdmin from "@/components/views/elementos/navbar3.vue";
 import firebase from "../../components/firebase/initFirebase";
 import Seguridad from "../../components/js/encrypt.js";
+import DataTable from 'datatables.net-vue3';
 
 import "firebase/firestore";
 
@@ -79,6 +84,8 @@ const safe = new Seguridad();
 
 export default {
   components: {
+    navAdmin,
+    DataTable
 
 
 
@@ -87,7 +94,9 @@ export default {
     return {
       dataUsers: [],
       show: false,
-      controlData: []
+      controlData: [],
+      cambio: false,
+      colum: [{"data":"nit"},{"data":"nombre"},{"data":"fechaCreacion"},{"data":"tipo"},{"data":"encuesta"},{"data":"estado"},{"data":"pruebita"}]
 
     }
   },
@@ -99,7 +108,7 @@ export default {
         .get()
         .then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
-            this.dataUsers.push({ 'nit': doc.data().nit, 'nombre': doc.data().nombre, 'fechaCreacion': doc.data().fechaCreacion, 'tipo': doc.data().tipo, 'encuesta': doc.data().encuesta, 'estado': doc.data().estado , 'view':false})
+            this.dataUsers.push({ 'nit': doc.data().nit, 'nombre': doc.data().nombre, 'fechaCreacion': doc.data().fechaCreacion, 'tipo': doc.data().tipo, 'encuesta': doc.data().encuesta, 'estado': doc.data().estado , 'view':false, 'pruebita':' <button @click="prueba(1234)"><span>Habilitar/Deshabilitar</span></button>'})
 
 
           });
@@ -107,6 +116,7 @@ export default {
         .catch((error) => {
           console.log("Error getting documents: ", error);
         });
+        this.cambio=true
     },
     prueba(nit) {
       console.log(nit)
@@ -127,7 +137,7 @@ export default {
 
   mounted() {
     this.datosUsuarios()
-
+    
 
 
   }
