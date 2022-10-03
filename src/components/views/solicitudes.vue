@@ -17,6 +17,7 @@
                         </div>
                         <label class="text-sm font-bold text-black tracking-wide">Encargado</label>
                         <input
+                            v-model="encargado"
                             class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-teal-700"
                             type="">
                     </div>
@@ -24,7 +25,7 @@
                         <label class="text-sm font-bold text-black tracking-wide">
                             Teléfono
                         </label>
-                        <input
+                        <input v-model="telefono"
                             class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-teal-700"
                             type="">
                     </div>
@@ -33,11 +34,11 @@
                             Tipo de solicitud
                         </label>
                         <!--List option para visualizacion de opciones-->
-                        <select id="lista" class="text-right letra">
-                            <option value="seleccionar">Seleccione</option>
-                            <option value="opcion1">Software a la medida</option>
-                            <option value="opcion2">Curso educativo</option>
-                            <option value="opcion3">Soporte técnico</option>
+                        <select v-model="solicitud" class="text-right letra">
+                            <option disabled value="">Seleccione</option>
+                            <option >Software a la medida</option>
+                            <option >Curso educativo</option>
+                            <option >Soporte técnico</option>
                         </select>
                         <!--contenedor para escribir la solicitud-->
 
@@ -65,11 +66,8 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            <input id="remember_me" name="remember_me" type="checkbox"
-                                class="h-4 w-4 bg-indigo-500 focus:ring-indigo-400 border-gray-300 rounded">
-                            <label for="remember_me" class="ml-2 block text-sm text-gray-900">
-                                Recordar usuario
-                            </label>
+                            
+                            
                         </div>
                     </div>
                     <div>
@@ -97,12 +95,22 @@
 import navBar2 from './elementos/navbar2.vue'
 
 export default {
+    data() {
+    return {
+      solicitud: '',
+      telefono: '',
+      encargado: '',
+      nit: '',
+      
+    }
+  },
 
     name: 'solicitudes',
     components: {
         navBar2
     },
     methods: {
+        
 
     }
 }

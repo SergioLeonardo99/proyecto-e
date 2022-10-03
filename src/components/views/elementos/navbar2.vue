@@ -19,7 +19,7 @@
                     <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
                     <li><a @click="$router.push('/formulario')" class="botones-link">Encuesta</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
+                    <li><a @click="$router.push('/solicitudes')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/educativo')" class="botones-link">Modúlo educativo</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
 
@@ -42,7 +42,7 @@
                     <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
                     <li><a @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
+                    <li><a @click="$router.push('/solicitudes')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/educativo')" class="botones-link">Modúlo educativo</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
