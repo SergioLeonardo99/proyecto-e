@@ -2,7 +2,9 @@
 <template>
   
   <navAdmin></navAdmin>
-  <DataTable :data="dataUsers" :columns="colum" :key="cambio" id="tablaUsuarios" class="table table-striped"
+  <label>Buscar?</label>
+  <input type="checkbox" id="checkbox" v-model="buscar" />
+  <DataTable v-if="buscar==true" :data="dataUsers" :columns="colum" :key="cambio" id="tablaUsuarios" class="table table-striped"
   :options="{
             aLengthMenu: [[10,25,-1],[10,25,'All']],
             iDisplayLength: 10,
@@ -27,9 +29,9 @@
         <th>Usuario</th>
         <th>Fecha de Creación</th>
         <th>Tipo</th>
-        <th>Estado</th>
         <th>Encuesta</th>
-        <th>Prueba</th>
+        <th>Estado</th>
+        
         
       </tr>
     </thead>
@@ -73,6 +75,99 @@
     </tbody>
 
   </DataTable>
+
+  <table v-if="buscar==false">
+    <thead>
+      <tr>
+        <th>NIT</th>
+        <th>Usuario</th>
+        <th>Fecha de Creación</th>
+        <th>Tipo</th>
+        <th>Estado</th>
+        <th>Encuesta</th>
+        <th>Aciones</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+
+     <tr v-for="user in dataUsers">
+        <td>{{user.nit}}</td>
+        <td>{{user.nombre}}</td>
+        <td>{{user.fechaCreacion}}</td>
+        <td>{{user.tipo}}</td>
+        <td>{{user.estado}}</td>
+        <td>{{user.encuesta}}</td>
+        <td>
+          <button @click.stop="user.view = !user.view">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 12.75a.75.75 0 110-1.5.75.75 0 010 1.5zM12 18.75a.75.75 0 110-1.5.75.75 0 010 1.5z" />
+            </svg>
+
+
+          </button>
+
+           Opciones
+          <div v-show="user.view">
+            <tr>
+            <button v-if="user.tipo!='administrador'" @click="accederUsuario(user.nit, user.tipo)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+              </svg>
+              <span>Acceder</span>
+              
+
+            </button>
+          </tr>
+          <tr>
+            <button v-if="user.tipo=='empresa'" @click="entrarEncuesta(user.nit)">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H8.25m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0H12m4.125 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 01.778-.332 48.294 48.294 0 005.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
+              </svg>
+              <span>Realizar encuesta</span>
+            </button>
+          </tr>
+          <tr>
+            <button  @click="cambiarEstado(user.nit,user.estado)">
+              <div v-if="user.estado=='Inactivo'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+                </svg>
+
+                <span>Habilitar</span>
+
+              </div>
+
+              <div v-if="user.estado=='Activo'">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M22 10.5h-6m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM4 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 0110.374 21c-2.331 0-4.512-.645-6.374-1.766z" />
+              </svg>
+                <span>Deshabilitar</span>
+
+              </div>
+
+              
+              
+
+              
+              
+
+            </button>
+          </tr>
+
+          
+
+          </div>
+          
+
+        </td> 
+      </tr>
+
+      
+    </tbody>
+
+  </table>
+
   <TransitionRoot as="template" :show="open">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
@@ -122,6 +217,7 @@
 
 </template>
 <script>
+import VueCookies from 'vue-cookies'
 import navAdmin from "@/components/views/elementos/navbar3.vue";
 import firebase from "../../components/firebase/initFirebase";
 import Seguridad from "../../components/js/encrypt.js";
@@ -162,15 +258,15 @@ export default {
       show: false,
       controlData: [],
       cambio: false,
-      colum: [{"data":"nit"},{"data":"nombre"},{"data":"fechaCreacion"},{"data":"tipo"},{"data":"encuesta"},{"data":"estado"},{"data":"pruebita"}],
+      colum: [{"data":"nit"},{"data":"nombre"},{"data":"fechaCreacion"},{"data":"tipo"},{"data":"encuesta"},{"data":"estado"}],
       open: false,
       nitEditar: 1234,
+      buscar: false,
     }
   },
   methods: {
-    seguridadPrueba(){
-    },
     datosUsuarios() {
+      this.dataUsers=[]
       db.collection("usuario")
         .get()
         .then((querySnapshot) => {
@@ -190,11 +286,51 @@ export default {
       this.open=true
 
     },
-    accederUsuario(nit){
+    entrarEncuesta(nit){
+
+      VueCookies.set(safe.cipher('nit'), safe.cipher(nit.toString()), "1h")
+      this.$router.push('/formulario');
+    },
+    accederUsuario(nit, tipo){
+      if(tipo == 'empresa'){
+            VueCookies.set(safe.cipher('nit'), safe.cipher(nit.toString()), "1h")
+            this.$router.push('/profile');
+
+          }if(tipo == 'estudiante'){
+            VueCookies.set(safe.cipher('estudiante'), safe.cipher(this.nit.toString()), "1h")
+            this.$router.push('/');
+
+          }
+
+      
 
     },
     cambiarEstado(nit, estado){
+      if(estado=='Activo'){
+        estado='Inactivo'
 
+      }else{
+        estado='Activo'
+      }
+      var docRef = db.collection("usuario").doc(nit.toString());
+          var getOptions = {
+            //source: 'cache'
+          };
+          docRef.update({
+            estado: estado,
+          })
+            .then(() => {
+              console.log("Document successfully updated!");
+              this.datosUsuarios()
+              
+            })
+            .catch((error) => {
+              // The document probably doesn't exist.
+              console.error("Error updating document: ", error);
+            });
+    
+      
+         
     },
     realizarEncuesta(nit){
 

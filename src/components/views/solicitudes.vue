@@ -1,7 +1,8 @@
 <template>
     <navBar2> </navBar2>
     <!--Creacion del formulario para las solicitudes-->
-    <div class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center">
+    <div
+        class="relative min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 bg-gray-500 bg-no-repeat bg-cover relative items-center">
         <!--Inicio card-->
 
         <div class="absolute bg-white opacity-60 inset-0 z-0"></div>
@@ -16,8 +17,7 @@
                         <div class="absolute right-0 mt-4">
                         </div>
                         <label class="text-sm font-bold text-black tracking-wide">Encargado</label>
-                        <input
-                            v-model="encargado"
+                        <input v-model="encargado"
                             class=" w-full text-base py-2 border-b border-gray-300 focus:outline-none focus:border-teal-700"
                             type="">
                     </div>
@@ -36,9 +36,9 @@
                         <!--List option para visualizacion de opciones-->
                         <select v-model="solicitud" class="text-right letra">
                             <option disabled value="">Seleccione</option>
-                            <option >Software a la medida</option>
-                            <option >Curso educativo</option>
-                            <option >Soporte técnico</option>
+                            <option>Software a la medida</option>
+                            <option>Curso educativo</option>
+                            <option>Soporte técnico</option>
                         </select>
                         <!--contenedor para escribir la solicitud-->
 
@@ -66,8 +66,8 @@
                     </div>
                     <div class="flex items-center justify-between">
                         <div class="flex items-center">
-                            
-                            
+
+
                         </div>
                     </div>
                     <div>
@@ -96,21 +96,47 @@ import navBar2 from './elementos/navbar2.vue'
 
 export default {
     data() {
-    return {
-      solicitud: '',
-      telefono: '',
-      encargado: '',
-      nit: '',
-      
-    }
-  },
+        return {
+            solicitud: '',
+            telefono: '',
+            encargado: '',
+            nit: '',
+
+        }
+    },
 
     name: 'solicitudes',
     components: {
         navBar2
     },
     methods: {
-        
+        cargarEmpresa() {
+
+            this.nitEmpresa = safe.decrypt($cookies.get(safe.cipher('nit')))
+
+            var docRef = db.collection("usuario").doc(this.nitEmpresa.toString());
+
+
+            var getOptions = {
+                //source: 'cache'
+            };
+            docRef.get(getOptions).then((doc) => {
+
+                // Document was found in the cache. If no cached document exists,
+                // an error will be returned to the 'catch' block below.
+               
+                this.telefonoEmpresa = doc.data().telefono;
+                this.encargado = doc.data().encargado;
+                
+                
+                this.about = doc.data().about;
+                this.cargarImagen()
+
+            }).catch((error) => {
+                this.$router.push('/');
+            });
+        },
+
 
     }
 }

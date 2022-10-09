@@ -2008,9 +2008,7 @@ export default {
   },
  
   methods: {
-    verificar(){
     
-    },
     puntuacion(){
       if (this.p1 != ''){
         this.conocimiento=this.conocimiento+1;
