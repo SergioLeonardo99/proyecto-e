@@ -30,10 +30,12 @@
 
   <body>
 
+    <Navbar></Navbar>
     <section class="flex flex-col md:flex-row h-screen items-center">
+      
 
       <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
-        <router-view></router-view>
+        
         <img src="@/assets/wall.jpeg" alt="" class="w-full h-full object-cover">
       </div>
 
@@ -160,6 +162,8 @@ import "firebase/firestore";
 import Seguridad from "../components/js/encrypt.js";
 import VueCookies from 'vue-cookies'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import Navbar from '../components/views/elementos/navbar.vue'
+
 const db = firebase.firestore();
 const safe = new Seguridad();
 
@@ -169,7 +173,8 @@ export default {
     DialogPanel,
     DialogTitle,
     TransitionChild,
-    TransitionRoot
+    TransitionRoot,
+    Navbar
 
 
 
@@ -210,7 +215,7 @@ export default {
 
           }if(doc.data().tipo == 'estudiante'){
             VueCookies.set(safe.cipher('estudiante'), safe.cipher(this.nit.toString()), "1h")
-            this.$router.push('/');
+            this.$router.push('/empresaestudiante');
 
           }if(doc.data().tipo == 'administrador'){
             VueCookies.set(safe.cipher('admin'), safe.cipher(this.nit.toString()), "1h")
