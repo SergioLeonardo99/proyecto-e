@@ -17,7 +17,7 @@
                 <ul class="menu flex items-center justify-center gap-5">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
                     <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
-                    <li><a @click="$router.push('/formulario')" class="botones-link">Encuesta</a></li>
+                    <li><a v-if="encuesta" @click="$router.push('/formulario')" class="botones-link">Encuesta</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/solicitudes')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/educativo')" class="botones-link">Modúlo educativo</a></li>
@@ -40,7 +40,7 @@
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
                     <li><a @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
-                    <li><a @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>
+                    <li><a v-if="encuesta" @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>
                     <li><a @click="$router.push('/')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/solicitudes')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/educativo')" class="botones-link">Modúlo educativo</a></li>
@@ -66,6 +66,7 @@ export default {
     data() {
         return {
             isActive: true,
+            encuesta: false,
 
         }
     },
@@ -75,9 +76,14 @@ export default {
         },
         compruebaSession(){
             var nitEmpresa =$cookies.get(safe.cipher('nit'))
-
+            var admin =$cookies.get(safe.cipher('admin'))
             if (nitEmpresa === null){
                 this.$router.push('/');
+            }
+            if(admin === null){
+                this.encuesta=false
+            }else{
+                this.encuesta=true
             }
         },
         terminarSession(){

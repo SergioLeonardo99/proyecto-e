@@ -19,6 +19,8 @@ import listaUsuarios from "./components/views/listaUsuarios.vue"
 import graficos from "./views/graficos.vue"
 import modEducativo from "./components/views/ModuloEd.vue"
 import solicitudes from "./components/views/solicitudes.vue"
+import solicitudesAdmin from "./components/views/solicitudesAdmin.vue"
+import empresaEstudiante from "./components/views/empresasEstudiantes.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -55,7 +57,9 @@ const router = createRouter( {
     {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
     {path: '/educativo', name: 'modEducativo', component: modEducativo},
     {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
-    {path: '/solicitudes', name:'solicitudes', component:solicitudes}
+    {path: '/solicitudes', name:'solicitudes', component:solicitudes},
+    {path: '/solicitudesadmin', name:'solicitudesAdmin', component:solicitudesAdmin},
+    {path: '/empresaestudiante', name:'empresaEstudiante', component:empresaEstudiante}
   ]
 
 })

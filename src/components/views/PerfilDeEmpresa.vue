@@ -150,7 +150,7 @@ export default {
                 // https://firebase.google.com/docs/storage/web/handle-errors
                 switch (error.code) {
                     case 'storage/object-not-found':
-                        // File doesn't exist
+                        this.imagenDescargada="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
                         break;
                     case 'storage/unauthorized':
                         // User doesn't have permission to access the object

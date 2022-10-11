@@ -11,10 +11,11 @@
 
 </head>
 <body>
+  <Navbar></Navbar>
   <section class="flex flex-col md:flex-row h-screen items-center">
 
     <div class="bg-gray-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
-      <router-view></router-view>
+      
       <img src="@/assets/wall2.jpeg" alt="" class="w-full h-full object-cover">
     </div>
   
@@ -212,9 +213,12 @@
 import "firebase/storage";
 import firebase from "../components/firebase/initFirebase";
 const db = firebase.firestore();
-
+import Navbar from '../components/views/elementos/navbar.vue'
 
 export default {
+  components: {
+    Navbar
+  },
   data() {
     return {
       nombre: '',
