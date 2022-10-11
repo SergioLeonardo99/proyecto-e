@@ -12,7 +12,7 @@
                     Centro de solicitudes
                 </h2>
                 <form class="mt-8 space-y-6">
-                    <input type="hidden" name="remember" value="true">
+
                     <div class="relative text-left">
                         <div class="absolute right-0 mt-4">
                         </div>
@@ -45,7 +45,7 @@
                     </div>
                     <div class="mt-8 content-center text-left">
                         <div class="form-group mb-6">
-                            <textarea class="
+                            <textarea v-model="texto" class="
                                     form-control
                                     block
                                     w-full
@@ -71,13 +71,14 @@
                         </div>
                     </div>
                     <div>
-                        <button type="submit"
+                        <button @click="enviarSolicitud()"  type="button"
                             class="w-full flex justify-center bg-teal-700 text-gray-100 p-4  rounded-full tracking-wide
                                 font-semibold  focus:outline-none focus:shadow-outline hover:bg-teal-700 shadow-lg cursor-pointer transition ease-in duration-300">
                             Enviar solicitud
                         </button>
                     </div>
                 </form>
+                <h1>{{mensaje}}</h1>
             </div>
         </div>
     </div>
@@ -93,6 +94,11 @@
 
 <script>
 import navBar2 from './elementos/navbar2.vue'
+import Seguridad from "../../components/js/encrypt.js";
+import "firebase/firestore";
+import firebase from "../../components/firebase/initFirebase";
+const safe = new Seguridad();
+const db = firebase.firestore();
 
 export default {
     data() {
@@ -101,6 +107,8 @@ export default {
             telefono: '',
             encargado: '',
             nit: '',
+            texto: '',
+            mensaje: ''
 
         }
     },
@@ -112,9 +120,9 @@ export default {
     methods: {
         cargarEmpresa() {
 
-            this.nitEmpresa = safe.decrypt($cookies.get(safe.cipher('nit')))
+            this.nit = safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
 
-            var docRef = db.collection("usuario").doc(this.nitEmpresa.toString());
+            var docRef = db.collection("usuario").doc(this.nit.toString());
 
 
             var getOptions = {
@@ -124,21 +132,52 @@ export default {
 
                 // Document was found in the cache. If no cached document exists,
                 // an error will be returned to the 'catch' block below.
-               
-                this.telefonoEmpresa = doc.data().telefono;
+
+                this.telefono = doc.data().telefono;
                 this.encargado = doc.data().encargado;
-                
-                
-                this.about = doc.data().about;
-                this.cargarImagen()
+
 
             }).catch((error) => {
                 this.$router.push('/');
             });
         },
+        enviarSolicitud() {
+            if (this.solicitud != '' && this.telefono != '' && this.encargado != '' && this.nit != '' && this.texto != '') {
+                let date = new Date().toLocaleDateString();
+                var solicitud = date+this.nit
+                solicitud = solicitud.split("/").join(''); 
+                db.collection("solicitudes").doc(solicitud).set({
+                    solicitud: this.solicitud,
+                    telefono: this.telefono,
+                    encargado: this.encargado,
+                    nit: this.nit,
+                    texto: this.texto,
+                    completada: 'No',
+                    fechaCreacion: date,
+                    admin: '',
+                    fechaSolucion: '',
+                    tipo: 'Empresa'
+                })
+                    .then(() => {
+                        this.mensaje = "Solicitud realizada con exito"
+                    })
+                    .catch((error) => {
+                        console.error("Error writing document: ", error);
+                        this.mensaje = "No se pudo completar la solicitud, intente nuevamente"
+                    });
+            } else {
+                this.mensaje = "Tiene que rellenar todos los campos..."
+            }
+
+        },
 
 
-    }
+    },
+    mounted() {
+        this.cargarEmpresa()
+
+
+    },
 }
 
 </script>

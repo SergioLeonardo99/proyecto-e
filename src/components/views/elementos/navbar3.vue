@@ -17,7 +17,7 @@
                 <ul class="menu flex items-center justify-center gap-5">
                     <li><a @click="$router.push('/admin')" class="botones-link">Dashboard</a></li>
                     <li><a @click="$router.push('/listausuarios')" class="botones-link">Lista Usuarios</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
+                    <li><a @click="$router.push('/solicitudesadmin')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/generarcsv')" class="botones-link">Generar CSV</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
@@ -37,7 +37,7 @@
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/admin')" class="botones-link">Dashboard</a></li>
                     <li><a @click="$router.push('/listausuarios')" class="botones-link">Lista Usuarios</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
+                    <li><a @click="$router.push('/solicitudesadmin')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/generarcsv')" class="botones-link">Generar CSV</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
