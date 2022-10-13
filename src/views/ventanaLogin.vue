@@ -215,7 +215,7 @@ export default {
 
           }if(doc.data().tipo == 'estudiante'){
             VueCookies.set(safe.cipher('estudiante'), safe.cipher(this.nit.toString()), "1h")
-            this.$router.push('/empresaestudiante');
+            this.$router.push('/perfilestudiante');
 
           }if(doc.data().tipo == 'administrador'){
             VueCookies.set(safe.cipher('admin'), safe.cipher(this.nit.toString()), "1h")

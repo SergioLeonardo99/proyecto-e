@@ -15,9 +15,9 @@
 
             <div class="links lg:block hidden w-1/6 md:w-4/6">
                 <ul class="menu flex items-center justify-center gap-5">
-                    <li><a @click="$router.push('/')" class="botones-link">Perfil</a></li>
+                    <li><a @click="$router.push('/perfilestudiante')" class="botones-link">Perfil</a></li>
                     <li><a @click="$router.push('/empresaestudiante')" class="botones-link">Empresas</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
+                    <li><a @click="$router.push('/solicitudesestudiante')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"
                             class="border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
@@ -34,9 +34,9 @@
                 </button>
                 <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
                     :class="{ hidden: isActive }">
-                    <li><a @click="$router.push('/')" class="botones-link">Perfil</a></li>
+                    <li><a @click="$router.push('/perfilestudiante')" class="botones-link">Perfil</a></li>
                     <li><a @click="$router.push('/empresaestudiante')" class="botones-link">Empresas</a></li>
-                    <li><a @click="$router.push('/')" class="botones-link">Solicitudes</a></li>
+                    <li><a @click="$router.push('/solicitudesestudiante')" class="botones-link">Solicitudes</a></li>
                     
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
                     <!-- <li><a href="#"

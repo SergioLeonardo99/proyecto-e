@@ -1,6 +1,6 @@
 <template>
   <!--llamado del navBar2 a la clase-->
-  <navBar2></navBar2>
+  <navBar4></navBar4>
   <!--Intregacion de la imagen principal de la empresa-->
 
   <div class="flex items-center justify-center min-h-screen  ">
@@ -31,14 +31,14 @@
       <form action="">
         <div class="mt-4">
           <div>
-            <label class="block">Nombre de la empresa </label>
+            <label class="block">Nombre del Estudiante </label>
             <input type="text" v-model="nombre" placeholder="nombre"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
               autofocus autocomplete required>
 
           </div>
           <div>
-            <label class="block">Nit de la empresa </label>
+            <label class="block">Identificacion estudiante </label>
             <input type="number" v-model="nit" placeholder="nit"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               autofocus autocomplete required disabled>
@@ -51,20 +51,7 @@
               autofocus autocomplete required>
 
           </div>
-          <div>
-            <label class="block">Nombre del encargado</label>
-            <input type="text" v-model="encargado" placeholder="nombre del encargado"
-              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required>
-
-          </div>
-          <div>
-            <label class="block">Cargo del encargado en la empresa</label>
-            <input type="text" v-model="cargo" placeholder="cargo"
-              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required>
-
-          </div>
+         
           <div>
             <label class="block">Correo electrónico</label>
             <input type="email" v-model="email" placeholder="correo"
@@ -121,7 +108,7 @@ var storageRef = storage.ref();
 
 
 
-import navBar2 from './elementos/navbar2.vue'
+import navBar4 from './elementos/navbar4.vue'
 
 
 
@@ -145,12 +132,12 @@ export default {
     }
   },
   components: {
-    navBar2
+    navBar4
   },
 
   methods: {
     cargarEmpresa() {
-      var nitEmpresa = safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
+      var nitEmpresa = safe.decrypt($cookies.get(safe.cipher('estudiante'))).toString()
 
       var docRef = db.collection("usuario").doc(nitEmpresa);
 
@@ -164,11 +151,8 @@ export default {
         this.nombre = doc.data().nombre;
         this.nit = doc.data().nit;
         this.telefono = doc.data().telefono;
-        this.encargado = doc.data().encargado;
-        this.cargo = doc.data().cargo;
         this.email = doc.data().email;
         this.direccion = doc.data().direccion;
-        this.about = doc.data().about;
         this.cargarImagen()
 
       }).catch((error) => {
@@ -193,26 +177,11 @@ export default {
     cargarImagen() {
       // Create a reference to the file we want to download
       var starsRef = storageRef.child('imagenes/' + this.nit + '.jpg');
-      var docRef = db.collection("usuario").doc(this.nit.toString());
+
       // Get the download URL
       starsRef.getDownloadURL()
         .then((url) => {
           this.imagenDescargada = url;
-
-          docRef.update({
-            img: url
-            
-
-          })
-            .then(() => {
-              console.log("Document successfully updated!");
-              this.contraseña = ''
-              this.contraseñaConfirmar = ''
-            })
-            .catch((error) => {
-              // The document probably doesn't exist.
-              console.error("Error updating document: ", error);
-            });
           // Insert url into an <img> tag to "download"
 
 
@@ -222,19 +191,7 @@ export default {
           // https://firebase.google.com/docs/storage/web/handle-errors
           switch (error.code) {
             case 'storage/object-not-found':
-            docRef.update({
-            img: 'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png'
-            
-
-          })
-            .then(() => {
-              console.log("Document successfully updated!");
-
-            })
-            .catch((error) => {
-              // The document probably doesn't exist.
-              console.error("Error updating document: ", error);
-            });
+              // File doesn't exist
               break;
             case 'storage/unauthorized':
               // User doesn't have permission to access the object
@@ -260,7 +217,7 @@ export default {
     },
 
     advancedRegister() {
-      if (this.nombre != '' && this.nit != 0 && this.direccion != '' && this.telefono != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.encargado != '' && this.cargo != '') {
+      if (this.nombre != '' && this.nit != 0 && this.direccion != '' && this.telefono != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '') {
         if (this.contraseña == this.contraseñaConfirmar) {
           var docRef = db.collection("usuario").doc(this.nit.toString());
           var forge = require('node-forge');
@@ -276,12 +233,7 @@ export default {
             direccion: this.direccion,
             telefono: this.telefono,
             email: this.email,
-            encargado: this.encargado,
-            cargo: this.cargo,
             contraseña: md.digest().toHex(),
-            about: this.about,
-            
-
           })
             .then(() => {
               console.log("Document successfully updated!");
