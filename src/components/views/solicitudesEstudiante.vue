@@ -2,6 +2,9 @@
 <template>
   
   <navBar4></navBar4>
+  <div v-if="dataUsers.length>0">
+
+  
   <label>Buscar?</label>
   <input type="checkbox" id="checkbox" v-model="buscar" />
   <DataTable v-if="buscar==true" :data="dataUsers" :columns="colum" :key="cambio" id="tablaUsuarios" class="table table-striped"
@@ -29,7 +32,7 @@
         <th>Completada</th>
         <th>Responsable</th>
         <th>Solicitud</th>
-        <th>Tipo</th>
+        
       
         
         
@@ -172,7 +175,10 @@
     </Dialog>
   </TransitionRoot>
 
-  
+</div>
+<div v-if="dataUsers.length<1">
+  <h1>Sin solicitudes disponibles</h1>
+</div>
 
 
 
@@ -181,7 +187,7 @@
 
 
 
-
+ 
 </template>
 <script>
 import navBar4 from './elementos/navbar4.vue'
@@ -225,7 +231,7 @@ export default {
       show: false,
       dataUser: new Object,
       cambio: false,
-      colum: [{"data":"id"},{"data":"completada"},{"data":"admin"},{"data":"solicitud"},{"data":"tipo"}],
+      colum: [{"data":"id"},{"data":"completada"},{"data":"admin"},{"data":"solicitud"}],
       open: false,
       nitEditar: 1234,
       buscar: false,
@@ -238,15 +244,16 @@ export default {
   },
   methods: {
     datosSolicitudes() {
+      var idEstudiante = safe.decrypt($cookies.get(safe.cipher('estudiante'))).toString()
       this.dataUsers=[]
-      db.collection("solicitudes")
+      db.collection("solicitudes").where("nit", "==", idEstudiante.toString())
         .get()
         .then((querySnapshot) => {
           querySnapshot.forEach((doc) => {
             var rellenarid=''
             rellenarid=doc.data().fechaCreacion+doc.data().nit
             rellenarid=rellenarid.split("/").join(''); 
-            this.dataUsers.push({ 'id': rellenarid, 'completada': doc.data().completada, 'admin': doc.data().admin, 'solicitud': doc.data().solicitud, 'tipo': doc.data().tipo, 'estado': doc.data().estado})
+            this.dataUsers.push({ 'id': rellenarid, 'completada': doc.data().completada, 'admin': doc.data().admin, 'solicitud': doc.data().solicitud, 'estado': doc.data().estado})
 
           });
         })
