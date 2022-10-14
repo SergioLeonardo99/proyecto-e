@@ -87,8 +87,6 @@ export default {
     },
     mounted() {
         this.compruebaSession()
-        
-    
   }
 }
 </script>
