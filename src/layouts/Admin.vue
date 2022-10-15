@@ -1,6 +1,7 @@
 <template>
     <div>
-      <sidebar />
+    
+ 
       <div class="relative bg-blueGray-100">
         <admin-navbar /> 
         <HeaderStatus/>
@@ -14,6 +15,7 @@
   <script>
   import AdminNavbar from "@/components/navarbs/adminNavar.vue";
   import Sidebar from "@/components/sidebar/sidebar.vue";
+  import sidebarmini from "@/components/sidebar/sidebarmini.vue";
   import HeaderStatus from "@/components/headers/HeaderStatus.vue";
 
   //import FooterAdmin from "@/components/Footers/FooterAdmin.vue";
@@ -21,6 +23,7 @@
     name: "admin-layout",
     components: {
     AdminNavbar,
+    sidebarmini,
     Sidebar,
     HeaderStatus,
    

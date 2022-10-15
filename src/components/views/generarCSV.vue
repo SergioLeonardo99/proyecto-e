@@ -1,207 +1,242 @@
 <template>
-<ul border="1">
-<tr>
-	<th>Nit</th>
-    <th>Fecha</th>
-	<th>Pregunta1</th>
-	<th>Complemento1</th>
-	<th>Pregunta2</th>
-    <th>Complemento2</th>
-	<th>Pregunta3</th>
-    <th>Complemento3</th>
-	<th>Pregunta4</th>
-    <th>Complemento4</th>
-	<th>Pregunta5</th>
-    <th>Complemento5</th>
-	<th>Pregunta6</th>
-    <th>Complemento6</th>
-	<th>Pregunta7</th>
-    <th>Complemento7</th>
-	<th>Pregunta8</th>
-    <th>Complemento8</th>
-	<th>Pregunta9</th>
-    <th>Complemento9</th>
-	<th>Pregunta10</th>
-    <th>Complemento10</th>
-	<th>Pregunta11</th>
-    <th>Complemento11</th>
-	<th>Pregunta12</th>
-	<th>Pregunta13</th>
-	<th>Pregunta14</th>
-	<th>Complemento14</th>
-	<th>Pregunta15</th>
-	<th>Complemento15</th>
-    <th>Pregunta16</th>
-	<th>Complemento16</th>
-    <th>Pregunta17</th>
-    <th>Pregunta18</th>
-    <th>Complemento18</th>
-    <th>Pregunta19</th>
-    <th>Complemento19</th>
-    <th>Pregunta20</th>
-    <th>Complemento20</th>
-    <th>Pregunta21</th>
-    <th>Complemento21</th>
-    <th>Pregunta22</th>
-    <th>Pregunta23</th>
-    <th>Complemento23</th>
-    <th>Pregunta24</th>
-    <th>Complemento24</th>
-    <th>Pregunta25</th>
-    <th>Complemento25</th>
-    <th>Pregunta26</th>
-    <th>Complemento26</th>
-    <th>Pregunta26_1</th>
-    <th>Complemento26_1</th>
-    <th>Pregunta27</th>
-    <th>Pregunta28</th>
-    <th>Complemento28</th>
-    <th>Pregunta29</th>
-    <th>Complemento29</th>
-    <th>Pregunta30</th>
-    <th>Complemento30</th>
-    <th>Pregunta31</th>
-    <th>Pregunta32</th>
-    <th>Pregunta33</th>
-    <th>Pregunta34</th>
-    <th>Complemento34</th>
-    <th>Pregunta35</th>
-    <th>Pregunta36</th>
-    <th>Pregunta37</th>
-    <th>Pregunta38</th>
-    <th>FrecuenciaÓrdenesdeCompra</th>
-    <th>NúmeroÓrdenesdeCompra</th>
-    <th>FrecuenciaFacturas</th>
-    <th>NúmeroFacturas</th>
-    <th>FrecuenciaRemisiones</th>
-    <th>NúmeroRemisiones</th>
-    <th>FrecuenciaConfirmacionesdedespacho</th>
-    <th>NúmeroConfirmacionesdedespacho</th>
-    <th>FrecuenciaCotizaciones</th>
-    <th>NúmeroCotizaciones</th>
-    <th>FrecuenciaCatálogosdeproductos</th>
-    <th>NúmeroCatálogosdeproductos</th>
-    <th>FrecuenciaOtros</th>
-    <th>NúmeroOtros</th>
-    <th>Pregunta40</th>
-    <th>Complemento40</th>
-    <th>Pregunta41</th>
-    <th>Complemento41</th>
-    <th>Comentarios</th>
-    <th>puntajeClientes</th>
-    <th>puntajeConocimiento</th>
-    <th>puntajeInfraestructura</th>
-    <th>puntajeMadurez</th>
-    <th>PuntajeProveedores</th>
-    <th>PuntajeTotal</th>
+    <navAdmin></navAdmin>
+
+    <body class="bg-white text-gray-900 tracking-wider leading-normal">
+      
+        <div class="container mx-auto px-4 sm:px-8">
+         
+            <div class="py-8">
+                <div>
+                    <h2 class="text-2xl font-semibold leading-tight">Tabla Csv</h2>
+                </div>
+                <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
+                    <div class="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
+                        <table class="min-w-full leading-normal" id="customers">
+                            
+                            <thead>
+                                <tr>
+                                    <th  class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Nit</th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Fecha</th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Pregunta1</th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Complemento1</th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Pregunta2</th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Complemento2</th>
+                                    <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">Pregunta3</th>
+                                    <th>Complemento3</th>
+                                    <th>Pregunta4</th>
+                                    <th>Complemento4</th>
+                                    <th>Pregunta5</th>
+                                    <th>Complemento5</th>
+                                    <th>Pregunta6</th>
+                                    <th>Complemento6</th>
+                                    <th>Pregunta7</th>
+                                    <th>Complemento7</th>
+                                    <th>Pregunta8</th>
+                                    <th>Complemento8</th>
+                                    <th>Pregunta9</th>
+                                    <th>Complemento9</th>
+                                    <th>Pregunta10</th>
+                                    <th>Complemento10</th>
+                                    <th>Pregunta11</th>
+                                    <th>Complemento11</th>
+                                    <th>Pregunta12</th>
+                                    <th>Pregunta13</th>
+                                    <th>Pregunta14</th>
+                                    <th>Complemento14</th>
+                                    <th>Pregunta15</th>
+                                    <th>Complemento15</th>
+                                    <th>Pregunta16</th>
+                                    <th>Complemento16</th>
+                                    <th>Pregunta17</th>
+                                    <th>Pregunta18</th>
+                                    <th>Complemento18</th>
+                                    <th>Pregunta19</th>
+                                    <th>Complemento19</th>
+                                    <th>Pregunta20</th>
+                                    <th>Complemento20</th>
+                                    <th>Pregunta21</th>
+                                    <th>Complemento21</th>
+                                    <th>Pregunta22</th>
+                                    <th>Pregunta23</th>
+                                    <th>Complemento23</th>
+                                    <th>Pregunta24</th>
+                                    <th>Complemento24</th>
+                                    <th>Pregunta25</th>
+                                    <th>Complemento25</th>
+                                    <th>Pregunta26</th>
+                                    <th>Complemento26</th>
+                                    <th>Pregunta26_1</th>
+                                    <th>Complemento26_1</th>
+                                    <th>Pregunta27</th>
+                                    <th>Pregunta28</th>
+                                    <th>Complemento28</th>
+                                    <th>Pregunta29</th>
+                                    <th>Complemento29</th>
+                                    <th>Pregunta30</th>
+                                    <th>Complemento30</th>
+                                    <th>Pregunta31</th>
+                                    <th>Pregunta32</th>
+                                    <th>Pregunta33</th>
+                                    <th>Pregunta34</th>
+                                    <th>Complemento34</th>
+                                    <th>Pregunta35</th>
+                                    <th>Pregunta36</th>
+                                    <th>Pregunta37</th>
+                                    <th>Pregunta38</th>
+                                    <th>FrecuenciaÓrdenesdeCompra</th>
+                                    <th>NúmeroÓrdenesdeCompra</th>
+                                    <th>FrecuenciaFacturas</th>
+                                    <th>NúmeroFacturas</th>
+                                    <th>FrecuenciaRemisiones</th>
+                                    <th>NúmeroRemisiones</th>
+                                    <th>FrecuenciaConfirmacionesdedespacho</th>
+                                    <th>NúmeroConfirmacionesdedespacho</th>
+                                    <th>FrecuenciaCotizaciones</th>
+                                    <th>NúmeroCotizaciones</th>
+                                    <th>FrecuenciaCatálogosdeproductos</th>
+                                    <th>NúmeroCatálogosdeproductos</th>
+                                    <th>FrecuenciaOtros</th>
+                                    <th>NúmeroOtros</th>
+                                    <th>Pregunta40</th>
+                                    <th>Complemento40</th>
+                                    <th>Pregunta41</th>
+                                    <th>Complemento41</th>
+                                    <th>Comentarios</th>
+                                    <th>puntajeClientes</th>
+                                    <th>puntajeConocimiento</th>
+                                    <th>puntajeInfraestructura</th>
+                                    <th>puntajeMadurez</th>
+                                    <th>PuntajeProveedores</th>
+                                    <th>PuntajeTotal</th>
+                                    
+                                    
+                                </tr>
+                                    <tr v-for="data in all_data ">
+                                        <td>{{data.nit}}</td>
+                                        <td>{{data.fecha}}</td>
+                                        <td>{{data.p1}}</td>
+                                        <td>{{data.c1}}</td>
+                                        <td>{{data.p2}}</td>
+                                        <td>{{data.c2}}</td>
+                                        <td>{{data.p3}}</td>
+                                        <td>{{data.c3}}</td>
+                                        <td>{{data.p4}}</td>
+                                        <td>{{data.c4}}</td>
+                                        <td>{{data.p5}}</td>
+                                        <td>{{data.c5}}</td>
+                                        <td>{{data.p6}}</td>
+                                        <td>{{data.c6}}</td>
+                                        <td>{{data.p7}}</td>
+                                        <td>{{data.c7}}</td>
+                                        <td>{{data.p8}}</td>
+                                        <td>{{data.c8}}</td>
+                                        <td>{{data.p9}}</td>
+                                        <td>{{data.c9}}</td>
+                                        <td>{{data.p10}}</td>
+                                        <td>{{data.c10}}</td>
+                                        <td>{{data.p11}}</td>
+                                        <td>{{data.c11}}</td>
+                                        <td>{{data.p12}}</td>
+                                        <td>{{data.p13}}</td>
+                                        <td>{{data.p14}}</td>
+                                        <td>{{data.c14}}</td>
+                                        <td>{{data.p15}}</td>
+                                        <td>{{data.c15}}</td>
+                                        <td>{{data.p16}}</td>
+                                        <td>{{data.c16}}</td>
+                                        <td>{{data.p17}}</td>
+                                        <td>{{data.p18}}</td>
+                                        <td>{{data.c18}}</td>
+                                        <td>{{data.p19}}</td>
+                                        <td>{{data.c19}}</td>
+                                        <td>{{data.p20}}</td>
+                                        <td>{{data.c20}}</td>
+                                        <td>{{data.p21}}</td>
+                                        <td>{{data.c21}}</td>
+                                        <td>{{data.p22}}</td>
+                                        <td>{{data.p23}}</td>
+                                        <td>{{data.c23}}</td>
+                                        <td>{{data.p24}}</td>
+                                        <td>{{data.c24}}</td>
+                                        <td>{{data.p25}}</td>
+                                        <td>{{data.c25}}</td>
+                                        <td>{{data.p26}}</td>
+                                        <td>{{data.c26}}</td>
+                                        <td>{{data.p26_1}}</td>
+                                        <td>{{data.c26_1}}</td>
+                                        <td>{{data.p27}}</td>
+                                        <td>{{data.p28}}</td>
+                                        <td>{{data.c28}}</td>
+                                        <td>{{data.p29}}</td>
+                                        <td>{{data.c29}}</td>
+                                        <td>{{data.p30}}</td>
+                                        <td>{{data.c30}}</td>
+                                        <td>{{data.p31}}</td>
+                                        <td>{{data.p32}}</td>
+                                        <td>{{data.p33}}</td>
+                                        <td>{{data.p34}}</td>
+                                        <td>{{data.c34}}</td>
+                                        <td>{{data.p35}}</td>
+                                        <td>{{data.p36}}</td>
+                                        <td>{{data.p37}}</td>
+                                        <td>{{data.p38}}</td>
+                                        <td>{{data.p39a}}</td>
+                                        <td>{{data.n39a}}</td>
+                                        <td>{{data.p39b}}</td>
+                                        <td>{{data.n39b}}</td>
+                                        <td>{{data.p39c}}</td>
+                                        <td>{{data.n39c}}</td>
+                                        <td>{{data.p39d}}</td>
+                                        <td>{{data.n39d}}</td>
+                                        <td>{{data.p39e}}</td>
+                                        <td>{{data.n39e}}</td>
+                                        <td>{{data.p39f}}</td>
+                                        <td>{{data.n39f}}</td>
+                                        <td>{{data.p39g}}</td>
+                                        <td>{{data.n39g}}</td>
+                                        <td>{{data.p40}}</td>
+                                        <td>{{data.c40}}</td>
+                                        <td>{{data.p41}}</td>
+                                        <td>{{data.c41}}</td>
+                                        <td>{{data.comentarios}}</td>
+                                        <td>{{data.pClientes}}</td>
+                                        <td>{{data.pConocimiento}}</td>
+                                        <td>{{data.pInfraestructura}}</td>
+                                        <td>{{data.pMadurez}}</td>
+                                        <td>{{data.pProveedores}}</td>
+                                        <td>{{data.pTotal}}</td>
+                                
+                                
+                                
+                                
+                                
+                                        
+                                        
+                                        
+                                    </tr>
     
+                            </thead>
+                        </table>
+                      
     
-</tr>
-	<tr v-for="data in all_data ">
-        <td>{{data.nit}}</td>
-        <td>{{data.fecha}}</td>
-		<td>{{data.p1}}</td>
-        <td>{{data.c1}}</td>
-        <td>{{data.p2}}</td>
-        <td>{{data.c2}}</td>
-        <td>{{data.p3}}</td>
-        <td>{{data.c3}}</td>
-        <td>{{data.p4}}</td>
-        <td>{{data.c4}}</td>
-        <td>{{data.p5}}</td>
-        <td>{{data.c5}}</td>
-        <td>{{data.p6}}</td>
-        <td>{{data.c6}}</td>
-        <td>{{data.p7}}</td>
-        <td>{{data.c7}}</td>
-        <td>{{data.p8}}</td>
-        <td>{{data.c8}}</td>
-        <td>{{data.p9}}</td>
-        <td>{{data.c9}}</td>
-        <td>{{data.p10}}</td>
-        <td>{{data.c10}}</td>
-        <td>{{data.p11}}</td>
-        <td>{{data.c11}}</td>
-        <td>{{data.p12}}</td>
-        <td>{{data.p13}}</td>
-        <td>{{data.p14}}</td>
-        <td>{{data.c14}}</td>
-        <td>{{data.p15}}</td>
-        <td>{{data.c15}}</td>
-        <td>{{data.p16}}</td>
-        <td>{{data.c16}}</td>
-        <td>{{data.p17}}</td>
-        <td>{{data.p18}}</td>
-        <td>{{data.c18}}</td>
-        <td>{{data.p19}}</td>
-        <td>{{data.c19}}</td>
-        <td>{{data.p20}}</td>
-        <td>{{data.c20}}</td>
-        <td>{{data.p21}}</td>
-        <td>{{data.c21}}</td>
-        <td>{{data.p22}}</td>
-        <td>{{data.p23}}</td>
-        <td>{{data.c23}}</td>
-        <td>{{data.p24}}</td>
-        <td>{{data.c24}}</td>
-        <td>{{data.p25}}</td>
-        <td>{{data.c25}}</td>
-        <td>{{data.p26}}</td>
-        <td>{{data.c26}}</td>
-        <td>{{data.p26_1}}</td>
-        <td>{{data.c26_1}}</td>
-        <td>{{data.p27}}</td>
-        <td>{{data.p28}}</td>
-        <td>{{data.c28}}</td>
-        <td>{{data.p29}}</td>
-        <td>{{data.c29}}</td>
-        <td>{{data.p30}}</td>
-        <td>{{data.c30}}</td>
-        <td>{{data.p31}}</td>
-        <td>{{data.p32}}</td>
-        <td>{{data.p33}}</td>
-        <td>{{data.p34}}</td>
-        <td>{{data.c34}}</td>
-        <td>{{data.p35}}</td>
-        <td>{{data.p36}}</td>
-        <td>{{data.p37}}</td>
-        <td>{{data.p38}}</td>
-        <td>{{data.p39a}}</td>
-        <td>{{data.n39a}}</td>
-        <td>{{data.p39b}}</td>
-        <td>{{data.n39b}}</td>
-        <td>{{data.p39c}}</td>
-        <td>{{data.n39c}}</td>
-        <td>{{data.p39d}}</td>
-        <td>{{data.n39d}}</td>
-        <td>{{data.p39e}}</td>
-        <td>{{data.n39e}}</td>
-        <td>{{data.p39f}}</td>
-        <td>{{data.n39f}}</td>
-        <td>{{data.p39g}}</td>
-        <td>{{data.n39g}}</td>
-        <td>{{data.p40}}</td>
-        <td>{{data.c40}}</td>
-        <td>{{data.p41}}</td>
-        <td>{{data.c41}}</td>
-        <td>{{data.comentarios}}</td>
-        <td>{{data.pClientes}}</td>
-        <td>{{data.pConocimiento}}</td>
-        <td>{{data.pInfraestructura}}</td>
-        <td>{{data.pMadurez}}</td>
-        <td>{{data.pProveedores}}</td>
-        <td>{{data.pTotal}}</td>
+                    </div>
+                   
+                    
+    
+                </div>
+               
+    
+        </div>
+    </div>
+
+    </body>
 
 
-
-
-
-        
-		
-		
-	</tr>
-</ul>
 <button @click="tableToCSV()">Export HTML Table To CSV File</button>
+
+
+
+	
 </template>
 
 <script>
@@ -209,6 +244,9 @@
 import "firebase/storage";
 import "firebase/firestore";
 import firebase from "../../components/firebase/initFirebase";
+import Sidebar from "@/components/sidebar/sidebar.vue";
+import navAdmin from "@/components/views/elementos/navbar3.vue";
+
 const db = firebase.firestore();
 
 
@@ -224,7 +262,8 @@ export default {
     }
   },
     components: {
-       
+       Sidebar,
+       navAdmin
     },
     
     methods: {
@@ -1062,3 +1101,119 @@ export default {
 }
 
 </script>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+
+<style>
+		/*Overrides for Tailwind CSS */
+
+		/*Form fields*/
+		.dataTables_wrapper select,
+		.dataTables_wrapper .dataTables_filter input {
+			color: #4a5568;
+			/*text-gray-700*/
+			padding-left: 1rem;
+			/*pl-4*/
+			padding-right: 1rem;
+			/*pl-4*/
+			padding-top: .5rem;
+			/*pl-2*/
+			padding-bottom: .5rem;
+			/*pl-2*/
+			line-height: 1.25;
+			/*leading-tight*/
+			border-width: 2px;
+			/*border-2*/
+			border-radius: .25rem;
+			border-color: #edf2f7;
+			/*border-gray-200*/
+			background-color: #edf2f7;
+			/*bg-gray-200*/
+		}
+
+		/*Row Hover*/
+		table.dataTable.hover tbody tr:hover,
+		table.dataTable.display tbody tr:hover {
+			background-color: #ebf4ff;
+			/*bg-indigo-100*/
+		}
+
+		/*Pagination Buttons*/
+		.dataTables_wrapper .dataTables_paginate .paginate_button {
+			font-weight: 700;
+			/*font-bold*/
+			border-radius: .25rem;
+			/*rounded*/
+			border: 1px solid transparent;
+			/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Current selected */
+		.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+			color: #fff !important;
+			/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+			/*shadow*/
+			font-weight: 700;
+			/*font-bold*/
+			border-radius: .25rem;
+			/*rounded*/
+			background: #667eea !important;
+			/*bg-indigo-500*/
+			border: 1px solid transparent;
+			/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Hover */
+		.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+			color: #fff !important;
+			/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+			/*shadow*/
+			font-weight: 700;
+			/*font-bold*/
+			border-radius: .25rem;
+			/*rounded*/
+			background: #667eea !important;
+			/*bg-indigo-500*/
+			border: 1px solid transparent;
+			/*border border-transparent*/
+		}
+
+		/*Add padding to bottom border */
+		table.dataTable.no-footer {
+			border-bottom: 1px solid #e2e8f0;
+			/*border-b-1 border-gray-300*/
+			margin-top: 0.75em;
+			margin-bottom: 0.75em;
+		}
+
+		/*Change colour of responsive icon*/
+		table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+		table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+			background-color: #667eea !important;
+			/*bg-indigo-500*/
+		}
+	</style>
