@@ -13,7 +13,7 @@
             </p>
             <p class="text-gray-600 text-xs">{{user.fecha}}</p>
             <br />
-            <button type="button"
+            <button type="button" @click="habilitarModal(user.nombre,user.nit,'No')"
               class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
               Aplicar</button>
           </div>
@@ -43,30 +43,38 @@
 
                   </div>
                   <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
-                    <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">{{msgTitulo}}</DialogTitle>
+                    <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">Envio de solicitud de contacto</DialogTitle>
                     <div class="mt-2">
                       <p class="text-sm text-gray-500">{{msgBody}}</p>
 
                     </div>
                     <div class="mt-2">
-                      <p>Id: {{dataUser.id}}</p>
-                      <p>Fecha de creación: {{dataUser.fechaCreacion}}</p>
-                      <p>Fecha de solucion: {{dataUser.fechaSolucion}}</p>
-                      <p>Nombre del encargado: {{dataUser.encargado}}</p>
-                      <p>Telefono del encargado: {{dataUser.telefono}}</p>
-                      <p>Tipo de solicitud: {{dataUser.tipo}}</p>
-                      <p>Estado de la solicitud: {{dataUser.estado}}</p>
-                      <p>Responsable: {{dataUser.admin}}</p>
-                      <p>Solicitud: {{dataUser.solicitud}}</p>
-                      <p>Explicación: {{dataUser.texto}}</p>
+                      <label for="">Escriba el por que de su solicitud: </label>
+                <textarea v-model="texto" class="
+                                    form-control
+                                    block
+                                    w-full
+                                    px-3
+                                    py-1.5
+                                    text-base
+                                    font-normal
+                                    text-gray-700
+                                    bg-white bg-clip-padding
+                                    border border-solid border-gray-300
+                                    rounded
+                                    transition
+                                    ease-in-out
+                                    m-0
+                                    focus:text-gray-700 focus:bg-white focus:border-slate-400 focus:outline-none
+                                " id="exampleFormControlTextarea13" rows="3" placeholder="Escribe aquí por que desea realizar la solicitud de contacto"></textarea>
                     </div>
                     
                   </div>
                 </div>
               </div>
               <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <p>{{msgProcess}}</p>
-                <button type="button" v-if="openBut" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" @click="procesarSolicitud()" >Responder solicitud</button>
+                
+                <button type="button"  class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" @click="habilitarModal(nombreEmpresa,nitEmpresa,'Si')" >Enviar solicitud</button>
                 <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm" @click="open = false">Salir</button>
                 
               </div>
@@ -81,6 +89,9 @@
 import navBar4 from './elementos/navbar4.vue'
 import firebase from "../../components/firebase/initFirebase";
 import "firebase/firestore";
+import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
+import Seguridad from "../js/encrypt.js";
+const safe = new Seguridad();
 
 const db = firebase.firestore();
 
@@ -88,15 +99,29 @@ const db = firebase.firestore();
 export default {
 
   components: {
-    navBar4
+
+    navBar4,
+    Dialog,
+    DialogPanel,
+    DialogTitle,
+    TransitionChild,
+    TransitionRoot
 
 
   },
   data() {
     return {
       dataUsers: [],
-      dataUser: new Object,
       cambio: false,
+      textoSolicitud: '',
+      open: false,
+      msgBody: '',
+      nombreEmpresa: '',
+      nitEmpresa: '',
+      texto: '',
+      telefonoEstudiante: '',
+      nombreEstudiante: '',
+      idEstudiante: '',
     }
   },
   methods: {
@@ -118,39 +143,69 @@ export default {
       
       
     },
-    extraerDatoEmpresa(){
-      var docRef = db.collection("solicitudes").doc(idSolicitud);
+    extraerDatoEstudiante(){
+      var nitEstudiante =safe.decrypt($cookies.get(safe.cipher('estudiante')))
+      var docRef = db.collection("usuario").doc(nitEstudiante.toString());
 
 
     var getOptions = {
         //source: 'cache'
     };
     docRef.get(getOptions).then((doc) => {
-      var rellenarid=''
-      rellenarid=doc.data().fechaCreacion+doc.data().nit
-      rellenarid=rellenarid.split("/").join(''); 
-      this.dataUser={ 'id': rellenarid, 'fechaCreacion': doc.data().fechaCreacion,'fechaSolucion': doc.data().fechaSolucion,'encargado': doc.data().encargado,'telefono': doc.data().telefono, 'admin': doc.data().admin, 'solicitud': doc.data().solicitud, 'tipo': doc.data().tipo, 'estado': doc.data().completada,'texto': doc.data().texto}
-      
-
+        
+        this.nombreEstudiante=doc.data().nombre
+        this.telefonoEstudiante=doc.data().telefono
+        this.idEstudiante=nitEstudiante.toString()
         
 
+          
     }).catch((error) => {
         console.log("Error en la consulta")
     });
+    
     },
+    enviarSolicitud(idEmpresa) {
+                var nitEstudiante =safe.decrypt($cookies.get(safe.cipher('estudiante')))
+                let date = new Date().toLocaleDateString();
+                var solicitud = date+nitEstudiante
+                solicitud = solicitud.split("/").join(''); 
+                db.collection("solicitudes").doc(solicitud).set({
+                    solicitud: 'Contacto con la empresa '+idEmpresa,
+                    telefono: this.telefonoEstudiante,
+                    encargado: this.nombreEstudiante,
+                    nit: this.idEstudiante,
+                    texto: this.texto,
+                    completada: 'No',
+                    fechaCreacion: date,
+                    admin: '',
+                    fechaSolucion: '',
+                    tipo: 'Estudiante'
+                })
+                    .then(() => {
+                        this.msgBody = "Solicitud realizada con exito"
+                    })
+                    .catch((error) => {
+                        console.error("Error writing document: ", error);
+                        this.msgBody = "No se pudo completar la solicitud, intente nuevamente"
+                    });
 
-    habilitarModal(id,estado) {
-      this.extraerDatoEmpresa(id)
+
+        },
+
+    habilitarModal(nombre,id,estado) {
+      
+      
       if(estado =='No'){
-        this.msgTitulo="Panel gestión solicitud"
-        this.msgBody="Contactese con el encargado de la solicitud para corroborar la informacion y agendar una cita..."
-        this.openBut=true
+        this.open=true
+        this.nitEmpresa=id
+        this.nombreEmpresa=nombre
+        this.msgBody="¿Esta seguro que desea realizar una solicitud de contacto con la empresa "+nombre+" ?"
+        
       }else{
-        this.msgTitulo="Panel de información solicitud aceptada"
-        this.msgBody="Datos de la solicitud procesada..."
-        this.openBut=false
+        this.enviarSolicitud(id)
+       
       }
-      this.open=true
+      
       
 
     },
@@ -158,6 +213,7 @@ export default {
 
   mounted() {
     this.datosEmpresas()
+    this.extraerDatoEstudiante()
 
     
     

@@ -297,8 +297,8 @@ export default {
             this.$router.push('/profile');
 
           }if(tipo == 'estudiante'){
-            VueCookies.set(safe.cipher('estudiante'), safe.cipher(this.nit.toString()), "1h")
-            this.$router.push('/');
+            VueCookies.set(safe.cipher('estudiante'), safe.cipher(nit.toString()), "1h")
+            this.$router.push('/perfilestudiante');
 
           }
 
@@ -320,7 +320,7 @@ export default {
             estado: estado,
           })
             .then(() => {
-              console.log("Document successfully updated!");
+              
               this.datosUsuarios()
               
             })

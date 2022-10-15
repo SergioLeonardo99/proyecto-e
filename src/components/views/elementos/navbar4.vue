@@ -80,7 +80,7 @@ export default {
             if(admin === null){
                 this.$router.push('/');
             }else{
-                this.$router.push('/listausuaios');
+                this.$router.push('/listausuarios');
             }
             
         },
