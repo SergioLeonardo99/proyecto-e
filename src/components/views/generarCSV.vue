@@ -1,16 +1,16 @@
 <template>
     <navAdmin></navAdmin>
 
-    <body class="bg-white text-gray-900 tracking-wider leading-normal">
+    <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
+        
       
         <div class="container mx-auto px-4 sm:px-8">
          
             <div class="py-8">
-                <div>
-                    <h2 class="text-2xl font-semibold leading-tight">Tabla Csv</h2>
-                </div>
+                <div class="letra text-12xm  text-center text-teal-700 ">Resultados Encuestas</div>
                 <div class="-mx-4 sm:-mx-8 px-4 sm:px-8 py-4 overflow-x-auto">
                     <div class="inline-block min-w-full shadow-md rounded-lg overflow-hidden">
+                        
                         <table class="min-w-full leading-normal" id="customers">
                             
                             <thead>
@@ -232,7 +232,16 @@
     </body>
 
 
-<button @click="tableToCSV()">Export HTML Table To CSV File</button>
+<button  @click="tableToCSV()"  class="flex space-x-1 items-center px-3 py-3 bg-teal-800 hover:bg-teal-500 rounded-full drop-shadow-md h-10  m-2 text-indigo-100 transition-colors duration-150  focus:shadow-outline ">
+    <svg class="h-8 w-8 text-white"  x="0px" y="0px" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16a5 5 0 01-.916-9.916 5.002 5.002 0 019.832 0A5.002 5.002 0 0116 16m-7 3l3 3m0 0l3-3m-3 3V10"/>
+      </svg>
+<span>Descargar CSV</span>
+</button>
+    
+   
+
+
 
 
 
@@ -1121,7 +1130,7 @@ export default {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: rgb(0, 105, 92);
   color: white;
 }
 </style>

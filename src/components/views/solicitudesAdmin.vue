@@ -165,11 +165,11 @@
                   </div>
                   <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">{{msgTitulo}}</DialogTitle>
-                    <div class="mt-2">
+                    <div class="letra">
                       <p class="text-sm text-gray-500">{{msgBody}}</p>
 
                     </div>
-                    <div class="mt-2">
+                    <div class="letra text-coolGray-800">
                       <p>Id: {{dataUser.id}}</p>
                       <p>Fecha de creación: {{dataUser.fechaCreacion}}</p>
                       <p>Fecha de solucion: {{dataUser.fechaSolucion}}</p>
@@ -404,4 +404,96 @@ export default {
 </style>
 <style>
   @import 'datatables.net-dt';
+  #customers .dataTables_wrapper select,
+	#customers 	.dataTables_wrapper .dataTables_filter input {
+			color: #4a5568;
+			/*text-gray-700*/
+			padding-left: 1rem;
+			/*pl-4*/
+			padding-right: 1rem;
+			/*pl-4*/
+			padding-top: .5rem;
+			/*pl-2*/
+			padding-bottom: .5rem;
+			/*pl-2*/
+			line-height: 1.25;
+			/*leading-tight*/
+			border-width: 2px;
+			/*border-2*/
+			border-radius: .25rem;
+			border-color: #edf2f7;
+			/*border-gray-200*/
+			background-color: #edf2f7;
+			/*bg-gray-200*/
+		}
+
+		/*Row Hover*/
+    #customers 	table.dataTable.hover tbody tr:hover,
+		#customers table.dataTable.display tbody tr:hover {
+			background-color: #23af9c;
+			/*bg-indigo-100*/
+		}
+
+		/*Pagination Buttons*/
+		#customers .dataTables_wrapper .dataTables_paginate .paginate_button {
+			font-weight: 700;
+			/*font-bold*/
+			border-radius: .25rem;
+			/*rounded*/
+			border: 1px solid transparent;
+			/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Current selected */
+		#customers .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+			color: #fff !important;
+			/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+			/*shadow*/
+			font-weight: 700;
+			/*font-bold*/
+			border-radius: .25rem;
+			/*rounded*/
+			background: #00695C !important;
+			/*bg-indigo-500*/
+			border: 1px solid transparent;
+			/*border border-transparent*/
+		}
+
+		/*Pagination Buttons - Hover */
+    #customers 	.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+			color: #fff !important;
+			/*text-white*/
+			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
+			/*shadow*/
+			font-weight: 700;
+			/*font-bold*/
+			border-radius: .25rem;
+			/*rounded*/
+			background: #00695C !important;
+			/*bg-indigo-500*/
+			border: 1px solid transparent;
+			/*border border-transparent*/
+		}
+
+		/*Add padding to bottom border */
+    #customers 	table.dataTable.no-footer {
+			border-bottom: 1px solid #e2e8f0;
+			/*border-b-1 border-gray-300*/
+			margin-top: 0.75em;
+			margin-bottom: 0.75em;
+		}
+
+		/*Change colour of responsive icon*/
+		#customers table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+		#customers table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+			background-color: #539c90 !important;
+			/*bg-indigo-500*/
+		}
+</style>
+<style>
+.letra {
+  font-family: sans-serif;
+  font-size: medium;
+}
 </style>

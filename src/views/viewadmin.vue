@@ -1,7 +1,7 @@
 <template>
 <navAdmin></navAdmin>
     <div>
-      <div class="relative md:ml-64 bg-blueGray-100">
+      <div class="relative md:ml-100 bg-blueGray-100">
           <AdminL/>
           <header-stats />
         </div>

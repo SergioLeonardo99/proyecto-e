@@ -122,7 +122,7 @@
                   <tr>
                 
                   <button  v-if="user.tipo!='administrador'" @click="accederUsuario(user.nit, user.tipo)" 
-                  class="flex space-x-2 items-center px-4 py-2 bg-green-600 hover:bg-amber-600 rounded-full drop-shadow-md">
+                  class="flex space-x-2 items-center px-4 py-2 bg-green-600 hover:bg-green-600 rounded-full drop-shadow-md">
                   <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
                       viewBox="0 0 50 50">
                       <path
@@ -357,6 +357,7 @@ export default {
 
 </script>
 <style>
+
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -376,7 +377,7 @@ export default {
   padding-top: 12px;
   padding-bottom: 12px;
   text-align: left;
-  background-color: #04AA6D;
+  background-color: #00695C;
   color: white;
 }
 </style>
@@ -388,8 +389,8 @@ export default {
 </style>
 <style>
   @import 'datatables.net-dt';
-  .dataTables_wrapper select,
-		.dataTables_wrapper .dataTables_filter input {
+  #customers .dataTables_wrapper select,
+	#customers 	.dataTables_wrapper .dataTables_filter input {
 			color: #4a5568;
 			/*text-gray-700*/
 			padding-left: 1rem;
@@ -412,14 +413,14 @@ export default {
 		}
 
 		/*Row Hover*/
-		table.dataTable.hover tbody tr:hover,
-		table.dataTable.display tbody tr:hover {
-			background-color: #006cf0;
+    #customers 	table.dataTable.hover tbody tr:hover,
+		#customers table.dataTable.display tbody tr:hover {
+			background-color: #23af9c;
 			/*bg-indigo-100*/
 		}
 
 		/*Pagination Buttons*/
-		.dataTables_wrapper .dataTables_paginate .paginate_button {
+		#customers .dataTables_wrapper .dataTables_paginate .paginate_button {
 			font-weight: 700;
 			/*font-bold*/
 			border-radius: .25rem;
@@ -429,7 +430,7 @@ export default {
 		}
 
 		/*Pagination Buttons - Current selected */
-		.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+		#customers .dataTables_wrapper .dataTables_paginate .paginate_button.current {
 			color: #fff !important;
 			/*text-white*/
 			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
@@ -438,14 +439,14 @@ export default {
 			/*font-bold*/
 			border-radius: .25rem;
 			/*rounded*/
-			background: #667eea !important;
+			background: #00695C !important;
 			/*bg-indigo-500*/
 			border: 1px solid transparent;
 			/*border border-transparent*/
 		}
 
 		/*Pagination Buttons - Hover */
-		.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    #customers 	.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
 			color: #fff !important;
 			/*text-white*/
 			box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .1), 0 1px 2px 0 rgba(0, 0, 0, .06);
@@ -454,14 +455,14 @@ export default {
 			/*font-bold*/
 			border-radius: .25rem;
 			/*rounded*/
-			background: #667eea !important;
+			background: #00695C !important;
 			/*bg-indigo-500*/
 			border: 1px solid transparent;
 			/*border border-transparent*/
 		}
 
 		/*Add padding to bottom border */
-		table.dataTable.no-footer {
+    #customers 	table.dataTable.no-footer {
 			border-bottom: 1px solid #e2e8f0;
 			/*border-b-1 border-gray-300*/
 			margin-top: 0.75em;
@@ -469,9 +470,9 @@ export default {
 		}
 
 		/*Change colour of responsive icon*/
-		table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
-		table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
-			background-color: #667eea !important;
+		#customers table.dataTable.dtr-inline.collapsed>tbody>tr>td:first-child:before,
+		#customers table.dataTable.dtr-inline.collapsed>tbody>tr>th:first-child:before {
+			background-color: #539c90 !important;
 			/*bg-indigo-500*/
 		}
 </style>
