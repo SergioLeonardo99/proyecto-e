@@ -11,7 +11,7 @@
 
 </head>
 <body>
-  <Navbar></Navbar>
+  
   <section class="flex flex-col md:flex-row h-screen items-center">
 
     <div class="bg-gray-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
@@ -59,12 +59,33 @@
                     <div>
         
                     <label class="block letra text-gray-700">Nit de la empresa: </label>
-                    <input type="number" v-model="nit" placeholder="numero" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="number" v-model="nit" placeholder="Nit de la empresa" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
                   </div>
         
                    <div>
                     <label class="block letra text-gray-700">Dirección: </label>
-                    <input type="text" v-model="direccion" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="text" v-model="direccion" placeholder="Dirección de la empresa" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                  </div>
+
+                  <div>
+                    <label class="block letra text-gray-700">Sector de la empresa: </label>
+                    <select v-model="sector" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none">
+                      <option disabled value="">Seleccione el sector de su empresa</option>
+                      <option>Ganadería</option>
+                      <option>Minería de carbón</option>
+                      <option>Comercio</option>
+                      <option>Arcillas</option>
+                      <option>Gravas</option>
+                      <option>Cuero y/o calzado</option>
+                      <option>Artefactos domésticos</option>
+                      <option>Equipo y Maquinaria eléctrica y electrónica</option>
+                      <option>Lácteos</option>
+                      <option>Convenio software y servicios asociados</option>
+                      <option>Servicios de salud</option>
+                      <option>Financiero</option>
+                      <option>Telecomunicaciones </option>
+                      <option>Servicios</option>
+                    </select>
                   </div>
                 </div>
               </div>
@@ -94,23 +115,23 @@
                 <div class="accordion-body py-4 px-5">
                   <div>
                     <label class="block letra text-gray-700">Nombre del encargado: </label>
-                    <input type="text" v-model="encargado" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="text" v-model="encargado" placeholder="Nombre del encargado" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
                   </div>
         
                   <div>
                     <label class="block letra text-gray-700">Cargo del encargado en la empresa: </label>
-                    <input type="text" v-model="cargo" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="text" v-model="cargo" placeholder="Cargo del encargado" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
                   </div>
         
                   <div>
                     <label class="block letra text-gray-700">Correo electrónico: </label>
-                    <input type="text" v-model="email" placeholder="direccion" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="text" v-model="email" placeholder="Correo electrónico" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
                   </div>
         
         
                      <div>
                     <label class="block letra text-gray-700">Número de celular o teléfono: </label>
-                    <input type="number" v-model="telefono" placeholder="Telefono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="number" v-model="telefono" placeholder="Teléfono" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
                   </div>
 
                 </div>
@@ -141,43 +162,16 @@
                 <div class="accordion-body py-4 px-5">
                   <div class="mt-4">
                     <label class="block letra text-gray-700">Contraseña: </label>
-                    <input type="password" v-model="contraseña" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                    <input type="password" v-model="contraseña" placeholder="Contraseña" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                           focus:bg-white focus:outline-none" required>
                   </div>
                     
                   <div class="mt-4">
                     <label class="block letra text-gray-700">Confirmar Contraseña: </label>
         
-                    <input type="password" v-model="contraseñaConfirmar" placeholder="Password" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                    <input type="password" v-model="contraseñaConfirmar" placeholder="Confirmar contraseña" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                           focus:bg-white focus:outline-none" required>
                   </div>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item border-l-0 border-r-0 rounded-none bg-white border border-gray-200">
-              <h2 class="accordion-header mb-0" id="flush-headingTwo">
-                <button class="accordion-button
-              collapsed
-              relative
-              flex
-              items-center
-              w-full
-              py-4
-              px-5
-              text-base text-gray-800 text-left
-              bg-white
-              border-0
-              rounded-none
-              transition
-              focus:outline-none" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo"
-                  aria-expanded="false" aria-controls="flush-collapseTwo">
-                  Sector
-                </button>
-              </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse border-0 collapse" aria-labelledby="flush-headingTwo"
-                data-bs-parent="#accordionFlushExample">
-                <div class="accordion-body py-4 px-5">
-                 
                 </div>
               </div>
             </div>
@@ -213,11 +207,11 @@
 import "firebase/storage";
 import firebase from "../components/firebase/initFirebase";
 const db = firebase.firestore();
-import Navbar from '../components/views/elementos/navbar.vue'
+
 
 export default {
   components: {
-    Navbar
+   
   },
   data() {
     return {
@@ -231,17 +225,14 @@ export default {
       email: '',
       encargado: '',
       cargo: '',
+      sector: ''
 
     }
   },
   methods: {
     advancedRegister() {
-      if(this.nombre!=''&& this.nit != 0 && this.direccion != ''&&this.telefono !=0 &&this.contraseña !=''&&this.contraseñaConfirmar != ''&&this.email !=''&& this.encargado != ''&& this.cargo != ''){
+      if(this.nombre!=''&& this.nit != 0 && this.direccion != ''&&this.telefono !=0 &&this.contraseña !=''&&this.contraseñaConfirmar != ''&&this.email !=''&& this.encargado != ''&& this.cargo != ''&& this.sector != ''){
         if(this.contraseña==this.contraseñaConfirmar){
-
-
-        
-        
           var docRef = db.collection("usuario").doc(this.nit.toString());
           
           var getOptions = {
@@ -272,6 +263,8 @@ export default {
               tipo: "empresa",
               fechaCreacion: date,
               estado: 'Activo',
+              sector: this.sector,
+              encuesta: 'No'
             })
               .then(() => {
                 this.mensaje = "Empresa registrada con exito"

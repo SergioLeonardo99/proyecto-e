@@ -161,7 +161,7 @@ import "firebase/firestore";
 import Seguridad from "../components/js/encrypt.js";
 import VueCookies from 'vue-cookies'
 import { Dialog, DialogPanel, DialogTitle, TransitionChild, TransitionRoot } from '@headlessui/vue'
-import Navbar from '../components/views/elementos/navbar.vue'
+
 
 const db = firebase.firestore();
 const safe = new Seguridad();
@@ -173,7 +173,6 @@ export default {
     DialogTitle,
     TransitionChild,
     TransitionRoot,
-    Navbar
 
 
 

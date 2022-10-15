@@ -92,7 +92,7 @@ export default {
             if(admin === null){
                 this.$router.push('/');
             }else{
-                this.$router.push('/listausuarios');
+                this.$router.push('/admin');
             }
             
         },

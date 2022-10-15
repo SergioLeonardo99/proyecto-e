@@ -44,13 +44,7 @@
               autofocus autocomplete required disabled>
 
           </div>
-          <div>
-            <label class="block">Dirección</label>
-            <input type="text" v-model="direccion" placeholder="dirección"
-              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required>
 
-          </div>
          
           <div>
             <label class="block">Correo electrónico</label>
@@ -59,13 +53,7 @@
               autofocus autocomplete required>
 
           </div>
-          <div>
-            <label class="block">Número de celular o teléfono</label>
-            <input type="number" v-model="telefono" placeholder="teléfono"
-              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required>
 
-          </div>
 
           <div class="mt-4">
             <label class="block">Contraseña</label>
@@ -74,7 +62,7 @@
               required>
           </div>
           <div class="mt-4">
-            <label class="block">Contraseña</label>
+            <label class="block">Confirmar Contraseña</label>
             <input type="password" v-model="contraseñaConfirmar" placeholder="Password"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
               required>
@@ -119,8 +107,6 @@ export default {
     return {
       nombre: '',
       nit: 0,
-      direccion: '',
-      telefono: 0,
       contraseña: '',
       contraseñaConfirmar: '',
       mensaje: '',
@@ -150,9 +136,7 @@ export default {
         // an error will be returned to the 'catch' block below.
         this.nombre = doc.data().nombre;
         this.nit = doc.data().nit;
-        this.telefono = doc.data().telefono;
         this.email = doc.data().email;
-        this.direccion = doc.data().direccion;
         this.cargarImagen()
 
       }).catch((error) => {

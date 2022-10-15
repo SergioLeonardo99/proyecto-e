@@ -24,12 +24,7 @@
                         {{email}}</div>
                     <p class="text-gray-600 text-sm text-center">Correo del estudiante</p>
                 
-                    <div class="font-bold text-xl text-center text-gray-800 hover:text-cyan-600 hover:cursor-pointer">
-                        {{telefonoEmpresa}}</div>
-                    <p class="text-gray-600 text-sm text-center">Telefono</p>
                     
-
-
                     <button @click="$router.push('/editarestudiante')" type="button"
                         class="bg-grey-light hover:bg-grey text-grey-darkest font-bold inline-flex items-center my-auto text-gray-800 py-1 px-4 border-2 border-cyan-600 hover:bg-cyan-600 hover:cursor-pointer hover:text-white rounded-3xl mx-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -109,12 +104,7 @@ export default {
                 // an error will be returned to the 'catch' block below.
                 this.nombreEmpresa = doc.data().nombre;
                 this.nitEmpresa = doc.data().nit;
-                this.telefonoEmpresa = doc.data().telefono;
-                this.encargado = doc.data().encargado;
-                this.cargoEncargado = doc.data().cargo;
                 this.email = doc.data().email;
-                this.direccion = doc.data().direccion;
-                this.about = doc.data().about;
                 this.cargarImagen()
 
             }).catch((error) => {
