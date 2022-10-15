@@ -16,7 +16,6 @@
             <div class="links lg:block hidden w-1/6 md:w-4/6">
                 <ul class="menu flex items-center justify-center gap-5">
                     <li><a @click="$router.push('/admin')" class="botones-link">Dashboard</a></li>
-                    <li><a @click="$router.push('/listausuarios')" class="botones-link">Lista Usuarios</a></li>
                     <li><a @click="$router.push('/solicitudesadmin')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/generarcsv')" class="botones-link">Generar CSV</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>
@@ -36,7 +35,6 @@
                 <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/admin')" class="botones-link">Dashboard</a></li>
-                    <li><a @click="$router.push('/listausuarios')" class="botones-link">Lista Usuarios</a></li>
                     <li><a @click="$router.push('/solicitudesadmin')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/generarcsv')" class="botones-link">Generar CSV</a></li>
                     <li><a @click="terminarSession()" class="botones-link">Salir</a></li>

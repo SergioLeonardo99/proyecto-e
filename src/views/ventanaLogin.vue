@@ -30,7 +30,6 @@
 
   <body>
 
-    <Navbar></Navbar>
     <section class="flex flex-col md:flex-row h-screen items-center">
       
 
