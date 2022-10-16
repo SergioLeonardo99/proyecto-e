@@ -1,10 +1,12 @@
 <template>
-    <!--llamado del navBar2 a la clase-->
+        <!--llamado del navBar2 a la clase-->
     <navBar2></navBar2>
     <!--Intregacion de la imagen principal de la empresa-->
 
-    <div class="">
-        <div class=" mx-auto my-20 rounded-md overflow-hidden shadow-lg lg:max-w-full" v-if="imagenDescargada != null">
+        <div class=" mx-auto my-20 rounded-md overflow-hidden  lg:max-w-full 2xl:max-w-full"  v-if="imagenDescargada != null">
+            
+
+          
             <img class="object-cover rounded-full h-36 w-36 mx-auto m-1 p-1 border-4 border-cyan-600"
                 :src="imagenDescargada" alt="" />
 
@@ -39,7 +41,7 @@
                 <div class="flex flex-row justify-center font-semibold mx-auto my-4">
 
                     <button @click="$router.push('/editprofile')" type="button"
-                        class="bg-grey-light hover:bg-grey text-grey-darkest font-bold inline-flex items-center my-auto text-gray-800 py-1 px-4 border-2 border-cyan-600 hover:bg-cyan-600 hover:cursor-pointer hover:text-white rounded-3xl mx-2">
+                        class="bg-grey-light hover:bg-grey text-grey-darkest font-bold inline-flex items-center my-auto py-1 px-4 border-2bg-teal-700 text-white bg-teal-700  hover:bg-teal-500 hover:cursor-pointer  rounded-3xl mx-2">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                             stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -49,17 +51,30 @@
                         <span>Editar perfil</span>
                     </button>
 
+
+               
                 </div>
 
-                <p class="mt-2 text-black text-center">Acerca de la empresa</p>
+                <br/>
+                <br/>
+                <br/>
+                
+                
+                <p class="font-bold text-xl text-center text-gray-800 hover:text-cyan-600 hover:cursor-pointer">Acerca de la empresa</p>
                 <br>
                 <p class="text-black text-center font-light lg:px-16">{{about}}</p>
+                <div class="space-y- 96">
+                    
+
+            </div>
+           
             </div>
 
+            
         </div>
+   
 
 
-    </div>
 
 
 

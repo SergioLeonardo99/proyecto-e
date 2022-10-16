@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 //estilos
-import "@fortawesome/fontawesome-free/css/all.min.css";
+//import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/assets/styles/tailwind.css";
 
 
@@ -19,6 +19,7 @@ import listaUsuarios from "./components/views/listaUsuarios.vue"
 import graficos from "./views/graficos.vue"
 import modEducativo from "./components/views/ModuloEd.vue"
 import solicitudes from "./components/views/solicitudes.vue"
+import estudianteMod from "./components/views/estudianteMod.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -55,7 +56,8 @@ const router = createRouter( {
     {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
     {path: '/educativo', name: 'modEducativo', component: modEducativo},
     {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
-    {path: '/solicitudes', name:'solicitudes', component:solicitudes}
+    {path: '/solicitudes', name:'solicitudes', component:solicitudes},
+    {path: '/estudiante', name:'estudiante', component:estudianteMod}
   ]
 
 })
