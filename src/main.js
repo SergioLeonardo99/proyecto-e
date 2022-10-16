@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 //estilos
-import "@fortawesome/fontawesome-free/css/all.min.css";
+//import "@fortawesome/fontawesome-free/css/all.min.css";
 import "@/assets/styles/tailwind.css";
 
 
@@ -24,6 +24,7 @@ import empresaEstudiante from "./components/views/empresasEstudiantes.vue"
 import perfilEstudiante from "./components/views/perfilEstudiante.vue"
 import solicitudesEstudiante from "./components/views/solicitudesEstudiante.vue"
 import editarPerfilEstudiante from "./components/views/editarPerfilDeEstudiante.vue"
+import estudianteMod from "./components/views/estudianteMod.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -66,6 +67,7 @@ const router = createRouter( {
     {path: '/perfilestudiante', name: 'PerfilEstudiante', component: perfilEstudiante},
     {path: '/solicitudesestudiante', name: 'SolicitudesEstudiante', component: solicitudesEstudiante},
     {path: '/editarestudiante', name: 'editarPerfilEstudiante', component: editarPerfilEstudiante},
+    {path: '/estudiante', name:'estudiante', component:estudianteMod}
   ]
 
 })
