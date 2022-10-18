@@ -179,7 +179,7 @@ export default {
   },
   data() {
     return {
-      nit: 0,
+      nit: null,
       contraseña: '',
       mensaje: '',
       modal: false,

@@ -134,11 +134,21 @@
 
 
                         <button @click="cambiarEstado(user.nit,user.estado)">
+                          <div>
 
-                          <svg class="h-6 w-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                              d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" />
-                          </svg>
+                          </div>
+                          <div v-if="user.estado=='Inactivo'">
+                            <svg class="h-6 w-6 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
+                            </svg>
+
+                          </div>
+                          <div v-if="user.estado=='Activo'">
+                            <svg class="h-6 w-6 text-green-500"  fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7a4 4 0 11-8 0 4 4 0 018 0zM9 14a6 6 0 00-6 6v1h12v-1a6 6 0 00-6-6zM21 12h-6"/>
+                            </svg>
+
+                          </div>
 
                         </button>
 
@@ -211,7 +221,7 @@
                     <div class="mt-2">
                       <label class="block letra text-gray-700">Tipo de usuario: </label>
                       <select v-model="tipoUsuario"
-                        class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none">
+                        class=" h-14 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none">
                         <option disabled value="">Seleccione el tipo de usuario</option>
                         <option>Administrador</option>
                         <option>Empresa</option>

@@ -52,7 +52,7 @@
                 <div class="accordion-body py-4 px-5">
                   <div>
                     <label  class="block letra text-gray-700">Nombre de la empresa: </label>
-                    <input type="text" v-model="nombre" placeholder="nombre"
+                    <input type="text" v-model="nombre" placeholder="Nombre de la empresa"
                     class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none" autofocus autocomplete  required>
                   </div>
                     
@@ -69,7 +69,7 @@
 
                   <div>
                     <label class="block letra text-gray-700">Sector de la empresa: </label>
-                    <select v-model="sector" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none">
+                    <select v-model="sector" class=" h-14 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none">
                       <option disabled value="">Seleccione el sector de su empresa</option>
                       <option>Ganadería</option>
                       <option>Minería de carbón</option>
@@ -125,7 +125,7 @@
         
                   <div>
                     <label class="block letra text-gray-700">Correo electrónico: </label>
-                    <input type="text" v-model="email" placeholder="Correo electrónico" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
+                    <input type="email" v-model="email" placeholder="Correo electrónico" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none" autofocus autocomplete required>
                   </div>
         
         
@@ -216,9 +216,9 @@ export default {
   data() {
     return {
       nombre: '',
-      nit: 0,
+      nit: null,
       direccion: '',
-      telefono: 0,
+      telefono: null,
       contraseña: '',
       contraseñaConfirmar: '',
       mensaje: '',

@@ -1858,7 +1858,7 @@
 
           <button class=" bg-teal-700 hover:bg-teal-300 focus:bg-teal-300 text-white font-semibold rounded-lg
           px-16 py-3 mt-6" type="button"  @click="registerForm()"> 
-          Ingresar
+          Registrar Entrevista
         </button>
       
     
@@ -2212,7 +2212,14 @@ export default {
     },
     
     registerForm(){
-      this.nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
+      if (this.p1=='' || this.p2=='' || this.p3=='' || this.p4=='' || this.p5=='' || this.p6=='' || this.p7=='' || this.p8=='' || this.p9=='' || this.p10=='' || this.p11=='' || this.p12=='' || this.p13=='' || this.p14=='' || this.p15==''
+      || this.p16==''|| this.p17=='' || this.p18=='' || this.p19==''|| this.p20.length==0|| this.p21==''||this.p22==''||this.p23==''||this.p24==''||this.p25==''||this.p26==''||this.p27==''||this.p28==''
+      || this.p29==''||this.p30=='' ||this.p31==''||this.p32==''||this.p33==''||this.p34==''||this.p35==''||this.p36==''||this.p37==''||this.p38==''||this.p39a==''||this.p40==''||this.p41==''){
+
+        this.mensaje=="Debe rellenar todos los datos"
+
+      }else{
+        this.nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
       let date = new Date().toLocaleDateString();
       this.puntuacion()
       db.collection("datos").doc(this.nitEmpresa).set({
@@ -2400,6 +2407,11 @@ export default {
       console.error("Error writing document: ", error);
       this.mensaje="No se pudo completar el registro, intente nuevamente"
 });
+
+        
+      }
+
+      
 
     }
   },
