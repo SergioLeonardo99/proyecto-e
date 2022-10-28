@@ -7,7 +7,7 @@
 
                 <!--Integracion de logo-->
 
-                <img src="@/assets/logo1.png" height="150" width="150" alt="">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Flogo1.webp?alt=media&token=b5f93def-5513-4e06-b47c-3599266bbb6f" height="150" width="150" alt="">
 
             </div>
             <!--opciones superiores para acceso a los diferentes modúlos-->

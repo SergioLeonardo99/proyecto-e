@@ -39,7 +39,6 @@
     components: {
       cardBarras,
       cardGraficos,
-   
       cardSectores,
       navAdmin,
       AdminL,

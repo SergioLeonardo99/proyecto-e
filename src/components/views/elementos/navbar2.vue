@@ -8,7 +8,7 @@
 
                 <!--Integracion de logo-->
 
-                <img src="@/assets/logo1.png" height="150" width="150" alt="">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Flogo1.webp?alt=media&token=b5f93def-5513-4e06-b47c-3599266bbb6f" height="150" width="150" alt="">
 
             </div>
             <!--opciones superiores para acceso a los diferentes modúlos-->
@@ -83,6 +83,8 @@ export default {
         compruebaSession() {
             var nitEmpresa = $cookies.get(safe.cipher('nit'))
             var admin = $cookies.get(safe.cipher('admin'))
+            var encuesta = $cookies.get(safe.cipher('encuesta'))
+            var encuestaComprobante = safe.decrypt(encuesta)
             if (nitEmpresa === null) {
                 this.$router.push('/');
             }
@@ -91,10 +93,14 @@ export default {
             } else {
                 this.encuesta = true
             }
+            if(encuestaComprobante=='Si'){
+                this.graficos = true
+            }
         },
         terminarSession() {
             var admin = $cookies.get(safe.cipher('admin'))
             document.cookie = safe.cipher('nit') + "= a; max-age=1; SameSite=none; secure";
+            document.cookie = safe.cipher('encuesta') + "= a; max-age=1; SameSite=none; secure";
             if (admin === null) {
                 this.$router.push('/');
             } else {
@@ -102,31 +108,11 @@ export default {
             }
 
         },
-        cargarEmpresa() {
 
-            var nitEmpresa = safe.decrypt($cookies.get(safe.cipher('nit')))
-
-            var docRef = db.collection("usuario").doc(nitEmpresa.toString());
-            var getOptions = {
-                //source: 'cache'
-            };
-            docRef.get(getOptions).then((doc) => {
-
-                // Document was found in the cache. If no cached document exists,
-                // an error will be returned to the 'catch' block below.
-                if (doc.data().encuesta=='Si'){
-                    this.graficos==true
-                }
-                
-
-            }).catch((error) => {
-                this.$router.push('/');
-            });
-        },
     },
     mounted() {
         this.compruebaSession()
-        this.cargarEmpresa()
+       
 
 
     }

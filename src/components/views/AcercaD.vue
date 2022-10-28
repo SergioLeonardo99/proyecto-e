@@ -140,7 +140,7 @@
                 <!---contenedor principal de avatars-->
                 <div class="w-1/2 p-3 alinearT  bg-center rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/EdilsonYomayuza.jpeg" alt="Edilson Yomayuza"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FEdilsonYomayuza.webp?alt=media&token=416c21e3-be54-4199-8b19-bc859f3e9444" alt="Edilson Yomayuza"
                             class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Edilson Yadir Yomayuza Guzman</h5>
                         <p class="text-gray-500">Ingeniero de sistemas
@@ -167,7 +167,7 @@
 
                 <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/BrayanMedina.jpeg" alt="Brayan Medina"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FBrayanMedina.webp?alt=media&token=557aa90d-3e1e-4b1a-9482-f6faef9f7139" alt="Brayan Medina"
                             class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Brayan Felipe Medina Duarte</h5>
                         <p class="text-gray-500">Ingeniero de sistemas
@@ -199,7 +199,7 @@
                 <!---contenedor principal-->
                 <div class="w-1/2 p-3 alinearT  bg-center rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/FelipeGuarnizo.jpeg" alt="Felipe Guarnizo"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FFelipeGuarnizo.webp?alt=media&token=6332e684-4475-4f1d-881b-d032c4b7bc87" alt="Felipe Guarnizo"
                             class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Cristian Felipe Saenz Guarnizo</h5>
                         <p class="text-gray-500">Ingeniero de sistemas
@@ -227,7 +227,7 @@
 
                 <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/KarenMaldonado.jpeg" alt="Karen Maldonado"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FKarenMaldonado.webp?alt=media&token=49345c9d-0451-43cd-909f-ff183e000c37" alt="Karen Maldonado"
                             class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Karen Yised Maldonado Rincón</h5>
                         <p class="text-gray-500">Ingeniero de sistemas
@@ -261,7 +261,7 @@
                 <!---contenedor principal-->
                 <div class="w-1/2 p-3 alinearT  bg-center rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/SergioVega.jpeg" alt="Sergio Vega" class="rounded-full w-32 h-32 mx-auto">
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FSergioVega.webp?alt=media&token=63aec6fc-025f-4a52-9aa3-00ab7da5c8bc" alt="Sergio Vega" class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Sergio Leonardo Vega </h5>
                         <p class="text-gray-500">Ingeniero de sistemas
                             <br>
@@ -288,7 +288,7 @@
 
                 <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/SegundoCortes.jpeg" alt="Segundo Cortes"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FSegundoCortes.webp?alt=media&token=bb0a0095-91e2-4067-a5af-9f1efc3a67c2" alt="Segundo Cortes"
                             class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Segundo Leonardo Cortes López</h5>
                         <p class="text-gray-500">Ingeniero industrial
@@ -315,7 +315,7 @@
 
                 <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
                     <div class="text-center">
-                        <img src="@/assets/CristianCano.jpeg" alt="Cristian Cano"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FCristianCano.webp?alt=media&token=71ae406d-c63b-4868-938d-2409d46753d5" alt="Cristian Cano"
                             class="rounded-full w-32 h-32 mx-auto">
                         <h5 class="text-xl font-medium leading-tight mb-2">Cristian Eduardo Cano López </h5>
                         <p class="text-gray-500">Ingeniero de sistemas

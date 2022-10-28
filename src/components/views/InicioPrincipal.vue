@@ -17,13 +17,13 @@
         </div>
         <div class="carousel-inner relative w-full overflow-hidden h-50">
             <div class="carousel-item active float-left w-full">
-                <img src="@/assets/img14.png" class="block w-full imagen-carousel" alt="ImagenDeInfomacion1" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg14.webp?alt=media&token=e0e154bc-91c6-4010-95fb-737be08d38f6" class="block w-full imagen-carousel" alt="ImagenDeInfomacion1" />
             </div>
             <div class="carousel-item float-left w-full">
-                <img src="@/assets/img12.png" class="block w-full imagen-carousel" alt="ImagenDeInfomacion2" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg12.webp?alt=media&token=44897a70-67bb-48aa-ac49-9686fa56a29d" class="block w-full imagen-carousel" alt="ImagenDeInfomacion2" />
             </div>
             <div class="carousel-item float-left w-full">
-                <img src="@/assets/img13.png" class="block w-full imagen-carousel " alt="ImagenDeInfomacion3" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg13.webp?alt=media&token=42d16e8a-8ad1-48ac-8cf7-fe80d38d4fa8" class="block w-full imagen-carousel " alt="ImagenDeInfomacion3" />
             </div>
         </div>
         <button
@@ -60,13 +60,13 @@
         <div>
             <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3">
                 <!---contenedor principal de los sectores economicos-->
-                <div class="w-1/2 p-3 alinearT bg-[url('@/assets/imgMineria.jpg')] bg-center rounded-md shadow-lg">
+                <div class="w-1/2 p-3 alinearT bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] bg-center rounded-md shadow-lg">
 
                     <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
                 </div>
 
                 <div
-                    class="w-1/2 p-3 alinearT bg-[url('@/assets/imgLacteo.jpg')] bg-center bg-cover rounded-md shadow-lg">
+                    class="w-1/2 p-3 alinearT bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgLacteo.webp?alt=media&token=9e6a117e-6009-4fd6-a7ad-874649685a74')] bg-center bg-cover rounded-md shadow-lg">
                     <h1 class="w-50 letra text-2xl p-6 text-white ">Lechero</h1>
                 </div>
             </div>
@@ -270,42 +270,42 @@
                         <div class="w-full p-1 md:p-2">
                             <img alt="vaca"
                                 class="transition ease-in-out delay-150 block object-cover object-center w-full h-full rounded-lg hover:-translate-y-1 hover:scale-110 duration-300"
-                                src="@/assets/ubate1.jpeg">
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fubate1.webp?alt=media&token=76068167-fb74-432f-bbe5-bb8d3e04f0cf">
                         </div>
                     </div>
                     <div class="flex flex-wrap w-1/3">
                         <div class="w-full p-1 md:p-2">
                             <img alt="acopio"
                                 class="transition ease-in-out delay-150 block object-cover object-center w-full h-full rounded-lg hover:-translate-y-1 hover:scale-110 duration-300"
-                                src="@/assets/ubate2.jpeg">
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fubate2.webp?alt=media&token=1e7c4742-9d7a-4cdc-8d72-3d39f2b2e218">
                         </div>
                     </div>
                     <div class="flex flex-wrap w-1/3">
                         <div class="w-full p-1 md:p-2">
                             <img alt="entradaAcopio"
                                 class="transition ease-in-out delay-150 block object-cover object-center w-full h-full rounded-lg hover:-translate-y-1 hover:scale-110 duration-300"
-                                src="@/assets/ubate3.jpeg">
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fubate3.webp?alt=media&token=5497467f-d7bf-45ba-96de-4210d3e57d12">
                         </div>
                     </div>
                     <div class="flex flex-wrap w-1/3">
                         <div class="w-full p-1 md:p-2">
                             <img alt="iglesia1"
                                 class="transition ease-in-out delay-150 block object-cover object-center w-full h-full rounded-lg hover:-translate-y-1 hover:scale-110 duration-300"
-                                src="@/assets/ubate4.jpeg">
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fubate4.webp?alt=media&token=8e47bcb5-0e4d-4786-ba05-17acb016cb7a">
                         </div>
                     </div>
                     <div class="flex flex-wrap w-1/3">
                         <div class="w-full p-1 md:p-2">
                             <img alt="iglesia2"
                                 class="transition ease-in-out delay-150 block object-cover object-center w-full h-full rounded-lg hover:-translate-y-1 hover:scale-110 duration-300"
-                                src="@/assets/ubate5.jpeg">
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fubate5.webp?alt=media&token=420ebf29-c90f-49e8-8bd0-1313a3cdf8a9">
                         </div>
                     </div>
                     <div class="flex flex-wrap w-1/3">
                         <div class="w-full p-1 md:p-2">
                             <img alt="iglesia3"
                                 class="transition ease-in-out delay-150 block object-cover object-center w-full h-full rounded-lg hover:-translate-y-1 hover:scale-110 duration-300"
-                                src="@/assets/ubate6.jpeg">
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fubate6.webp?alt=media&token=5d5818ec-006c-419e-ac84-74cd104f4c4e">
                         </div>
                     </div>
                 </div>
@@ -325,21 +325,21 @@
                 <br>
                 <div class=" grid justify-items-center grid-cols-3">
                     <div class="text-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/31/Microsoft_Office_Excel_%282013%E2%80%932019%29.svg/1200px-Microsoft_Office_Excel_%282013%E2%80%932019%29.svg.png"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fexceldo.webp?alt=media&token=0ac76032-afce-4c7c-b625-a40c919a90fe"
                             class="transition ease-in-out delay-150 rounded-full w-20 mb-4 mx-auto hover:-translate-y-1 hover:scale-110 duration-300"
                             alt="Excel" />
                         <h5 class="text-xl font-medium leading-tight mb-2 ">Excel</h5>
                         <p class="text-gray-500">Tutorial básico</p>
                     </div>
                     <div class="text-center">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Microsoft_Office_Word_%282019%E2%80%93present%29.svg/516px-Microsoft_Office_Word_%282019%E2%80%93present%29.svg.png"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fwordo.webp?alt=media&token=ef63d30c-4111-413a-8680-c0c092ff356e"
                             class="transition ease-in-out delay-150 rounded-full w-20 mb-4 mx-auto hover:-translate-y-1 hover:scale-110 duration-300 "
                             alt="word" />
                         <h5 class="text-xl font-medium leading-tight mb-2">Word</h5>
                         <p class="text-gray-500">Tutorial básico</p>
                     </div>
                     <div class="text-center">
-                        <img src="https://findicons.com/files/icons/2795/office_2013_hd/2000/powerpoint.png"
+                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fpowerpointo.webp?alt=media&token=8b4851c3-0514-4ef4-bd7c-e1b5f2337f26"
                             class="transition ease-in-out delay-150 rounded-full w-20 mb-4 mx-auto hover:-translate-y-1 hover:scale-110 duration-300"
                             alt="power point" />
                         <h5 class="text-xl font-medium leading-tight mb-2">Power Point</h5>
@@ -370,13 +370,13 @@
                                 <br>
                                 <img alt="Letrero"
                                     class="animate-bounce block object-cover object-center w-full h-full rounded-lg"
-                                    src="@/assets/imgAprender.png">
+                                    src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgAprender.webp?alt=media&token=19080191-169e-43ba-8edc-096995abb430">
                             </div>
                         </div>
                         <div class="object-cover p-8">
                             <div class="flex justify-center max-h-100 min-h-100 p-10">
-                                <img src="@/assets/iMacPlantilla.png"
-                                    alt="https://www.tenvinilo.co/vinilos-decorativos/vinilo-decorativo-pantalla-imac-4810">
+                                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FiMacPlantilla.webp?alt=media&token=d86a1d8f-8aa1-4daa-b580-d55f924d0737"
+                                    alt="a">
                             </div>
                         </div>
                     </div>

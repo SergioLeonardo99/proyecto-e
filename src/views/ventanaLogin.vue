@@ -35,7 +35,7 @@
 
       <div class="bg-blue-600 hidden lg:block w-full md:w-1/2 xl:w-2/3 h-screen">
         
-        <img src="@/assets/wall.jpeg" alt="" class="w-full h-full object-cover">
+        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FfondoSectores.webp?alt=media&token=76d3bbb8-32a7-4984-893d-7f71d9c8cadd" alt="" class="w-full h-full object-cover">
       </div>
 
       <div class="bg-white w-full md:max-w-md lg:max-w-full md:mx-auto md:mx-0 md:w-1/2 xl:w-1/3 h-screen px-6 lg:px-16 xl:px-12
@@ -201,7 +201,7 @@ export default {
         var input_str = this.contraseña;
         var md = forge.md.sha256.create();
         md.update(input_str);
-
+        var estadoEncuesta = doc.data().encuesta
         if (doc.data().contraseña == md.digest().toHex()) {
           if(doc.data().estado == 'Inactivo'){
             this.modal= true
@@ -209,6 +209,8 @@ export default {
           }else{
             if(doc.data().tipo == 'empresa'){
             VueCookies.set(safe.cipher('nit'), safe.cipher(this.nit.toString()), "1h")
+            VueCookies.set(safe.cipher('encuesta'), safe.cipher(estadoEncuesta.toString()), "1h")
+            
             this.$router.push('/profile');
 
           }if(doc.data().tipo == 'estudiante'){
