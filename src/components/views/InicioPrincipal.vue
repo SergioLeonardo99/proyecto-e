@@ -16,14 +16,17 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner relative w-full overflow-hidden h-50">
-            <div class="carousel-item active float-left w-full">
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg14.webp?alt=media&token=e0e154bc-91c6-4010-95fb-737be08d38f6" class="block w-full imagen-carousel" alt="ImagenDeInfomacion1" />
+            <div class="carousel-item active float-left w-full h-full">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg14.webp?alt=media&token=e0e154bc-91c6-4010-95fb-737be08d38f6"
+                    class="block h-full imagen-carousel" alt="ImagenDeInfomacion1" />
             </div>
             <div class="carousel-item float-left w-full">
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg12.webp?alt=media&token=44897a70-67bb-48aa-ac49-9686fa56a29d" class="block w-full imagen-carousel" alt="ImagenDeInfomacion2" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg12.webp?alt=media&token=44897a70-67bb-48aa-ac49-9686fa56a29d"
+                    class="block h-full imagen-carousel" alt="ImagenDeInfomacion2" />
             </div>
             <div class="carousel-item float-left w-full">
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg13.webp?alt=media&token=42d16e8a-8ad1-48ac-8cf7-fe80d38d4fa8" class="block w-full imagen-carousel " alt="ImagenDeInfomacion3" />
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg13.webp?alt=media&token=42d16e8a-8ad1-48ac-8cf7-fe80d38d4fa8"
+                    class="block  h-full imagen-carousel " alt="ImagenDeInfomacion3" />
             </div>
         </div>
         <button
@@ -44,24 +47,19 @@
     <section class="bg-white">
         <div class="bg-white justify-center gap-4  p-3 alinearT">
             <h3 class="font-semibold letra text-teal-900 text-3xl">
-
                 Sectores
-
             </h3>
-
         </div>
-
     </section>
 
     <!--Division de sectores-->
 
-
     <section class="bg-white">
         <div>
-            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3">
+            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-2 p-3">
                 <!---contenedor principal de los sectores economicos-->
-                <div class="w-1/2 p-3 alinearT bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] bg-center rounded-md shadow-lg">
-
+                <div
+                    class="w-1/2 p-3 alinearT bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] bg-center rounded-md shadow-lg">
                     <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
                 </div>
 
@@ -71,10 +69,10 @@
                 </div>
             </div>
 
-            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3 ">
+            <div class=" bg-white grid md:grid-cols-2">
                 <!---contenedor principal para la informacion acerca de los sectores-->
                 <div
-                    class="w-1/2 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md indent-8 shadow-lg text-center">
+                    class="m-5 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md indent-8 shadow-lg text-center">
                     <div class="text-center p-8">
 
                         <p>La minería consiste en la extracción y explotación de minerales. Los recursos están
@@ -87,9 +85,8 @@
                             familias del municipio.</p>
                     </div>
                 </div>
-
                 <div
-                    class="w-1/2 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md indent-8 shadow-lg text-center">
+                    class="m-5 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md indent-8 shadow-lg text-center">
                     <div class="text-center p-8">
 
                         <p>El sector lácteo es una actividad económica que produce grandes oportunidades de negocio
@@ -103,12 +100,10 @@
                     </div>
                 </div>
             </div>
-
-
         </div>
         <!--seccion de titulo para los beneficios-->
         <section class="bg-white">
-            <div class="bg-white justify-center gap-4  p-3 alinearT">
+            <div class="bg-white justify-center gap-4 p-3 alinearT">
                 <h3 class="font-semibold letra text-teal-900 text-3xl">
                     Beneficios
                 </h3>
@@ -116,13 +111,13 @@
         </section>
 
         <div>
-            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3 ">
+            <div class=" bg-white grid md:grid-cols-2">
                 <!---contenedor principal de dos cards para informacion de la plataforma-->
-                <br>
-                <div class="w-1/2 p-3 alinearT border-2 px-1 py-1 border-slate-200 rounded-md shadow-lg">
+                <div class="p-3 alinearT border-2 px-1 py-1 border-slate-200 rounded-md shadow-lg">
                     <h1 class=" w-50 p5 letra text-2xl p-6 text-slate-600">¡Importante!</h1>
-                    <div class="flex flex-col justify-center">
-                        <div class="bg-blue-600 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+                    <div class="grid md:grid-cols-1">
+                        <!-- 1 -->
+                        <div class="m-2 shadow-lg  text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
                             id="static-example" role="alert" aria-live="assertive" aria-atomic="true"
                             data-mdb-autohide="false">
                             <div
@@ -145,7 +140,8 @@
                                 provincia de Ubaté.
                             </div>
                         </div>
-                        <div class="bg-slate-700 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+                        <!-- 2 -->
+                        <div class="m-2 bg-slate-700 shadow-lg  text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
                             id="static-example" role="alert" aria-live="assertive" aria-atomic="true"
                             data-mdb-autohide="false">
                             <div
@@ -168,7 +164,8 @@
                                 los representantes de las empresas.
                             </div>
                         </div>
-                        <div class="bg-teal-700 shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+                        <!-- 3 -->
+                        <div class="m-2 bg-teal-700  text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
                             id="static-example" role="alert" aria-live="assertive" aria-atomic="true"
                             data-mdb-autohide="false">
                             <div
@@ -190,7 +187,8 @@
                                 la confianza y la convicción permite que se alcancen los resultados esperados.
                             </div>
                         </div>
-                        <div class="bg-white shadow-lg mx-auto w-96 max-w-full text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
+                        <!-- 4 -->
+                        <div class="m-2 bg-white shadow-lg text-sm pointer-events-auto bg-clip-padding rounded-lg block mb-3"
                             id="static-example" role="alert" aria-live="assertive" aria-atomic="true"
                             data-mdb-autohide="false">
                             <div
@@ -227,7 +225,7 @@
 
                 </div>
                 <!--  beneficios del sitio web-->
-                <div class="w-1/2 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md shadow-lg ">
+                <div class="m-5 p-3 alinearT border-2 px-1 py-1 border-slate-200  rounded-md shadow-lg ">
 
                     <br>
                     <br>
@@ -348,39 +346,38 @@
                 </div>
                 <br>
                 <!---iconos de los cursos de cpacitacion educativa-->
-                <div class="grid-rows-2">
-                    <br>
-                    <div class="grid grid-cols-2 gap-8 letra">
 
-                        <div class="text-center p-10">
+                <div class="grid md:grid-cols-2 gap-8 letra">
 
-                            <p class="text-justify">
-                                Este es un espacio de tutoriales básicos, donde se encuentran herramientas importantes
-                                para el desarrollo de documentación, obtención de información a partir de grandes
-                                cantidades de datos, presentaciones para evidenciar ideas de negocios o temas a tratar.
-                            </p>
-                            <p class="text-justify">
-                                Las capacitaciones se brindan a partir de la interacción con las herramientas
-                                presentadas. Los cursos son básicos y se mostrarán de forma corta y concisa, para que de
-                                esta manera se logren entender las
-                                principales funciones que contienen estos entornos tecnológicos.
-                            </p>
+                    <div class="text-center p-10">
 
-                            <div class="w-full p-1 md:p-2">
-                                <br>
-                                <img alt="Letrero"
-                                    class="animate-bounce block object-cover object-center w-full h-full rounded-lg"
-                                    src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgAprender.webp?alt=media&token=19080191-169e-43ba-8edc-096995abb430">
-                            </div>
+                        <p class="text-justify">
+                            Este es un espacio de tutoriales básicos, donde se encuentran herramientas importantes
+                            para el desarrollo de documentación, obtención de información a partir de grandes
+                            cantidades de datos, presentaciones para evidenciar ideas de negocios o temas a tratar.
+                        </p>
+                        <p class="text-justify">
+                            Las capacitaciones se brindan a partir de la interacción con las herramientas
+                            presentadas. Los cursos son básicos y se mostrarán de forma corta y concisa, para que de
+                            esta manera se logren entender las
+                            principales funciones que contienen estos entornos tecnológicos.
+                        </p>
+
+                        <div class="w-full p-1 md:p-2">
+                            <br>
+                            <img alt="Letrero"
+                                class="animate-bounce block object-cover object-center w-full h-full rounded-lg"
+                                src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgAprender.webp?alt=media&token=19080191-169e-43ba-8edc-096995abb430">
                         </div>
-                        <div class="object-cover p-8">
-                            <div class="flex justify-center max-h-100 min-h-100 p-10">
-                                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FiMacPlantilla.webp?alt=media&token=d86a1d8f-8aa1-4daa-b580-d55f924d0737"
-                                    alt="a">
-                            </div>
+                    </div>
+                    <div class="object-cover p-8">
+                        <div class="flex justify-center max-h-100 min-h-100 p-10">
+                            <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FiMacPlantilla.webp?alt=media&token=d86a1d8f-8aa1-4daa-b580-d55f924d0737"
+                                alt="a">
                         </div>
                     </div>
                 </div>
+
 
             </div>
 
@@ -389,9 +386,8 @@
         <!--formulario para el usuario, llenado para comentarios-->
         <!-- footer-->
         <footer>
-
             <div class="bg-teal-700 justify-center p-3">
-                <div class=" grid grid-cols-3">
+                <div class=" grid md:grid-cols-3">
                     <div class="block p-6 rounded-lg shadow-lg max-w-md">
                         <form>
                             <h3 class="font-semibold letra text-white text-2xl">
@@ -530,7 +526,7 @@
                                         class="modal-header flex flex-shrink-0 items-center justify-between p-4 border-b border-gray-200 rounded-t-md">
                                         <h5 class="text-xl font-medium leading-normal text-black"
                                             id="exampleModalLongLabel">
-                                            {{titulo_leyes}}
+                                            {{ titulo_leyes }}
 
                                         </h5>
                                         <button type="button"
@@ -539,9 +535,9 @@
                                     </div>
                                     <!--texto interno del modal-->
                                     <div class="modal-body relative p-4 text-black" style="min-height: 100px">
-                                        {{ley1}}
-                                        <p>{{parrafos}}</p>
-                                        <a v-bind:href="link" class="underline decoration-solid">{{citas}}</a>
+                                        {{ ley1 }}
+                                        <p>{{ parrafos }}</p>
+                                        <a v-bind:href="link" class="underline decoration-solid">{{ citas }}</a>
 
                                     </div>
                                     <div

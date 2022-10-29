@@ -34,8 +34,8 @@
                             Tipo de solicitud
                         </label>
                         <!--List option para visualizacion de opciones-->
-                        <select v-model="solicitud" class="text-right letra">
-                            <option disabled value="">Seleccione</option>
+                        <select v-model="solicitud" class="text-right letra w-48">
+                            <option disabled value="" class="text-center">Seleccione</option>
                             <option>Software a la medida</option>
                             <option>Curso educativo</option>
                             <option>Soporte técnico</option>
@@ -71,14 +71,14 @@
                         </div>
                     </div>
                     <div>
-                        <button @click="enviarSolicitud()"  type="button"
+                        <button @click="enviarSolicitud()" type="button"
                             class="w-full flex justify-center bg-teal-700 text-gray-100 p-4  rounded-full tracking-wide
                                 font-semibold  focus:outline-none focus:shadow-outline hover:bg-teal-700 shadow-lg cursor-pointer transition ease-in duration-300">
                             Enviar solicitud
                         </button>
                     </div>
                 </form>
-                <h1>{{mensaje}}</h1>
+                <h1>{{ mensaje }}</h1>
             </div>
         </div>
     </div>
@@ -144,8 +144,8 @@ export default {
         enviarSolicitud() {
             if (this.solicitud != '' && this.telefono != '' && this.encargado != '' && this.nit != '' && this.texto != '') {
                 let date = new Date().toLocaleDateString();
-                var solicitud = date+this.nit
-                solicitud = solicitud.split("/").join(''); 
+                var solicitud = date + this.nit
+                solicitud = solicitud.split("/").join('');
                 db.collection("solicitudes").doc(solicitud).set({
                     solicitud: this.solicitud,
                     telefono: this.telefono,

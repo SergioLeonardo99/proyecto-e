@@ -4,7 +4,7 @@
     <section class="bg-white">
         <div class="bg-white justify-center gap-4  p-3 alinearT">
             <Navbar></Navbar>
-        
+
             <br>
             <h3 class="font-semibold letra text-teal-900 text-3xl">
 
@@ -123,6 +123,7 @@
 
     <!--esta seccion es el equipo de trabajo-->
     <!--seccion de titulo-->
+
     <section class="bg-white">
         <div class="bg-white justify-center gap-4  p-3 alinearT">
             <br>
@@ -133,216 +134,209 @@
             </h3>
         </div>
     </section>
+    <div class="grid md:lg:xl:px-40 grid-rows-1 md:lg:xl:grid-cols-2">
+        <!-- Yadir -->
+        <div class="col alinearT  bg-center rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FEdilsonYomayuza.webp?alt=media&token=416c21e3-be54-4199-8b19-bc859f3e9444"
+                    alt="Edilson Yomayuza" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Edilson Yadir Yomayuza Guzman</h5>
+                <p class="text-gray-500">Ingeniero de sistemas
+                    <br>
+                    (Desarrollador backend)
+                    <br>
+                    eyomayuza@ucundinamarca.edu.co
+                    <br>
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/edilson-yadir-yomayuza-guzman-7675b7241/">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
 
-    <section class="bg-white">
-        <div>
-            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3">
-                <!---contenedor principal de avatars-->
-                <div class="w-1/2 p-3 alinearT  bg-center rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FEdilsonYomayuza.webp?alt=media&token=416c21e3-be54-4199-8b19-bc859f3e9444" alt="Edilson Yomayuza"
-                            class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Edilson Yadir Yomayuza Guzman</h5>
-                        <p class="text-gray-500">Ingeniero de sistemas
-                            <br>
-                            (Desarrollador backend)
-                            <br>
-                            eyomayuza@ucundinamarca.edu.co
-                            <br>
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/edilson-yadir-yomayuza-guzman-7675b7241/">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-                    </div>
-
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
-
-                <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FBrayanMedina.webp?alt=media&token=557aa90d-3e1e-4b1a-9482-f6faef9f7139" alt="Brayan Medina"
-                            class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Brayan Felipe Medina Duarte</h5>
-                        <p class="text-gray-500">Ingeniero de sistemas
-                            <br>
-                            (Desarrollador backend)
-                            <br>
-                            bfmedina@ucundinamarca.edu.co
-                            <br>
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/brayan-felipe-medina-duarte-241826234/">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-                    </div>
-                </div>
+                </p>
             </div>
         </div>
-    </section>
-    <section class="bg-white">
-        <div>
-            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3">
-                <!---contenedor principal-->
-                <div class="w-1/2 p-3 alinearT  bg-center rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FFelipeGuarnizo.webp?alt=media&token=6332e684-4475-4f1d-881b-d032c4b7bc87" alt="Felipe Guarnizo"
-                            class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Cristian Felipe Saenz Guarnizo</h5>
-                        <p class="text-gray-500">Ingeniero de sistemas
-                            <br>
-                            (Analista de pruebas de software )
-                            <br>
-                            cfsaenz@ucundinamarca.edu.co
-                            <br>
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/cristian-felipe-saenz-guarnizo-879a92239/">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        <!-- Fin yadir -->
+        <!-- Medina -->
+        <div class="col p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FBrayanMedina.webp?alt=media&token=557aa90d-3e1e-4b1a-9482-f6faef9f7139"
+                    alt="Brayan Medina" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Brayan Felipe Medina Duarte</h5>
+                <p class="text-gray-500">Ingeniero de sistemas
+                    <br>
+                    (Desarrollador backend)
+                    <br>
+                    bfmedina@ucundinamarca.edu.co
+                    <br>
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/brayan-felipe-medina-duarte-241826234/">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
 
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-
-                    </div>
-
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
-
-                <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FKarenMaldonado.webp?alt=media&token=49345c9d-0451-43cd-909f-ff183e000c37" alt="Karen Maldonado"
-                            class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Karen Yised Maldonado Rincón</h5>
-                        <p class="text-gray-500">Ingeniero de sistemas
-                            <br>
-                            (Desarrollador frontend)
-                            <br>
-                            kymaldonado@ucundinamarca.edu.co
-                            <br>
-
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/karen-maldonado-8a2121214/">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-                    </div>
-                </div>
+                </p>
             </div>
         </div>
+        <!-- Fin Medina -->
+        <!-- Felipe -->
+        <div class="col p-3 alinearT  bg-center rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FFelipeGuarnizo.webp?alt=media&token=6332e684-4475-4f1d-881b-d032c4b7bc87"
+                    alt="Felipe Guarnizo" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Cristian Felipe Saenz Guarnizo</h5>
+                <p class="text-gray-500">Ingeniero de sistemas
+                    <br>
+                    (Analista de pruebas de software )
+                    <br>
+                    cfsaenz@ucundinamarca.edu.co
+                    <br>
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/cristian-felipe-saenz-guarnizo-879a92239/">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
 
-    </section>
-    <section class="bg-white">
-        <div>
-            <div class=" bg-white flex justify-center gap-4 grid-rows grid-rows-3 p-3">
-                <!---contenedor principal-->
-                <div class="w-1/2 p-3 alinearT  bg-center rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FSergioVega.webp?alt=media&token=63aec6fc-025f-4a52-9aa3-00ab7da5c8bc" alt="Sergio Vega" class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Sergio Leonardo Vega </h5>
-                        <p class="text-gray-500">Ingeniero de sistemas
-                            <br>
-                            (Desarrollador frontend)
-                            <br>
-                            slvega@ucundinamarca.edu.co
-                            <br>
-
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/sergio-leonardo-vega-corredor-99260b1b2/">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-                    </div>
-
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
+                </p>
 
-                <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FSegundoCortes.webp?alt=media&token=bb0a0095-91e2-4067-a5af-9f1efc3a67c2" alt="Segundo Cortes"
-                            class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Segundo Leonardo Cortes López</h5>
-                        <p class="text-gray-500">Ingeniero industrial
-                            <br>
-                            (Especialista en gestión estratégica de proyectos)
-                            <br>
-                            sleonardocortes@ucundinamarca.edu.co.
-                            <br>
+            </div>
 
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/segundo-leonardo-cortes-lopez-19123999">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+        </div>
+        <!-- Fin Felipe -->
+        <!-- Karen -->
+        <div class="col alinearT  bg-center bg-cover rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FKarenMaldonado.webp?alt=media&token=49345c9d-0451-43cd-909f-ff183e000c37"
+                    alt="Karen Maldonado" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Karen Yised Maldonado Rincón</h5>
+                <p class="text-gray-500">Ingeniero de sistemas
+                    <br>
+                    (Desarrollador frontend)
+                    <br>
+                    kymaldonado@ucundinamarca.edu.co
+                    <br>
 
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-                    </div>
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/karen-maldonado-8a2121214/">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
                 </div>
-
-                <div class="w-1/2 p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
-                    <div class="text-center">
-                        <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FCristianCano.webp?alt=media&token=71ae406d-c63b-4868-938d-2409d46753d5" alt="Cristian Cano"
-                            class="rounded-full w-32 h-32 mx-auto">
-                        <h5 class="text-xl font-medium leading-tight mb-2">Cristian Eduardo Cano López </h5>
-                        <p class="text-gray-500">Ingeniero de sistemas
-                            <br>
-                            (Especialista en TIC aplicada a la enseñanza)
-                            <br>
-                            cecano@ucundinamarca.edu.co
-                            <br>
-
-                        <div class="flex flex-col justify-center items-center">
-                            <a href="https://www.linkedin.com/in/cristian-cano-778b70115/">
-                                <svg class="w-8 h-8 text-blue-500 bg-withe fill-current"
-                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-
-                                    <path
-                                        d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
-                                    </path>
-                                </svg>
-                            </a>
-                        </div>
-                        </p>
-                    </div>
-                </div>
+                </p>
             </div>
         </div>
+        <!-- Fin Karen -->
+        <!-- Sergio -->
+        <div class="col p-3 alinearT bg-center rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FSergioVega.webp?alt=media&token=63aec6fc-025f-4a52-9aa3-00ab7da5c8bc"
+                    alt="Sergio Vega" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Sergio Leonardo Vega </h5>
+                <p class="text-gray-500">Ingeniero de sistemas
+                    <br>
+                    (Desarrollador frontend)
+                    <br>
+                    slvega@ucundinamarca.edu.co
+                    <br>
 
-    </section>
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/sergio-leonardo-vega-corredor-99260b1b2/">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                </p>
+            </div>
+
+        </div>
+        <!-- Fin sergio -->
+        <!-- Ing segundo -->
+        <div class="col p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FSegundoCortes.webp?alt=media&token=bb0a0095-91e2-4067-a5af-9f1efc3a67c2"
+                    alt="Segundo Cortes" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Segundo Leonardo Cortes López</h5>
+                <p class="text-gray-500">Ingeniero industrial
+                    <br>
+                    (Especialista en gestión estratégica de proyectos)
+                    <br>
+                    sleonardocortes@ucundinamarca.edu.co.
+                    <br>
+
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/segundo-leonardo-cortes-lopez-19123999">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                </p>
+            </div>
+        </div>
+        <!-- fin Ing segundo -->
+        <!-- Ing cristian -->
+        <div class="col p-3 alinearT  bg-center bg-cover rounded-md shadow-lg">
+            <div class="text-center">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FCristianCano.webp?alt=media&token=71ae406d-c63b-4868-938d-2409d46753d5"
+                    alt="Cristian Cano" class="rounded-full w-32 h-32 mx-auto">
+                <h5 class="text-xl font-medium leading-tight mb-2">Cristian Eduardo Cano López </h5>
+                <p class="text-gray-500">Ingeniero de sistemas
+                    <br>
+                    (Especialista en TIC aplicada a la enseñanza)
+                    <br>
+                    cecano@ucundinamarca.edu.co
+                    <br>
+
+                <div class="flex flex-col justify-center items-center">
+                    <a href="https://www.linkedin.com/in/cristian-cano-778b70115/">
+                        <svg class="w-8 h-8 text-blue-500 bg-withe fill-current" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 448 512">
+
+                            <path
+                                d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+                </p>
+            </div>
+        </div>
+        <!-- Fin Ing Cristian -->
+
+
+
+
+    </div>
+
     <!--footer para fin de pagina-->
     <footer>
 
@@ -350,6 +344,7 @@
         </div>
 
     </footer>
+
 </template>
 
 <script>
