@@ -25,6 +25,7 @@ import perfilEstudiante from "./components/views/perfilEstudiante.vue"
 import solicitudesEstudiante from "./components/views/solicitudesEstudiante.vue"
 import editarPerfilEstudiante from "./components/views/editarPerfilDeEstudiante.vue"
 import estudianteMod from "./components/views/estudianteMod.vue"
+import recomendaciones from "./components/views/recomendaciones.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -67,7 +68,8 @@ const router = createRouter( {
     {path: '/perfilestudiante', name: 'PerfilEstudiante', component: perfilEstudiante},
     {path: '/solicitudesestudiante', name: 'SolicitudesEstudiante', component: solicitudesEstudiante},
     {path: '/editarestudiante', name: 'editarPerfilEstudiante', component: editarPerfilEstudiante},
-    {path: '/estudiante', name:'estudiante', component:estudianteMod}
+    {path: '/estudiante', name:'estudiante', component:estudianteMod},
+    {path: '/recomendaciones', name:'recomendaciones', component:recomendaciones}
   ]
 
 })
