@@ -63,8 +63,10 @@
             </div>
 
             <div class="text-right mt-2">
-              
-                <button @click="abrirRecuperar" type="button" class="text-sm letra text-gray-700 hover:text-gray-700 focus:text-gray-700">¿Olvidaste tu contraseña?</button>
+
+              <button @click="abrirRecuperar" type="button"
+                class="text-sm letra text-gray-700 hover:text-gray-700 focus:text-gray-700">¿Olvidaste tu
+                contraseña?</button>
               <p>{{ mensaje }}</p>
             </div>
 
@@ -166,40 +168,80 @@
                   <div class="sm:flex sm:items-start">
                     <div
                       class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
                       </svg>
                     </div>
                     <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                       <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">Recuperar clave
                       </DialogTitle>
                       <div class="mt-2">
-                        <p class="text-sm text-gray-500">Ingresa el correo electrónico asociado a tu cuenta para recuperar la clave.</p>
+
+                        <p class="text-sm text-gray-500">Ingresa el correo electrónico asociado a tu cuenta para
+                          recuperar la clave.</p>
                       </div>
                       <div>
-                      <label class="block letra text-gray-700">Correo electrónico</label>
-                      <input type="email" name="email" v-model="correoRecuperar" placeholder="Correo electrónico"
-                        class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
-                        
+                        <form>
+                          <label class="block letra text-gray-700">Correo electrónico</label>
+                          <input type="email" name="email" v-model="correoRecuperar" placeholder="Correo electrónico"
+                            class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none">
+                        </form>
 
 
 
-                    </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                  
+
                   <button type="button"
                     class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                     @click="cerrarModal()">Cerrar</button>
                   <button type="button"
                     class="inline-flex w-full justify-center rounded-md border border-transparent bg-green-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
-                    @click="cerrarModal()">Recuperar</button>
+                    @click="verificarUsuario()">Recuperar</button>
 
                 </div>
               </div>
+
+              <div v-if="aceptado">
+                <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
+                  <div class="sm:flex sm:items-start">
+                    <div
+                      class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 sm:mx-0 sm:h-10 sm:w-10">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                          d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+                      </svg>
+                    </div>
+                    <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
+                      <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">Clave recuperada con
+                        exito
+                      </DialogTitle>
+                      <div class="mt-2">
+                        <p class="text-sm text-gray-500">Verifique su correo electrónico para comprobar su nueva
+                          contraseña.</p>
+                      </div>
+                      <div>
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
+
+                  <button type="button"
+                    class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
+                    @click="cerrarModal()">Cerrar</button>
+
+
+                </div>
+              </div>
+
             </DialogPanel>
           </TransitionChild>
         </div>
@@ -238,8 +280,12 @@ export default {
       mensaje: '',
       modal: false,
       recuperar: false,
+      aceptado: false,
       aviso: false,
       correoRecuperar: '',
+      nombre: '',
+      id: '',
+      clave: ''
     }
   },
   methods: {
@@ -281,7 +327,6 @@ export default {
 
             }
             this.mensaje = "Datos validos"
-
           }
 
 
@@ -297,34 +342,100 @@ export default {
       });
 
     },
-    cerrarModal(){
-      if (this.recuperar==true){
-        this.recuperar=false
+    cerrarModal() {
+      if (this.recuperar == true) {
+        this.recuperar = false
       }
-      if (this.aviso==true){
-        this.aviso=false
+      if (this.aviso == true) {
+        this.aviso = false
       }
-      this.modal=false
+      if (this.aceptado == true) {
+        this.aceptado = false
+      }
+      this.modal = false
     },
-    abrirRecuperar(){
-      this.recuperar=true
-      this.modal=true
+    abrirRecuperar() {
+      this.recuperar = true
+      this.modal = true
     },
-    recuperacion(){
+    verificarUsuario() {
+      if (this.correoRecuperar == '') {
+        this.recuperar = false
+        this.aviso = true
+      } else {
+        
+        db.collection("usuario").where("email", "==", this.correoRecuperar.toString())
+          .get()
+          .then((querySnapshot) => {
+            querySnapshot.forEach((doc) => {
+              console.log("toy vivo")
+              this.correoRecuperar = doc.data().email
+              this.nombre = doc.data().nombre
+              this.id = doc.data().nit
+              this.cambioClave()
+
+            });
+          })
+          .catch((error) => {
+            console.log("Usuario no encontrado ", error);
+            this.recuperar = false
+            this.aceptado = true
+          });
+          this.recuperar = false
+          this.aceptado = true
+      }
+
+
+
+    },
+    cambioClave() {
+      var docRef = db.collection("usuario").doc(this.id.toString());
+      var forge = require('node-forge');
+      var input_str = Math.random().toString(36).slice(2)
+      var md = forge.md.sha256.create();
+      md.update(input_str);
+      this.clave = input_str
+      var getOptions = {
+        //source: 'cache'
+      };
+      docRef.update({
+        contraseña: md.digest().toHex(),
+      })
+        .then(() => {
+          console.log("Document successfully updated!");
+          this.recuperacion()
+        })
+        .catch((error) => {
+          // The document probably doesn't exist.
+          console.error("Error updating document: ", error);
+          this.recuperar = false
+          this.aceptado = true
+        });
+
+
+
+
+
+    },
+
+    recuperacion() {
+
       var templateParams = {
         name_proyect: 'M-SUbate',
-        name: 'James',
-        id: 'James',
-        clave: 'James',
-        correo: '',
-        
-    };
-      emailjs.sendForm('service_f231616', 'YOUR_TEMPLATE_ID', templateParams, 'YOUR_PUBLIC_KEY')
-        .then((result) => {
-            console.log('SUCCESS!', result.text);
-        }, (error) => {
-            console.log('FAILED...', error.text);
+        name: this.nombre,
+        id: this.id,
+        clave: this.clave,
+        correo: this.correoRecuperar,
+
+      };
+      emailjs.send('service_f231616', 'template_ux9gq9f', templateParams, 'qPWdYWkxEBTFlHmVj')
+        .then(function (response) {
+          console.log('SUCCESS!', response.status, response.text);
+        }, function (error) {
+          console.log('FAILED...', error);
         });
+        this.recuperar = false
+        this.aceptado = true
     },
 
 
