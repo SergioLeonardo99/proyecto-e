@@ -28,14 +28,9 @@
             <option>Nivel Preguntas</option>
             <option>Complementos y cambios tecnológicos</option>
           </select>
-
-          
-
+            
         </div>
-      </div>
-    </div>
-
-    <!--Primero-->
+         <!--Primero-->
     <div class="container mx-auto px-0 flex lg:max-w-full   justify-center  ">
       <div class="items-center flex flex-wrap ">
         <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
@@ -46,40 +41,40 @@
               </pie-chart>
             </div>
             <div v-if="tipoGrafico == 'Nivel Conocimiento'">
-              <column-chart class="w-16 md:w-32 lg:w-48"
+              <bar-chart class="w-16 md:w-32 lg:w-48"
                 :data="[['Su Empresa', puntajeConocimiento], ['Empresa 1', puntajeConocimiento1], ['Empresa 2', puntajeConocimiento2], ['Empresa 3', puntajeConocimiento3], ['Empresa 4', puntajeConocimiento4]]"
-                :colors="['#3f8880', '#20CBA4', '#20CBA4', '#20CBA4', '#20CBA4']"></column-chart>
+                :colors="['#3f8880', '#20CBA4', '#20CBA4', '#20CBA4', '#20CBA4']"></bar-chart>
             </div>
             <div v-if="tipoGrafico == 'Nivel Infraestructura'">
-              <column-chart class="w-16 md:w-32 lg:w-48"
+              <bar-chart class="w-16 md:w-32 lg:w-48"
                 :data="[['Su Empresa', puntajeInfraestructura], ['Empresa 1', puntajeInfraestructura1], ['Empresa 2', puntajeInfraestructura2], ['Empresa 3', puntajeInfraestructura3], ['Empresa 4', puntajeInfraestructura4]]"
-                :colors="['#20CB3F', '#FC381D', '#FC381D', '#FC381D', '#FC381D']"></column-chart>
+                :colors="['#20CB3F', '#FC381D', '#FC381D', '#FC381D', '#FC381D']"></bar-chart>
             </div>
 
             <div v-if="tipoGrafico == 'Nivel Madurez'">
-              <column-chart class="w-16 md:w-32 lg:w-48"
+              <bar-chart class="w-16 md:w-32 lg:w-48"
                 :data="[['Su Empresa', puntajeMadurez], ['Empresa 1', puntajeMadurez1], ['Empresa 2', puntajeMadurez2], ['Empresa 3', puntajeMadurez3], ['Empresa 4', puntajeMadurez4]]"
-                :colors="['#65FC23', '#2CE6C3', '#2CE6C3', '#2CE6C3', '#2CE6C3']"></column-chart>
+                :colors="['#65FC23', '#2CE6C3', '#2CE6C3', '#2CE6C3', '#2CE6C3']"></bar-chart>
 
             </div>
             <div v-if="tipoGrafico == 'Nivel Clientes'">
-              <column-chart class="w-16 md:w-32 lg:w-48"
+              <bar-chart class="w-16 md:w-32 lg:w-48"
                 :data="[['Su Empresa', puntajeClientes], ['Empresa 1', puntajeClientes1], ['Empresa 2', puntajeClientes2], ['Empresa 3', puntajeClientes3], ['Empresa 4', puntajeClientes4]]"
-                :colors="['#3f8880', '#a0fb0e', '#a0fb0e', '#a0fb0e', '#a0fb0e']"></column-chart>
+                :colors="['#3f8880', '#a0fb0e', '#a0fb0e', '#a0fb0e', '#a0fb0e']"></bar-chart>
 
             </div>
             <div v-if="tipoGrafico == 'Nivel Proveedores'">
-              <column-chart class="w-16 md:w-32 lg:w-48"
+              <bar-chart class="w-16 md:w-32 lg:w-48"
                 :data="[['Su Empresa', puntajeProveedores], ['Empresa 1', puntajeProveedores1], ['Empresa 2', puntajeProveedores2], ['Empresa 3', puntajeProveedores3], ['Empresa 4', puntajeProveedores4]]"
-                :colors="['#ff4e18', '#0a6e9a', '#0a6e9a', '#0a6e9a', '#0a6e9a']"></column-chart>
+                :colors="['#ff4e18', '#0a6e9a', '#0a6e9a', '#0a6e9a', '#0a6e9a']"></bar-chart>
 
             </div>
 
 
             <div v-if="tipoGrafico == 'Nivel Total'">
-              <column-chart class="w-16 md:w-32 lg:w-48"
+              <bar-chart class="w-16 md:w-32 lg:w-48"
                 :data="[['Su Empresa', puntajeTotal], ['Empresa 1', puntajeTotal1], ['Empresa 2', puntajeTotal2], ['Empresa 3', puntajeTotal3], ['Empresa 4', puntajeTotal4]]"
-                :colors="['#0667ce', '#06d986', '#06d986', '#06d986', '#06d986']"></column-chart>
+                :colors="['#0667ce', '#06d986', '#06d986', '#06d986', '#06d986']"></bar-chart>
 
             </div>
             <div v-if="tipoGrafico == 'Nivel Preguntas'">
@@ -210,6 +205,10 @@
         </div>
       </div>
     </div>
+      </div>
+    </div>
+
+   
   </section>
 
 

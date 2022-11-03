@@ -1,7 +1,30 @@
 <template>
-  <div>
+  
     <navBar4></navBar4>
-    <div class="flex flex-wrap justify-center space-x-10 space-y-12 " :key="cambio">
+<section>   
+   <div class="flex flex-wrap justify-center space-x-10 space-y-12 " :key="cambio">
+      <div class="flex justify-center"></div>
+        <div class="flex justify-center" v-for="user in dataUsers">
+          <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
+          <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg" :src="user.img" alt="" />
+          <div class="p-6 flex flex-col justify-start">
+          <h5 class="text-gray-900 text-xl font-medium mb-2">{{user.nombre}}</h5>
+          <p class="text-gray-700 text-base mb-4">
+            {{user.about}}
+          </p>
+          <p class="text-gray-600 text-xs">{{user.fecha}}</p>
+          <br/>
+      <button type="button" @click="habilitarModal(user.nombre,user.nit,'No')" class=" inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">
+      Aplicar</button>
+    </div>
+  </div>
+  </div>
+
+
+</div>
+</section>
+
+    <!-- <div class="flex flex-wrap justify-center space-x-10 space-y-12 " :key="cambio">
       <div class="flex justify-center" v-for="user in dataUsers"> 
         <div class="flex flex-col md:flex-row md:max-w-xl rounded-lg bg-white shadow-lg">
           <img class=" w-full h-96 md:h-auto object-cover md:w-48 rounded-t-lg md:rounded-none md:rounded-l-lg"
@@ -21,8 +44,10 @@
       </div>
 
 
-    </div>
-  </div>
+    </div> -->
+
+
+  
   <TransitionRoot as="template" :show="open" :key="open">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">

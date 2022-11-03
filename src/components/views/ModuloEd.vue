@@ -27,9 +27,8 @@
                   Aprende como usar herramientas de office
                 </h1>
                 <p class="mt-4 text-lg text-blueGray-200">
-                  This is a simple example of a Landing Page you can build using
-                  Vue Notus. It features multiple CSS components based on the
-                  Tailwind CSS design system.
+                Las herramientas de office te proporcionan escalabilidad, colaboración entre empleados
+                y se puede utilizar desde cualquier dispositivo digital en cualquier lugar.
                 </p>
               </div>
             </div>
@@ -135,9 +134,7 @@
             <div class="w-full lg:w-6/12 px-4 "> 
               <h2 class="text-4xl font-semibold">Word</h2>
               <p class="text-lg leading-relaxed m-4 text-blueGray-500">
-                According to the National Oceanic and Atmospheric
-                Administration, Ted, Scambos, NSIDClead scentist, puts the
-                potentially record maximum.
+                
               </p>
             </div>
           </div>
@@ -147,8 +144,8 @@
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
             <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
               <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
-                            frameborder="0"
+                          src="https://www.youtube.com/embed/tkd7NUbhkmc" 
+                            frameborder="0" 
                             allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"
                         ></iframe>
@@ -157,13 +154,12 @@
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
                 
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">Documentos en línea</h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  Subir documentos a drive, para trabajos en grupos, aprovechando
+                  las herramientas, facilitando el trabajo y manejos de documentos
                 </p>
-                <ul class="list-none mt-6">
+                <!-- <ul class="list-none mt-6">
                   <li class="py-2">
                     <div class="flex items-center">
                       <div>
@@ -210,7 +206,7 @@
                       </div>
                     </div>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -221,7 +217,7 @@
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
             <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
               <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
+                          src="https://www.youtube.com/embed/Jt1NtaXPTfY" 
                             frameborder="0"
                             allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"
@@ -231,13 +227,12 @@
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
               
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">Carta masiva mediante base de datos.</h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  Mediante una base de datos, se mejora la optimización, para 
+                  el manejo de los destinatatios de una carta dirijida masivamente.
                 </p>
-                <ul class="list-none mt-6">
+                <!-- <ul class="list-none mt-6">
                   <li class="py-2">
                     <div class="flex items-center">
                       <div>
@@ -284,7 +279,7 @@
                       </div>
                     </div>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -295,7 +290,7 @@
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
             <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
               <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
+                          src="https://www.youtube.com/embed/jmdjjwxgaxw" 
                             frameborder="0"
                             allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"
@@ -304,13 +299,12 @@
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">Herramientas básicas.</h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  Introducción al uso de las diversas herramientas, para edición e insersión
+                  de contenido multimedia, gráficos , tablas, entre otros.
                 </p>
-                <ul class="list-none mt-6">
+                <!-- <ul class="list-none mt-6">
                   <li class="py-2">
                     <div class="flex items-center">
                       <div>
@@ -357,7 +351,7 @@
                       </div>
                     </div>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -367,15 +361,13 @@
       <section>
      >
       </section>
-      <section id="excel" class="relative py-20 space-y-10">
+      <section id="power" class="relative py-20 space-y-10">
         <!--Encabezadp-->
         <div class="flex flex-wrap justify-center text-center mb-24">
             <div class="w-full lg:w-6/12 px-4"> 
-              <h2 class="text-4xl font-semibold">Excel</h2>
+              <h2 class="text-4xl font-semibold">PowerPoint</h2>
               <p class="text-lg leading-relaxed m-4 text-blueGray-500">
-                According to the National Oceanic and Atmospheric
-                Administration, Ted, Scambos, NSIDClead scentist, puts the
-                potentially record maximum.
+               
               </p>
             </div>
           </div>
@@ -385,7 +377,7 @@
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
             <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
               <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
+                          src="https://www.youtube.com/embed/3vgkp54et2o"
                             frameborder="0"
                             allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"
@@ -395,13 +387,12 @@
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
                 
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">Presentaciones en línea</h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  Es un tutorial básico donde se enlazan documentos a Google drive 
+                  y One drive (nube) para guardar las presentaciones. 
                 </p>
-                <ul class="list-none mt-6">
+                <!-- <ul class="list-none mt-6">
                   <li class="py-2">
                     <div class="flex items-center">
                       <div>
@@ -448,7 +439,7 @@
                       </div>
                     </div>
                   </li>
-                </ul>
+                </ul> -->
               </div>
             </div>
           </div>
@@ -459,7 +450,7 @@
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
             <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
               <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
+                          src="https://www.youtube.com/embed/SJxLjtOPV8A"
                             frameborder="0"
                             allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"
@@ -467,62 +458,14 @@
             </div>
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
+              <div class="md:pr-10">
               
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">Guía de presentación</h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  Es un tutorial básico con pasos a seguir para realizar la presentación
+                  de tu empresa, te puedes guiar a partir de los ítems.
                 </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+              
               </div>
             </div>
           </div>
@@ -533,7 +476,7 @@
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
             <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
               <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
+                          src="https://www.youtube.com/embed/YjA0vROvlQ4"
                             frameborder="0"
                             allowfullscreen
                             class="absolute top-0 left-0 w-full h-full"
@@ -542,299 +485,18 @@
             </div>
             <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
               <div class="md:pr-12">
-                <h3 class="text-3xl font-semibold">A growing company</h3>
+                <h3 class="text-3xl font-semibold">Herramientas básicas </h3>
                 <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
+                  Es un tutorial básico donde se indica como utilizar las diversas
+                  herramientas, para el desarrollo de presentaciones.
                 </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+               
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="power" class="relative py-20 space-y-10  bg-blueGray-200">
-        <!--Encabezadp-->
-        <div class="flex flex-wrap justify-center text-center mb-24">
-            <div class="w-full lg:w-6/12 px-4"> 
-              <h2 class="text-4xl font-semibold">PowerPoint</h2>
-              <p class="text-lg leading-relaxed m-4 text-blueGray-500">
-                According to the National Oceanic and Atmospheric
-                Administration, Ted, Scambos, NSIDClead scentist, puts the
-                potentially record maximum.
-              </p>
-            </div>
-          </div>
-        <!--Primero-->  
-        <div class="container mx-auto px-4 flex lg:max-w-full  justify-center ">
-          <div class="items-center flex flex-wrap ">
-            <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
-            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
-              <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
-                            frameborder="0"
-                            allowfullscreen
-                            class="absolute top-0 left-0 w-full h-full"
-                        ></iframe>
-            </div>
-            </div>
-            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
-                
-                <h3 class="text-3xl font-semibold">A growing company</h3>
-                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
-                </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Segundo-->
-        <div class="container mx-auto px-4 flex lg:max-w-full   justify-center">
-          <div class="items-center flex flex-wrap ">
-            <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
-            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
-              <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
-                            frameborder="0"
-                            allowfullscreen
-                            class="absolute top-0 left-0 w-full h-full"
-                        ></iframe>
-            </div>
-            </div>
-            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
-              
-                <h3 class="text-3xl font-semibold">A growing company</h3>
-                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
-                </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!--Tercero-->
-        <div class="container mx-auto px-4 flex lg:max-w-full   justify-center">
-          <div class="items-center flex flex-wrap ">
-            <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
-            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
-              <iframe
-                          src="https://www.youtube.com/embed/UBOj6rqRUME"
-                            frameborder="0"
-                            allowfullscreen
-                            class="absolute top-0 left-0 w-full h-full"
-                        ></iframe>
-            </div>
-            </div>
-            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
-              <div class="md:pr-12">
-                <h3 class="text-3xl font-semibold">A growing company</h3>
-                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
-                  The extension comes with three pre-built pages to help you get
-                  started faster. You can change the text and images and you're
-                  good to go.
-                </p>
-                <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+    
     </main>
     
   </div>
