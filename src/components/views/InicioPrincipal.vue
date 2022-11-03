@@ -17,15 +17,15 @@
         </div>
         <div class="carousel-inner relative w-full overflow-hidden h-50">
             <div class="carousel-item active float-left w-full h-full">
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg14.webp?alt=media&token=e0e154bc-91c6-4010-95fb-737be08d38f6"
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2F1.webp?alt=media&token=61dd3881-8719-4a27-ab79-ad18bd9bd6eb"
                     class="block h-full imagen-carousel" alt="ImagenDeInfomacion1" />
             </div>
             <div class="carousel-item float-left w-full">
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg12.webp?alt=media&token=44897a70-67bb-48aa-ac49-9686fa56a29d"
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2F3.webp?alt=media&token=c8cab1d6-ae23-4d1d-987f-9706cca64f6d"
                     class="block h-full imagen-carousel" alt="ImagenDeInfomacion2" />
             </div>
             <div class="carousel-item float-left w-full">
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fimg13.webp?alt=media&token=42d16e8a-8ad1-48ac-8cf7-fe80d38d4fa8"
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2F2.webp?alt=media&token=eae98eea-ebbd-47ae-af54-4441204f1f80"
                     class="block  h-full imagen-carousel " alt="ImagenDeInfomacion3" />
             </div>
         </div>

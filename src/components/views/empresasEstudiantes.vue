@@ -225,7 +225,6 @@ export default {
         this.nitEmpresa=id
         this.nombreEmpresa=nombre
         this.msgBody="¿Esta seguro que desea realizar una solicitud de contacto con la empresa "+nombre+" ?"
-        
       }else{
         this.enviarSolicitud(id)
        

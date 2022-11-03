@@ -1,7 +1,7 @@
 <template>
     <navBar2></navBar2>
 <!-- Lacteo -->
-    <div>
+    <div v-if="sector=='Lácteos'">
         <section class="bg-white">
         <div class="bg-white justify-center gap-4  p-3 alinearT">
         
@@ -264,10 +264,12 @@
         </div>
 
     </section>
+    <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1C8cj3zoOPX80IhS31D63eOGkTAiW7uGV/view?usp=share_link','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
+                px-4 py-3 mt-6">Abrir documento recomendaciones</button>
 
     </div>
 <!-- Minero -->
-    <div>
+    <div v-if="sector=='Minería de carbón'">
         <section class="bg-white">
         <div class="bg-white justify-center gap-4  p-3 alinearT">
         
@@ -318,7 +320,7 @@
             <div class="flex flex-wrap justify-end">
                 <div class="w-5/6 sm:w-1/2 p-6">
                     <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Mineros Contituos
+                        Mineros Continuos
 
                     </h3>
                     <p class="text-gray-600 mb-8">
@@ -461,14 +463,15 @@
    
 
     </section>
+    <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1xcRLNqJBs4HbfFYpG8FZ-WWrKbp_RR9j/view?usp=sharing','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
+                px-4 py-3 mt-6">Abrir documento recomendaciones</button>
+
 
     </div>
 
     <!--Creacion del formulario para las solicitudes-->
    
-    <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1o1MCXw3L0KrsiPuhf3Cnam2rBfOGe2eb/view?usp=sharing','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
-                px-4 py-3 mt-6">Descargar</button>
-
+    
 
 
 
@@ -479,17 +482,19 @@
 </template>
 
 <script>
+import "firebase/firestore";
 import navBar2 from './elementos/navbar2.vue'
 import firebase from "../../components/firebase/initFirebase";
-import "firebase/storage";
-const storage = firebase.storage();
-var storageRef = storage.ref();
+const db = firebase.firestore();
+import Seguridad from "../js/encrypt.js";
+const safe = new Seguridad();
 
 
 export default {
     data() {
         return {
             texto: '',
+            sector: ''
             
 
         }
@@ -530,11 +535,33 @@ export default {
                 // Handle any errors
             });
         },
+        cargarEmpresa() {
+
+        this.nitEmpresa =safe.decrypt($cookies.get(safe.cipher('nit')))
+
+        var docRef = db.collection("usuario").doc(this.nitEmpresa.toString());
+
+
+        var getOptions = {
+            //source: 'cache'
+        };
+        docRef.get(getOptions).then((doc) => {
+
+            // Document was found in the cache. If no cached document exists,
+            // an error will be returned to the 'catch' block below.
+            this.sector = doc.data().sector;
+            
+
+        }).catch((error) => {
+            
+        });
+        },
         
 
 
     },
     mounted() {
+        this.cargarEmpresa()
         
 
     },

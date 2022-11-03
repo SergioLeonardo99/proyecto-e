@@ -8,7 +8,7 @@
             <br>
             <h3 class="font-semibold letra text-teal-900 text-3xl">
 
-                Micro and Small Companys
+                Micro and Small Companies
 
             </h3>
         </div>
@@ -27,7 +27,7 @@
                             d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                     </svg></span>
                 <p class="text-xl font-medium text-slate-700 mt-3">¿Quienes somos? </p>
-                <p class="mt-2 text-sm text-slate-500">Micro and Small Companys es un proyecto desarrollado en un
+                <p class="mt-2 text-sm text-slate-500">Micro and Small Companies es un proyecto desarrollado en un
                     entorno universitario enfocado en las micro y pequeñas empresas de la Villa de San Diego de Ubaté.
                 </p>
             </div>
@@ -111,7 +111,7 @@
                             d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                     </svg></span>
                 <p class="text-xl font-medium text-slate-700 mt-3">¿Por qué utilizar nuestra plataforma?</p>
-                <p class="mt-2 text-sm text-slate-500">La plataforma de Micro and Small Companys es un sitio donde las
+                <p class="mt-2 text-sm text-slate-500">La plataforma de Micro and Small companies es un sitio donde las
                     micro y pequeñas empresas de la Villa de San Diego de Ubaté pueden proporcionar sus datos puntuales
                     por medio de una encuesta, los cuales se albergarán en una base de datos para su debido proceso y
                     entrega de resultado final. El equipo de trabajo se encarga de mantener los datos seguros,
