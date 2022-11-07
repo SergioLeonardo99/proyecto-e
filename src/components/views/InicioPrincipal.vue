@@ -16,17 +16,17 @@
                 aria-label="Slide 3"></button>
         </div>
         <div class="carousel-inner relative w-full overflow-hidden h-50">
-            <div class="carousel-item active float-left w-full h-full">
+            <div class="carousel-item active float-left w-full ">
                 <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2F1.webp?alt=media&token=61dd3881-8719-4a27-ab79-ad18bd9bd6eb"
-                    class="block h-full imagen-carousel" alt="ImagenDeInfomacion1" />
+                    class="block w-full imagen-carousel" alt="ImagenDeInfomacion1" />
             </div>
             <div class="carousel-item float-left w-full">
                 <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2F3.webp?alt=media&token=c8cab1d6-ae23-4d1d-987f-9706cca64f6d"
-                    class="block h-full imagen-carousel" alt="ImagenDeInfomacion2" />
+                    class="block w-full imagen-carousel" alt="ImagenDeInfomacion2" />
             </div>
             <div class="carousel-item float-left w-full">
                 <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2F2.webp?alt=media&token=eae98eea-ebbd-47ae-af54-4441204f1f80"
-                    class="block  h-full imagen-carousel " alt="ImagenDeInfomacion3" />
+                    class="block  w-full imagen-carousel " alt="ImagenDeInfomacion3" />
             </div>
         </div>
         <button
@@ -445,7 +445,7 @@
                                     m-0
                                     focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
                                     id="exampleInput8" placeholder="Correo destino"
-                                    value="correspondencia.ubate@ucundinamarca.edu.co" disabled>
+                                    value="microandsmall2022@gmail.com" disabled>
                             </div>
                             <div class="form-group mb-6">
                                 <textarea class="
