@@ -127,12 +127,9 @@ export default {
            
 
             var getOptions = {
-                //source: 'cache'
             };
             docRef.get(getOptions).then((doc) => {
 
-                // Document was found in the cache. If no cached document exists,
-                // an error will be returned to the 'catch' block below.
                 this.nombreEmpresa = doc.data().nombre;
                 this.nitEmpresa = doc.data().nit;
                 this.telefonoEmpresa = doc.data().telefono;
@@ -142,7 +139,6 @@ export default {
                 this.direccion = doc.data().direccion;
                 this.about = doc.data().about;
                 this.cargarImagen()
-
             }).catch((error) => {
                 this.$router.push('/');
             });

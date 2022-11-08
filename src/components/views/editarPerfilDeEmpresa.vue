@@ -188,7 +188,6 @@ export default {
 
       });
 
-
     },
     cargarImagen() {
       // Create a reference to the file we want to download

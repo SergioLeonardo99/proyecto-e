@@ -231,17 +231,12 @@ export default {
   },
   methods: {
     advancedRegister() {
-      if(this.nombre!=''&& this.nit != 0 && this.direccion != ''&&this.telefono !=0 &&this.contraseña !=''&&this.contraseñaConfirmar != ''&&this.email !=''&& this.encargado != ''&& this.cargo != ''&& this.sector != ''){
+      if(this.nombre!=''&& this.nit != 0 && this.direccion != ''&&this.telefono !=0 &&this.contraseña !=''&&this.contraseñaConfirmar != ''&&this.email !=''&& this.encargado != ''&& this.cargo != ''&& this.sector != ''){       
         if(this.contraseña==this.contraseñaConfirmar){
           var docRef = db.collection("usuario").doc(this.nit.toString());
-          
           var getOptions = {
-            //source: 'cache'
           };
           docRef.get(getOptions).then((doc) => {
-            // Document was found in the cache. If no cached document exists,
-            // an error will be returned to the 'catch' block below.
-
             if (doc.data().nit == this.nit.toString()) {
               this.mensaje = "Nit ya registrado..."
             }
