@@ -283,6 +283,275 @@
         </div>
     </section>
     <section class="bg-white border-b py-8">
+        <div class="container my-12 mx-auto px-4 md:px-12">
+            <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        
+                <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hubfs/SEO%20content/Mining%20Tools/Mining%20tools%20Webp/Mining%20tools%20Webp/mining-tools-crane-lift.webp">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Ascensores de grúa
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Los elevadores de grúa son versátiles en la minería subterránea. 
+                                    Estas máquinas de minería se pueden utilizar para cargar explosivos
+                                     y transportar otras cargas pesadas y equipos de minería.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <!-- END Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hubfs/SEO%20content/Mining%20Tools/Mining%20tools%20Webp/Mining%20tools%20Webp/continuous-miner-mining-tools.webp">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Mineros Continuos
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Los mineros continuos son un tipo de equipo minero está equipado con 
+                                    un gran tambor giratorio con dientes de carburo para raspar el carbón
+                                    de las vetas. Estas herramientas mineras pueden extraer hasta cinco
+                                    toneladas de carbón por minuto y representan aproximadamente el 45 % 
+                                    de la producción subterránea de carbón. También cuentan con cintas
+                                    transportadoras que transportan el carbón, haciendo de este un proceso automatizado 
+                                    que se controla de forma remota.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hs-fs/hubfs/Elios%203/Launch%20email/Transition%20image%20-%20Elios%203%20in%20mining%20old.jpg?width=585&name=Transition%20image%20-%20Elios%203%20in%20mining%20old.jpg">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Drones
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Los drones de minería subterránea, como Elios 3 de Flyability ,
+                                    se utilizan para inspecciones visuales en tramos de pasos del mineral
+                                    , pozos de ventilación, cintas transportadoras en áreas de una mina subterránea. 
+                                    Esta tecnología ha permitido que se lleven a cabo inspecciones en zonas que no son 
+                                    seguras para el ingreso de humano, es una herramienta vital en condiciones peligrosas
+                                    como lo es un socavón.
+                                    
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hubfs/SEO%20content/Mining%20Tools/Mining%20tools%20Webp/Mining%20tools%20Webp/mining-tools-rock-dusting.webp">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Plumeros
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Los pulverizadores de roca son cruciales para evitar la combustión de los socavones de la mina.
+                                    Los plumeros aplican polvo inerte o polvo con una pequeña cantidad de materiales combustibles 
+                                    para contrarrestar el polvo de carbón. Este proceso es especialmente importante cuando se están 
+                                    produciendo explosiones planificadas.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hubfs/SEO%20content/Mining%20Tools/Mining%20tools%20Webp/Mining%20tools%20Webp/roof-bolter-mining-tools.webp">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Empernadores de techo
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Los pernos de techo aseguran el techo de la mina con gatos de seguridad para ayudar a prevenir derrumbes.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hubfs/SEO%20content/Mining%20Tools/Mining%20tools%20Webp/Mining%20tools%20Webp/ventilation-system-mining-tools.webp">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Sistemas de ventilación
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Los sistemas de ventilación son cruciales para que los trabajadores estén presentes
+                                    en las minas debido a la naturaleza nociva del carbón y, específicamente, del polvo 
+                                    de carbón. Estos sistemas se utilizan para proporcionar aire limpio a los trabajadores 
+                                    y regular las temperaturas bajo tierra.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://www.flyability.com/hubfs/SEO%20content/Mining%20Tools/Mining%20tools%20Webp/Mining%20tools%20Webp/refuge-chamber-mining-tools.webp">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Cámaras de refugio
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Las cámaras de refugio son cámaras de seguridad independientes para mineros que están equipadas con oxígeno,
+                                    alimentos, agua y necesidades sanitarias en caso de emergencia. Estas cámaras pueden albergar mineros de
+                                     forma segura durante 96 horas a ocho días.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+        
+        
+            </div>
+        </div>
         <div class="bg-white justify-center gap-4  p-3 alinearT">
             <h1 class="font-semibold letra text-teal-900 text-3xl">
                 Equipos de minería subterránea
