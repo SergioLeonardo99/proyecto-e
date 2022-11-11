@@ -94,8 +94,10 @@
                         <path stroke-linecap="round" stroke-linejoin="round"
                             d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01" />
                     </svg></span>
-                <p class="text-xl font-medium text-slate-700 mt-3">¿Por qué es importante generar encuestas? </p>
-                <p class="mt-2 text-sm text-slate-500">Las encuestas proporcionan números y datos concretos, lo cual es
+                <p class="text-xl font-medium text-slate-700 mt-3">¿Por qué es importante generar una caracterización?
+                </p>
+                <p class="mt-2 text-sm text-slate-500">Las caracterizaciones proporcionan números y datos concretos, lo
+                    cual es
                     importante para tomar decisiones a base de información proveída por los mismos representantes de las
                     empresas. Las encuestas generalmente ayudan a revelar el “Por qué ” es decir que los datos esta en
                     constante estudio y son confiables para generar un resultado más preciso y finalmente las encuestas
@@ -134,6 +136,16 @@
             </h3>
         </div>
     </section>
+    <br>
+    <p>
+        Somos un equipo de trabajo dedicado a la investigación de las capacidades tecnológicas de las micro y pequeñas
+        empresas
+        de la Villa de San diego de Ubaté y además desarrollamos software a la medida para brindar posibles soluciones a
+        las
+        necesidades de las empresas en cuanto a tecnología.
+    </p>
+
+    <br>
     <div class="grid md:lg:xl:px-40 grid-rows-1 md:lg:xl:grid-cols-2">
         <!-- Yadir -->
         <div class="col alinearT  bg-center rounded-md shadow-lg">

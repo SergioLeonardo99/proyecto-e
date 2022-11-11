@@ -7,7 +7,8 @@
 
                 <!--Integracion de logo-->
 
-                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FLogofinishim.webp?alt=media&token=959234d1-a437-48ae-b868-4dafc92ef490" height="250" width="250" alt="">
+                <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FLogofinishim.webp?alt=media&token=959234d1-a437-48ae-b868-4dafc92ef490"
+                    height="250" width="250" alt="">
 
             </div>
             <!--opciones superiores para acceso a los diferentes modúlos-->
@@ -16,8 +17,9 @@
             <div class="links lg:block hidden w-1/6 md:w-4/6">
                 <ul class="menu flex items-center justify-center gap-5">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
-                    <li><a v-if="graficos" @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
-                    <li><a v-if="encuesta" @click="$router.push('/formulario')" class="botones-link">Encuesta</a></li>
+                    <li><a v-if="graficos" @click="$router.push('/graficos')" class="botones-link">Gráficos</a></li>
+                    <li><a v-if="encuesta" @click="$router.push('/formulario')" class="botones-link">Caracterización</a>
+                    </li>
                     <li><a @click="$router.push('/recomendaciones')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/solicitudes')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/educativo')" class="botones-link">Modúlo educativo</a></li>
@@ -41,8 +43,9 @@
                 <ul class="mobile-links w-full absolute z-50 left-0 text-center bg-stone-50"
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/profile')" class="botones-link">Perfil</a></li>
-                    <li><a v-if="graficos" @click="$router.push('/graficos')" class="botones-link">Graficos</a></li>
-                    <li><a v-if="encuesta" @click="$router.push('/formulario')" class="botones-link">Encuestas</a></li>
+                    <li><a v-if="graficos" @click="$router.push('/graficos')" class="botones-link">Gráficos</a></li>
+                    <li><a v-if="encuesta" @click="$router.push('/formulario')" class="botones-link">Caracterización</a>
+                    </li>
                     <li><a @click="$router.push('/recomendaciones')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/solicitudes')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/educativo')" class="botones-link">Modúlo educativo</a></li>

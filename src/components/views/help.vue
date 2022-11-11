@@ -37,8 +37,28 @@
                     obtenga
                     sus creneciales según su rol se le otorgará un manual interno.
                 </p>
+
             </div>
+            <button type="submit" class="
+                                        w-full
+                                        px-6
+                                        py-2.5
+                                        bg-teal-700
+                                        text-white
+                                        font-medium
+                                        text-xs
+                                        leading-tight
+                                        uppercase
+                                        rounded
+                                        shadow-md
+                                        hover:bg-teal-500 hover:shadow-lg
+                                        focus:bg-teal-800 focus:shadow-lg focus:outline-none focus:ring-0
+                                        active:bg-teal-800 active:shadow-lg
+                                        transition
+                                        duration-150
+                                        ease-in-out">Ingresar</button>
         </div>
+
     </div>
 
 </template>
