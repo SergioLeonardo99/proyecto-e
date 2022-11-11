@@ -1,13 +1,36 @@
 
 <template>
-  
+    <link href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" rel=" stylesheet">
+<!--Replace with your tailwind.css once created-->
+
+
+<!--Regular Datatables CSS-->
+<link href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" rel="stylesheet">
+
   <navBar4></navBar4>
   <div v-if="dataUsers.length>0">
+    <div class="flex flex-col justify-center h-full">
+  <body class="bg-gray-100 text-gray-900 tracking-wider leading-normal">
+    <div class="container w-full md:w-1/1 xl:w-4/20  mx-auto px-2">
+      <header class="px-5 py-4 border-b border-gray-100">
+        <div class="letra text-3xl  text-center letra leading-tight text-teal-700 ">Lista solicitudes estudiante</div>
+        <button @click="activarBusqueda()"
+            class="flex space-x-1 items-center px-3 py-3  bg-teal-800 hover:bg-teal-500 rounded-full drop-shadow-md h-10  m-2 text-indigo-100 transition-colors duration-150  focus:shadow-outline ">
+            <svg class="fill-white" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+              viewBox="0 0 30 30">
+              <path
+                d="M 13 3 C 7.4889971 3 3 7.4889971 3 13 C 3 18.511003 7.4889971 23 13 23 C 15.396508 23 17.597385 22.148986 19.322266 20.736328 L 25.292969 26.707031 A 1.0001 1.0001 0 1 0 26.707031 25.292969 L 20.736328 19.322266 C 22.148986 17.597385 23 15.396508 23 13 C 23 7.4889971 18.511003 3 13 3 z M 13 5 C 17.430123 5 21 8.5698774 21 13 C 21 17.430123 17.430123 21 13 21 C 8.5698774 21 5 17.430123 5 13 C 5 8.5698774 8.5698774 5 13 5 z">
+              </path>
+            </svg>
+            <span class="text-white text-xl font-bold">Buscar</span>
+          </button>
+      
+    </header>
 
-  
-  <label>Buscar?</label>
-  <input type="checkbox" id="checkbox" v-model="buscar" />
-  <DataTable v-if="buscar==true" :data="dataUsers" :columns="colum" :key="cambio" id="tablaUsuarios" class="table table-striped"
+    <div id='recipients' class="p-10 mt-6 lg:mt-0 rounded shadow bg-white">
+      <div class="overflow-x-auto p-3">
+        <table id="customers" class="stripe hover" style="width:100%; padding-top: 1em;  padding-bottom: 1em;">
+          <DataTable v-if="buscar==true" :data="dataUsers" :columns="colum" :key="cambio" id="tablaUsuarios" class="table table-striped"
   :options="{
             aLengthMenu: [[10,25,-1],[10,25,'All']],
             iDisplayLength: 10,
@@ -32,10 +55,6 @@
         <th>Completada</th>
         <th>Responsable</th>
         <th>Solicitud</th>
-        
-      
-        
-        
       </tr>
     </thead>
     <tbody>
@@ -78,7 +97,6 @@
     </tbody>
 
   </DataTable>
-
   <table v-if="buscar==false">
     <thead>
       <tr>
@@ -112,7 +130,6 @@
     </tbody>
 
   </table>
-
   <TransitionRoot as="template" :show="open" :key="open">
     <Dialog as="div" class="relative z-10" @close="open = false">
       <TransitionChild as="template" enter="ease-out duration-300" enter-from="opacity-0" enter-to="opacity-100" leave="ease-in duration-200" leave-from="opacity-100" leave-to="opacity-0">
@@ -134,11 +151,11 @@
                   </div>
                   <div class="mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left">
                     <DialogTitle as="h3" class="text-lg font-medium leading-6 text-gray-900">{{msgTitulo}}</DialogTitle>
-                    <div class="mt-2">
+                    <div class="letra">
                       <p class="text-sm text-gray-500">{{msgBody}}</p>
 
                     </div>
-                    <div class="mt-2">
+                    <div class="letra text-coolGray-800">
                       <p>Id: {{dataUser.id}}</p>
                       <p>Fecha de creación: {{dataUser.fechaCreacion}}</p>
                       <p>Fecha de solucion: {{dataUser.fechaSolucion}}</p>
@@ -156,7 +173,8 @@
               </div>
               <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
                 <p>{{msgProcess}}</p>
-                <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm" @click="open = false">Salir</button>
+                <button type="button" v-if="openBut" class="mt-3 inline-flex w-full justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-base font-medium text-gray-700 shadow-sm hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 sm:mt-0 sm:ml-3 sm:w-auto sm:text-sm" @click="procesarSolicitud()" >Responder solicitud</button>
+                <button type="button" class="inline-flex w-full justify-center rounded-md border border-transparent bg-teal-700 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-teal-400 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm" @click="open = false">Salir</button>
                 
               </div>
             </DialogPanel>
@@ -166,7 +184,22 @@
     </Dialog>
   </TransitionRoot>
 
+
+
+        </table>
+      </div>
+    </div>
+
+    </div>
+  </body>
+
 </div>
+  
+  
+
+</div>
+
+
 <div v-if="dataUsers.length<1">
   <h1>Sin solicitudes disponibles</h1>
 </div>
@@ -310,6 +343,10 @@ export default {
     }).catch((error) => {
         console.log("Error en la consulta")
     });
+    },
+    activarBusqueda() {
+      this.buscar = !this.buscar
+
     },
 
     

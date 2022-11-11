@@ -57,9 +57,6 @@
         <th>Responsable</th>
         <th>Solicitud</th>
         <th>Tipo</th>
-      
-        
-        
       </tr>
     </thead>
     <tbody>
