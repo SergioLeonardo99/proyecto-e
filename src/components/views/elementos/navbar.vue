@@ -21,6 +21,12 @@
                     <li><a @click="$router.push('/about')" class="botones-link">
                             <div class="flex justify-center items-center"><i class="gg-browse"></i></div>Acerca de
                         </a></li>
+                    <li><a @click="$router.push('/help')" class="botones-link">
+                            <div class="flex justify-center items-center"><i class="gg-search-found"></i>
+                                <br>
+                            </div>
+                            Ayuda
+                        </a></li>
                     <li><a @click="$router.push('/ventanaL')"
                             class="border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
                     </li>
@@ -36,6 +42,7 @@
                     :class="{ hidden: isActive }">
                     <li><a @click="$router.push('/')" class="botones-link ">Inicio</a></li>
                     <li><a @click="$router.push('/about')" class="botones-link ">Acerca de </a></li>
+                    <li><a @click="$router.push('/help')" class="botones-link ">Ayuda </a></li>
                     <li><a @click="$router.push('/ventanaL')"
                             class="my-4 inline-block border-2 px-2 py-2 border-teal-700 text-black font-semibold rounded-full hover:bg-teal-100 hover:text-black transition duration-500">Comenzar</a>
                     </li>
@@ -70,6 +77,7 @@ export default {
 @import url('https://css.gg/browse.css');
 @import url('https://css.gg/home.css');
 @import url('https://css.gg/menu.css');
+@import url('https://css.gg/search-found.css');
 </style>
 
     

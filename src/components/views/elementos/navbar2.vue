@@ -1,9 +1,8 @@
 <template>
 
-    <div class="mx-auto ">
+    <div class="mx-auto border-gray-200">
         <!--Estilo superior-->
-        <nav class="bg-white-50 flex justify-between lg:justify-start items-center"
-            style="box-shadow: 5px 5px 10px #f5f5f4;">
+        <nav class="bg-white-50 flex justify-between lg:justify-start items-center">
             <div class="logo p-3 w-5/6 ">
 
                 <!--Integracion de logo-->
@@ -72,7 +71,7 @@ export default {
         return {
             isActive: true,
             encuesta: false,
-            graficos:false,
+            graficos: false,
 
         }
     },
@@ -93,7 +92,7 @@ export default {
             } else {
                 this.encuesta = true
             }
-            if(encuestaComprobante=='Si'){
+            if (encuestaComprobante == 'Si') {
                 this.graficos = true
             }
         },
@@ -112,7 +111,7 @@ export default {
     },
     mounted() {
         this.compruebaSession()
-       
+
 
 
     }
