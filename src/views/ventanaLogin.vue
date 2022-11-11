@@ -45,8 +45,8 @@
 
         <div class="w-full h-100">
 
-          <h1 class="text-3xl font-bold letra ">Bienvenido</h1>
-          <h1 class="text-xl md:text-xl letra leading-tight text-teal-700 mt-12">Ingresa al sistema</h1>
+          <h1 class="text-3xl font-bold letra text-teal-700 ">Bienvenido</h1>
+          <h1 class="text-xl md:text-xl letra leading-tight text-gray-900 mt-12">Ingresa al sistema</h1>
 
           <form class="mt-6">
             <div>

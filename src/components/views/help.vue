@@ -27,7 +27,7 @@
         <br>
 
         <div class="w-1/2 rounded overflow-hidden shadow-lg">
-            <img class="w-full" src="/img/card-top.jpg" alt="imagen">
+            <img class="w-full" src="/img/card-top.jpg" alt="">
             <!--imagen de el manual de usario-->
             <div class="px-6 py-4">
                 <div class="font-bold text-xl mb-2">Manual de usuario</div>
