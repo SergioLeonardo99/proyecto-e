@@ -25,6 +25,7 @@ import perfilEstudiante from "./components/views/perfilEstudiante.vue"
 import solicitudesEstudiante from "./components/views/solicitudesEstudiante.vue"
 import editarPerfilEstudiante from "./components/views/editarPerfilDeEstudiante.vue"
 import estudianteMod from "./components/views/estudianteMod.vue"
+import ayudaUsuario from "./components/views/help.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -44,30 +45,32 @@ dom.watch();
 
 
 
-const router = createRouter( {
+const router = createRouter({
 
   history: createWebHistory(),
   routes: [
-    {path: '/', name: 'InicioPrincipal', component: inicioPrincipal},
-    {path: '/about', name: 'AcercaDe', component: acercaD},
-    {path: '/profile', name: 'PerfilEmpresa', component: perfilEmpresa},
-    {path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin},
-    {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
-    {path: '/ventanaE', name: 'encuesta', component: encuesta},
-    {path: '/admin', name: 'viewadmin', component: viewadmin},
-    {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
-    {path: '/graficos', name: 'graficos', component: graficos},
-    {path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa},
-    {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
-    {path: '/educativo', name: 'modEducativo', component: modEducativo},
-    {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
-    {path: '/solicitudes', name:'solicitudes', component:solicitudes},
-    {path: '/solicitudesadmin', name:'solicitudesAdmin', component:solicitudesAdmin},
-    {path: '/empresaestudiante', name:'empresaEstudiante', component:empresaEstudiante},
-    {path: '/perfilestudiante', name: 'PerfilEstudiante', component: perfilEstudiante},
-    {path: '/solicitudesestudiante', name: 'SolicitudesEstudiante', component: solicitudesEstudiante},
-    {path: '/editarestudiante', name: 'editarPerfilEstudiante', component: editarPerfilEstudiante},
-    {path: '/estudiante', name:'estudiante', component:estudianteMod}
+    { path: '/', name: 'InicioPrincipal', component: inicioPrincipal },
+    { path: '/about', name: 'AcercaDe', component: acercaD },
+    { path: '/profile', name: 'PerfilEmpresa', component: perfilEmpresa },
+    { path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin },
+    { path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro },
+    { path: '/ventanaE', name: 'encuesta', component: encuesta },
+    { path: '/admin', name: 'viewadmin', component: viewadmin },
+    { path: '/formulario', name: 'formularioFinal', component: formularioFinal },
+    { path: '/graficos', name: 'graficos', component: graficos },
+    { path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa },
+    { path: '/generarcsv', name: 'generarCSV', component: generarCSV },
+    { path: '/educativo', name: 'modEducativo', component: modEducativo },
+    { path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios },
+    { path: '/solicitudes', name: 'solicitudes', component: solicitudes },
+    { path: '/solicitudesadmin', name: 'solicitudesAdmin', component: solicitudesAdmin },
+    { path: '/empresaestudiante', name: 'empresaEstudiante', component: empresaEstudiante },
+    { path: '/perfilestudiante', name: 'PerfilEstudiante', component: perfilEstudiante },
+    { path: '/solicitudesestudiante', name: 'SolicitudesEstudiante', component: solicitudesEstudiante },
+    { path: '/editarestudiante', name: 'editarPerfilEstudiante', component: editarPerfilEstudiante },
+    { path: '/estudiante', name: 'estudiante', component: estudianteMod },
+    { path: '/help', name: 'help', component: ayudaUsuario },
+
   ]
 
 })
