@@ -208,7 +208,7 @@
           <hr class="my-4 border-gray-300 w-full">
 
           <p class="mt-4 letra">¿ya tienes cuenta ? <Router-link to="/ventanaL"
-              class="text-teal-700 hover:text-teal-400 font-semibold">Iniciar Sesion</Router-link>
+              class="text-teal-700 hover:text-teal-400 font-semibold">Iniciar sesión</Router-link>
           </p>
           <p class="text-sm letra text-teal-700 mt-4">&copy; 2022 M&S.</p>
         </div>
