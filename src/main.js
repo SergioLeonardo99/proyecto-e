@@ -5,28 +5,29 @@ import "@/assets/styles/tailwind.css";
 
 
 import App from './App.vue'
-import ventanaLogin from "./views/ventanaLogin.vue"
-import ventanaRegistro from "./views/ventanaRegistro.vue"
-import encuesta from "./views/encuesta.vue"
-import formularioFinal from "./views/formularioFinal.vue"
-import viewadmin from "./views/viewadmin.vue"
-import acercaD from "./components/views/AcercaD.vue"
-import inicioPrincipal from "./components/views/InicioPrincipal.vue"
-import perfilEmpresa from "./components/views/PerfilDeEmpresa.vue"
-import editarPerfilEmpresa from "./components/views/editarPerfilDeEmpresa.vue"
-import generarCSV from "./components/views/generarCSV.vue"
-import listaUsuarios from "./components/views/listaUsuarios.vue"
-import graficos from "./views/graficos.vue"
-import modEducativo from "./components/views/ModuloEd.vue"
-import solicitudes from "./components/views/solicitudes.vue"
-import solicitudesAdmin from "./components/views/solicitudesAdmin.vue"
-import empresaEstudiante from "./components/views/empresasEstudiantes.vue"
-import perfilEstudiante from "./components/views/perfilEstudiante.vue"
-import solicitudesEstudiante from "./components/views/solicitudesEstudiante.vue"
-import editarPerfilEstudiante from "./components/views/editarPerfilDeEstudiante.vue"
-import estudianteMod from "./components/views/estudianteMod.vue"
-import recomendaciones from "./components/views/recomendaciones.vue"
-import ayudaUsuario from "./components/views/help.vue"
+import login from "./modules/guest/login.vue"
+import register from "./modules/guest/register.vue"
+import form from "./modules/company/form.vue"
+import dashboard from "./modules/admin/dashboard.vue"
+import about from "./modules/guest/about.vue"
+import indexGuest from "./modules/guest/indexGuest.vue"
+import profileCompany from "./modules/company/profileCompany.vue"
+import editCompany from "./modules/company/editCompanyProfile.vue"
+import generateCSV from "./modules/admin/generateCSV.vue"
+import graphics from "./modules/company/graphics.vue"
+import educative from "./modules/company/educative.vue"
+import companyRequest from "./modules/company/requestCompany.vue"
+import adminRequest from "./modules/admin/requestAdmin.vue"
+import viewCompanies from "./modules/student/viewCompanies.vue"
+import profileStudent from "./modules/student/profileStudent.vue"
+import requestStudent from "./modules/student/requestStudent.vue"
+import editStudent from "./modules/student/editStudent.vue"
+import findings from "./modules/company/findings.vue"
+import helpGuest from "./modules/guest/helpGuest.vue"
+import helpStudent from "./modules/student/helpStudent.vue"
+import helpAdmin from "./modules/admin/helpAdmin.vue"
+import helpCompany from "./modules/company/helpCompany.vue"
+import requestHistory from "./modules/company/requestHistory.vue"
 import './assets/tailwind.css'
 import 'tw-elements';
 import { createRouter, createWebHistory } from 'vue-router';
@@ -50,28 +51,29 @@ const router = createRouter({
 
   history: createWebHistory(),
   routes: [
-    {path: '/', name: 'InicioPrincipal', component: inicioPrincipal},
-    {path: '/about', name: 'AcercaDe', component: acercaD},
-    {path: '/profile', name: 'PerfilEmpresa', component: perfilEmpresa},
-    {path: '/ventanaL', name: 'ventanaLogin', component: ventanaLogin},
-    {path: '/ventanaR', name: 'ventanaRegistro', component: ventanaRegistro},
-    {path: '/ventanaE', name: 'encuesta', component: encuesta},
-    {path: '/admin', name: 'viewadmin', component: viewadmin},
-    {path: '/formulario', name: 'formularioFinal', component: formularioFinal},
-    {path: '/graficos', name: 'graficos', component: graficos},
-    {path: '/editprofile', name: 'editarPerfilEmpresa', component: editarPerfilEmpresa},
-    {path: '/generarcsv', name: 'generarCSV', component: generarCSV},
-    {path: '/educativo', name: 'modEducativo', component: modEducativo},
-    {path: '/listausuarios', name: 'listaUsuarios', component: listaUsuarios},
-    {path: '/solicitudes', name:'solicitudes', component:solicitudes},
-    {path: '/solicitudesadmin', name:'solicitudesAdmin', component:solicitudesAdmin},
-    {path: '/empresaestudiante', name:'empresaEstudiante', component:empresaEstudiante},
-    {path: '/perfilestudiante', name: 'PerfilEstudiante', component: perfilEstudiante},
-    {path: '/solicitudesestudiante', name: 'SolicitudesEstudiante', component: solicitudesEstudiante},
-    {path: '/editarestudiante', name: 'editarPerfilEstudiante', component: editarPerfilEstudiante},
-    {path: '/estudiante', name:'estudiante', component:estudianteMod},
-    {path: '/recomendaciones', name:'recomendaciones', component:recomendaciones},
-    {path: '/help', name: 'help', component: ayudaUsuario },
+    {path: '/', name: 'indexGuest', component: indexGuest},
+    {path: '/about', name: 'about', component: about},
+    {path: '/profileCompany', name: 'profileCompany', component: profileCompany},
+    {path: '/login', name: 'login', component: login},
+    {path: '/register', name: 'register', component: register},
+    {path: '/dashboard', name: 'dashboard', component: dashboard},
+    {path: '/form', name: 'form', component: form},
+    {path: '/graphics', name: 'graphics', component: graphics},
+    {path: '/editCompany', name: 'editCompany', component: editCompany},
+    {path: '/generateCSV', name: 'generateCSV', component: generateCSV},
+    {path: '/educative', name: 'educative', component: educative},
+    {path: '/companyRequest', name:'companyRequest', component:companyRequest},
+    {path: '/adminRequest', name:'adminRequest', component:adminRequest},
+    {path: '/viewCompanies', name:'viewCompanies', component:viewCompanies},
+    {path: '/profileStudent', name: 'profileStudent', component: profileStudent},
+    {path: '/requestStudent', name: 'requestStudent', component: requestStudent},
+    {path: '/editStudent', name: 'editStudent', component: editStudent},
+    {path: '/findings', name:'findings', component:findings},
+    {path: '/helpGuest', name: 'helpGuest', component: helpGuest },
+    {path: '/helpAdmin', name: 'helpAdmin', component: helpAdmin },
+    {path: '/helpCompany', name: 'helpCompany', component: helpCompany },
+    {path: '/helpStudent', name: 'helpStudent', component: helpStudent },
+    {path: '/requestHistory', name: 'requestHistory', component: requestHistory },
   ]
 
 })
