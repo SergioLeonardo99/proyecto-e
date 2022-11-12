@@ -20,7 +20,7 @@
                     <li><a v-if="graficos" @click="$router.push('/graphics')" class="botones-link">Gráficos</a></li>
                     <li><a v-if="encuesta" @click="$router.push('/form')" class="botones-link">Caracterización</a>
                     </li>
-                    <li><a v-if="encuesta" @click="$router.push('/findings')" class="botones-link">Recomendaciones</a></li>
+                    <li><a v-if="graficos" @click="$router.push('/findings')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/companyRequest')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/requestHistory')" class="botones-link">Historial Solicitudes</a></li>
                     <li><a @click="$router.push('/educative')" class="botones-link">Modúlo educativo</a></li>
@@ -48,7 +48,7 @@
                     <li><a v-if="graficos" @click="$router.push('/graphics')" class="botones-link">Gráficos</a></li>
                     <li><a v-if="encuesta" @click="$router.push('/form')" class="botones-link">Caracterización</a>
                     </li>
-                    <li><a v-if="encuesta" @click="$router.push('/findings')" class="botones-link">Recomendaciones</a></li>
+                    <li><a v-if="graficos" @click="$router.push('/findings')" class="botones-link">Recomendaciones</a></li>
                     <li><a @click="$router.push('/companyRequest')" class="botones-link">Solicitudes</a></li>
                     <li><a @click="$router.push('/requestHistory')" class="botones-link">Historial Solicitudes</a></li>
                     <li><a @click="$router.push('/educative')" class="botones-link">Modúlo educativo</a></li>

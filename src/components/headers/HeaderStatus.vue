@@ -32,7 +32,7 @@
             </div>
             <div class="w-full lg:w-6/12 xl:w-3/12 px-2">
               <card-stats
-                statSubtitle="ENCUESTAS"
+                statSubtitle="CARACTERIZACIONES"
                 :statTitle="numEncuestas.toString()"
                 statArrow="up"
                 statPercent="1.10"
