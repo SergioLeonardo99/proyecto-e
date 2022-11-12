@@ -1,4 +1,5 @@
 <template>
+    <Navbar></Navbar>
 
     <section class="bg-white">
         <div class="bg-white justify-center gap-4  p-3 alinearT">
@@ -46,10 +47,11 @@
 </template>
 
 <script>
-
+import navbarGuest from '@/components/navbars/navbarGuest.vue'
 export default {
     name: "help",
     components: {
+        Navbar: navbarGuest
 
 
     },
