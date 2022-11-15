@@ -15,255 +15,372 @@
         </div>
     </section>
     <section class="bg-white border-b py-8">
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <h1 class="font-semibold letra text-teal-900 text-3xl">
-                Equipos de ordeño
-            </h1>
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
+        <div class="container my-12 mx-auto px-4 md:px-12">
+            <div class="flex flex-wrap -mx-1 lg:-mx-4">
+        
+                <!-- Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl1.webp?alt=media&token=0a064dc9-bce5-4bbb-8a5c-153d7722f085">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Equipo One Car
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Es un equipo que cuenta con una bomba lubricada con consumo de gasolina 1/2 L x Hora, es
+                                    ideal para los pequeños
+                                    productores. Además, tiene una capacidad Colector de 1 x 150cc y permite recolectar el
+                                    producto lácteo de 10 vacas en
+                                    una hora, Fácil de transportar en los potreros.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <!-- END Column -->
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl2.webp?alt=media&token=21dd5e0c-16df-49cd-9ee2-41a3ee63ec1d">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Equipo Zan Car
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Es un equipo que cuenta con una bomba lubricada con consumo de gasolina 1/2 L x Hora, es
+                                    ideal
+                                    para los pequeños
+                                    productores. Además, tiene una capacidad Colector de 1 x 150cc y permite recolectar el
+                                    producto
+                                    lácteo de 10 a 15 vacas
+                                    en una hora. Es más compacto de 1 puesto con 2 motores (eléctrico y gasolina).
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl3.webp?alt=media&token=b8d1135e-ba78-40a8-97f1-347a9939d2a7">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Equipo Twin Car
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Es un equipo que cuenta con una bomba lubricada con consumo de gasolina 1L x Hora, Además,
+                                    tiene
+                                    una capacidad Colector
+                                    de 2 x 150cc y permite recolectar el producto lácteo de 20 a 25 vacas en una hora. Cuenta
+                                    con 2
+                                    motores, eléctrico de
+                                    1.0 HP y gasolina de 6.5 HP.
+                                    
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl4.webp?alt=media&token=7675f76c-814a-4649-923b-f2d0424d39c2">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Tanques de refrigeración
 
-            <div class="flex flex-wrap">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Equipo One Car
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Es un equipo que cuenta con una bomba lubricada con consumo de gasolina 1/2 L x Hora, es
-                        ideal para los pequeños
-                        productores. Además, tiene una capacidad Colector de 1 x 150cc y permite recolectar el
-                        producto lácteo de 10 vacas en
-                        una hora, Fácil de transportar en los potreros.
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <a href="#">
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    La leche es un producto delicado, que necesita condiciones específicas, para no perder
+                                    calidad,
+                                    un tanque adecuado
+                                    permitirá mantener sus propiedades y calidad del producto.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl5.webp?alt=media&token=90c2331f-78d2-4304-b7b0-61fb981e5f27">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Prensa para queso
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Este equipo permite aumentar la fuerza ejercida a la masa de queso, es adaptable al tipo de
+                                    fuerza requerida según la
+                                    masa, optimizando tiempos de procesamiento.
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl6.webp?alt=media&token=cd0310db-b112-452d-b4ec-82e29a8dd5a0">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Envasadora al vacio
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    El objetivo de dicha máquina es ayudar a conservar durante mayor tiempo, en la mejores
+                                    condiciones, el alimento queda
+                                    sellado de manera hermética, sin aire hasta quedar totalmente sellado.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+        
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+        
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl7.webp?alt=media&token=5c8193a0-b409-481a-bcd9-ed6490fe80ab">
+                        </a>
+        
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    Control Ganadero
+                                </a>
+                            </h1>
+                           
+                        </header>
+        
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                               
+                                <p class="text-gray-600 mb-8">
+                                    Es un software que permite llevar una administración ganadera, para que se pueda llevar un
+                                    control, monitoreo de la
+                                    finca y el ganado. Este software incluye monitoreo al ganado en general, contacto directo
+                                    con
+                                    sus trabajadores, contacto
+                                    directo con los veterinarios y registro de partos e inseminaciones. Para poder acceder a
+                                    todo el
+                                    sistema web sin
+                                    restricciones es necesario adquirir una membresía.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                           
+                        </footer>
+        
+                    </article>
+                    <!-- END Article -->
+        
+                </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
 
-                        <img class=" justify-end w-1/2 p-3
-                        bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')]
-                        rounded-md shadow-lg" />
-                    </a>  -->
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl8.webp?alt=media&token=cdd5e466-99c2-46db-97d7-cf9592d042fc">
+                        </a>
+
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    BovControl
+                                </a>
+                            </h1>
+                        
+                        </header>
+
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                            
+                                <p class="text-gray-600 mb-8">
+                                    Es una plataforma de tecnologías que permiten interacciones digitales, reorganizando la
+                                    cadena
+                                    de valor del ganado para
+                                    erradicar el hambre e impulsar la neutralidad climática, alimentando a 1.000 millones de
+                                    personas/día y compensación de
+                                    50 millones de toneladas de carbono por año hasta 2025. Cuenta con tres secciones que son:
+                                    bovControl, bovImpact,
+                                    bovCrypto. Además, busca soluciones sostenibles para la agricultura del futuro, registrarse
+                                    es
+                                    gratis.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                        
+                        </footer>
+
+                    </article>
+                    <!-- END Article -->
+
                 </div>
+                <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+                    
+                    <!-- Article -->
+                    <article class="overflow-hidden rounded-lg shadow-lg">
+
+                        <a href="#">
+                            <img alt="Placeholder" class="block h-auto w-full" src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fl9.webp?alt=media&token=0fed479e-6f09-40fd-9994-e00b786bdc55">
+                        </a>
+
+                        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+                            <h1 class="text-lg">
+                                <a  class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
+                                    VacApp
+                                </a>
+                            </h1>
+                        
+                        </header>
+
+                        <footer class="flex items-center justify-between leading-none p-2 md:p-4">
+                            <a class="flex items-center no-underline  text-black" href="#">
+                            
+                                <p class="text-gray-600 mb-8">
+                                    Es una aplicación diseñada por ganaderos para gestionar vacas, toros y rebaños. Permite
+                                    tener un
+                                    control exhaustivo de
+                                    terneros, destetes, saneamientos, enfermedades y diversos eventos que le pueden pasar a tu
+                                    rebaño. Además contiene:
+                                    Alojamiento en la nube, Modo Offline,Simplifica los saneamientos,Gestiona de rebaños,
+                                    Historial
+                                    de terneros,Importa y
+                                    exporta documentos.
+                                    <br />
+                                    <br />
+                                </p>
+                            </a>
+                        
+                        </footer>
+
+                    </article>
+                    <!-- END Article -->
+
+                </div>
+        
             </div>
         </div>
 
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap justify-end">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Equipo Zan Car
-
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Es un equipo que cuenta con una bomba lubricada con consumo de gasolina 1/2 L x Hora, es
-                        ideal
-                        para los pequeños
-                        productores. Además, tiene una capacidad Colector de 1 x 150cc y permite recolectar el
-                        producto
-                        lácteo de 10 a 15 vacas
-                        en una hora. Es más compacto de 1 puesto con 2 motores (eléctrico y gasolina).
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Equipo Twin Car
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Es un equipo que cuenta con una bomba lubricada con consumo de gasolina 1L x Hora, Además,
-                        tiene
-                        una capacidad Colector
-                        de 2 x 150cc y permite recolectar el producto lácteo de 20 a 25 vacas en una hora. Cuenta
-                        con 2
-                        motores, eléctrico de
-                        1.0 HP y gasolina de 6.5 HP.
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap justify-end">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Tanques de refrigeración
-
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        La leche es un producto delicado, que necesita condiciones específicas, para no perder
-                        calidad,
-                        un tanque adecuado
-                        permitirá mantener sus propiedades y calidad del producto.
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Prensa para queso
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Este equipo permite aumentar la fuerza ejercida a la masa de queso, es adaptable al tipo de
-                        fuerza requerida según la
-                        masa, optimizando tiempos de procesamiento.
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap justify-end">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Envasadora al vacio
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        El objetivo de dicha máquina es ayudar a conservar durante mayor tiempo, en la mejores
-                        condiciones, el alimento queda
-                        sellado de manera hermética, sin aire hasta quedar totalmente sellado.
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        Control Ganadero
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Es un software que permite llevar una administración ganadera, para que se pueda llevar un
-                        control, monitoreo de la
-                        finca y el ganado. Este software incluye monitoreo al ganado en general, contacto directo
-                        con
-                        sus trabajadores, contacto
-                        directo con los veterinarios y registro de partos e inseminaciones. Para poder acceder a
-                        todo el
-                        sistema web sin
-                        restricciones es necesario adquirir una membresía..
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap justify-end">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        BovControl
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Es una plataforma de tecnologías que permiten interacciones digitales, reorganizando la
-                        cadena
-                        de valor del ganado para
-                        erradicar el hambre e impulsar la neutralidad climática, alimentando a 1.000 millones de
-                        personas/día y compensación de
-                        50 millones de toneladas de carbono por año hasta 2025. Cuenta con tres secciones que son:
-                        bovControl, bovImpact,
-                        bovCrypto. Además, busca soluciones sostenibles para la agricultura del futuro, registrarse
-                        es
-                        gratis.
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
-        <div class="bg-white justify-center gap-4  p-3 alinearT">
-            <div class="w-full mb-4">
-                <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
-            </div>
-            <div class="flex flex-wrap">
-                <div class="w-5/6 sm:w-1/2 p-6">
-                    <h3 class="text-2xl text-teal-900 font-bold leading-none mb-3 alinearT">
-                        VacApp
-                    </h3>
-                    <p class="text-gray-600 mb-8">
-                        Es una aplicación diseñada por ganaderos para gestionar vacas, toros y rebaños. Permite
-                        tener un
-                        control exhaustivo de
-                        terneros, destetes, saneamientos, enfermedades y diversos eventos que le pueden pasar a tu
-                        rebaño. Además contiene:
-                        Alojamiento en la nube, Modo Offline,Simplifica los saneamientos,Gestiona de rebaños,
-                        Historial
-                        de terneros,Importa y
-                        exporta documentos.
-
-                        <br />
-                        <br />
-                    </p>
-                    <!-- <div
-                        class="w-1/2 p-3 bg-[url('https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2FimgMineria.webp?alt=media&token=598055f3-fc2a-4ae9-b757-9449c8af360a')] rounded-md shadow-lg object-right-top">
-                        <h1 class=" w-50 p5 letra text-2xl p-6 text-white">Minero</h1>
-                    </div> -->
-                </div>
-            </div>
-        </div>
 
     </section>
+    
     <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1C8cj3zoOPX80IhS31D63eOGkTAiW7uGV/view?usp=share_link','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Abrir documento recomendaciones</button>
 
@@ -561,17 +678,6 @@
 
 
     </div>
-
-    <!--Creacion del formulario para las solicitudes-->
-   
-    
-
-
-
-
-
-
-
 </template>
 
 <script>

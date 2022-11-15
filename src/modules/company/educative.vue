@@ -12,7 +12,7 @@
           class="absolute top-0 w-full h-full bg-center bg-cover"
           style="
             background-image: url('https://images.pexels.com/photos/532568/pexels-photo-532568.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
-          "
+         "
         >
           <span
             id="blackOverlay"
@@ -76,7 +76,7 @@
                   </a>
                   <h6 href="#word" class="text-xl letra"><a href="#word">Word</a></h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    v1
+                   
                   </p>
                 </div>
               </div>
@@ -98,7 +98,7 @@
                 </a>
                   <h6 class="text-xl font-semibold">Excel</h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    v2
+                   
                   </p>
                 </div>
               </div>
@@ -120,7 +120,7 @@
                 </a>
                   <h6 class="text-xl font-semibold">PowerPoint</h6>
                   <p class="mt-2 mb-4 text-blueGray-500">
-                    v3
+                  
                   </p>
                 </div>
               </div>
@@ -159,54 +159,7 @@
                   Subir documentos a drive, para trabajos en grupos, aprovechando
                   las herramientas, facilitando el trabajo y manejos de documentos
                 </p>
-                <!-- <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul> -->
+               
               </div>
             </div>
           </div>
@@ -232,54 +185,7 @@
                   Mediante una base de datos, se mejora la optimización, para 
                   el manejo de los destinatatios de una carta dirijida masivamente.
                 </p>
-                <!-- <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500 letra">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul> -->
+                
               </div>
             </div>
           </div>
@@ -304,54 +210,7 @@
                   Introducción al uso de las diversas herramientas, para edición e insersión
                   de contenido multimedia, gráficos , tablas, entre otros.
                 </p>
-                <!-- <ul class="list-none mt-6">
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fas fa-fingerprint"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Carefully crafted components
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="fab fa-html5"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">
-                          Amazing page examples
-                        </h4>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="py-2">
-                    <div class="flex items-center">
-                      <div>
-                        <span
-                          class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-emerald-600 bg-emerald-200 mr-3"
-                        >
-                          <i class="far fa-paper-plane"></i>
-                        </span>
-                      </div>
-                      <div>
-                        <h4 class="text-blueGray-500">Dynamic components</h4>
-                      </div>
-                    </div>
-                  </li>
-                </ul> -->
+                
               </div>
             </div>
           </div>
@@ -496,6 +355,98 @@
           </div>
         </div>
       </section>
+      <section id="excel" class="relative py-20 space-y-10 bg-blueGray-200 ">
+        <!--Encabezadp-->
+        <div class="flex flex-wrap justify-center text-center mb-24">
+            <div class="w-full lg:w-6/12 px-4 "> 
+              <h2 class="text-4xl font-semibold">Excel</h2>
+              <p class="text-lg leading-relaxed m-4 text-blueGray-500">
+                
+              </p>
+            </div>
+          </div>
+        <!--Primero-->  
+        <div class="container mx-auto px-4 flex lg:max-w-full  justify-center ">
+          <div class="items-center flex flex-wrap ">
+            <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
+            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
+              <iframe
+                          src="https://www.youtube.com/embed/mJwPSawhGmU" 
+                            frameborder="0" 
+                            allowfullscreen
+                            class="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+            </div>
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12">
+                
+                <h3 class="text-3xl font-semibold">Archivos excel en línea</h3>
+                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                  Es posible aprovechar 
+                  el trabajo colaborativo y mejor manejo de la información desde
+                   cualquier lugar mediante archivos en línea.
+                </p>
+               
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Segundo-->
+        <div class="container mx-auto px-4 flex lg:max-w-full   justify-center ">
+          <div class="items-center flex flex-wrap ">
+            <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
+            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
+              <iframe
+                          src="https://www.youtube.com/embed/-M0uAp5WW-c" 
+                            frameborder="0"
+                            allowfullscreen
+                            class="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+            </div>
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12">
+              
+                <h3 class="text-3xl font-semibold">Tablas dinámicas.</h3>
+                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                  Una tabla dinámica es una herramienta que permite calcular, 
+                  analizar y resumir datos, realizando diferentes comparaciones.     
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Tercero-->
+        <div class="container mx-auto px-4 flex lg:max-w-full  justify-center  ">
+          <div class="items-center flex flex-wrap ">
+            <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
+            <div class="relative h-0 overflow-hidden max-w-full w-full" style="padding-bottom: 56.25%">
+              <iframe
+                          src="https://www.youtube.com/embed/CnRRkJPM-nw" 
+                            frameborder="0" 
+                            allowfullscreen
+                            class="absolute top-0 left-0 w-full h-full"
+                        ></iframe>
+            </div>
+            </div>
+            <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
+              <div class="md:pr-12">
+                <h3 class="text-3xl font-semibold">Herramientas básicas.</h3>
+                <p class="mt-4 text-lg leading-relaxed text-blueGray-500">
+                  
+                  Como usar las diversas herramientas básicas proporcionadas por
+                   Excel y como hacer uso de acuerdo con la necesidad requerida. 
+                </p>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      
     
     </main>
     
