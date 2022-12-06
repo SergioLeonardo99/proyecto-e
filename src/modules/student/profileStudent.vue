@@ -23,13 +23,13 @@
                     <div class="font-bold text-xl text-center text-gray-800 hover:text-cyan-600 hover:cursor-pointer">
                         {{email}}</div>
                     <p class="text-gray-600 text-sm text-center">Correo del estudiante</p>
+                    <div class="font-bold text-xl text-center text-gray-800 hover:text-cyan-600 hover:cursor-pointer">
+                        {{telefono}}</div>
+                    <p class="text-gray-600 text-sm text-center">Telefono del estudiante</p>
 
                     <div class="flex flex-row justify-center font-semibold mx-auto my-4">
                         <div>
-            <label class="block">Número de celular o teléfono</label>
-            <input type="number" v-model="telefono" placeholder="teléfono"
-              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required minlength="6" maxlength="16">
+           
 
           </div>
 
@@ -195,13 +195,13 @@ export default {
 
           })
             .then(() => {
-              console.log("Document successfully updated!");
+              //console.log("Document successfully updated!");
               this.contraseña = ''
               this.contraseñaConfirmar = ''
             })
             .catch((error) => {
               // The document probably doesn't exist.
-              console.error("Error updating document: ", error);
+              //console.error("Error updating document: ", error);
             });
 
 
@@ -225,7 +225,7 @@ export default {
     },
     compruebaLongitud(elemento, min, max) {
       elemento = elemento.toString();
-      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      //console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
       if (elemento.length < min || elemento.length > max) {
         return false
       } else {

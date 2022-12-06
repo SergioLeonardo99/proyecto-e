@@ -2,7 +2,7 @@
 
     <div class="mx-auto border-gray-200">
         <!--Estilo superior-->
-        <nav class="bg-white-50 flex justify-between lg:justify-start items-center">
+        <nav id="navbar_top" class="bg-gray-50 flex justify-between lg:justify-start items-center">
             <div class="logo p-3 w-5/6 ">
 
                 <!--Integracion de logo-->
@@ -123,6 +123,20 @@ export default {
 
     }
 }
+document.addEventListener("DOMContentLoaded", function(){
+  window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        document.getElementById('navbar_top').classList.add('fixed-top');
+        // add padding top to show content behind navbar
+        //navbar_height = document.querySelector('.navbar').offsetHeight;
+        //document.body.style.paddingTop = navbar_height + 'px';
+      } else {
+        document.getElementById('navbar_top').classList.remove('fixed-top');
+         // remove padding top from body
+        document.body.style.paddingTop = '0';
+      } 
+  });
+});
 </script>
     
     

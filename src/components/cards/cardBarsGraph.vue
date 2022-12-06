@@ -37,7 +37,7 @@
       
        
       
-      console.log(this.arrayData)
+     // console.log(this.arrayData)
   
       // Create Y-axis 
       let yAxis = chart.yAxes.push(

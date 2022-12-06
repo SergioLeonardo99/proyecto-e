@@ -58,7 +58,10 @@
                       <input type="text" v-model="nombre" placeholder="Nombre de la empresa"
                         class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
                         autofocus autocomplete required minlength="6" maxlength="30">
+                        <p v-if="correciones[0]!=''" class="text-red-600 text-sm text-center">{{correciones[0]}}</p>
                     </div>
+                    
+
 
                     <div>
 
@@ -66,13 +69,15 @@
                       <input type="number" v-model="nit" placeholder="Nit de la empresa"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
                         autofocus autocomplete required minlength="6" maxlength="16">
+                        <p v-if="correciones[1]!=''" class="text-red-600 text-sm text-center">{{correciones[1]}}</p>
                     </div>
 
                     <div>
                       <label class="block letra text-gray-700">Dirección: </label>
                       <input type="text" v-model="direccion" placeholder="Dirección de la empresa"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required minlength="8" maxlength="16">
+                        autofocus autocomplete required minlength="8" maxlength="30">
+                        <p v-if="correciones[2]!=''" class="text-red-600 text-sm text-center">{{correciones[2]}}</p>
                     </div>
 
                     <div>
@@ -127,6 +132,7 @@
                       <input type="text" v-model="encargado" placeholder="Nombre del encargado"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                         autocomplete required minlength="3" maxlength="16">
+                        <p v-if="correciones[3]!=''" class="text-red-600 text-sm text-center">{{correciones[3]}}</p>
                     </div>
 
                     <div>
@@ -134,6 +140,7 @@
                       <input type="text" v-model="cargo" placeholder="Cargo del encargado"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                         autocomplete required minlength="3" maxlength="16">
+                        <p v-if="correciones[4]!=''" class="text-red-600 text-sm text-center">{{correciones[4]}}</p>
                     </div>
 
                     <div>
@@ -141,6 +148,7 @@
                       <input type="email" v-model="email" placeholder="Correo electrónico"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
                         autocomplete required minlength="8" maxlength="50">
+                        <p v-if="correciones[5]!=''" class="text-red-600 text-sm text-center">{{correciones[5]}}</p>
                     </div>
 
 
@@ -149,6 +157,7 @@
                       <input type="number" v-model="telefono" placeholder="Teléfono"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
                          autocomplete required minlength="8" maxlength="16">
+                         <p v-if="correciones[6]!=''" class="text-red-600 text-sm text-center">{{correciones[6]}}</p>
                     </div>
 
                   </div>
@@ -181,6 +190,7 @@
                       <label class="block letra text-gray-700">Contraseña: </label>
                       <input type="password" v-model="contraseña" placeholder="Contraseña" minlength="8" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                           focus:bg-white focus:outline-none" required maxlength="16">
+                          <p v-if="correciones[7]!=''" class="text-red-600 text-sm text-center">{{correciones[7]}}</p>
                     </div>
 
                     <div class="mt-4">
@@ -189,6 +199,7 @@
                       <input type="password" v-model="contraseñaConfirmar" placeholder="Confirmar contraseña"
                         minlength="8" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
                           focus:bg-white focus:outline-none" required maxlength="16">
+                          <p v-if="correciones[8]!=''" class="text-red-600 text-sm text-center">{{correciones[8]}}</p>
                     </div>
                   </div>
                 </div>
@@ -245,14 +256,18 @@ export default {
       email: '',
       encargado: '',
       cargo: '',
-      sector: ''
+      sector: '',
+      correciones: ['','','','','','','','','']
+      
+
 
     }
   },
   methods: {
     advancedRegister() {
+      this.validarTipos()
       if (this.nombre != '' && this.nit > 0 && this.direccion != '' && this.telefono > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.encargado != '' && this.cargo != '' && this.sector != '') {
-        if (this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.direccion, 6, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.email, 8, 50) && this.compruebaLongitud(this.encargado, 8, 16) && this.compruebaLongitud(this.cargo,3, 16)) {
+        if (this.compruebaLongitud(this.nombre, 6, 30) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.direccion, 6, 30) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.contraseña, 3, 16) && this.compruebaLongitud(this.email, 8, 50) && this.compruebaLongitud(this.encargado, 3, 16) && this.compruebaLongitud(this.cargo,3, 16)) {
           if(this.validarEmail(this.email)){
             if (this.contraseña == this.contraseñaConfirmar) {
             var docRef = db.collection("usuario").doc(this.nit.toString());
@@ -287,7 +302,7 @@ export default {
                   this.mensaje = "Empresa registrada con exito"
                 })
                 .catch((error) => {
-                  console.error("Error writing document: ", error);
+                  //console.error("Error writing document: ", error);
                   this.mensaje = "No se pudo completar el registro, intente nuevamente"
                 });
 
@@ -329,13 +344,13 @@ export default {
 
         })
         .catch((error) => {
-          console.error("Error writing document: ", error);
+          //console.error("Error writing document: ", error);
           this.mensaje = "No se pudo completar el registro, intente nuevamente"
         });
     },
     compruebaLongitud(elemento, min, max) {
       elemento = elemento.toString();
-      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      //console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
       if (elemento.length < min || elemento.length > max) {
         return false
       } else {
@@ -350,12 +365,80 @@ export default {
   } else {
    return false
   }
-}
+}, 
+
+    limpiarArray(){
+      this.correciones[0]=""
+      this.correciones[1]=""
+      this.correciones[2]=""
+      this.correciones[3]=""
+      this.correciones[4]=""
+      this.correciones[5]=""
+      this.correciones[6]=""
+      this.correciones[7]=""
+      this.correciones[8]=""
+
+    },
+    validarTipos(){
+      this.limpiarArray()
+      if(typeof this.nombre!=="string"||!this.compruebaLongitud(this.nombre, 6, 30)){
+        this.correciones[0]="*Los caracteres deben ir entre 6 y 30."
+      }
+      if(typeof this.nit!=="number"||!this.compruebaLongitud(this.nit, 6, 16)||this.nit%10!=0){
+        this.nit=parseInt(this.nit)
+        if (!this.compruebaLongitud(this.nit, 6, 16)&&!Number.isNaN(this.nit)){
+          this.correciones[1]="*Los caracteres deben ir entre 6 y 16."
+
+        }else if(Number.isNaN(this.nit)){
+          this.correciones[1]="*Solo puede contener caracteres numericos"
+        }else if(this.nit%10!=0){
+          this.correciones[1]="*No puede ser decimal o negativo"
+        }
+        
+      }
+      if(typeof this.direccion!=="string"||!this.compruebaLongitud(this.direccion, 6, 30)){
+        this.correciones[2]="*Los caracteres deben ir entre 6 y 30."
+      }
+      if(typeof this.encargado!=="string"||!this.compruebaLongitud(this.encargado, 3, 16)){
+        this.correciones[3]="*Los caracteres deben ir entre 3 y 16."
+      }
+      if(typeof this.cargo!=="string"||!this.compruebaLongitud(this.cargo, 3, 16)){
+        this.correciones[4]="*Los caracteres deben ir entre 3 y 16."
+      }
+      if(typeof this.email!=="string"||!this.compruebaLongitud(this.email, 8, 50)||!this.validarEmail(this.email)){
+        if(!this.compruebaLongitud(this.email, 8, 50)){
+          this.correciones[5]="*Los caracteres deben ir entre 8 y 50."
+        }else{
+          this.correciones[5]="*El texto ingresado no es un correo."
+          this.email=''
+        }
+      }
+      if(typeof this.telefono!=="number"||!this.compruebaLongitud(this.telefono, 6, 16)){
+        this.telefono=parseInt(this.telefono)
+        if (!this.compruebaLongitud(this.telefono, 6, 16)&&!Number.isNaN(this.telefono)){
+          this.correciones[6]="*Los caracteres deben ir entre 6 y 16."
+        }else if(Number.isNaN(this.telefono)){
+          this.correciones[6]="*Solo puede contener caracteres numericos"
+        }else if(this.telefono%1!=0){
+          this.correciones[6]="*No puede ser decimal o negativo"
+        }
+      }
+      if(typeof this.contraseña!=="string"||!this.compruebaLongitud(this.contraseña, 8, 16)){
+        this.correciones[7]="*Los caracteres deben ir entre 6 y 16 para mayor seguridad."
+      }
+      if(typeof this.contraseñaConfirmar!=="string"||!this.compruebaLongitud(this.contraseñaConfirmar, 8, 16)){
+        this.correciones[8]="*Los caracteres deben ir entre 6 y 16 para mayor seguridad."
+      }
+
+
+
+    }
 
 
   },
   mounted() {
     // methods can be called in lifecycle hooks, or other methods!
+    
   }
 }
 

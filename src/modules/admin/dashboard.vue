@@ -38,7 +38,6 @@
       navAdmin: navbarAdmin,
       AdminL,
 
-
      
     },
 

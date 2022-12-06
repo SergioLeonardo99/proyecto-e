@@ -1219,7 +1219,7 @@ export default {
                     });
                 })
                 .catch((error) => {
-                    console.log("Error getting documents: ", error);
+                   // console.log("Error getting documents: ", error);
                 });
 
 
@@ -1249,9 +1249,11 @@ export default {
             // Create to temporary link to initiate
             // download process
             var temp_link = document.createElement('a');
-
+            let date = new Date().toLocaleDateString();
+            var solicitud = date
+            solicitud = solicitud.split("/").join('');
             // Download csv file
-            temp_link.download = "GfG.csv";
+            temp_link.download = solicitud+".csv";
             var url = window.URL.createObjectURL(CSVFile);
             temp_link.href = url;
 

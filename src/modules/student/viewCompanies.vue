@@ -160,7 +160,7 @@ export default {
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
         
       
@@ -185,7 +185,7 @@ export default {
 
           
     }).catch((error) => {
-        console.log("Error en la consulta")
+        //console.log("Error en la consulta")
     });
     
     },
@@ -210,7 +210,7 @@ export default {
                         this.msgBody = "Solicitud realizada con exito"
                     })
                     .catch((error) => {
-                        console.error("Error writing document: ", error);
+                        //console.error("Error writing document: ", error);
                         this.msgBody = "No se pudo completar la solicitud, intente nuevamente"
                     });
 

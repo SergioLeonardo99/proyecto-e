@@ -570,7 +570,7 @@ export default {
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
       this.cambio = true
     },
@@ -619,13 +619,13 @@ export default {
         estado: estado,
       })
         .then(() => {
-          console.log("Document successfully updated!");
+          //console.log("Document successfully updated!");
           this.datosUsuarios()
 
         })
         .catch((error) => {
           // The document probably doesn't exist.
-          console.error("Error updating document: ", error);
+          //console.error("Error updating document: ", error);
         });
 
 
@@ -684,7 +684,7 @@ export default {
                     this.mensaje = "Empresa registrada con exito"
                   })
                   .catch((error) => {
-                    console.error("Error writing document: ", error);
+                    //console.error("Error writing document: ", error);
                     this.mensaje = "No se pudo completar el registro, intente nuevamente"
                   });
 
@@ -734,7 +734,7 @@ export default {
                       this.mensaje = "Administrador registrado con exito"
                     })
                     .catch((error) => {
-                      console.error("Error writing document: ", error);
+                      //console.error("Error writing document: ", error);
                       this.mensaje = "No se pudo completar el registro, intente nuevamente"
                     });
 
@@ -796,7 +796,7 @@ export default {
                           this.mensaje = "Estudiante registrado con exito"
                         })
                         .catch((error) => {
-                          console.error("Error writing document: ", error);
+                         // console.error("Error writing document: ", error);
                           this.mensaje = "No se pudo completar el registro, intente nuevamente"
                         });
 
@@ -831,7 +831,7 @@ export default {
     },
     compruebaLongitud(elemento, min, max) {
       elemento = elemento.toString();
-      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      //console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
       if (elemento.length < min || elemento.length > max) {
         return false
       } else {

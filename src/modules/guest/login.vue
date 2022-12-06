@@ -44,6 +44,14 @@
           flex items-center justify-center">
 
         <div class="w-full h-100">
+          <button @click="volverIndex()"
+            class="flex float-right space-x-1 items-center px-3 py-3  bg-teal-700 hover:bg-teal-500 rounded-full drop-shadow-md h-10  m-2 text-indigo-100 transition-colors duration-150  focus:shadow-outline ">
+            <svg class="h-6 w-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+             <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+            </svg>
+
+            <span class="text-white text-xl font-bold">Regresar</span>
+          </button>
 
           <h1 class="text-3xl font-bold letra ">Bienvenido</h1>
           <h1 class="text-xl md:text-xl letra leading-tight text-teal-700 mt-12">Ingresa al sistema</h1>
@@ -70,7 +78,7 @@
               <p>{{ mensaje }}</p>
             </div>
 
-            <button @click="autenticate()" type="button" class="w-full block letra bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
+            <button @click="notNull()" type="button" class="w-full block letra bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Ingresar</button>
 
           </form>
@@ -108,6 +116,7 @@
               Crear una cuenta
             </router-link>
           </p>
+
 
           <p class="text-sm letra text-teal-700 mt-12">&copy; 2022 M&S.</p>
         </div>
@@ -276,7 +285,7 @@ export default {
   data() {
     return {
       nit: null,
-      contraseña: '',
+      contraseña: null,
       mensaje: '',
       modal: false,
       recuperar: false,
@@ -322,12 +331,45 @@ export default {
           }
         } else {
           this.mensaje = "Contraseña invalida..."
+          this.contraseña=null
         }
       }).catch((error) => {
-        console.log("Nit Incorrecto...", error);
+        //console.log("Nit Incorrecto...", error);
         this.mensaje = "Nit incorrecto..."
+        this.nit=null
+        this.contraseña=null
       });
 
+    },
+    notNull(){
+      if(this.nit===null ||this.contraseña===null){
+        this.mensaje="Tiene que rellenar los campos..."
+      }else if (typeof this.nit!=="number"){
+        this.mensaje="El nit debe ser numerico..."
+        this.nit=null
+      }else if(!this.compruebaLongitud(this.nit,6,16)){
+        this.mensaje="El nit debe estar entre 6 y 16 caracteres"
+        this.nit=null
+      }else if(!this.compruebaLongitud(this.contraseña,8,16)){
+        this.mensaje="La contraseña debe estar entre 8 y 16 caracteres"
+        this.contraseña=null
+        
+      }else{
+        this.autenticate()
+      }
+    },
+    volverIndex(){
+      this.$router.push('/');
+
+    },
+    compruebaLongitud(elemento, min, max) {
+      elemento = elemento.toString();
+      //console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      if (elemento.length < min || elemento.length > max) {
+        return false
+      } else {
+        return true
+      }
     },
     cerrarModal() {
       if (this.recuperar == true) {
@@ -355,7 +397,6 @@ export default {
           .get()
           .then((querySnapshot) => {
             querySnapshot.forEach((doc) => {
-              console.log("toy vivo")
               this.correoRecuperar = doc.data().email
               this.nombre = doc.data().nombre
               this.id = doc.data().nit
@@ -364,7 +405,7 @@ export default {
             });
           })
           .catch((error) => {
-            console.log("Usuario no encontrado ", error);
+            //console.log("Usuario no encontrado ", error);
             this.recuperar = false
             this.aceptado = true
           });
@@ -389,12 +430,12 @@ export default {
         contraseña: md.digest().toHex(),
       })
         .then(() => {
-          console.log("Document successfully updated!");
+          //console.log("Document successfully updated!");
           this.recuperacion()
         })
         .catch((error) => {
           // The document probably doesn't exist.
-          console.error("Error updating document: ", error);
+          //console.error("Error updating document: ", error);
           this.recuperar = false
           this.aceptado = true
         });
@@ -416,9 +457,9 @@ export default {
       };
       emailjs.send('service_f231616', 'template_ux9gq9f', templateParams, 'qPWdYWkxEBTFlHmVj')
         .then(function (response) {
-          console.log('SUCCESS!', response.status, response.text);
+          //console.log('SUCCESS!', response.status, response.text);
         }, function (error) {
-          console.log('FAILED...', error);
+          //console.log('FAILED...', error);
         });
       this.recuperar = false
       this.aceptado = true

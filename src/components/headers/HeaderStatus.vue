@@ -98,7 +98,7 @@
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
         db.collection("usuario").where("tipo", "==", "estudiante").where("estado", "==", "Activo")
         .get()
@@ -108,7 +108,7 @@
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
         db.collection("datos")
         .get()
@@ -118,7 +118,7 @@
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
         db.collection("solicitudes")
         .get()
@@ -128,7 +128,7 @@
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
 
         

@@ -283,7 +283,7 @@ export default {
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
         this.cambio=true
     },
@@ -319,7 +319,7 @@ export default {
             })
             .catch((error) => {
               // The document probably doesn't exist.
-              console.error("Error updating document: ", error);
+              //console.error("Error updating document: ", error);
               this.msgProcess='Error al procesar la solicitud'
             });
 
@@ -342,7 +342,7 @@ export default {
         
 
     }).catch((error) => {
-        console.log("Error en la consulta")
+        //console.log("Error en la consulta")
     });
     },
     activarBusqueda() {

@@ -161,7 +161,7 @@ export default {
 
       imagesRef.put(this.imagen, metadata).then((snapshot) => {
         location.reload()
-        console.log('Uploaded a blob or file!');
+        //console.log('Uploaded a blob or file!');
 
       });
 
@@ -206,7 +206,7 @@ export default {
     },
     clickImage(e) {
       this.imagen = e.target.files[0]
-      console.log(this.imagen)
+      //console.log(this.imagen)
     },
 
     advancedRegister() {
@@ -230,13 +230,13 @@ export default {
               contraseña: md.digest().toHex(),
             })
               .then(() => {
-                console.log("Document successfully updated!");
+                //console.log("Document successfully updated!");
                 this.contraseña = ''
                 this.contraseñaConfirmar = ''
               })
               .catch((error) => {
                 // The document probably doesn't exist.
-                console.error("Error updating document: ", error);
+                //console.error("Error updating document: ", error);
               });
 
 
@@ -259,7 +259,7 @@ export default {
     },
     compruebaLongitud(elemento, min, max) {
       elemento = elemento.toString();
-      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      //console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
       if (elemento.length < min || elemento.length > max) {
         return false
       } else {

@@ -27,6 +27,7 @@
               <option>Nivel Clientes</option>
               <option>Nivel Proveedores</option>
               <option>Nivel Total</option>
+              <option>Complementos y cambios tecnológicos</option>
             </select>
             <div class="container mx-auto px-0 flex lg:max-w-full   justify-center  ">
           <div class="items-center flex flex-wrap ">
@@ -622,7 +623,7 @@ export default {
 
 
       }).catch((error) => {
-        console.log("Sesion terminada regresando al login", error);
+        //console.log("Sesion terminada regresando al login", error);
 
 
       });
@@ -675,7 +676,7 @@ export default {
           });
         })
         .catch((error) => {
-          console.log("Error getting documents: ", error);
+          //console.log("Error getting documents: ", error);
         });
     },
 

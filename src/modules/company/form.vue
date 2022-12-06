@@ -1905,7 +1905,7 @@
 
           </section>
           <div class="flex justify-center">
-
+            <label for="mensaje">{{ mensaje }}</label>
             <button class=" bg-teal-700 hover:bg-teal-300 focus:bg-teal-300 text-white font-semibold rounded-lg
           px-16 py-3 mt-6" type="button" @click="registerForm()">
               Registrar Entrevista
@@ -1913,7 +1913,7 @@
 
 
           </div>
-          <label for="mensaje">{{ mensaje }}</label>
+
         </div>
 
 
@@ -2455,7 +2455,7 @@ export default {
             this.$router.push('/profileCompany');
           })
           .catch((error) => {
-            console.error("Error writing document: ", error);
+            //console.error("Error writing document: ", error);
             this.mensaje = "No se pudo completar el registro, intente nuevamente"
           });
 

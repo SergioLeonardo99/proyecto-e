@@ -162,7 +162,7 @@ export default {
                         this.mensaje = "Solicitud realizada con exito"
                     })
                     .catch((error) => {
-                        console.error("Error writing document: ", error);
+                        //console.error("Error writing document: ", error);
                         this.mensaje = "No se pudo completar la solicitud, intente nuevamente"
                     });
             } else {
