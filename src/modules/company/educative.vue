@@ -24,11 +24,11 @@
             <div class="w-full lg:w-6/12 px-4 ml-auto mr-auto text-center">
               <div class="pr-12">
                 <h1 class="text-white font-semibold text-5xl">
-                  Aprende como usar herramientas de office
+                  Aprende a utilizar herramientas de Microsoft 365 y Google Workspace.
                 </h1>
                 <p class="mt-4 text-lg text-blueGray-200">
-                Las herramientas de office te proporcionan escalabilidad, colaboración entre empleados
-                y se puede utilizar desde cualquier dispositivo digital en cualquier lugar.
+                  Las herramientas de Microsoft 365 y Google Workspace te proporcionan escalabilidad, 
+                  colaboración entre empleados y se puede utilizar desde cualquier dispositivo digital en cualquier lugar.
                 </p>
               </div>
             </div>

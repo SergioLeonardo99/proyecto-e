@@ -38,7 +38,7 @@
                 </p>
 
             </div>
-            <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1xcRLNqJBs4HbfFYpG8FZ-WWrKbp_RR9j/view?usp=sharing','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
+            <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1N8ltiyL337YWTAlSXSrDCTNfQtHuKyZX/view?usp=share_link','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Abrir manual Invitado</button>
         </div>
 
@@ -58,6 +58,18 @@ export default {
     data() {
         return {
         }
+    },
+    methods:{
+        descargarRecomendacion(ruta, nombre){
+            const downloadIInstance = document.createElement('a')
+            downloadIInstance.href = ruta
+            downloadIInstance.target = '_blank'
+            downloadIInstance.download = nombre
+            document.body.appendChild(downloadIInstance)
+            downloadIInstance.click()
+            document.body.removeChild(downloadIInstance)
+        },
+
     },
 }
 

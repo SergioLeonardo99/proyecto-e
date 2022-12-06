@@ -34,23 +34,30 @@
             <label class="block">Nombre del Estudiante </label>
             <input type="text" v-model="nombre" placeholder="nombre"
               class="form-control block w-full px-4 py-2 text-xl font-normal text-gray-700 bg-white bg-clip-padding border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"
-              autofocus autocomplete required>
+              autofocus autocomplete required minlength="8" maxlength="16">
 
           </div>
           <div>
             <label class="block">Identificacion estudiante </label>
             <input type="number" v-model="nit" placeholder="nit"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required disabled>
+              autofocus autocomplete required minlength="8" disabled maxlength="16">
 
           </div>
 
-         
+
           <div>
             <label class="block">Correo electrónico</label>
             <input type="email" v-model="email" placeholder="correo"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              autofocus autocomplete required>
+              autofocus autocomplete minlength="8" required maxlength="50">
+
+          </div>
+          <div>
+            <label class="block">Número de celular o teléfono</label>
+            <input type="number" v-model="telefono" placeholder="teléfono"
+              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+              autofocus autocomplete required minlength="6" maxlength="16">
 
           </div>
 
@@ -59,13 +66,13 @@
             <label class="block">Contraseña</label>
             <input type="password" v-model="contraseña" placeholder="Password"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              required>
+              required minlength="8" maxlength="16">
           </div>
           <div class="mt-4">
             <label class="block">Confirmar Contraseña</label>
             <input type="password" v-model="contraseñaConfirmar" placeholder="Password"
               class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
-              required>
+              required minlength="8" maxlength="16">
           </div>
 
           <div class="flex items-baseline justify-center">
@@ -115,6 +122,7 @@ export default {
       cargo: '',
       imagen: null,
       imagenDescargada: null,
+      telefono: null,
     }
   },
   components: {
@@ -137,6 +145,7 @@ export default {
         this.nombre = doc.data().nombre;
         this.nit = doc.data().nit;
         this.email = doc.data().email;
+        this.telefono = doc.data().telefono;
         this.cargarImagen()
 
       }).catch((error) => {
@@ -201,44 +210,71 @@ export default {
     },
 
     advancedRegister() {
-      if (this.nombre != '' && this.nit != 0 && this.direccion != '' && this.telefono != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '') {
-        if (this.contraseña == this.contraseñaConfirmar) {
-          var docRef = db.collection("usuario").doc(this.nit.toString());
-          var forge = require('node-forge');
-          var input_str = this.contraseña;
-          var md = forge.md.sha256.create();
-          md.update(input_str);
-          var getOptions = {
-            //source: 'cache'
-          };
-          docRef.update({
-            nombre: this.nombre,
-            nit: this.nit,
-            direccion: this.direccion,
-            telefono: this.telefono,
-            email: this.email,
-            contraseña: md.digest().toHex(),
-          })
-            .then(() => {
-              console.log("Document successfully updated!");
-              this.contraseña = ''
-              this.contraseñaConfirmar = ''
+      if (this.nombre != '' && this.nit > 0 && this.direccion != '' && this.telefono > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '') {
+        if (this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.email, 8, 50) ) {
+          if(this.validarEmail(this.email)){
+            if (this.contraseña == this.contraseñaConfirmar) {
+            var docRef = db.collection("usuario").doc(this.nit.toString());
+            var forge = require('node-forge');
+            var input_str = this.contraseña;
+            var md = forge.md.sha256.create();
+            md.update(input_str);
+            var getOptions = {
+              //source: 'cache'
+            };
+            docRef.update({
+              nombre: this.nombre,
+              nit: this.nit,
+              telefono: this.telefono,
+              email: this.email,
+              contraseña: md.digest().toHex(),
             })
-            .catch((error) => {
-              // The document probably doesn't exist.
-              console.error("Error updating document: ", error);
-            });
+              .then(() => {
+                console.log("Document successfully updated!");
+                this.contraseña = ''
+                this.contraseñaConfirmar = ''
+              })
+              .catch((error) => {
+                // The document probably doesn't exist.
+                console.error("Error updating document: ", error);
+              });
 
 
 
+          } else {
+            this.mensaje = "Las contraseñas no coinciden..."
+          }
+          }else{
+            this.mensaje = "El email es invalido..."
+          }
+          
         } else {
-          this.mensaje = "Las contraseñas no coinciden..."
+          this.mensaje = "Las longitudes de los campos no son validas"
         }
+
       } else {
         this.mensaje = "Tiene que rellenar todos los campos..."
       }
 
     },
+    compruebaLongitud(elemento, min, max) {
+      elemento = elemento.toString();
+      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      if (elemento.length < min || elemento.length > max) {
+        return false
+      } else {
+        return true
+      }
+
+
+    },
+     validarEmail(valor) {
+  if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+   return true
+  } else {
+   return false
+  }
+}
 
 
 

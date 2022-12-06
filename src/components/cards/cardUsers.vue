@@ -264,7 +264,7 @@
                                   <label class="block letra text-gray-700">Nombre de la empresa: </label>
                                   <input type="text" v-model="nombre" placeholder="nombre"
                                     class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
@@ -272,14 +272,14 @@
                                   <label class="block letra text-gray-700">Nit de la empresa: </label>
                                   <input type="number" v-model="nit" placeholder="Nit de la empresa"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
                                   <label class="block letra text-gray-700">Dirección: </label>
                                   <input type="text" v-model="direccion" placeholder="Dirección de la empresa"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
@@ -334,21 +334,21 @@
                                   <label class="block letra text-gray-700">Nombre del encargado: </label>
                                   <input type="text" v-model="encargado" placeholder="Nombre del encargado"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
                                   <label class="block letra text-gray-700">Cargo del encargado en la empresa: </label>
                                   <input type="text" v-model="cargo" placeholder="Cargo del encargado"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
                                   <label class="block letra text-gray-700">Correo electrónico: </label>
                                   <input type="text" v-model="email" placeholder="Correo electrónico"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="50" minlength="8">
                                 </div>
 
 
@@ -356,7 +356,7 @@
                                   <label class="block letra text-gray-700">Número de celular o teléfono: </label>
                                   <input type="number" v-model="telefono" placeholder="Teléfono"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                               </div>
@@ -389,7 +389,7 @@
                                   <label class="block letra text-gray-700">Nombre del {{ tipoUsuario }}: </label>
                                   <input type="text" v-model="nombre" placeholder="nombre"
                                     class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
@@ -397,7 +397,7 @@
                                   <label class="block letra text-gray-700">C.C del {{ tipoUsuario }} : </label>
                                   <input type="number" v-model="nit" placeholder="C.C"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                                 <div>
@@ -405,7 +405,13 @@
                                   </label>
                                   <input type="text" v-model="email" placeholder="correo"
                                     class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                                    autofocus autocomplete required>
+                                    autofocus autocomplete required maxlength="50" minlength="8">
+                                </div>
+                                <div>
+                                  <label class="block letra text-gray-700">Número de celular o teléfono  del {{ tipoUsuario }} </label>
+                                  <input type="number" v-model="telefono" placeholder="Teléfono"
+                                    class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
+                                    autofocus autocomplete required maxlength="16" minlength="8">
                                 </div>
 
                               </div>
@@ -437,17 +443,16 @@
                               <div class="accordion-body py-4 px-5">
                                 <div class="mt-4">
                                   <label class="block letra text-gray-700">Contraseña: </label>
-                                  <input type="password" v-model="contraseña" placeholder="Contraseña" minlength="6"
-                                    class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
-                          focus:bg-white focus:outline-none" required>
+                                  <input type="password" v-model="contraseña" placeholder="Contraseña" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                          focus:bg-white focus:outline-none" required maxlength="16" minlength="8">
                                 </div>
 
                                 <div class="mt-4">
                                   <label class="block letra text-gray-700">Confirmar Contraseña: </label>
 
                                   <input type="password" v-model="contraseñaConfirmar"
-                                    placeholder="Confirmar contraseña" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
-                          focus:bg-white focus:outline-none" required>
+                                    placeholder="Confirmar contraseña" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                          focus:bg-white focus:outline-none" required maxlength="16" minlength="8">
                                 </div>
                               </div>
                             </div>
@@ -471,7 +476,7 @@
                 </div>
               </div>
               <div class="bg-gray-50 px-4 py-3 sm:flex sm:flex-row-reverse sm:px-6">
-                <p>{{ msgProcess }}</p>
+                
                 <button type="button"
                   class="inline-flex w-full justify-center rounded-md border border-transparent bg-red-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2 sm:ml-3 sm:w-auto sm:text-sm"
                   @click="open = false">Salir</button>
@@ -534,9 +539,9 @@ export default {
       buscar: false,
       tipoUsuario: '',
       nombre: '',
-      nit: 0,
+      nit: null,
       direccion: '',
-      telefono: 0,
+      telefono: null,
       contraseña: '',
       contraseñaConfirmar: '',
       mensaje: '',
@@ -636,7 +641,12 @@ export default {
         this.mensaje = 'Debe seleccionar un tipo de usuario...'
       } else {
         if (this.tipoUsuario == 'Empresa') {
-          if (this.nombre != '' && this.nit != 0 && this.direccion != '' && this.telefono != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.encargado != '' && this.cargo != '' && this.sector != '') {
+          if (this.nombre != '' && this.nit > 0 && this.direccion != '' && this.telefono > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.encargado != '' && this.cargo != '' && this.sector != '') {
+            if (this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.direccion, 6, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.email, 8, 50) && this.compruebaLongitud(this.encargado, 8, 16) && this.compruebaLongitud(this.cargo,8, 16)) {
+
+            } else {
+              this.mensaje = "Las longitudes de los campos no son validas"
+            }
             if (this.contraseña == this.contraseñaConfirmar) {
               var docRef = db.collection("usuario").doc(this.nit.toString());
               var getOptions = {
@@ -688,8 +698,10 @@ export default {
 
         } else {
           if (this.tipoUsuario == 'Administrador') {
-            if (this.nombre != '' && this.nit != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '') {
-              if (this.contraseña == this.contraseñaConfirmar) {
+            if (this.nombre != '' && this.nit > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.telefono > 0) {
+              if (this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.email, 8, 50)) {
+                if(this.validarEmail(this.email)){
+                  if (this.contraseña == this.contraseñaConfirmar) {
                 var docRef = db.collection("usuario").doc(this.nit.toString());
 
                 var getOptions = {
@@ -716,6 +728,7 @@ export default {
                     tipo: "administrador",
                     fechaCreacion: date,
                     estado: 'Activo',
+                    telefono: this.telefono,
                   })
                     .then(() => {
                       this.mensaje = "Administrador registrado con exito"
@@ -729,53 +742,77 @@ export default {
               } else {
                 this.mensaje = "Las contraseñas no coinciden..."
               }
+            
+          }else{
+            this.mensaje = "El email es invalido..."
+          }
+
+
+
+             
+              } else {
+                this.mensaje = "Las longitudes de los campos no son validas"
+              }
+             
             } else {
               this.mensaje = "Tiene que rellenar todos los campos..."
             }
 
           } else {
             if (this.tipoUsuario == 'Estudiante') {
-              if (this.nombre != '' && this.nit != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '') {
-                if (this.contraseña == this.contraseñaConfirmar) {
-                  var docRef = db.collection("usuario").doc(this.nit.toString());
+              if (this.nombre != '' && this.nit > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.telefono > 0) {
+                if (this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.email, 8, 50)) {
+                  if(this.validarEmail(this.email)){
+                    if (this.contraseña == this.contraseñaConfirmar) {
+                    var docRef = db.collection("usuario").doc(this.nit.toString());
 
-                  var getOptions = {
-                    //source: 'cache'
-                  };
-                  docRef.get(getOptions).then((doc) => {
-                    // Document was found in the cache. If no cached document exists,
-                    // an error will be returned to the 'catch' block below.
+                    var getOptions = {
+                      //source: 'cache'
+                    };
+                    docRef.get(getOptions).then((doc) => {
+                      // Document was found in the cache. If no cached document exists,
+                      // an error will be returned to the 'catch' block below.
 
-                    if (doc.data().nit == this.nit.toString()) {
-                      this.mensaje = "C.C ya registrado..."
-                    }
-                  }).catch((error) => {
-                    let date = new Date().toLocaleDateString();
-                    var forge = require('node-forge');
-                    var input_str = this.contraseña;
-                    var md = forge.md.sha256.create();
-                    md.update(input_str);
-                    db.collection("usuario").doc(this.nit.toString()).set({
-                      nombre: this.nombre,
-                      nit: this.nit,
-                      email: this.email,
-                      contraseña: md.digest().toHex(),
-                      tipo: "estudiante",
-                      fechaCreacion: date,
-                      estado: 'Activo',
-                    })
-                      .then(() => {
-                        this.mensaje = "Estudiante registrado con exito"
+                      if (doc.data().nit == this.nit.toString()) {
+                        this.mensaje = "C.C ya registrado..."
+                      }
+                    }).catch((error) => {
+                      let date = new Date().toLocaleDateString();
+                      var forge = require('node-forge');
+                      var input_str = this.contraseña;
+                      var md = forge.md.sha256.create();
+                      md.update(input_str);
+                      db.collection("usuario").doc(this.nit.toString()).set({
+                        nombre: this.nombre,
+                        nit: this.nit,
+                        email: this.email,
+                        contraseña: md.digest().toHex(),
+                        tipo: "estudiante",
+                        fechaCreacion: date,
+                        estado: 'Activo',
+                        telefono: this.telefono,
                       })
-                      .catch((error) => {
-                        console.error("Error writing document: ", error);
-                        this.mensaje = "No se pudo completar el registro, intente nuevamente"
-                      });
+                        .then(() => {
+                          this.mensaje = "Estudiante registrado con exito"
+                        })
+                        .catch((error) => {
+                          console.error("Error writing document: ", error);
+                          this.mensaje = "No se pudo completar el registro, intente nuevamente"
+                        });
 
-                  });
+                    });
+                  } else {
+                    this.mensaje = "Las contraseñas no coinciden..."
+                  }
+            
+          }else{
+            this.mensaje = "El email es invalido..."
+          }
+                  
                 } else {
-                  this.mensaje = "Las contraseñas no coinciden..."
+                  this.mensaje = "Las longitudes de los campos no son validas"
                 }
+
               } else {
                 this.mensaje = "Tiene que rellenar todos los campos..."
               }
@@ -791,7 +828,25 @@ export default {
     abrirModal() {
       this.open = true
 
-    }
+    },
+    compruebaLongitud(elemento, min, max) {
+      elemento = elemento.toString();
+      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      if (elemento.length < min || elemento.length > max) {
+        return false
+      } else {
+        return true
+      }
+
+
+    },
+     validarEmail(valor) {
+  if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+   return true
+  } else {
+   return false
+  }
+}
 
 
   },

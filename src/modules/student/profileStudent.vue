@@ -25,6 +25,13 @@
                     <p class="text-gray-600 text-sm text-center">Correo del estudiante</p>
 
                     <div class="flex flex-row justify-center font-semibold mx-auto my-4">
+                        <div>
+            <label class="block">Número de celular o teléfono</label>
+            <input type="number" v-model="telefono" placeholder="teléfono"
+              class="w-full px-4 py-2 mt-2 border rounded-md focus:outline-none focus:ring-1 focus:ring-blue-600"
+              autofocus autocomplete required minlength="6" maxlength="16">
+
+          </div>
 
 <button @click="$router.push('/editStudent')" type="button"
     class="bg-grey-light hover:bg-grey text-grey-darkest font-bold inline-flex items-center my-auto py-1 px-4 border-2bg-teal-700 text-white bg-teal-700  hover:bg-teal-500 hover:cursor-pointer  rounded-3xl mx-2">
@@ -78,7 +85,7 @@ export default {
             nit: 0,
             nombreEmpresa: '',
             nitEmpresa: '',
-            telefonoEmpresa: '',
+            telefono: null,
             encargado: '',
             cargoEncargado: '',
             email: '',
@@ -111,6 +118,7 @@ export default {
                 this.nombreEmpresa = doc.data().nombre;
                 this.nitEmpresa = doc.data().nit;
                 this.email = doc.data().email;
+                this.telefono =doc.data().telefono;
                 this.cargarImagen()
 
             }).catch((error) => {
@@ -160,7 +168,78 @@ export default {
 
 
     },
+    advancedRegister() {
+      if (this.nombre != '' && this.nit > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.telefono > 0) {
+        if(this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.email, 8, 50)){
+          if(this.validarEmail(this.email)){
+            if (this.contraseña == this.contraseñaConfirmar) {
+          var docRef = db.collection("usuario").doc(this.nit.toString());
+          var forge = require('node-forge');
+          var input_str = this.contraseña;
+          var md = forge.md.sha256.create();
+          md.update(input_str);
+          var getOptions = {
+            //source: 'cache'
+          };
+          docRef.update({
+            nombre: this.nombre,
+            nit: this.nit,
+            direccion: this.direccion,
+            telefono: this.telefono,
+            email: this.email,
+            encargado: this.encargado,
+            cargo: this.cargo,
+            contraseña: md.digest().toHex(),
+            about: this.about,
+            
+
+          })
+            .then(() => {
+              console.log("Document successfully updated!");
+              this.contraseña = ''
+              this.contraseñaConfirmar = ''
+            })
+            .catch((error) => {
+              // The document probably doesn't exist.
+              console.error("Error updating document: ", error);
+            });
+
+
+
+        } else {
+          this.mensaje = "Las contraseñas no coinciden..."
+        }
+          }else{
+            this.mensaje = "El email es invalido..."
+          }
+          
+          
+        }else{
+          this.mensaje = "Las longitudes de los campos no son validas"
+        }
+
+      } else {
+        this.mensaje = "Tiene que rellenar todos los campos..."
+      }
+
+    },
+    compruebaLongitud(elemento, min, max) {
+      elemento = elemento.toString();
+      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      if (elemento.length < min || elemento.length > max) {
+        return false
+      } else {
+        return true
+      }
+    },
+     validarEmail(valor) {
+  if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+   return true
+  } else {
+   return false
+  }
 },
+    },
     mounted() {
         this.cargarEmpresa()
 

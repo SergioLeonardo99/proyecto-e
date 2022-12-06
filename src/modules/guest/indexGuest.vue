@@ -372,7 +372,7 @@
                     </div>
                     <div class="object-cover p-8">
                         <div class="flex justify-center max-h-100 min-h-100 p-10">
-                            <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fped.webp?alt=media&token=90784d53-2cc1-4d0b-abd7-23d35da8cec5"
+                            <img src="https://firebasestorage.googleapis.com/v0/b/m-subate.appspot.com/o/sistema%2Fpantalla.webp?alt=media&token=9808a40c-40f1-4da5-8e0a-669d3966c508"
                                 alt="a">
                         </div>
                     </div>

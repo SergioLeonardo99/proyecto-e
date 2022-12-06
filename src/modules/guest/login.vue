@@ -53,13 +53,13 @@
               <label class="block letra text-gray-700">NIT/C.C.</label>
               <input type="number" name="nit" v-model="nit" placeholder="Nit"
                 class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                autofocus autocomplete required>
+                autofocus autocomplete required maxlength="16" minlength="8">
             </div>
 
             <div class="mt-4">
               <label class="block letra text-gray-700">Contraseña</label>
-              <input type="password" name="contraseña" v-model="contraseña" placeholder="Password" minlength="4" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
-                  focus:bg-white focus:outline-none" required>
+              <input type="password" name="contraseña" v-model="contraseña" placeholder="Password" minlength="8" class="w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                  focus:bg-white focus:outline-none" required maxlength="16">
             </div>
 
             <div class="text-right mt-2">
@@ -317,7 +317,6 @@ export default {
             } if (doc.data().tipo == 'administrador') {
               VueCookies.set(safe.cipher('admin'), safe.cipher(this.nit.toString()), "1h")
               this.$router.push('/dashboard');
-
             }
             this.mensaje = "Datos validos"
           }
@@ -351,7 +350,7 @@ export default {
         this.recuperar = false
         this.aviso = true
       } else {
-        
+
         db.collection("usuario").where("email", "==", this.correoRecuperar.toString())
           .get()
           .then((querySnapshot) => {
@@ -369,8 +368,8 @@ export default {
             this.recuperar = false
             this.aceptado = true
           });
-          this.recuperar = false
-          this.aceptado = true
+        this.recuperar = false
+        this.aceptado = true
       }
 
 
@@ -421,8 +420,8 @@ export default {
         }, function (error) {
           console.log('FAILED...', error);
         });
-        this.recuperar = false
-        this.aceptado = true
+      this.recuperar = false
+      this.aceptado = true
     },
 
   },

@@ -57,7 +57,7 @@
                       <label class="block letra text-gray-700">Nombre de la empresa: </label>
                       <input type="text" v-model="nombre" placeholder="Nombre de la empresa"
                         class="h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                        autofocus autocomplete required minlength="6" maxlength="30">
                     </div>
 
                     <div>
@@ -65,14 +65,14 @@
                       <label class="block letra text-gray-700">Nit de la empresa: </label>
                       <input type="number" v-model="nit" placeholder="Nit de la empresa"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                        autofocus autocomplete required minlength="6" maxlength="16">
                     </div>
 
                     <div>
                       <label class="block letra text-gray-700">Dirección: </label>
                       <input type="text" v-model="direccion" placeholder="Dirección de la empresa"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                        autofocus autocomplete required minlength="8" maxlength="16">
                     </div>
 
                     <div>
@@ -126,21 +126,21 @@
                       <label class="block letra text-gray-700">Nombre del encargado: </label>
                       <input type="text" v-model="encargado" placeholder="Nombre del encargado"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                        autocomplete required minlength="3" maxlength="16">
                     </div>
 
                     <div>
                       <label class="block letra text-gray-700">Cargo del encargado en la empresa: </label>
                       <input type="text" v-model="cargo" placeholder="Cargo del encargado"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                        autocomplete required minlength="3" maxlength="16">
                     </div>
 
                     <div>
                       <label class="block letra text-gray-700">Correo electrónico: </label>
                       <input type="email" v-model="email" placeholder="Correo electrónico"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-blue-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                        autocomplete required minlength="8" maxlength="50">
                     </div>
 
 
@@ -148,7 +148,7 @@
                       <label class="block letra text-gray-700">Número de celular o teléfono: </label>
                       <input type="number" v-model="telefono" placeholder="Teléfono"
                         class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500 focus:bg-white focus:outline-none"
-                        autofocus autocomplete required>
+                         autocomplete required minlength="8" maxlength="16">
                     </div>
 
                   </div>
@@ -179,16 +179,16 @@
                   <div class="accordion-body py-4 px-5">
                     <div class="mt-4">
                       <label class="block letra text-gray-700">Contraseña: </label>
-                      <input type="password" v-model="contraseña" placeholder="Contraseña" minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
-                          focus:bg-white focus:outline-none" required>
+                      <input type="password" v-model="contraseña" placeholder="Contraseña" minlength="8" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                          focus:bg-white focus:outline-none" required maxlength="16">
                     </div>
 
                     <div class="mt-4">
                       <label class="block letra text-gray-700">Confirmar Contraseña: </label>
 
                       <input type="password" v-model="contraseñaConfirmar" placeholder="Confirmar contraseña"
-                        minlength="6" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
-                          focus:bg-white focus:outline-none" required>
+                        minlength="8" class=" h-8 w-full px-4 py-3 rounded-lg bg-gray-200 mt-2 border focus:border-gray-500
+                          focus:bg-white focus:outline-none" required maxlength="16">
                     </div>
                   </div>
                 </div>
@@ -207,7 +207,7 @@
 
           <hr class="my-4 border-gray-300 w-full">
 
-          <p class="mt-4 letra">¿ya tienes cuenta ? <Router-link to="/register"
+          <p class="mt-4 letra">¿ya tienes cuenta ? <Router-link to="/login"
               class="text-teal-700 hover:text-teal-400 font-semibold">Iniciar Sesion</Router-link>
           </p>
           <p class="text-sm letra text-teal-700 mt-4">&copy; 2022 M&S.</p>
@@ -251,48 +251,60 @@ export default {
   },
   methods: {
     advancedRegister() {
-      if (this.nombre != '' && this.nit != 0 && this.direccion != '' && this.telefono != 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.encargado != '' && this.cargo != '' && this.sector != '') {
-        if (this.contraseña == this.contraseñaConfirmar) {
-          var docRef = db.collection("usuario").doc(this.nit.toString());
-          var getOptions = {
-          };
-          docRef.get(getOptions).then((doc) => {
-            if (doc.data().nit == this.nit.toString()) {
-              this.mensaje = "Nit ya registrado..."
-            }
-          }).catch((error) => {
-            let date = new Date().toLocaleDateString();
-            var forge = require('node-forge');
-            var input_str = this.contraseña;
-            var md = forge.md.sha256.create();
-            md.update(input_str);
-            db.collection("usuario").doc(this.nit.toString()).set({
-              nombre: this.nombre,
-              nit: this.nit,
-              direccion: this.direccion,
-              telefono: this.telefono,
-              email: this.email,
-              encargado: this.encargado,
-              cargo: this.cargo,
-              contraseña: md.digest().toHex(),
-              tipo: "empresa",
-              fechaCreacion: date,
-              estado: 'Activo',
-              sector: this.sector,
-              encuesta: 'No'
-            })
-              .then(() => {
-                this.mensaje = "Empresa registrada con exito"
+      if (this.nombre != '' && this.nit > 0 && this.direccion != '' && this.telefono > 0 && this.contraseña != '' && this.contraseñaConfirmar != '' && this.email != '' && this.encargado != '' && this.cargo != '' && this.sector != '') {
+        if (this.compruebaLongitud(this.nombre, 6, 16) && this.compruebaLongitud(this.nit, 6, 16) && this.compruebaLongitud(this.direccion, 6, 16) && this.compruebaLongitud(this.telefono, 6, 16) && this.compruebaLongitud(this.contraseña, 8, 16) && this.compruebaLongitud(this.email, 8, 50) && this.compruebaLongitud(this.encargado, 8, 16) && this.compruebaLongitud(this.cargo,3, 16)) {
+          if(this.validarEmail(this.email)){
+            if (this.contraseña == this.contraseñaConfirmar) {
+            var docRef = db.collection("usuario").doc(this.nit.toString());
+            var getOptions = {
+            };
+            docRef.get(getOptions).then((doc) => {
+              if (doc.data().nit == this.nit.toString()) {
+                this.mensaje = "Nit ya registrado..."
+              }
+            }).catch((error) => {
+              let date = new Date().toLocaleDateString();
+              var forge = require('node-forge');
+              var input_str = this.contraseña;
+              var md = forge.md.sha256.create();
+              md.update(input_str);
+              db.collection("usuario").doc(this.nit.toString()).set({
+                nombre: this.nombre,
+                nit: this.nit,
+                direccion: this.direccion,
+                telefono: this.telefono,
+                email: this.email,
+                encargado: this.encargado,
+                cargo: this.cargo,
+                contraseña: md.digest().toHex(),
+                tipo: "empresa",
+                fechaCreacion: date,
+                estado: 'Activo',
+                sector: this.sector,
+                encuesta: 'No'
               })
-              .catch((error) => {
-                console.error("Error writing document: ", error);
-                this.mensaje = "No se pudo completar el registro, intente nuevamente"
-              });
+                .then(() => {
+                  this.mensaje = "Empresa registrada con exito"
+                })
+                .catch((error) => {
+                  console.error("Error writing document: ", error);
+                  this.mensaje = "No se pudo completar el registro, intente nuevamente"
+                });
 
-          });
+            });
+          } else {
+            this.mensaje = "Las contraseñas no coinciden..."
+          }
+            
+          }else{
+            this.mensaje = "El email es invalido..."
+          }
+          
+
         } else {
-          this.mensaje = "Las contraseñas no coinciden..."
+          this.mensaje = "Las longitudes de los campos no son validas"
         }
+
       } else {
         this.mensaje = "Tiene que rellenar todos los campos..."
       }
@@ -320,7 +332,26 @@ export default {
           console.error("Error writing document: ", error);
           this.mensaje = "No se pudo completar el registro, intente nuevamente"
         });
-    }
+    },
+    compruebaLongitud(elemento, min, max) {
+      elemento = elemento.toString();
+      console.log("Soy el elemento "+elemento+elemento.length+" soy min "+min+" soy max "+max+ " soy el validador "+(elemento.length < min || elemento.length > max))
+      if (elemento.length < min || elemento.length > max) {
+        return false
+      } else {
+        return true
+      }
+
+
+    },
+     validarEmail(valor) {
+  if (/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(valor)){
+   return true
+  } else {
+   return false
+  }
+}
+
 
   },
   mounted() {

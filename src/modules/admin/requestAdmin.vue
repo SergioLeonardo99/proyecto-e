@@ -337,8 +337,6 @@ export default {
         this.openBut = false
       }
       this.open = true
-
-
     },
 
     procesarSolicitud() {
