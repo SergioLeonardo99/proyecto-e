@@ -205,12 +205,15 @@ export default {
     subirFoto() {
       var imagesRef = storageRef.child('imagenes/' + this.nit + '.jpg');
       var metadata = { contentType: 'img/jpeg' }
+      if(this.imagen === null){
+        alert('No has seleccionado ninguna imagen');
 
-      imagesRef.put(this.imagen, metadata).then((snapshot) => {
+      }else{
+        imagesRef.put(this.imagen, metadata).then((snapshot) => {
         location.reload()
         //console.log('Uploaded a blob or file!');
-
       });
+      }
 
     },
     cargarImagen() {
@@ -278,7 +281,15 @@ export default {
 
     },
     clickImage(e) {
-      this.imagen = e.target.files[0]
+      var image= e.target.files[0].size
+      if (image> 200000){
+        alert('El archivo supera el límite de 0.2MB');
+
+      }else{
+        this.imagen = e.target.files[0]
+      }
+      
+
       //console.log(this.imagen)
     },
 

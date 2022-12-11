@@ -2452,6 +2452,7 @@ export default {
         )
           .then(() => {
             this.mensaje = "Caracterizacion de Empresa registrada con exito"
+            this.procesarSolicitud()
             this.$router.push('/profileCompany');
           })
           .catch((error) => {
@@ -2464,7 +2465,29 @@ export default {
 
 
 
-    }
+    },
+    procesarSolicitud() {
+      this.nitEmpresa = safe.decrypt($cookies.get(safe.cipher('nit'))).toString()
+      var docRef = db.collection("usuario").doc(this.nitEmpresa.toString());
+      docRef.update({
+        
+        encuesta: 'Si',
+        
+
+      })
+        .then(() => {
+
+
+        })
+        .catch((error) => {
+          // The document probably doesn't exist.
+          //console.error("Error updating document: ", error);
+
+        });
+
+    },
+
+
   },
   mounted() {
 

@@ -32,6 +32,13 @@
               <option>Nivel Total</option>
               <option>Complementos y cambios tecnológicos</option>
             </select>
+            <select  @change="accionBuscar()" v-model="sector"
+              class="block py-2.5 px-0 w-full text-sm text-gray-500 bg-transparent border-0 border-b-2 border-gray-200 appearance-none dark:text-black dark:border-gray-700 focus:outline-none focus:ring-0 focus:border-gray-200 peer">
+              <option disabled value="">Seleccione el sector</option>
+              <option>Todos</option>
+              <option>Minería de carbón</option>
+              <option>Lácteos</option>
+            </select>
             <div class="container mx-auto px-0 flex lg:max-w-full   justify-center  ">
           <div class="items-center flex flex-wrap ">
             <div class="w-full md:w-6/12 lg:max-h-72  mb-12  xl:max-h-52/max-w-xs  ">
@@ -537,14 +544,15 @@ export default {
       totalPuntos: [[1, 1], [2, 1], [3, 1], [4, 4]],
       textoEnviar: '',
       pruebita: [],
-      cambio2: ''
+      cambio2: '',
+      sector: '',
 
     }
   },
   methods: {
 
     recovery() {
-
+      this.textoEnviar=''
       var contador = 1;
       db.collection("datos").limit(50)
         .get()
@@ -557,6 +565,13 @@ export default {
             this.puntajeProveedores = this.puntajeProveedores + doc.data().puntajeProveedores
             this.puntajeTotal = this.puntajeTotal + doc.data().puntajeTotal
             this.textoEnviar =this.textoEnviar+doc.data().comentarios + ' '
+            this.textoEnviar =this.textoEnviar+doc.data().pregunta25.complemento + ' '
+            this.textoEnviar =this.textoEnviar+doc.data().pregunta24.complemento + ' '
+            this.textoEnviar =this.textoEnviar+doc.data().pregunta30.complemento + ' '
+            this.textoEnviar =this.textoEnviar+doc.data().pregunta9.complemento + ' '
+            this.textoEnviar =this.textoEnviar+doc.data().pregunta8.complemento + ' '
+            
+
 
             if (contador == 1) {
               this.puntajeClientes1 = doc.data().puntajeClientes
@@ -602,6 +617,7 @@ export default {
             contador = contador + 1
           });
           this.calculin(contador)
+          this.limpiar(" en ")
         })
         .catch((error) => {
           //console.log("Error getting documents: ", error);
@@ -609,6 +625,85 @@ export default {
 
 
     },
+    recover(tipoEmpresa) {
+this.textoEnviar=''
+var contador = 1;
+db.collection("datos").limit(50)
+  .get()
+  .then((querySnapshot) => {
+    querySnapshot.forEach((doc) => {
+      //b mineria i lacteos
+      if(doc.data().pregunta1.respuesta==tipoEmpresa){
+        this.puntajeClientes = this.puntajeClientes + doc.data().puntajeClientes
+      this.puntajeConocimiento = this.puntajeConocimiento + doc.data().puntajeClientes
+      this.puntajeInfraestructura = this.puntajeInfraestructura + doc.data().puntajeInfraestructura
+      this.puntajeMadurez = this.puntajeMadurez + doc.data().puntajeMadurez
+      this.puntajeProveedores = this.puntajeProveedores + doc.data().puntajeProveedores
+      this.puntajeTotal = this.puntajeTotal + doc.data().puntajeTotal
+      this.textoEnviar =this.textoEnviar+doc.data().comentarios + ' '
+      this.textoEnviar =this.textoEnviar+doc.data().pregunta25.complemento + ' '
+      this.textoEnviar =this.textoEnviar+doc.data().pregunta24.complemento + ' '
+      this.textoEnviar =this.textoEnviar+doc.data().pregunta30.complemento + ' '
+      this.textoEnviar =this.textoEnviar+doc.data().pregunta9.complemento + ' '
+      this.textoEnviar =this.textoEnviar+doc.data().pregunta8.complemento + ' '
+      
+
+
+      if (contador == 1) {
+        this.puntajeClientes1 = doc.data().puntajeClientes
+        this.puntajeConocimiento1 = doc.data().puntajeConocimiento
+        this.puntajeInfraestructura1 = doc.data().puntajeInfraestructura
+        this.puntajeMadurez1 = doc.data().puntajeMadurez
+        this.puntajeProveedores1 = doc.data().puntajeProveedores
+        this.puntajeTotal1 = doc.data().puntajeTotal
+        this.nombre1 = doc.data().nit
+
+
+      } if (contador == 2) {
+        this.puntajeClientes2 = doc.data().puntajeClientes
+        this.puntajeConocimiento2 = doc.data().puntajeConocimiento
+        this.puntajeInfraestructura2 = doc.data().puntajeInfraestructura
+        this.puntajeMadurez2 = doc.data().puntajeMadurez
+        this.puntajeProveedores2 = doc.data().puntajeProveedores
+        this.puntajeTotal2 = doc.data().puntajeTotal
+        this.nombre2 = doc.data().nit
+
+
+      } if (contador == 3) {
+        this.puntajeClientes3 = doc.data().puntajeClientes
+        this.puntajeConocimiento3 = doc.data().puntajeConocimiento
+        this.puntajeInfraestructura3 = doc.data().puntajeInfraestructura
+        this.puntajeMadurez3 = doc.data().puntajeMadurez
+        this.puntajeProveedores3 = doc.data().puntajeProveedores
+        this.puntajeTotal3 = doc.data().puntajeTotal
+        this.nombre3 = doc.data().nit
+
+      } if (contador == 4) {
+        this.puntajeClientes4 = doc.data().puntajeClientes
+        this.puntajeConocimiento4 = doc.data().puntajeConocimiento
+        this.puntajeInfraestructura4 = doc.data().puntajeInfraestructura
+        this.puntajeMadurez4 = doc.data().puntajeMadurez
+        this.puntajeProveedores4 = doc.data().puntajeProveedores
+        this.puntajeTotal4 = doc.data().puntajeTotal
+        this.nombre4 = doc.data().nit
+      }
+      // doc.data() is never undefined for query doc snapshots
+
+      //console.log(doc.id, " => ", doc.data());
+      contador = contador + 1
+      }
+
+      
+    });
+    this.calculin(contador)
+    this.limpiar(" en ")
+  })
+  .catch((error) => {
+    //console.log("Error getting documents: ", error);
+  });
+
+
+},
     calculin(contador) {
       this.puntajeClientes = this.puntajeClientes / contador
       this.puntajeConocimiento = this.puntajeConocimiento / contador
@@ -616,7 +711,25 @@ export default {
       this.puntajeMadurez = this.puntajeMadurez / contador
       this.puntajeProveedores = this.puntajeProveedores / contador
       this.puntajeTotal = this.puntajeTotal / contador
-    }
+    },
+    limpiar(reemplazar){
+      
+      var textukiz=this.textoEnviar;
+      textofino= textukiz.replace(reemplazar," ")
+      this.textoEnviar=textofino;
+      
+    },
+    accionBuscar(){
+      if(this.sector=="Todos"){
+        this.recovery()
+
+      }else if(this.sector=="Minería de carbón"){
+        this.recover("2")
+
+      }else if (this.sector=="Lácteos"){
+        this.recover("9")
+      }
+    },
 
 
 

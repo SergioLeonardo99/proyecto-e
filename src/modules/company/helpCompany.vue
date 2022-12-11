@@ -37,7 +37,7 @@
                 </p>
 
             </div>
-            <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/1EAWoCD9OXH0Ey8Nag9ncxjDLZbDfGLop/view?usp=share_link','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
+            <button type="button" @click="descargarRecomendacion('https://drive.google.com/file/d/16SDpZ2t4Oxf0iyfn9fvcSZZOMEiiPTIb/view?usp=share_link','archivo.pdf')" class=" letra w-full block bg-teal-700 hover:bg-teal-500 focus:bg-teal-500 text-white font-semibold rounded-lg
                 px-4 py-3 mt-6">Abrir manual empresa</button>
         </div>
 

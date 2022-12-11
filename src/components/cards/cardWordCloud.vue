@@ -20,7 +20,7 @@
       // Update chart based on props
       var series = root.container.children.push(
         am5wc.WordCloud.new(root, {
-            text: this.textuki
+            text: this.textuki,
         })
         );
     }
@@ -32,7 +32,8 @@
   
       var series = root.container.children.push(
         am5wc.WordCloud.new(root, {
-            text: this.textuki
+            text: this.textuki,
+            excludeWords: ["en","el","esta","no","de","la","si","va","al","un","que","lo","y","000","10"],
         })
         );
   

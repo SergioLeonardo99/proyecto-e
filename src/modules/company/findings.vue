@@ -46,6 +46,7 @@
                                     productores. Además, tiene una capacidad Colector de 1 x 150cc y permite recolectar el
                                     producto lácteo de 10 vacas en
                                     una hora, Fácil de transportar en los potreros.
+                                    Conócelo aquí:<a href="https://www.xn--deordeo-9za.com/equipos-portatiles/equipo-one-car/">https://www.xn--deordeo-9za.com/equipos-portatiles/equipo-one-car/</a>.
                                     <br />
                                     <br />
                                 </p>
@@ -87,6 +88,7 @@
                                     producto
                                     lácteo de 10 a 15 vacas
                                     en una hora. Es más compacto de 1 puesto con 2 motores (eléctrico y gasolina).
+                                    Conócelo aquí: <a href="https://www.xn--deordeo-9za.com/equipos-portatiles/equipo-zan-car/">https://www.xn--deordeo-9za.com/equipos-portatiles/equipo-zan-car/</a>.
                                     <br />
                                     <br />
                                 </p>
@@ -127,7 +129,8 @@
                                     con 2
                                     motores, eléctrico de
                                     1.0 HP y gasolina de 6.5 HP.
-                                    
+                                   
+                                    Conócelo aquí:<a href="https://www.xn--deordeo-9za.com/equipos-portatiles/equipo-twin-car/">https://www.xn--deordeo-9za.com/equipos-portatiles/equipo-twin-car/</a>.
                                     <br />
                                     <br />
                                 </p>

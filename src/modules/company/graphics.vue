@@ -620,7 +620,12 @@ export default {
         this.empresaPuntos.push(parseInt(doc.data().pregunta40['respuesta']))
         this.empresaPuntos.push(parseInt(doc.data().pregunta41['respuesta']))
         this.textoEnviar = doc.data().comentarios + ' ' + doc.data().pregunta1['complemento']
-
+        this.textoEnviar =this.textoEnviar+doc.data().comentarios + ' '
+        this.textoEnviar =this.textoEnviar+doc.data().pregunta25.complemento + ' '
+        this.textoEnviar =this.textoEnviar+doc.data().pregunta24.complemento + ' '
+        this.textoEnviar =this.textoEnviar+doc.data().pregunta30.complemento + ' '
+        this.textoEnviar =this.textoEnviar+doc.data().pregunta9.complemento + ' '
+        this.textoEnviar =this.textoEnviar+doc.data().pregunta8.complemento + ' '
 
       }).catch((error) => {
         //console.log("Sesion terminada regresando al login", error);
@@ -679,6 +684,7 @@ export default {
           //console.log("Error getting documents: ", error);
         });
     },
+
 
 
 
